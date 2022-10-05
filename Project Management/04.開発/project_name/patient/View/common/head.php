@@ -39,7 +39,7 @@
                     </li>
                     <li class="nav-item me-3 ">
                         <div class="profile">
-                            <img src="./profile.jpg" alt="" class="profile_img">
+                            <img src="./storages/image/profile.jpg" alt="" class="profile_img">
                         </div>
                     </li>
                 </ul>
