@@ -15,23 +15,46 @@
 </head>
 
 <body>
-    <div class="card" style="width: 18rem;">
-        <div class="image mt-1">
+    <div class="card cart" style="width: 23rem;">
+        <dvi class="image">
             <img src="../image/vaccine.png" class="card-img-top" alt="...">
-        </div>
+        </dvi>
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <p>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Appointment
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="btk">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Date &nbsp; &nbsp; &nbsp; &nbsp; </li>
+                            <li class="list-inline-item">Time &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
+                            <li class="list-inline-item">Hospital</li>
+                        </ul>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Mon &nbsp; 9:00Am ~ 11:00AM &nbsp; &nbsp; SSC
+                            </label>
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Mon &nbsp; 12:00Am ~ 2:00PM &nbsp; &nbsp; Asia Royal
+                        </label>
+                    </div>
+                    <hr>
+                    <button class="btn-outline-primary">continue</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
