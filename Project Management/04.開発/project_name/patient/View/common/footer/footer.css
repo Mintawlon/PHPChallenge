@@ -4,7 +4,7 @@
 }
 .footer{
     position: relative;
-    background-color: var(--secondary_color) ;
+    background-color: var(--secondary_color);
     font-family: var(--primary_font);
 }
 .backlogo_name{
