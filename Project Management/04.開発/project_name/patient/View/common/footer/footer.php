@@ -16,36 +16,87 @@
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/fa91b09b37.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg border-bottom border-dark" >
-        <div class="container-fluid ">
-            <a class="navbar-brand" href="#">Logo</a>
-            <div class="collapse navbar-collapse d-flex flex-row-reverse " id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item me-5 text-white">
-                        <a class="nav-link " aria-current="page" href="#">Hospital Locations</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link  " aria-current="page" href="#">Find Doctors</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link  " aria-current="page" href="#">Booking</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link  " aria-current="page" href="#">Blogs</a>
-                    </li>
-                    <li class="nav-item me-3 ">
-                        <div class="profile">
-                            <img src="./profile.jpg" alt="" class="profile_img">
-                        </div>
-                    </li>
-                </ul>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start  text-muted footer">
+        <h1 class=" backlogo_name fw-bolder">MedPlatform</h1>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start ">
+                <!-- Grid row -->
+                <div class="row ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3 mt-5">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-white">
+                            Contact MedPlatform
+                        </h6>
+                        <p class=" text-white">
+                            <span>Ph:</span>09 799999999
+                        </p>
+                        <p class=" text-white">
+                            Address:Nar Nat TawRoad, Yangon,Myanmar.
+                        </p>
+                        <h6 class=" fw-bold mb-4 text-dark">
+                            Keep in Touch with Us
+                        </h6>
+                        <p class="link_color">
+                            <span class="me-3"><i class="fa-brands fa-facebook"></i></span>
+                            <span class="me-3"><i class="fa-brands fa-facebook-messenger"></i></span>
+                            <span class="me-3"><i class="fa-brands fa-instagram"></i></span>
+                        </p>
+                    </div>
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-3 mt-5">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-white">
+                            About MedPlatform
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-decoration-none link_color fw-semibold">About Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-decoration-none link_color fw-semibold">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 mt-5">
+                        <!-- Links -->
+                        <h6 class=" fw-semibold mb-4 text-white">Blogs</h6>
+                        <p>
+                            <a href="#!" class="text-decoration-none link_color fw-semibold">Blood Donation</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-decoration-none link_color fw-semibold">First Aid For Emergency Situations</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-decoration-none link_color fw-semibold">Knowledge About Dengue</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
             </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 link_color " style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2022 Copyright: <span class="fw-bold">MedPlatform.com</span>
         </div>
-    </nav>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
 </body>
 

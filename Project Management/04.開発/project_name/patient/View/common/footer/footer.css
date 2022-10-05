@@ -2,22 +2,20 @@
     margin: 0;
     padding: 0;
 }
-.profile{
-    width: 50px !important;
-    height: 50px !important;
-}
-.profile_img{
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 50px;
-}
-#navbarNav{
+.footer{
+    position: relative;
+    background-color: var(--secondary_color) ;
     font-family: var(--primary_font);
-    font-size: var(--extra_small);
 }
-.navbar{
-    background-color: var(--primary_color) !important;
+.backlogo_name{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    letter-spacing: 0.3em!important;
+    font-size: var(--extra_large);
+    color: var(--first_color);
+    opacity: 0.05;
 }
-.nav-link,.navbar-brand{
-    color: var(--first_color) !important;
+.link_color{
+    color: var(--fourth_color);
 }
