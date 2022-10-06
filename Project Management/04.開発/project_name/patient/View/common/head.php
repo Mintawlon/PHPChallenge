@@ -17,7 +17,59 @@
 
 <body>
 
-
+<nav class="navbar navbar-expand-lg border-bottom border-dark">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#">Logo</a>
+            
+            <div class="collapse navbar-collapse d-flex flex-row-reverse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5 text-white">
+                        <a class="nav-link " aria-current="page" href="#">Hospital Locations</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link  " aria-current="page" href="#">Find Doctors</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link " aria-current="page" href="#">Booking</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link  " aria-current="page" href="#">Blogs</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <button class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="../storages/image/profile.jpg" class="profile"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">User Profile</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="box">
+                <div class="mainbox">
+                    <button class="usersetting"><i class="fa-solid fa-gear"></i></button>
+                    <br>
+                    <br>
+                    <p>
+                        <img src="../storages/image/profile.jpg" class="profile">
+                    </p>
+                    <label for="name" id="name">User Name</label>
+                    <br>
+                    <br>
+                    <label for="email" id="email">Email</label>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-lg btn-outline-primary">Patient History</button>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-lg btn-outline-warning">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
