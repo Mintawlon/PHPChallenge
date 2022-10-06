@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Aid For Emergency Situations</title>
     <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/emergency.css">
+    <link rel="stylesheet" href="./resources/css/emergency.css?v="time()>
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- Boostrap -->
@@ -23,16 +23,16 @@
     <!-- Search Box -->
     <div id="first_aid_search" class="me-4">
         <div class="searchbox mt-2">
-            <span class="search_text fw-semibold">Search</span>
+            <span class="search_text fw-semibold px-2">Search</span>
             <input type="text" class="search_input ps-5" placeholder="" />
             <i class="fa-solid fa-magnifying-glass search_icon"></i>
         </div>
     </div>
     <!-- First Tab -->
     <div class="important_tab text-center mt-5">
-        <h3 class="text-uppercase important_tab_header">why is it important to know first aid?</h3>
+        <h3 class="text-uppercase important_tab_header ">why is it important to know first aid?</h3>
         <div class="important_tab_para">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas maxime facere laboriosam id, quae sequi error veritatis culpa doloremque eveniet ipsum unde quibusdam sapiente, perspiciatis quisquam ipsa consectetur repudiandae quia?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, ading elit. Quas maxime facere laboriosam id, quae sequi error veritatis culpa doloremque eveniet ipsum unde quibusdam sapiente, perspiciatis quisquam ipsa consectetur repudiandae quia?</p>
         </div>
         <hr class="line" />
     </div>

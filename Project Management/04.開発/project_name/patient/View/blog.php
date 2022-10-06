@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/blog.css">
+    <link rel="stylesheet" href="./resources/css/blog.css?v="time()>
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- Boostrap -->

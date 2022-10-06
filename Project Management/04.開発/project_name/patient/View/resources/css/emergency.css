@@ -25,4 +25,16 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 12em;
+}
+@media only screen and (max-width: 800px) {
+    .important_tab_para{
+        width: 100%;
+        margin: auto;
+        font-size: var(--extra_extra_small);
+    }
+    .important_tab_header{
+        font-size: var(--extra_small);
+    }
 }

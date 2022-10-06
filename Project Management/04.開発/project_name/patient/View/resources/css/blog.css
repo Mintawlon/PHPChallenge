@@ -57,3 +57,22 @@ body{
     font-family: var(--secondary_font);
     text-align: center;
 }
+
+@media only screen and (max-width: 800px) {
+    .blog_tab{
+        width: 80%;
+        height: 10em;
+    }
+    .blog_tab_img{
+        height: 60%;
+    }
+    .blog_tab_img_div{
+        width: 50%;
+    }
+    .blog_tab_text_div{
+        width: 50%;
+    }
+    .blog_tab_text{
+        font-size: var(--extra_small);
+    }
+}
