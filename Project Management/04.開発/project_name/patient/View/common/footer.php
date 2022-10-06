@@ -78,7 +78,7 @@
                             <a href="#!" class="text-decoration-none link_color fw-semibold">First Aid For Emergency Situations</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">Knowledge About Dengue</a>
+                            <a href="#!" class="text-decoration-none link_color fw-semibold hello">Knowledge About Dengue</a>
                         </p>
                     </div>
                     <!-- Grid column -->
