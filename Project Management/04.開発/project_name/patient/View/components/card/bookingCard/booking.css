@@ -1,0 +1,31 @@
+
+
+.bcontent {
+    margin-top: 10px;
+}
+
+.cart{
+    border-radius: 5px !important;
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
+    padding: 10px;
+   
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.list-group-item{
+font-size: 0.8rem !important;
+color: #ffc652; 
+font-weight: bolder;
+background-color: #2535A1;
+border-radius: 30px;
+}
+.col-sm-7{
+    border-right: 2px solid #2980b9;
+}
