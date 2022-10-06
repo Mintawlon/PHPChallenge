@@ -1,0 +1,52 @@
+body {
+  background-color: var(--primary_color) !important;
+}
+.blood_donate_header {
+  text-align: center;
+  color: var(--first_color);
+  font-family: var(--secondary_font);
+  font-size: var(--large);
+}
+.center_card_wrapper {
+  width: 100%;
+  height: 12.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center_card {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.center_name_div {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center_name {
+  font-size: var(--medium);
+  color: var(--first_color);
+}
+.center_address_div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.yellow_color{
+    color: var(--third_color);
+}
+.white_color{
+    color: var(--first_color);
+}
+.center_phone,.center_address{
+    font-size: var(--extra_small);
+    font-family: var(--primary_font);
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +18,6 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/fa91b09b37.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <!-- Footer -->
     <footer class="text-center text-lg-start  text-muted footer">
