@@ -21,7 +21,7 @@
 <body>
     <!-- Footer -->
     <footer class="text-center text-lg-start  text-muted footer">
-        <h1 class=" backlogo_name fw-bolder">Med Platform</h1>
+        <h1 class=" backlogo_name fw-bolder">MedPlatform</h1>
         <!-- Section: Social media -->
 
         <!-- Section: Links  -->
