@@ -11,13 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--css-->
-    <link rel="stylesheet" href="booking.css">
+     <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/booking.css">
 </head>
 
 <body>
-    
+<?php
+    include("./common/head.php");
+    ?>
     <div class="container bcontent">
-        <h2>Bootstrap Horizontal Card</h2>
+        <div class="page-deader">Your Booking Status</div>
         <hr />
         <div class="card cart" style="width: 500px;">
             <div class="row no-gutters">
@@ -41,7 +44,7 @@
         <div class="card cart mt-2" style="width: 500px;">
             <div class="row no-gutters">
                 <div class="col-sm-7">
-                    <div class="fs-3 text-white text-center">Your Appointment</div>
+                    <div class="fs-3 text-white text-center title">Your Appointment</div>
                     <br>
                     <p class="text-center text-white">doctorname</p>
                     <br>
@@ -61,3 +64,16 @@
 </body>
 
 </html>
+
+<style>
+@media screen and (max-width: 600px) {
+    .list-group-item{
+        display: block;
+        text-align: center;
+    }
+    .title{
+        font-size: 0.3rem !important;
+    }
+    
+}
+</style>

@@ -1,5 +1,8 @@
 
-
+body{
+    background-color:var(--primary_color);
+    font-family: var( --primary_font);
+}
 .bcontent {
     margin-top: 10px;
 }
@@ -21,11 +24,18 @@
 
 .list-group-item{
 font-size: 0.8rem !important;
-color: #ffc652; 
+color: var(--tertiary_color) !important; 
 font-weight: bolder;
-background-color: #2535A1;
-border-radius: 30px;
+background-color: #2535A1 !important;
+border-radius: 1.5rem !important;
+height: 1.25rem !important;
+display: block;
+text-align: center;
+bottom: -0.5rem;
 }
 .col-sm-7{
-    border-right: 2px solid #2980b9;
+    border-right: 2px solid var(--primary_color);
+}
+.page-deader{
+    font-size: 1.875rem;
 }
