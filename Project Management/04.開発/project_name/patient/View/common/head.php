@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse d-flex flex-row-reverse " id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item me-5 text-white">
-                        <a class="nav-link " aria-current="page" href="#">Hospital Locations</a>
+                        <a class="nav-link " aria-current="page" href="#">Hospital</a>
                     </li>
                     <li class="nav-item me-5">
                         <a class="nav-link  " aria-current="page" href="#">Find Doctors</a>
