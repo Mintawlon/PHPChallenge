@@ -1,0 +1,46 @@
+/* Admin Css root */
+
+/* Background Color */
+:root {
+    --primary_color: #F2F2F2;
+    --secondary_color: #4361EE;
+}
+
+/* Text Color */
+:root {
+    --first_color: #000000;
+    --second_color: #ffffff;
+    --third_color: #4361EE;
+    --fourth_color: #FFC652;
+    --fifth_color: #F8172D;
+    --sixth_color: #02F80C;
+}
+
+/* Font Family */
+:root {
+    --primary_font: 'Mulish', sans-serif;
+    --secondary_font: 'Archivo Narrow', sans-serif;
+}
+
+/* Font Size */
+:root {
+    --extra_large: 5em;
+    --large: 2.5em;
+    --medium: 1.87em;
+    --small: 1.56em;
+    --extra_small: 1.25em;
+    --extra_extra_small: 0.938em;
+}
+
+/* Admin Header */
+.bg_header {
+    background-color: var(--secondary_color) !important;
+    border-radius: 10px !important;
+}
+
+.ttl_admin {
+    margin-left: 45%;
+    color: var(--second_color) !important;
+    font-family: var(--primary_color) !important;
+    font-style: var(--medium) !important;
+}
