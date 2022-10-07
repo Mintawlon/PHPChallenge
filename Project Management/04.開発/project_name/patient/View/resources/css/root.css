@@ -54,6 +54,27 @@
     right: -5rem;
 }
 
+/* Header */
+.navbar{
+    background-color: var(--primary_color);
+    border-bottom: 0.12em solid var(--second_color);
+}
+.logo{
+    color: var(--first_color);
+}
+.navbar_text_div{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar_text{
+    color: var(--first_color);
+    text-decoration: none;
+    font-size: var(--extra_small);
+}
+.menu_bar_icon{
+    color: var(--first_color) !important;
+}
+
 /* Footer */
 .footer{
     position: relative;
@@ -71,6 +92,12 @@
 }
 .link_color{
     color: var(--fourth_color);
+}
+@media only screen and (max-width: 800px) {
+    .navbar_text_div{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* First Aid Card */
@@ -183,3 +210,5 @@
     left: 0;
     font-size: var(--extra_small);
 }
+
+/* <link rel="stylesheet" href="../resources/css/root.css"> */
