@@ -43,13 +43,13 @@ body{
 
 /* Search Box */
 .searchbox{
-    width: 25em;
+    width: 20em;
     height: 2.5em;
     border-radius: 5em;
     position: relative;
 }
 .search_input{
-    width: 20em;
+    width: 15em;
     height: 2.5em;
     position: absolute;
     top: 0;
