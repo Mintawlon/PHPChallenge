@@ -79,7 +79,7 @@
         </div>
         <hr class="line" />
     </div>
-    <!-- Current Diseases card --> /* header information */
+    <!-- Current Diseases card -->
     <div class="first_aid_card my-4">
         <div class="wrapper">
             <img src="./storages/image/emergency.jpg" alt="" class="card_img" />

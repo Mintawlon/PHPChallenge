@@ -30,7 +30,7 @@
                 <!-- Grid row -->
                 <div class="row ">
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3 mt-5">
+                    <div class="col-4 mx-auto mb-3 mt-5">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4 text-white">
                             Contact MedPlatform
@@ -53,7 +53,7 @@
 
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-3 mt-5">
+                    <div class="col-4 mx-auto mb-3 mt-5">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4 text-white">
                             About MedPlatform
@@ -68,7 +68,7 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 mt-5">
+                    <div class="col-4 mx-auto mb-md-0 mb-3 mt-5">
                         <!-- Links -->
                         <h6 class=" fw-semibold mb-4 text-white">Blogs</h6>
                         <p>
