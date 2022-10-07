@@ -48,8 +48,8 @@
 /* Common Button */
 .common_btn {
     display: inline-block;
-    width: 260px;
-    padding: 10px 20px;
+    width: 15em;
+    padding: 0.6em 1.2em;
     border: 1px solid transparent;
     font-size: var(--extra_small);
     text-decoration: none;
@@ -93,7 +93,7 @@
 
 /* Input */
 .common_input {
-    width: 20em;
+    width: 25em;
     height: 2.5em;
     border: 1px solid var(--secondary_color);
     background-color: var(--primary_color);
@@ -153,4 +153,74 @@
 
 .form-control {
     border: 1px solid var(--secondary_color) !important;
+}
+
+/* Input Set */
+.input_set_text{
+    font-size: var(--extra_small);
+}
+.input_set{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.input_one{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    
+}
+.input_set_header{
+    color: var(--secondary_color);
+}
+
+@media only screen and (max-width:800px) {
+    /* Input */
+.common_input {
+    width: 15em;
+    height: 2em;
+    font-weight: 300;
+}
+.common_btn {
+    display: inline-block;
+    width: 10em;
+    padding: 0.6em 1.2em;
+    font-size: var(--extra_extra_small);
+    border-radius: 50px;
+}
+.input_set_text{
+    font-size: var(--extra_extra_small);
+}
+.input_set{
+    display: flex;
+    flex-direction: column;
+
+}
+.input_one{
+    display: flex;
+    flex-direction: column;
+}
+}
+@media only screen and (max-width:1200px) {
+    /* Input */
+.common_input {
+    width: 15em;
+    height: 2em;
+    font-weight: 300;
+}
+.input_set_text{
+    font-size: var(--extra_extra_small);
+}
+.input_set{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.input_one{
+    display: flex;
+    flex-direction: column;
+}
 }
