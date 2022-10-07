@@ -85,29 +85,39 @@
 }
 
 /* Footer */
-.footer{
+.footer {
     position: relative;
     background-color: var(--secondary_color);
     font-family: var(--primary_font);
-}
-.backlogo_name{
+  }
+  .backlogo_name {
     position: absolute;
     left: 25%;
     top: 30%;
-    letter-spacing: 0.3em!important;
+    letter-spacing: 0.3em !important;
     font-size: var(--extra_large);
     color: var(--first_color);
     opacity: 0.05;
-}
-.link_color{
+  }
+  .link_color {
     color: var(--fourth_color);
-}
-@media only screen and (max-width: 800px) {
-    .navbar_text_div{
-        display: flex;
-        justify-content: center;
+  }
+  /* Tablet View */
+  @media only screen and (max-width: 992px) {
+    .backlogo_name {
+      letter-spacing: 0.3em !important;
+      font-size: var(--medium);
     }
-}
+    .backlogo_name {
+      left: 35%;
+    }
+  }
+  /* Mobile View */
+  @media only screen and (max-width: 600px) {
+    .backlogo_name {
+      left: 20%;
+    }
+  }
 
 /* First Aid Card */
 .first_aid_card{
