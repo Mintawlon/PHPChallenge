@@ -85,70 +85,98 @@
 }
 
 /* Footer */
-.footer{
+.footer {
     position: relative;
     background-color: var(--secondary_color);
     font-family: var(--primary_font);
-}
-.backlogo_name{
+  }
+  .backlogo_name {
     position: absolute;
     left: 25%;
     top: 30%;
-    letter-spacing: 0.3em!important;
+    letter-spacing: 0.3em !important;
     font-size: var(--extra_large);
     color: var(--first_color);
     opacity: 0.05;
-}
-.link_color{
+  }
+  .link_color {
     color: var(--fourth_color);
-}
-@media only screen and (max-width: 800px) {
-    .navbar_text_div{
-        display: flex;
-        justify-content: center;
+  }
+  /* Tablet View */
+  @media only screen and (max-width: 992px) {
+    .backlogo_name {
+      letter-spacing: 0.3em !important;
+      font-size: var(--medium);
     }
-}
+    .backlogo_name {
+      left: 35%;
+    }
+  }
+  /* Mobile View */
+  @media only screen and (max-width: 600px) {
+    .backlogo_name {
+      left: 20%;
+    }
+  }
 
 /* First Aid Card */
-.first_aid_card{
+.first_aid_card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--primary_color);
-}
-.wrapper{
+  }
+  .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 80vw;
     height: 20em;
     background-color: var(--primary_color);
-}
-.card_img{
+  }
+  .card_img {
     width: 40%;
     height: 100%;
-}
-
-.first_aid_card_header{
+  }
+  .info {
+    width: 50%;
+    height: 100%;
+    font-size: var(--extra_extra_small);
+  }
+  .first_aid_card_header {
     color: var(--first_color);
     font-family: var(--primary_font);
-}
-.first_aid_para_header{
+  }
+  .first_aid_para_header {
     color: var(--third_color);
     font-family: var(--primary_font);
-}
-.first_aid_para{
+  }
+  .first_aid_para {
     color: var(--first_color);
     font-family: var(--primary_font);
-}
-.line{
+  }
+  .line {
     height: 1.5px;
     width: 80%;
     background-color: var(--second_color);
     margin-top: 1em;
     border: none;
-}
+  }
+  @media only screen and (max-width: 800px) {
+    .wrapper {
+      flex-direction: column;
+      height: 40em;
+    }
+    .info {
+      width: 100%;
+    }
+    .card_img {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  
 
 /* Blue Square Button */
 .square_blue_btn{
@@ -193,13 +221,13 @@
 
 /* Search Box */
 .searchbox{
-    width: 25em;
+    width: 20em;
     height: 2.5em;
     border-radius: 5em;
     position: relative;
 }
 .search_input{
-    width: 20em;
+    width: 15em;
     height: 2.5em;
     position: absolute;
     top: 0;
