@@ -14,7 +14,7 @@
 
 <body>
     <!-- Header -->
-    <?php include("./common/header.php"); ?>
+    <?php include("./common/head.php"); ?>
 
     <!-- Main Content -->
     <div class="container">
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Footer -->
-    <?php include("./common/header.php"); ?>
+    <?php include("./common/head.php"); ?>
 </body>
 
 </html>
