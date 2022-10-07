@@ -1,0 +1,30 @@
+:root{
+    --primary_color:#1C92D2;
+    --secondary_color:#2535A1;
+    --tertiary_color:#FFC652;
+}
+/* Text Color */
+:root{
+    --first_color:#FFFFFF;
+    --second_color:#000000;
+    --third_color:#FFC652;
+    --fourth_color:#1C92D2;
+}
+/* Font Family */
+:root{
+    --primary_font: 'Source Sans Pro', sans-serif;
+    --secondary_font:'Archivo Narrow', sans-serif;
+}
+/* Font Size */
+:root{
+    --extra_large:5em;
+    --large:2.5em;
+    --medium:1.87em;
+    --small:1.56em;
+    --extra_small:1.25em;
+    --extra_extra_small:0.9em;
+}
+
+.navbar{
+    background-color: var(--primary_color);
+}
