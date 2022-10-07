@@ -63,3 +63,15 @@ body {
   color: #2535a1 !important;
   font-size: var(--extra_extra_small);
 }
+
+/* @media only screen and (max-width: 800px) {
+  .{
+    ;
+  }
+  .{
+    ;
+  }
+  .{
+    ;
+  }
+} */
