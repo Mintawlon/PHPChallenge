@@ -28,6 +28,12 @@
     --extra_extra_small:0.9em;
 }
 
+/* user profile*/
+.profile{
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: 50%;
+}
 #offcanvasRightLabel{
     color: #2535A1;
 }
@@ -58,6 +64,9 @@
 .navbar{
     background-color: var(--primary_color);
     border-bottom: 0.12em solid var(--second_color);
+}
+.navbar_text:hover{
+   color:var(--tertiary_color);
 }
 .logo{
     color: var(--first_color);

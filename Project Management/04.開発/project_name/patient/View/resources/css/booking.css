@@ -1,7 +1,7 @@
 
 body{
     background-color:var(--primary_color);
-    font-family: var( --primary_font);
+    font-family: var(--primary_font);
 }
 .bcontent {
     margin-top: 10px;

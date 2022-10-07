@@ -28,10 +28,41 @@
         <a class="navbar_text me-5" href="#">Find Doctors</a>
         <a class="navbar_text me-5" href="#">Booking</a>
         <a class="navbar_text me-5 ">Blog</a>
+        <a class="navbar_text me-5 ">
+        <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="../storages/image/profile.jpg" class="profile"></span>
+        </a>
       </div>
     </div>
   </div>
 </nav>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">User Profile</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="box">
+                <div class="mainbox">
+                    <button class="usersetting"><i class="fa-solid fa-gear"></i></button>
+                    <br>
+                    <br>
+                    <p>
+                        <img src="../storages/image/profile.jpg" class="profile">
+                    </p>
+                    <label for="name" id="name">User Name</label>
+                    <br>
+                    <br>
+                    <label for="email" id="email">Email</label>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-lg btn-outline-primary">Patient History</button>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-lg btn-outline-warning">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
