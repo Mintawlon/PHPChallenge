@@ -11,8 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--css-->
-     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/booking.css">
+     <link rel="stylesheet" href="./resources/css/root.css?v="time();>
+    <link rel="stylesheet" href="./resources/css/booking.css?v="time();>
 </head>
 
 <body>
@@ -30,8 +30,9 @@
                     <p class="text-center text-white">doctorname</p>
                     <br>
                     <p class="text-center text-white">Specility</p>
-                    <li class="list-group-item">MON &nbsp;12:00AM ~ 1:00PM &nbsp; Asia
-                        Royal</li>
+                    <br>
+                    <p class="schedule">MON &nbsp;12:00AM ~ 1:00PM &nbsp; Asia
+                        Royal</p>
                 </div>
                 <div class="col-sm-5">
                     <div class="card-body">
@@ -49,8 +50,10 @@
                     <p class="text-center text-white">doctorname</p>
                     <br>
                     <p class="text-center text-white">Specility</p>
+                    <ul>
                     <li class="list-group-item">MON &nbsp;12:00AM ~ 1:00PM &nbsp; Asia
                         Royal</li>
+                        </ul>
                 </div>
                 <div class="col-sm-5">
                     <div class="card-body">
