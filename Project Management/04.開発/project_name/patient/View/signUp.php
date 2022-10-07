@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to your account</title>
+    <title>Sign Up</title>
     <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/login.css">
+    <link rel="stylesheet" href="./resources/css/signUp.css">
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- Boostrap -->
@@ -21,25 +21,25 @@
         <img class="mt-5 ms-5" src="" alt="LOGO">
         <!-- body -->
         <div class="body">
-            <p class="wclback">Welcome back</p>
-            <p class="login mt-5 text-white">Login to your account</p>
+            <p class="sign_up mt-5">Sign Up</p>
             <!-- input box -->
-            <div class="inpbox ms-5 mt-1">
+            <div class="inpbox ms-5 mt-5">
+                Name* <br>
+                <input type="text" class="name form-control" placeholder="username">
                 <br>
-                <input type="text" class="name form-control" placeholder="Login with email">
+                <br>
+                Email* <br>
+                <input type="text" class="name form-control" placeholder="email">
                 <br>
                 <br>
+                Password* <br>
+                <input type="text" class="name form-control" placeholder="password">
                 <br>
-                <input type="text" class="name form-control" placeholder="Password">
-                
-                
-                <a href=""><p class="forgotpsw  text-decoration-underline">Forgot Password?</p></a>
+                <br>
                 <button type="submit" class="btnsignup mt-1 form-control">
-                    Login In
+                    Sign up
                 </button>
-                <a href="">
-                    <p class="mt-2 reg text-white fs-6 text-decoration-underline d-flex">Not Registered yet?</p>
-                </a>
+                <a href=""><p class="mt-2 reg text-white fs-6 text-decoration-underline d-flex">Already have an account?</p></a>
             </div>
             <div>
                 <img class="login_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">
