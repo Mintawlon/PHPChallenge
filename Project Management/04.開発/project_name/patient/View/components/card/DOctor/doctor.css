@@ -1,0 +1,38 @@
+.cart{
+    margin:3rem;
+    background-color: #2535A1;
+}
+
+.card-img-top{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    
+}
+.btn{
+    background-color: #FFC652;
+    color: white;
+    width: 85%;
+}
+
+p{
+    margin-left: 2.063rem;
+}
+.image{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-inline{
+    margin-left: 1.5rem;
+   color: white;
+    
+}
+.btk{
+    text-align: center;
+    background-color: #FFC652;
+}
+hr{
+    color: #2535A1;
+}
