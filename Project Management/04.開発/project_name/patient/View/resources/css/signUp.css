@@ -9,53 +9,62 @@ body {
 
 .sign_up {
   color: var(--tertiary_color);
-  margin-left: 200px !important;
   font-family: var(--secondary_font) !important;
-  font-size: var(--extra_small);
+  font-size: var(--small);
 }
 
 .body {
-  margin-left: 100px !important;
+  display: flex;
+  justify-content: center;
 }
 
 .inpbox {
-  margin-left: 200px !important;
   font-family: var(--primary_font) !important;
 }
 
 .name {
-  width: 400px !important;
+  width: 20em !important;
 }
 
 .btnsignup {
   font-family: var(--secondary_font) !important;
   color: white !important;
-  width: 200px !important;
+  width: 12em !important;
   background-color: var(--secondary_color) !important;
-  margin-left: 100px !important;
   font-family: var(--secondary_font);
   font-size: var(--extra_small);
+  margin: 0 auto;
 }
 
 .reg {
-  margin-left: 110px !important;
+  text-align: center;
   font-family: var(--secondary_font) !important;
   font-size: var(--extra_extra_small) !important;
 }
 
-.login_img {
+/* .login_img {
   position: absolute;
   display: flex;
   bottom: 10px;
   right: 40px;
+} */
+.inputbox_wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-
+.signup_img{
+  height: 30em;
+}
 @media screen and (max-width: 800px) {
-  .login_img{
-    background-image: none;
-  }.inpbox{
-    margin-left: 100px !important;
+  .signup_img{
+    display: none;
   }
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   
 } 
