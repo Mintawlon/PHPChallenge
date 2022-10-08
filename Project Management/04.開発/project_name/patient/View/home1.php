@@ -13,12 +13,9 @@
   
   <!-- Css -->
   <link rel="stylesheet" href="./resources/css/root.css">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="./resources/css/home1.css?v="<?php echo time() ?>>
-=======
-  <!-- <link rel="stylesheet" href="./resources/css/home1.css?v="<?=time()?>> -->
-  <link rel="stylesheet" href="./resources/css/home1.css">
->>>>>>> dec7341ebf534c9ddefdca6786fb384f6be2d855
+  <!-- <link rel="stylesheet" href="./resources/css/home1.css?v="> -->
+  <link rel="stylesheet" href="./resources/css/home1.css?v="<php? echo time() ?>>
+
   
 </head>
 
@@ -70,7 +67,9 @@
         <ul class="cards">
             <li class="card">
                 <div>
-                    img
+                  <div class="card-image">
+                  <img src="./storages/image/vaccine.png">
+                  </div>
                     <h3 class="card-title">Service 1</h3>
                     <div class="card-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -201,7 +200,6 @@
             </li>
             <li class="card">
                 <div>
-                  <img src="./storages/image/vaccine.png" >
                     <h3 class="card-title">Service 12</h3>
                     <div class="card-content">
                         <p>Vestibulum ante ipsum primis in</p>
