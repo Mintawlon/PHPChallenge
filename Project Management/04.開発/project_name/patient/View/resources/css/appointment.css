@@ -37,13 +37,10 @@
 .btn_align {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 40%;
   margin-top: 2.5%;
   margin-bottom: 5%;
-  margin-left: 19%;
+  margin-left: 20%;
+  width: fit-content;
   background-color: var(--secondary_color);
 }
 
