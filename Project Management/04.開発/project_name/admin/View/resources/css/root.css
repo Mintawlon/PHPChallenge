@@ -48,7 +48,9 @@
   font-family: var(--primary_color) !important;
   font-size: var(--small) !important;
 }
-
+@media only screen and (max-width:800px) {
+  
+}
 /* Common Button */
 .common_btn {
   position: relative;
@@ -106,7 +108,7 @@
   color: var(--sixth_color);
   right: 5%;
   top: 20%;
-  font-size: var(--extra_small);
+  font-size: var(--extra_extra_small);
 }
 
 .back_btn{
@@ -165,7 +167,7 @@
 }
 
 .search_text {
-  position: absolute;
+  position:absolute;
   top: 10%;
   left: 0;
   font-size: var(--extra_small);
@@ -236,33 +238,11 @@ tbody .row_bdr {
 .input_set_header {
   color: var(--secondary_color);
 }
-
-/* Pagination */
-.pagination_container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.pagination {
-  margin: 0;
-}
-
-.pagination li:hover{
-    cursor: pointer;
-}
-
-.rows_count {
-  width: 20%;
-  text-align:right;
-  color: #999;
-}
-
-
 @media only screen and (max-width: 800px) {
   /* Input */
   .common_btn {
     display: inline-block;
-    width: 10em;
+    width: 12em;
     padding: 0.6em 1.2em;
     font-size: var(--extra_extra_small);
     border-radius: 50px;
@@ -307,6 +287,25 @@ tbody .row_bdr {
     flex-direction: column;
   }
 }
+/* Pagination */
+.pagination_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.pagination li:hover{
+    cursor: pointer;
+}
+
+.rows_count {
+  width: 20%;
+  text-align:right;
+  color: #999;
+}
 
 /* Side Nav Bar */
 
@@ -322,7 +321,6 @@ tbody .row_bdr {
 .dropdown_list {
   width: 100% !important;
   height: 2.5em !important;
-
   border-radius: 0.5em;
   margin-bottom: 1em;
 }
@@ -353,8 +351,15 @@ tbody .row_bdr {
 .color_green {
   color: var(--sixth_color);
 }
+.log_out{
+  color: var(--third_color);
+}
+.log_out_btn{
+  border-radius: 3em;
+}
+
 @media only screen and (max-width: 700px) {
-  .navbar_btn_name {
+  .navbar_btn_name{
     display: none;
   }
   .navbar_btn_name_o {
