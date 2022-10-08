@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Side Bar</title>
+    <!-- root Css -->
+    <link rel="stylesheet" href="../resources/css/root.css">
+    <link rel="stylesheet" href="./sidebar.css">
     <!-- Boostrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -23,7 +26,7 @@
   <body>
     <div class="container-fluid">
       <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg_sidebar">
           <div
             class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
           >
@@ -31,27 +34,30 @@
               href="/"
               class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
             >
-              <span class="fs-5 d-none d-sm-inline">Menu</span>
+              <span class="fs-5 d-none d-sm-inline">MEDPLATFORM</span>
             </a>
             <ul
               class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
               id="menu"
             >
-              <li class="nav-item">
+              <li class="nav-item bg_nav_item">
                 <a href="#" class="nav-link align-middle px-0">
-                    <i class="fa-solid fa-house-user"></i>
-                  <span class="ms-1 d-none d-sm-inline">Home</span>
+                    <i class="fa-solid fa-house-user bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Dashboard</span>
                 </a>
               </li>
               <li>
+                <div class="bg_nav_item">
                 <a
                   href="#submenu1"
                   data-bs-toggle="collapse"
                   class="nav-link px-0 align-middle"
                 >
-                <i class="fa-solid fa-house-user"></i>
-                  <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+         
+                <i class="fa-solid fa-house-user bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Daily</span>
                 </a>
+              </div>
                 <ul
                   class="collapse show nav flex-column ms-1"
                   id="submenu1"
@@ -59,20 +65,25 @@
                 >
                   <li class="w-100">
                     <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Item</span> 1
+                      <span class="d-none d-sm-inline">Date</span> 
                     </a>
                   </li>
                   <li>
                     <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Item</span> 2
+                      <span class="d-none d-sm-inline">Booking</span>
+                    </a>
+                  </li>
+                  <li class="w-100">
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Doctor</span> 
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
                 <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fa-solid fa-house-user"></i>
-                  <span class="ms-1 d-none d-sm-inline">Orders</span></a
+                    <i class="fa-solid fa-house-user bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Patient History</span></a
                 >
               </li>
               <li>
@@ -81,8 +92,8 @@
                   data-bs-toggle="collapse"
                   class="nav-link px-0 align-middle"
                 >
-                  <i class="fs-4 bi-bootstrap"></i>
-                  <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a
+                <i class="fa-solid fa-house-user bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">User Home</span></a
                 >
                 <ul
                   class="collapse nav flex-column ms-1"
@@ -91,15 +102,26 @@
                 >
                   <li class="w-100">
                     <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Item</span> 1</a
+                      <span class="d-none d-sm-inline">Carousel</span></a
                     >
                   </li>
                   <li>
                     <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Item</span> 2</a
+                      <span class="d-none d-sm-inline">Medicine</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">First Aid</span></a
                     >
                   </li>
                 </ul>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-grid bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Inpatient</span>
+                </a>
               </li>
               <li>
                 <a
@@ -107,8 +129,8 @@
                   data-bs-toggle="collapse"
                   class="nav-link px-0 align-middle"
                 >
-                  <i class="fs-4 bi-grid"></i>
-                  <span class="ms-1 d-none d-sm-inline">Products</span>
+                  <i class="fs-4 bi-people bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Information</span>
                 </a>
                 <ul
                   class="collapse nav flex-column ms-1"
@@ -117,31 +139,52 @@
                 >
                   <li class="w-100">
                     <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Product</span> 1</a
+                      <span class="d-none d-sm-inline">About Us</span></a
                     >
                   </li>
                   <li>
                     <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Product</span> 2</a
+                      <span class="d-none d-sm-inline">Hospital Location</span></a
                     >
                   </li>
-                  <li>
-                    <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Product</span> 3</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Product</span> 4</a
-                    >
-                  </li>
-                </ul>
+                  </ul>
               </li>
               <li>
                 <a href="#" class="nav-link px-0 align-middle">
-                  <i class="fs-4 bi-people"></i>
-                  <span class="ms-1 d-none d-sm-inline">Customers</span>
+                  <i class="fs-4 bi-grid bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Inpatient</span>
                 </a>
+              </li>
+              <li>
+                <a
+                  href="#submenu4"
+                  data-bs-toggle="collapse"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fs-4 bi-people bg_icon"></i>
+                  <span class="ms-1 d-none d-sm-inline nav_ttl">Blogs</span>
+                </a>
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu4"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Blogs</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">First Aid</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Blood Donation</span></a
+                    >
+                  </li>
+                  </ul>
               </li>
             </ul>
             <hr />

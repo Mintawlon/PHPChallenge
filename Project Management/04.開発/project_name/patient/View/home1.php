@@ -7,13 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <!-- Splide.js cdn link -->
-  <link rel="stylesheet" href="./resources/js/splide-4.1.3/dist/css//splide.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/themes/splide-skyblue.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
   <!-- JS file for Slider -->
-  <script src="./resources/js/home1.js" defer></script>
+  
   <!-- Css -->
   <link rel="stylesheet" href="./resources/css/root.css">
-  <link rel="stylesheet" href="./resources/css/home1.css?v=" time()>
+<<<<<<< HEAD
+  <link rel="stylesheet" href="./resources/css/home1.css?v="<?php echo time() ?>>
+=======
+  <!-- <link rel="stylesheet" href="./resources/css/home1.css?v="<?=time()?>> -->
+  <link rel="stylesheet" href="./resources/css/home1.css">
+>>>>>>> dec7341ebf534c9ddefdca6786fb384f6be2d855
   
 </head>
 
@@ -23,7 +28,23 @@
   include("./common/head.php")
   ?>
    <!-- Medicine Slider -->
-  <section class="splide medicine my-5" aria-label="Splide Basic HTML Example">
+  <section class="splide medicine my-5" id="carousel" aria-label="Splide Basic HTML Example">
+    <div class="splide__track medicine_wrapper">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="slide_img_div">
+            <img src="./storages/image/emergency1.png" alt="" class="slide_img" />
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide_img_div">
+            <img src="./storages/image/blog_tab_img1.png" alt="" class="slide_img" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="splide medicine my-5" id="medicine" aria-label="Splide Basic HTML Example">
     <div class="splide__track medicine_wrapper">
       <ul class="splide__list">
         <li class="splide__slide">
@@ -180,7 +201,7 @@
             </li>
             <li class="card">
                 <div>
-                  <img src="./storages/image/vaccine.png" style="">
+                  <img src="./storages/image/vaccine.png" >
                     <h3 class="card-title">Service 12</h3>
                     <div class="card-content">
                         <p>Vestibulum ante ipsum primis in</p>
@@ -209,7 +230,7 @@
   <?php
   include("./common/footer.php")
   ?>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+  <script src="./resources/js/home1.js"></script>
 </body>
 
 </html>

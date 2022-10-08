@@ -20,10 +20,10 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container my-3">
     <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand ttl_admin" href="#">Admin Dashboard</a>
+      <div class="header_box">
+        <a class="navbar-brand ttl_admin" href="#">Add Patient History</a>
       </div>
     </nav>
   </div>
