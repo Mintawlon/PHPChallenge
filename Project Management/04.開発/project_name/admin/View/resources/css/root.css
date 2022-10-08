@@ -37,12 +37,16 @@
     background-color: var(--secondary_color) !important;
     border-radius: 10px !important;
 }
-
+.header_box{
+    width: 100%;
+}
 .ttl_admin {
-    margin-left: 45%;
+    width: 100%;
+    display: block;
+    text-align: center;
     color: var(--second_color) !important;
     font-family: var(--primary_color) !important;
-    font-style: var(--medium) !important;
+    font-size: var(--small) !important;
 }
 
 /* Common Button */
