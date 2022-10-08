@@ -29,7 +29,7 @@
   --medium: 1.87em;
   --small: 1.56em;
   --extra_small: 1.25em;
-  --extra_extra_small: 0.938em;
+  --extra_extra_small: 0.8em;
 }
 
 /* Admin Header */
@@ -205,7 +205,6 @@
     display: flex;
     flex-direction: column;
   }
-  
 }
 @media only screen and (max-width: 1200px) {
   /* Input */
@@ -227,4 +226,110 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+/* Side Nav Bar */
+
+.navbar_wrapper {
+  background-color: var(--secondary_color);
+}
+.logo_btn {
+  width: 100% !important;
+  height: 3.5em !important;
+  margin-bottom: 1em;
+}
+.navbar_btn,
+.dropdown_list {
+  width: 100% !important;
+  height: 2.5em !important;
+
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.navbar_btn {
+  background-color: var(--second_color) !important;
+}
+.dropdown-container {
+  width: 100%;
+}
+.navbar_btn_name {
+  font-size: var(--extra_extra_small);
+  color: var(--first_color);
+  padding-left: 1em;
+  font-family: var(--primary_font);
+}
+.navbar_btn_name_o{
+  font-size: var(--extra_extra_small);
+  color: var(--first_color);
+  padding-left: 0.5em;
+  font-family: var(--primary_font);
+}
+.icon_size {
+  height: 10px;
+}
+.color_black {
+  color: var(--first_color);
+}
+.color_green {
+  color: var(--sixth_color);
+}
+@media only screen and (max-width: 700px) {
+  .navbar_btn_name {
+    display: none;
+  }
+  .navbar_btn_name_o {
+    display: none;
+  }
+  .navbar_btn {
+    padding: 0 2em;
+  }
+}
+
+/* Style the sidenav links and the dropdown button */
+.dropdown_list,
+.navbar_btn,
+.navbar a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.dropdown_list:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  padding-left: 1em;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
 }
