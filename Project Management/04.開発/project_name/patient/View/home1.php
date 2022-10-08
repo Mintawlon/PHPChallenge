@@ -13,7 +13,7 @@
   <script src="./resources/js/home1.js" defer></script>
   <!-- Css -->
   <link rel="stylesheet" href="./resources/css/root.css">
-  <link rel="stylesheet" href="./resources/css/home1.css?v=" time()>
+  <link rel="stylesheet" href="./resources/css/home1.css?v="<?php echo time() ?>>
   
 </head>
 

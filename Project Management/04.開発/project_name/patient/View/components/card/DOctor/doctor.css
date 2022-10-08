@@ -16,7 +16,7 @@
 }
 
 p{
-    margin-left: 2.063rem;
+    margin: 1rem;
 }
 .image{
     margin-top: 5px;
@@ -27,12 +27,15 @@ p{
 .list-inline{
     margin-left: 1.5rem;
    color: white;
+   background-color: #FFC652;
     
 }
 .btk{
     text-align: center;
-    background-color: #FFC652;
 }
 hr{
     color: #2535A1;
+}
+.btn-container{
+    margin-left: 2.5rem;
 }
