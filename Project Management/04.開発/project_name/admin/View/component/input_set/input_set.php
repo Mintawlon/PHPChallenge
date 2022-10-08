@@ -31,7 +31,7 @@
        <?php
        include("../../common/nav.php")
        ?>
-        <div class="col-auto col-auto col-md-8 col-xl-9 mx-3 px-0 ">
+        <div class="col-auto col-auto col-md-8 col-xl-9 px-0 ">
           <div class="input_set">
             <h2 class="input_set_header my-4">Header</h2>
             <div class="input_one mb-2">

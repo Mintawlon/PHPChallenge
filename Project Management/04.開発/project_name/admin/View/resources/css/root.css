@@ -242,7 +242,7 @@ tbody .row_bdr {
   /* Input */
   .common_btn {
     display: inline-block;
-    width: 10em;
+    width: 12em;
     padding: 0.6em 1.2em;
     font-size: var(--extra_extra_small);
     border-radius: 50px;
