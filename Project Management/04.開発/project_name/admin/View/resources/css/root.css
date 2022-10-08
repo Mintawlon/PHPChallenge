@@ -29,7 +29,7 @@
   --medium: 1.87em;
   --small: 1.56em;
   --extra_small: 1.25em;
-  --extra_extra_small: 0.938em;
+  --extra_extra_small: 0.8em;
 }
 
 /* Admin Header */
@@ -48,11 +48,14 @@
   font-family: var(--primary_color) !important;
   font-size: var(--small) !important;
 }
-
+@media only screen and (max-width:800px) {
+  
+}
 /* Common Button */
 .common_btn {
+  position: relative;
   display: inline-block;
-  width: 15em;
+  width: 12.5em;
   padding: 0.3em 1em;
   border: 1px solid transparent;
   font-size: var(--extra_small);
@@ -95,6 +98,31 @@
   color: var(--third_color);
 }
 
+/* Go Back Button */
+.go_btn{
+  text-align: left;
+}
+
+.arrow_right{
+  position: absolute;
+  color: var(--sixth_color);
+  right: 5%;
+  top: 20%;
+  font-size: var(--extra_extra_small);
+}
+
+.back_btn{
+  text-align: right;
+}
+
+.arrow_left{
+  position: absolute;
+  color: var(--sixth_color);
+  left: 5%;
+  top: 20%;
+  font-size: var(--extra_small);
+}
+
 /* Input */
 .common_input {
   width: 25em;
@@ -105,6 +133,12 @@
   font-family: var(--primary_font);
   font-size: var(--extra_small);
   font-weight: 600;
+}
+
+.common_input::placeholder{
+  color: var(--first_color);
+  font-family: var(--primary_font);
+  font-size: var(--extra_extra_small);
 }
 
 /* Search Box */
@@ -143,11 +177,10 @@
 .add_file {
   display: flex;
   align-items: center;
-  padding: 0.35rem 0.75rem;
+  padding: 0.6rem 5.75rem;
   color: var(--first_color);
   font-family: "Mulish", sans-serif;
   font-size: var(--extra_small);
-  font-weight: 600;
 }
 
 .form-control-lg {
@@ -156,6 +189,34 @@
 
 .form-control {
   border: 1px solid var(--secondary_color) !important;
+}
+
+/* Table */
+.table {
+  font-family: var(--primary_font);
+  font-size: var(--extra_small);
+}
+
+.table_bgcolor {
+  background-color: var(--secondary_color);
+  border-bottom: 1px solid var(--first_color);
+}
+
+tbody .row_bdr {
+  font-size: var(--extra_extra_small);
+  border-bottom: 1px solid var(--first_color) !important;
+}
+
+/* Input Section */
+.sec_input{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 1.5%;
+}
+
+.num_rows {
+  width: 20%;
+  margin-bottom: 1em;
 }
 
 /* Input Set */
@@ -177,12 +238,11 @@
 .input_set_header {
   color: var(--secondary_color);
 }
-
 @media only screen and (max-width: 800px) {
   /* Input */
   .common_btn {
     display: inline-block;
-    width: 10em;
+    width: 12em;
     padding: 0.6em 1.2em;
     font-size: var(--extra_extra_small);
     border-radius: 50px;
@@ -205,7 +265,6 @@
     display: flex;
     flex-direction: column;
   }
-  
 }
 @media only screen and (max-width: 1200px) {
   /* Input */
@@ -227,4 +286,135 @@
     display: flex;
     flex-direction: column;
   }
+}
+/* Pagination */
+.pagination_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.pagination li:hover{
+    cursor: pointer;
+}
+
+.rows_count {
+  width: 20%;
+  text-align:right;
+  color: #999;
+}
+
+/* Side Nav Bar */
+
+.navbar_wrapper {
+  background-color: var(--secondary_color);
+}
+.logo_btn {
+  width: 100% !important;
+  height: 3.5em !important;
+  margin-bottom: 1em;
+}
+.navbar_btn,
+.dropdown_list {
+  width: 100% !important;
+  height: 2.5em !important;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.navbar_btn {
+  background-color: var(--second_color) !important;
+}
+.dropdown-container {
+  width: 100%;
+}
+.navbar_btn_name {
+  font-size: var(--extra_extra_small);
+  color: var(--first_color);
+  padding-left: 1em;
+  font-family: var(--primary_font);
+}
+.navbar_btn_name_o{
+  font-size: var(--extra_extra_small);
+  color: var(--first_color);
+  padding-left: 0.5em;
+  font-family: var(--primary_font);
+}
+.icon_size {
+  height: 10px;
+}
+.color_black {
+  color: var(--first_color);
+}
+.color_green {
+  color: var(--sixth_color);
+}
+.log_out{
+  color: var(--third_color);
+}
+.log_out_btn{
+  border-radius: 3em;
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar_btn_name{
+    display: none;
+  }
+  .navbar_btn_name_o {
+    display: none;
+  }
+  .navbar_btn {
+    padding: 0 2em;
+  }
+}
+
+/* Style the sidenav links and the dropdown button */
+.dropdown_list,
+.navbar_btn,
+.navbar a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.dropdown_list:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  padding-left: 1em;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
 }

@@ -12,7 +12,6 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v="<?= time() ?> />
-
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/script.js"></script>
