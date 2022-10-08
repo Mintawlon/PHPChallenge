@@ -167,7 +167,7 @@
 }
 
 .search_text {
-  position: absolute;
+  position:absolute;
   top: 10%;
   left: 0;
   font-size: var(--extra_small);
