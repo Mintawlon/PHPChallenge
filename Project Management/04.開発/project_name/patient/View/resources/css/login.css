@@ -63,3 +63,9 @@ body {
     font-size: var(--extra_extra_small);
 
 }
+
+@media screen and (max-width: 700px) {
+ body{
+   background-color: yellow;
+ }
+}
