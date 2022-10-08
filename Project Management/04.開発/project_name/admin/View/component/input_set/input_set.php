@@ -28,7 +28,7 @@
     <!-- Side Bar -->
     <div class="container-fluid">
       <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="col-sm-3 col-auto col-md-3 col-xl-2  px-0 bg-dark">
           <div
             class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
           >
@@ -182,7 +182,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-10 col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto container">
+        <div class="col-sm-8 col-auto col-md-8 col-xl-9 mx-3 px-0 ">
           <div class="input_set">
             <h2 class="input_set_header my-4">Header</h2>
             <div class="input_one mb-2">
@@ -207,7 +207,7 @@
             </div>
             <div class=" mb-2  ">
               <!-- Add Btn -->
-              <a href="" class="common_btn add_btn input_box ">Add</a>
+              <a href="" class="common_btn add_btn ">Add</a>
             </div>
           </div>
         </div>
