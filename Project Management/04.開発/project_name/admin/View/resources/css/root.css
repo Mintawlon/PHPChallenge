@@ -51,8 +51,9 @@
 
 /* Common Button */
 .common_btn {
+  position: relative;
   display: inline-block;
-  width: 15em;
+  width: 12.5em;
   padding: 0.3em 1em;
   border: 1px solid transparent;
   font-size: var(--extra_small);
@@ -95,6 +96,31 @@
   color: var(--third_color);
 }
 
+/* Go Back Button */
+.go_btn{
+  text-align: left;
+}
+
+.arrow_right{
+  position: absolute;
+  color: var(--sixth_color);
+  right: 5%;
+  top: 20%;
+  font-size: var(--extra_small);
+}
+
+.back_btn{
+  text-align: right;
+}
+
+.arrow_left{
+  position: absolute;
+  color: var(--sixth_color);
+  left: 5%;
+  top: 20%;
+  font-size: var(--extra_small);
+}
+
 /* Input */
 .common_input {
   width: 25em;
@@ -105,6 +131,12 @@
   font-family: var(--primary_font);
   font-size: var(--extra_small);
   font-weight: 600;
+}
+
+.common_input::placeholder{
+  color: var(--first_color);
+  font-family: var(--primary_font);
+  font-size: var(--extra_extra_small);
 }
 
 /* Search Box */
@@ -143,11 +175,10 @@
 .add_file {
   display: flex;
   align-items: center;
-  padding: 0.35rem 0.75rem;
+  padding: 0.6rem 5.75rem;
   color: var(--first_color);
   font-family: "Mulish", sans-serif;
   font-size: var(--extra_small);
-  font-weight: 600;
 }
 
 .form-control-lg {
@@ -156,6 +187,34 @@
 
 .form-control {
   border: 1px solid var(--secondary_color) !important;
+}
+
+/* Table */
+.table {
+  font-family: var(--primary_font);
+  font-size: var(--extra_small);
+}
+
+.table_bgcolor {
+  background-color: var(--secondary_color);
+  border-bottom: 1px solid var(--first_color);
+}
+
+tbody .row_bdr {
+  font-size: var(--extra_extra_small);
+  border-bottom: 1px solid var(--first_color) !important;
+}
+
+/* Input Section */
+.sec_input{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 1.5%;
+}
+
+.num_rows {
+  width: 20%;
+  margin-bottom: 1em;
 }
 
 /* Input Set */
@@ -177,6 +236,27 @@
 .input_set_header {
   color: var(--secondary_color);
 }
+
+/* Pagination */
+.pagination_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.pagination li:hover{
+    cursor: pointer;
+}
+
+.rows_count {
+  width: 20%;
+  text-align:right;
+  color: #999;
+}
+
 
 @media only screen and (max-width: 800px) {
   /* Input */
