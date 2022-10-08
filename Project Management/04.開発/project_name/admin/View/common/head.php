@@ -23,7 +23,7 @@
   <div class="container my-3">
     <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
       <div class="header_box">
-        <a class="navbar-brand ttl_admin" href="#">Add Patient History</a>
+        <span class="navbar-brand ttl_admin" href="#">Add Patient History</span>
       </div>
     </nav>
   </div>
