@@ -23,7 +23,7 @@
     include("./common/nav.php")
     ?>
     
-      <div class="col-sm-10 col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
+      <div class="col-auto  col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
         <?php
         include("./common/head.php")
         ?>
