@@ -1,55 +1,69 @@
-body{
-    background-color:#1C92D2 !important;
+body {
+  background-color: #1c92d2 !important;
 }
 
-.row{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+.row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
-.select-doctor{
-    height:3.125rem !important;
-    width: 15.625rem !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+.select-doctor {
+  height: 3.125rem !important;
+  width: 15.625rem !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 
 /* doctor card*/
-.cart{
+.card{
+  background-color: white !important;
+  width: 23rem;
+}
+
+.card-img-top {
+  height: 150px !important;
+  width: 150px !important;
+  border-radius: 50% !important;
+}
+.btn {
+  background-color: #ffc652 !important;
+  color: white !important;
+  width: 100% !important;
+}
+
+p {
+  margin-left: 1rem !important;
+}
+.image {
+  margin-top: 5px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.list-inline {
+  color: white !important;
+}
+.btk {
+  text-align: center !important;
+  background-color: #ffc652 !important;
+}
+hr {
+  color: #2535a1 !important;
+}
+.card_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  /* doctor card*/
+  .cart {
     background-color: white !important;
-    margin: 3rem !important;
-}
+    margin: 0 !important;
+  }
+  .card{
+    margin: 0 auto!important;
+  }
+ 
 
-.card-img-top{
-    height: 150px !important;
-    width: 150px !important;
-    border-radius: 50% !important;
-    
 }
-.btn{
-    background-color: #FFC652 !important;
-    color: white !important;
-    width: 100% !important;
-}
-
-p{
-    margin-left: 1rem !important;
-}
-.image{
-    margin-top: 5px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-.list-inline{
-   color: white !important;
-    
-}
-.btk{
-    text-align: center !important;
-    background-color: #FFC652 !important;
-}
-hr{
-    color: #2535A1 !important;
-}
-

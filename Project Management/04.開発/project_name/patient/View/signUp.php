@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- Css -->
@@ -20,31 +25,33 @@
         <!-- Logo  -->
         <img class="mt-5 ms-5" src="" alt="LOGO">
         <!-- body -->
-        <div class="body">
-            <p class="sign_up mt-5">Sign Up</p>
-            <!-- input box -->
-            <div class="inpbox ms-5 mt-5">
-                Name* <br>
-                <input type="text" class="name form-control" placeholder="username">
-                <br>
-                <br>
-                Email* <br>
-                <input type="text" class="name form-control" placeholder="email">
-                <br>
-                <br>
-                Password* <br>
-                <input type="text" class="name form-control" placeholder="password">
-                <br>
-                <br>
-                <button type="submit" class="btnsignup mt-1 form-control">
-                    Sign up
-                </button>
-                <a href="">
-                    <p class="mt-2 reg text-white fs-6 text-decoration-underline d-flex">Already have an account?</p>
-                </a>
+        <div class="body ">
+            <div class="inputbox_wrapper">
+                <p class="sign_up mt-3">Sign Up</p>
+                <!-- input box -->
+                <div class="inpbox mt-3">
+                    Name* <br>
+                    <input type="text" class="name form-control" placeholder="username">
+                    <br>
+                    <br>
+                    Email* <br>
+                    <input type="text" class="name form-control" placeholder="email">
+                    <br>
+                    <br>
+                    Password* <br>
+                    <input type="text" class="name form-control" placeholder="password">
+                    <br>
+                    <br>
+                    <button type="submit" class="btnsignup mt-1 form-control">
+                        Sign up
+                    </button>
+                    <a href="">
+                        <p class="mt-2 reg text-white fs-6 text-decoration-underline ">Already have an account?</p>
+                    </a>
+                </div>
             </div>
             <div>
-                <img class="login_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">
+                <img class="signup_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">
             </div>
         </div>
 </body>

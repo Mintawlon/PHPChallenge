@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/about_us.css?v=" time()>
     <!-- Css Root  -->
@@ -84,16 +89,16 @@
                     <p class="dropdown_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, repellendus vitae iste distinctio perspiciatis iusto ex saepe illo corrupti assumenda facilis rem ratione. Iste blanditiis officiis, aliquid aperiam ex corrupti autem nemo ipsam itaque, laborum nam totam, harum iusto! Deleniti voluptatum corrupti commodi at fugit excepturi officiis voluptatem iusto consequuntur.</p>
                 </ul>
             </div></br>
-            <div class="btn-group mt-3">
+            <div class="btn-group my-3">
                 <button type="button" class="btn btn-warning dropdown-toggle dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     Privacy policy for the website of Medplatform
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu ">
                     <p p class="dropdown_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, repellendus vitae iste distinctio perspiciatis iusto ex saepe illo corrupti assumenda facilis rem ratione. Iste blanditiis officiis, aliquid aperiam ex corrupti autem nemo ipsam itaque, laborum nam totam, harum iusto! Deleniti voluptatum corrupti commodi at fugit excepturi officiis voluptatem iusto consequuntur.</p>
                 </ul>
             </div>
         </div>
-    </div> 
+    </div>
     </div>
     <!-- Footer -->
     <?php

@@ -33,6 +33,23 @@
   --extra_extra_small: 0.8em;
 }
 
+/* Font Color */
+.color_third {
+  color: var(--third_color) !important;
+}
+
+.color_fourth {
+  color: var(--fourth_color) !important;
+}
+
+.color_fifth {
+  color: var(--fifth_color) !important;
+}
+
+.color_sixth {
+  color: var(--sixth_color) !important;
+}
+
 /* Admin Header */
 .bg_header {
   background-color: var(--secondary_color) !important;
@@ -46,12 +63,10 @@
   display: block;
   text-align: center;
   color: var(--second_color) !important;
-  font-family: var(--primary_color) !important;
+  font-family: var(--primary_font) !important;
   font-size: var(--small) !important;
 }
-@media only screen and (max-width:800px) {
-  
-}
+
 /* Common Button */
 .common_btn {
   position: relative;
@@ -63,6 +78,7 @@
   text-decoration: none;
   text-align: center;
   border-radius: 50px;
+  font-weight: 400;
 }
 
 /* Common Button Hover State*/
@@ -108,7 +124,7 @@
   position: absolute;
   color: var(--sixth_color);
   right: 5%;
-  top: 20%;
+  top: 30%;
   font-size: var(--extra_extra_small);
 }
 
@@ -120,8 +136,8 @@
   position: absolute;
   color: var(--sixth_color);
   left: 5%;
-  top: 20%;
-  font-size: var(--extra_small);
+  top: 30%;
+  font-size: var(--extra_extra_small);
 }
 
 /* Input */
@@ -133,7 +149,7 @@
   color: var(--first_color);
   font-family: var(--primary_font);
   font-size: var(--extra_small);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .common_input::placeholder{
@@ -168,23 +184,27 @@
 }
 
 .search_text {
-  position: absolute;
+  position:absolute;
   top: 10%;
   left: 0;
   font-size: var(--extra_small);
+}
+
+.search {
+  margin-left: auto;
 }
 
 /* File Chosen */
 .add_file {
   display: flex;
   align-items: center;
-  padding: 0.6rem 5.75rem;
   color: var(--first_color);
   font-family: "Mulish", sans-serif;
   font-size: var(--extra_small);
 }
 
 .form-control-lg {
+  width: 57.9% !important;
   border-radius: 0 !important;
 }
 
@@ -220,6 +240,10 @@ tbody .row_bdr {
   margin-bottom: 1em;
 }
 
+.choose_date {
+  justify-content: space-around !important;
+}
+
 /* Input Set */
 .input_set_text {
   font-size: var(--extra_small);
@@ -239,6 +263,12 @@ tbody .row_bdr {
 .input_set_header {
   color: var(--secondary_color);
 }
+
+textarea {
+  height: 5em !important;
+  border-radius: 0 !important;
+}
+
 @media only screen and (max-width: 800px) {
   /* Input */
   .common_btn {
@@ -288,6 +318,25 @@ tbody .row_bdr {
     flex-direction: column;
   }
 }
+
+/* Icon */
+.check_icon {
+  color: var(--sixth_color);
+}
+
+.xmark_icon {
+  color: var(--fifth_color);
+}
+
+/* hr */
+hr {
+  width: 90%;
+  height: 0.125em;
+  margin: 2em auto !important;
+  border: 0px;
+  background-color: var(--third_color);
+}
+
 /* Pagination */
 .pagination_container {
   display: flex;
@@ -304,20 +353,27 @@ tbody .row_bdr {
 
 .rows_count {
   width: 20%;
-  text-align:right;
-  color: #999;
+  color: var(--first_color) !important;
+  text-align: right;
 }
+
+.pagi_color {
+  color: var(--first_color) !important;
+}
+
 
 /* Side Nav Bar */
 
 .navbar_wrapper {
   background-color: var(--secondary_color);
 }
+
 .logo_btn {
   width: 100% !important;
   height: 3.5em !important;
   margin-bottom: 1em;
 }
+
 .navbar_btn,
 .dropdown_list {
   width: 100% !important;
@@ -360,6 +416,7 @@ tbody .row_bdr {
 }
 
 @media only screen and (max-width: 700px) {
+
   .navbar_btn_name{
     display: none;
   }
@@ -369,9 +426,41 @@ tbody .row_bdr {
   .navbar_btn {
     padding: 0 2em;
   }
+
+  .input_set_text {
+    font-size: var(--extra_extra_small);
+  }
+
+  .common_input{
+    width: 100% !important;
+    font-size: var(--extra_extra_small);
+  }
+
+  .add_file {
+    font-size: var(--extra_extra_small);
+  }
+  
+  .form-control-lg {
+    width: 100% !important;  
+  }
+  
+  .form-control {
+    font-size: var(--extra_extra_small) !important;
+  }
+
+.table {
+  font-size: var(--extra_extra_small);
 }
 
-/* Style the sidenav links and the dropdown button */
+.check_icon{
+  font-size: var(--small);
+}
+
+.xmark_icon{
+  font-size: var(--small);
+}
+}
+
 .dropdown_list,
 .navbar_btn,
 .navbar a,
@@ -389,32 +478,29 @@ tbody .row_bdr {
   outline: none;
 }
 
-/* On mouse-over */
 .dropdown_list:hover,
 .dropdown-btn:hover {
   color: #f1f1f1;
 }
 
-/* Main content */
+
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
+  margin-left: 200px; 
+  font-size: 20px; 
   padding: 0px 10px;
 }
 
-/* Add an active class to the active dropdown button */
 .active {
   background-color: green;
   color: white;
 }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
 .dropdown-container {
   display: none;
   padding-left: 1em;
 }
 
-/* Optional: Style the caret down icon */
 .fa-caret-down {
   float: right;
   padding-right: 8px;

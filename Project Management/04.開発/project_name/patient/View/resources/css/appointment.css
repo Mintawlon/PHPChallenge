@@ -4,18 +4,18 @@
   margin-left: 7%;
   font-size: var(--large);
   font-family: var(--secondary_font);
-  font-weight: bold;
   color: var(--first_color);
 }
 /* form */
-.input_align {
-  width: 80%;
-}
+
 .display_top {
   margin-top: 2.5%;
 }
 .display_bottom {
   margin-bottom: 2.5%;
+}
+.form_box{
+  width: 100%;
 }
 /* display */
 .text {
@@ -40,10 +40,11 @@
   margin-top: 2.5%;
   margin-bottom: 5%;
   margin-left: 20%;
-  width: fit-content;
   background-color: var(--secondary_color);
 }
-
+.book_btn{
+  background-color: var(--secondary_color);
+}
 .btn_color {
   color: var(--first_color) !important;
 }
@@ -53,7 +54,22 @@
   color: var(--third_color) !important;
 }
 /* image */
-.appointment_img {
-  width: 40rem;
-  margin-top: -19%;
+
+
+.body {
+  display: flex;
+  justify-content: center;
+}
+.inputbox_wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width:800px) {
+  .appointmentImg{
+    display: none;
+  }
+  .appointment_header {
+    font-size: var(--Medium);
+  }
 }

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./resources/css/root.css?v="<?= time() ?> />
+    <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/script.js"></script>
@@ -39,10 +39,8 @@
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                     <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
+                        <input type="text" class="common_input  form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
                     </div>
-
-
                 </div>
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Patient History List</h2>
@@ -58,7 +56,6 @@
                             <option value="100">100</option>
                             <option value="5000">Show ALL Rows</option>
                         </select>
-
                     </div>
                 </div>
                 <table class="table" id="table-id">
@@ -161,7 +158,6 @@
                             <td>123456789</td>
                             <td>Yangon</td>
                         </tr>
-
                     </tbody>
                 </table>
                 <div class='pagination_container'>
@@ -184,13 +180,8 @@
                     </nav>
                     <div class="rows_count">Showing 11 to 20 of 91 entries</div>
                 </div>
-
             </div>
         </div>
-
-
-    </div>
-    </div>
     </div>
     <script src="./resources/js/dropdown_menu.js"></script>
 </body>

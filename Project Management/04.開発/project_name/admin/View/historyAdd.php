@@ -31,27 +31,27 @@
           <h2 class="input_set_header my-4">Add Patient History</h2>
           <div class="input_one mb-2">
             <span class="input_set_text">Hospital Name</span>
-            <input type="text" class="common_input input_box" />
+            <input type="text" class="common_input " />
           </div>
           <div class="input_one mb-2">
             <span class="input_set_text">Address</span>
-            <input type="text" class="common_input input_box" />
+            <input type="text" class="common_input " />
           </div>
           <div class="input_one mb-2">
             <span class="input_set_text">Phone Number</span>
-            <input type="text" class="common_input input_box" />
+            <input type="text" class="common_input " />
           </div>
           <div class="input_one mb-2">
             <span class="input_set_text">Email</span>
-            <input type="text" class="common_input input_box" />
+            <input type="text" class="common_input " />
           </div>
           <div class="input_one mb-2">
             <span class="input_set_text">Google Map</span>
-            <input type="text" class="common_input input_box" />
+            <input type="text" class="common_input " />
           </div>
           <div class=" mb-2  ">
             <!-- Add Btn -->
-            <a href="" class="common_btn add_btn input_box ">Add</a>
+            <a href="" class="common_btn add_btn  ">Add</a>
           </div>
         </div>
       </div>
