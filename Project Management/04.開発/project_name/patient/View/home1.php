@@ -2,27 +2,14 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <!-- Splide.js cdn link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/themes/splide-skyblue.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-  <!-- JS file for Slider -->
-  
-  <!-- Css -->
-  <link rel="stylesheet" href="./resources/css/root.css">
-  <!-- <link rel="stylesheet" href="./resources/css/home1.css?v="> -->
-  <link rel="stylesheet" href="./resources/css/home1.css?v="<php? echo time() ?>>
-
-  
-=======
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- Splide.js cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/themes/splide-skyblue.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
@@ -31,7 +18,6 @@
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/home1.css">
->>>>>>> 8e33cb396d88174cefaefbc8881da340292eec58
 </head>
 
 <body>
@@ -74,9 +60,9 @@
         <ul class="cards">
             <li class="card">
                 <div>
-                  <div class="card-image">
-                  <img src="./storages/image/vaccine.png">
-                  </div>
+                    <div class="card-image">
+                        <img src="./storages/image/vaccine.png">
+                    </div>
                     <h3 class="card-title">Service 1</h3>
                     <div class="card-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -207,14 +193,12 @@
             </li>
             <li class="card">
                 <div>
-<<<<<<< HEAD
-=======
-                    <img src="./storages/image/vaccine.png">
->>>>>>> 8e33cb396d88174cefaefbc8881da340292eec58
-                    <h3 class="card-title">Service 12</h3>
-                    <div class="card-content">
-                        <p>Vestibulum ante ipsum primis in</p>
-                    </div>
+                    <<<<<<< HEAD=======<img src="./storages/image/vaccine.png">
+                        >>>>>>> 8e33cb396d88174cefaefbc8881da340292eec58
+                        <h3 class="card-title">Service 12</h3>
+                        <div class="card-content">
+                            <p>Vestibulum ante ipsum primis in</p>
+                        </div>
                 </div>
                 <div class="card-link-wrapper">
                     <a href="" class="card-link">Learn More</a>

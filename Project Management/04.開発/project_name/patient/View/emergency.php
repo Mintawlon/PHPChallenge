@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Aid For Emergency Situations</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/emergency.css?v="time()>
+    <link rel="stylesheet" href="./resources/css/emergency.css?v=" time()>
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
-    
+
 </head>
 
 <body>

@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 inputbox_wrapper">
                 <!-- Page title -->
-                <h3 class="appointment_header my-4 ">Appointment</h3>
+                <h3 class="appointment_header my-4 ">Make an Appointment</h3>
                 <!-- Appointment form -->
                 <form class="form_box">
 

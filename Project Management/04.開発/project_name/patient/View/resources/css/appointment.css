@@ -70,4 +70,7 @@
   .appointmentImg{
     display: none;
   }
+  .appointment_header {
+    font-size: var(--Medium);
+  }
 }
