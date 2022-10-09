@@ -33,170 +33,182 @@
                         </div>
                     </nav>
                 </div>
-                <section class="booking_pending">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4 color_fourth">Booking Pending List</h2>
+                <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
+                    <div class="container my-3">
+                        <section class="booking_pending">
+                            <div class="input_set">
+                                <h2 class="input_set_header my-4 color_fourth">Booking Pending List</h2>
+                            </div>
+                            <table class="table">
+                                <thead class="table_bgcolor">
+                                    <tr>
+                                        <td>No.</td>
+                                        <td>Patient Name</td>
+                                        <td>Age</td>
+                                        <td>Contact</td>
+                                        <td>Address</td>
+                                        <td>Doctor Name</td>
+                                        <td>Specility</td>
+                                        <td>Date</td>
+                                        <td>Booking Time</td>
+                                        <td>Action</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row_bdr">
+                                        <td>1</td>
+                                        <td>Mary</td>
+                                        <td>20</td>
+                                        <td>123456789</td>
+                                        <td>Yangon</td>
+                                        <td>Dr. Knight Crawler</td>
+                                        <td>Specility</td>
+                                        <td>Date</td>
+                                        <td>Booking Time</td>
+                                        <td>
+                                            <span><i class="fa-solid fa-square-check check_icon"></i></span>
+                                            <span><i class="fa-solid fa-square-xmark xmark_icon"></i></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class='pagination_container'>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr />
+                        </section>
                     </div>
-                    <table class="table">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>No.</td>
-                                <td>Patient Name</td>
-                                <td>Age</td>
-                                <td>Contact</td>
-                                <td>Address</td>
-                                <td>Doctor Name</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                                <td>Action</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Mary</td>
-                                <td>20</td>
-                                <td>123456789</td>
-                                <td>Yangon</td>
-                                <td>Dr. Knight Crawler</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                                <td>
-                                    <span><i class="fa-solid fa-square-check check_icon"></i></span>
-                                    <span><i class="fa-solid fa-square-xmark xmark_icon"></i></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                </div>
+                <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
+                    <div class="container my-3">
+                        <section class="booking_approved">
+                            <div class="input_set">
+                                <h2 class="input_set_header my-4">Booking Approved List</h2>
+                            </div>
+                            <table class="table">
+                                <thead class="table_bgcolor">
+                                    <tr>
+                                        <td>No.</td>
+                                        <td>Patient Name</td>
+                                        <td>Age</td>
+                                        <td>Contact</td>
+                                        <td>Address</td>
+                                        <td>Doctor Name</td>
+                                        <td>Specility</td>
+                                        <td>Date</td>
+                                        <td>Booking Time</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row_bdr">
+                                        <td>1</td>
+                                        <td>Mary</td>
+                                        <td>20</td>
+                                        <td>123456789</td>
+                                        <td>Yangon</td>
+                                        <td>Dr. Knight Crawler</td>
+                                        <td>Specility</td>
+                                        <td>Date</td>
+                                        <td>Booking Time</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class='pagination_container'>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr />
+                        </section>
                     </div>
-                    <hr />
-                </section>
-                <section class="booking_approved">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Booking Approved List</h2>
+                </div>
+                <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
+                    <div class="container my-3">
+                        <section class="booking_reject">
+                            <div class="input_set">
+                                <h2 class="input_set_header my-4 color_fifth">Booking Reject List</h2>
+                            </div>
+                            <table class="table">
+                                <thead class="table_bgcolor">
+                                    <tr>
+                                        <td>No.</td>
+                                        <td>Patient Name</td>
+                                        <td>Age</td>
+                                        <td>Contact</td>
+                                        <td>Address</td>
+                                        <td>Doctor Name</td>
+                                        <td>Specility</td>
+                                        <td>Date</td>
+                                        <td>Booking Time</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row_bdr">
+                                        <td>1</td>
+                                        <td>Mary</td>
+                                        <td>20</td>
+                                        <td>123456789</td>
+                                        <td>Yangon</td>
+                                        <td>Dr. Knight Crawler</td>
+                                        <td>Specility</td>
+                                        <td>Date</td>
+                                        <td>Booking Time</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class='pagination_container'>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr />
+                        </section>
                     </div>
-                    <table class="table">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>No.</td>
-                                <td>Patient Name</td>
-                                <td>Age</td>
-                                <td>Contact</td>
-                                <td>Address</td>
-                                <td>Doctor Name</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Mary</td>
-                                <td>20</td>
-                                <td>123456789</td>
-                                <td>Yangon</td>
-                                <td>Dr. Knight Crawler</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <hr />
-                </section>
-                <section class="booking_reject">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4 color_fifth">Booking Reject List</h2>
-                    </div>
-                    <table class="table">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>No.</td>
-                                <td>Patient Name</td>
-                                <td>Age</td>
-                                <td>Contact</td>
-                                <td>Address</td>
-                                <td>Doctor Name</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Mary</td>
-                                <td>20</td>
-                                <td>123456789</td>
-                                <td>Yangon</td>
-                                <td>Dr. Knight Crawler</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <hr />
-                </section>
+                </div>
             </div>
         </div>
     </div>

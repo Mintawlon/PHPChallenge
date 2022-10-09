@@ -4,6 +4,7 @@
 :root {
   --primary_color: #f2f2f2;
   --secondary_color: #4361ee;
+  --tertiary_color: #000000;
 }
 
 /* Text Color */
@@ -65,9 +66,7 @@
   font-family: var(--primary_font) !important;
   font-size: var(--small) !important;
 }
-@media only screen and (max-width:800px) {
-  
-}
+
 /* Common Button */
 .common_btn {
   position: relative;
@@ -368,11 +367,13 @@ hr {
 .navbar_wrapper {
   background-color: var(--secondary_color);
 }
+
 .logo_btn {
   width: 100% !important;
   height: 3.5em !important;
   margin-bottom: 1em;
 }
+
 .navbar_btn,
 .dropdown_list {
   width: 100% !important;
@@ -415,6 +416,7 @@ hr {
 }
 
 @media only screen and (max-width: 700px) {
+
   .navbar_btn_name{
     display: none;
   }
@@ -424,6 +426,39 @@ hr {
   .navbar_btn {
     padding: 0 2em;
   }
+
+  .input_set_text {
+    font-size: var(--extra_extra_small);
+  }
+
+  .common_input{
+    width: 100% !important;
+    font-size: var(--extra_extra_small);
+  }
+
+  .add_file {
+    font-size: var(--extra_extra_small);
+  }
+  
+  .form-control-lg {
+    width: 100% !important;  
+  }
+  
+  .form-control {
+    font-size: var(--extra_extra_small) !important;
+  }
+
+.table {
+  font-size: var(--extra_extra_small);
+}
+
+.check_icon{
+  font-size: var(--small);
+}
+
+.xmark_icon{
+  font-size: var(--small);
+}
 }
 
 .dropdown_list,
