@@ -20,8 +20,8 @@
     <h3 class="hospital_location_header my-5">Hospital Locations</h3>
     <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-md-12">
-    <div class="card mb-3" style="max-width: 80%;">
+    <div class="col-sm-12 col-md-12 col-12">
+    <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-5 image-container">
       <img src="./storages/image/profile.jpg" class="img-fluid rounded-start" alt="...">
@@ -55,36 +55,4 @@
 </html>
 
 
- <!-- Blood Donation Center Cards -->
- <div class="center_card_wrapper">
-        <div class="center_card">
-            <div class="center_name_div">
-                <h2 class="center_name">Center Name</h2>
-            </div>
-            <div class="center_address_div">
-                <p class="yellow_color center_phone">Phone Number : <span class="white_color">01 2222222</span></p>
-                <p class="yellow_color center_address">Address : <span class="white_color">Nar Nat Taw Road,Yangon,Myanmar</span></p>
-            </div>
-        </div>
-
-
-        <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-      <div class="center_name_div">
-                <h2 class="center_name">Center Name</h2>
-            </div>
-            <div class="center_address_div">
-                <p class="yellow_color center_phone">Phone Number : <span class="white_color">01 2222222</span></p>
-                <p class="yellow_color center_address">Address : <span class="white_color">Nar Nat Taw Road,Yangon,Myanmar</span></p>
-                
-            </div>
-      </div>
-    </div>
-  </div>
-</div>
-        <!--hospital card-->
+ 
