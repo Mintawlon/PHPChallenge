@@ -84,11 +84,11 @@
                     <p class="dropdown_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, repellendus vitae iste distinctio perspiciatis iusto ex saepe illo corrupti assumenda facilis rem ratione. Iste blanditiis officiis, aliquid aperiam ex corrupti autem nemo ipsam itaque, laborum nam totam, harum iusto! Deleniti voluptatum corrupti commodi at fugit excepturi officiis voluptatem iusto consequuntur.</p>
                 </ul>
             </div></br>
-            <div class="btn-group mt-3">
+            <div class="btn-group my-3">
                 <button type="button" class="btn btn-warning dropdown-toggle dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     Privacy policy for the website of Medplatform
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu ">
                     <p p class="dropdown_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, repellendus vitae iste distinctio perspiciatis iusto ex saepe illo corrupti assumenda facilis rem ratione. Iste blanditiis officiis, aliquid aperiam ex corrupti autem nemo ipsam itaque, laborum nam totam, harum iusto! Deleniti voluptatum corrupti commodi at fugit excepturi officiis voluptatem iusto consequuntur.</p>
                 </ul>
             </div>

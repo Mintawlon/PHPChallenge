@@ -20,7 +20,7 @@
     <h3 class="hospital_location_header my-5">Hospital Locations</h3>
     <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 col-md-12 col-12">
+    <div class="col-12">
     <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-5 image-container">
@@ -53,6 +53,3 @@
 </body>
 
 </html>
-
-
- 
