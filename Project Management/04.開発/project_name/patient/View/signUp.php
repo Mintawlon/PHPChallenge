@@ -22,28 +22,28 @@
         <!-- body -->
         <div class="body ">
             <div class="inputbox_wrapper">
-            <p class="sign_up mt-3">Sign Up</p>
-            <!-- input box -->
-            <div class="inpbox mt-3">
-                Name* <br>
-                <input type="text" class="name form-control" placeholder="username">
-                <br>
-                <br>
-                Email* <br>
-                <input type="text" class="name form-control" placeholder="email">
-                <br>
-                <br>
-                Password* <br>
-                <input type="text" class="name form-control" placeholder="password">
-                <br>
-                <br>
-                <button type="submit" class="btnsignup mt-1 form-control">
-                    Sign up
-                </button>
-                <a href="">
-                    <p class="mt-2 reg text-white fs-6 text-decoration-underline ">Already have an account?</p>
-                </a>
-            </div>
+                <p class="sign_up mt-3">Sign Up</p>
+                <!-- input box -->
+                <div class="inpbox mt-3">
+                    Name* <br>
+                    <input type="text" class="name form-control" placeholder="username">
+                    <br>
+                    <br>
+                    Email* <br>
+                    <input type="text" class="name form-control" placeholder="email">
+                    <br>
+                    <br>
+                    Password* <br>
+                    <input type="text" class="name form-control" placeholder="password">
+                    <br>
+                    <br>
+                    <button type="submit" class="btnsignup mt-1 form-control">
+                        Sign up
+                    </button>
+                    <a href="">
+                        <p class="mt-2 reg text-white fs-6 text-decoration-underline ">Already have an account?</p>
+                    </a>
+                </div>
             </div>
             <div>
                 <img class="signup_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">

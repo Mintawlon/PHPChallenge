@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patient History</title>
     <!--css-->
-    <link rel="stylesheet" href="./resources/css/root.css?v="time();>
-    <link rel="stylesheet" href="./resources/css/patientHistory.css"time();>
+    <link rel="stylesheet" href="./resources/css/root.css?v="<?=time()?>>
+    <link rel="stylesheet" href="./resources/css/patientHistory.css?v"<?=time()?>>
 </head>
 <body>
 <?php
