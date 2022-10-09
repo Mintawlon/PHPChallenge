@@ -23,7 +23,8 @@ body {
 }
 
 .body {
-  margin-left: 100px !important;
+  display: flex;
+  justify-content: center;
 }
 
 .inpbox {
@@ -40,38 +41,37 @@ body {
   color: white !important;
   width: 200px !important;
   background-color: var(--secondary_color) !important;
-  margin-left: 100px !important;
   font-family: var(--secondary_font);
   font-size: var(--extra_small);
 }
-
+.name {
+  width: 20em !important;
+}
 .reg {
-  margin-left: 120px !important;
   font-family: var(--secondary_font) !important;
   font-size: var(--extra_small);
 }
 
 .login_img {
-  position: absolute;
-  float: left;
-  bottom: 10px;
-  right: 40px;
+  height: 25em;
 }
-
+.inputbox_wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
 .forgotpsw {
-  margin-left: 280px !important;
   color: #2535a1 !important;
   font-size: var(--extra_extra_small);
 }
 
-/* @media only screen and (max-width: 800px) {
-  .{
-    ;
+@media only screen and (max-width: 800px) {
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .{
-    ;
+  .login_img {
+    display: none;
   }
-  .{
-    ;
-  }
-} */
+}

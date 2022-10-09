@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/forgotpsw.css">
     <!-- Css Root  -->
@@ -22,14 +27,16 @@
         <!-- body -->
         <div class="body ">
             <br><br><br><br>
-            <p class="pasw mt-5 fw-semibold">Forgot Your Password?</p>
-            <!-- input box -->
-            <div class="inpbox ms-5 mt-5">                
-                <input type="text" class="name form-control" placeholder="Email Address">               
-                <br>
-                <button type="submit" class="btnsignup mt-1 form-control">
-                    Send Email
-                </button>
+            <div class="inputbox_wrapper">
+                <p class="pasw mt-5 fw-semibold">Forgot Your Password?</p>
+                <!-- input box -->
+                <div class="inpbox ms-5 mt-5">
+                    <input type="text" class="name form-control" placeholder="Email Address">
+                    <br>
+                    <button type="submit" class="btnsignup mt-1 form-control">
+                        Send Email
+                    </button>
+                </div>
             </div>
             <div>
                 <img class="login_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">

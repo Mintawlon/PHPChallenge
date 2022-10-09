@@ -42,12 +42,6 @@ body {
   font-size: var(--extra_extra_small) !important;
 }
 
-/* .login_img {
-  position: absolute;
-  display: flex;
-  bottom: 10px;
-  right: 40px;
-} */
 .inputbox_wrapper{
   display: flex;
   align-items: center;
