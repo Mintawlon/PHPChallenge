@@ -2,11 +2,6 @@ body{
     background-color:#1C92D2 !important;
 }
 
-.row{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
 .select-doctor{
     height:3.125rem !important;
     width: 15.625rem !important;
@@ -26,7 +21,7 @@ body{
     border-radius: 50% !important;
     
 }
-.btn{
+.submit{
     background-color: #FFC652 !important;
     color: white !important;
     width: 100% !important;
@@ -52,4 +47,47 @@ p{
 hr{
     color: #2535A1 !important;
 }
+/* Blue Square Button */
+.square_blue_btn{
+    background-color: var(--first_color) !important;
+    color:  var(--secondary_color);
+    border: 2px solid var(--secondary_color);
+    width: 250px;
+    height: 50px;
+    font-size: var(--extra_small);
+    margin-left: 3rem;
+}
 
+.square_blue_btn:hover{
+    background-color: #FFC652 !important;
+}
+.btn-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+       
+    .cart{
+        margin-left: 9rem !important;
+    }
+
+}
+@media screen and (max-width: 545px) {
+       
+    .cart{
+        margin-left: 3rem !important;
+    }
+    .mobile{
+        margin-left: 0.5rem !important;
+    }
+
+}
+@media screen and (max-width: 600px) {
+       
+    .square_blue_btn{
+        font-size: 0.75rem !important;
+    }
+
+}
