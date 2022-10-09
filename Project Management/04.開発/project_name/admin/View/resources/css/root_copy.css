@@ -1,86 +1,3 @@
-/* Admin Css root */
-
-/* Background Color */
-:root {
-  --primary_color: #f2f2f2;
-  --secondary_color: #4361ee;
-}
-
-/* Text Color */
-:root {
-  --first_color: #000000;
-  --second_color: #ffffff;
-  --third_color: #4361ee;
-  --fourth_color: #ffc652;
-  --fifth_color: #f8172d;
-  --sixth_color: #02f80c;
-}
-
-/* Font Family */
-:root {
-  --primary_font: "Mulish", sans-serif;
-  --secondary_font: "Archivo Narrow", sans-serif;
-}
-
-/* Font Size */
-:root {
-  --extra_large: 5em;
-  --large: 2.5em;
-  --medium: 1.87em;
-  --small: 1.56em;
-  --extra_small: 1.25em;
-  --extra_extra_small: 0.8em;
-}
-
-/* Font Color */
-.color_third {
-  color: var(--third_color) !important;
-}
-
-.color_fourth {
-  color: var(--fourth_color) !important;
-}
-
-.color_fifth {
-  color: var(--fifth_color) !important;
-}
-
-.color_sixth {
-  color: var(--sixth_color) !important;
-}
-
-/* Admin Header */
-.bg_header {
-  background-color: var(--secondary_color) !important;
-  border-radius: 10px !important;
-}
-.header_box {
-  width: 100%;
-}
-.ttl_admin {
-  width: 100%;
-  display: block;
-  text-align: center;
-  color: var(--second_color) !important;
-  font-family: var(--primary_font) !important;
-  font-size: var(--small) !important;
-}
-@media only screen and (max-width:800px) {
-  
-}
-/* Common Button */
-.common_btn {
-  position: relative;
-  display: inline-block;
-  width: 12.5em;
-  padding: 0.3em 1em;
-  border: 1px solid transparent;
-  font-size: var(--extra_small);
-  text-decoration: none;
-  text-align: center;
-  border-radius: 50px;
-  font-weight: 400;
-}
 
 /* Common Button Hover State*/
 .common_btn:hover {
@@ -117,27 +34,27 @@
 }
 
 /* Go Back Button */
-.go_btn{
+.go_btn {
   text-align: left;
 }
 
-.arrow_right{
+.arrow_right {
   position: absolute;
-  color: var(--sixth_color);
-  right: 5%;
   top: 30%;
+  right: 5%;
+  color: var(--sixth_color);
   font-size: var(--extra_extra_small);
 }
 
-.back_btn{
+.back_btn {
   text-align: right;
 }
 
-.arrow_left{
+.arrow_left {
   position: absolute;
-  color: var(--sixth_color);
-  left: 5%;
   top: 30%;
+  left: 5%;
+  color: var(--sixth_color);
   font-size: var(--extra_extra_small);
 }
 
@@ -153,7 +70,7 @@
   font-weight: 400;
 }
 
-.common_input::placeholder{
+.common_input::placeholder {
   color: var(--first_color);
   font-family: var(--primary_font);
   font-size: var(--extra_extra_small);
@@ -185,7 +102,7 @@
 }
 
 .search_text {
-  position:absolute;
+  position: absolute;
   top: 10%;
   left: 0;
   font-size: var(--extra_small);
@@ -230,7 +147,7 @@ tbody .row_bdr {
 }
 
 /* Input Section */
-.sec_input{
+.sec_input {
   display: flex;
   justify-content: space-between;
   margin: 80px 1.5%;
@@ -249,6 +166,7 @@ tbody .row_bdr {
 .input_set_text {
   font-size: var(--extra_small);
 }
+
 .input_set {
   display: flex;
   flex-direction: column;
@@ -256,11 +174,13 @@ tbody .row_bdr {
   align-items: center;
   width: 100%;
 }
+
 .input_one {
   display: flex;
   justify-content: space-between;
   width: 80%;
 }
+
 .input_set_header {
   color: var(--secondary_color);
 }
@@ -268,56 +188,6 @@ tbody .row_bdr {
 textarea {
   height: 5em !important;
   border-radius: 0 !important;
-}
-
-@media only screen and (max-width: 800px) {
-  /* Input */
-  .common_btn {
-    display: inline-block;
-    width: 12em;
-    padding: 0.6em 1.2em;
-    font-size: var(--extra_extra_small);
-    border-radius: 50px;
-  }
-  .input_set_text {
-    font-size: var(--extra_extra_small);
-  }
-  .input_set {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: left;
-  }
-  .input_one {
-    display: flex;
-    justify-content: left;
-    width: 100%;
-  }
-  .input_one {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  /* Input */
-  .common_input {
-    width: 15em;
-    height: 2em;
-    font-weight: 300;
-  }
-  .input_set_text {
-    font-size: var(--extra_extra_small);
-  }
-  .input_set {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .input_one {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 /* Icon */
@@ -338,6 +208,63 @@ hr {
   background-color: var(--third_color);
 }
 
+@media only screen and (max-width: 800px) {
+
+  /* Input */
+  .common_btn {
+    display: inline-block;
+    width: 12em;
+    padding: 0.6em 1.2em;
+    font-size: var(--extra_extra_small);
+    border-radius: 50px;
+  }
+
+  .input_set_text {
+    font-size: var(--extra_extra_small);
+  }
+
+  .input_set {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0 25% !important;
+  }
+
+  .input_one {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  /* Input */
+  .common_input {
+    width: 15em;
+    height: 2em;
+    font-weight: 300;
+  }
+
+  .input_set_text {
+    font-size: var(--extra_extra_small);
+  }
+
+  .input_set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input_one {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* Pagination */
 .pagination_container {
   display: flex;
@@ -348,8 +275,8 @@ hr {
   margin: 0;
 }
 
-.pagination li:hover{
-    cursor: pointer;
+.pagination li:hover {
+  cursor: pointer;
 }
 
 .rows_count {
@@ -362,110 +289,128 @@ hr {
   color: var(--first_color) !important;
 }
 
-
 /* Side Nav Bar */
 
 .navbar_wrapper {
   background-color: var(--secondary_color);
 }
+
 .logo_btn {
   width: 100% !important;
   height: 3.5em !important;
   margin-bottom: 1em;
 }
+
 .navbar_btn,
 .dropdown_list {
   width: 100% !important;
   height: 2.5em !important;
-  border-radius: 0.5em;
   margin-bottom: 1em;
+  border-radius: 0.5em;
 }
+
 .navbar_btn {
   background-color: var(--second_color) !important;
 }
+
 .dropdown-container {
   width: 100%;
 }
+
 .navbar_btn_name {
-  font-size: var(--extra_extra_small);
-  color: var(--first_color);
   padding-left: 1em;
-  font-family: var(--primary_font);
-}
-.navbar_btn_name_o{
-  font-size: var(--extra_extra_small);
   color: var(--first_color);
-  padding-left: 0.5em;
   font-family: var(--primary_font);
+  font-size: var(--extra_extra_small);
 }
+
+.navbar_btn_name_o {
+  padding-left: 0.5em;
+  color: var(--first_color);
+  font-family: var(--primary_font);
+  font-size: var(--extra_extra_small);
+}
+
 .icon_size {
   height: 10px;
 }
+
 .color_black {
   color: var(--first_color);
 }
+
 .color_green {
   color: var(--sixth_color);
 }
-.log_out{
+
+.log_out {
   color: var(--third_color);
 }
-.log_out_btn{
+
+.log_out_btn {
   border-radius: 3em;
 }
 
 @media only screen and (max-width: 700px) {
-  .navbar_btn_name{
+  .navbar_btn_name {
     display: none;
   }
+
   .navbar_btn_name_o {
     display: none;
   }
+
   .navbar_btn {
     padding: 0 2em;
   }
 }
 
+/* Style the sidenav links and the dropdown button */
 .dropdown_list,
 .navbar_btn,
 .navbar a,
 .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
   display: block;
+  width: 100%;
+  padding: 6px 8px 6px 16px;
   border: none;
   background: none;
-  width: 100%;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
   text-align: left;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
 }
 
+/* On mouse-over */
 .dropdown_list:hover,
 .dropdown-btn:hover {
   color: #f1f1f1;
 }
 
-
+/* Main content */
 .main {
-  margin-left: 200px; 
-  font-size: 20px; 
+  margin-left: 200px;
+  /* Same as the width of the sidenav */
   padding: 0px 10px;
+  font-size: 20px;
+  /* Increased text to enable scrolling */
 }
 
+/* Add an active class to the active dropdown button */
 .active {
   background-color: green;
   color: white;
 }
 
-
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
   padding-left: 1em;
 }
 
+/* Optional: Style the caret down icon */
 .fa-caret-down {
   float: right;
   padding-right: 8px;
