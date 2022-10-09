@@ -65,6 +65,8 @@
                         <hr />
                     </div>
                 </section>
+                <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
+                <div class="container my-3">
                 <section class="diseases_table">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Update Current Diseases</h2>
@@ -123,6 +125,9 @@
                     </div>
                     <hr />
                 </section>
+                </div>
+                </div>
+            
                 <section class="edit_diseases">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Edit Current Diseases</h2>
