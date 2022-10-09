@@ -22,7 +22,7 @@
             include("./common/nav.php")
             ?>
 
-            <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
+            <div class="col-auto col-md-8 col-xl-9 mx-xs-1 px-0 mx-auto ">
                 <div class="container my-3">
                     <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
                         <div class="header_box">
