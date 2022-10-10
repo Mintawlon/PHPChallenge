@@ -29,7 +29,7 @@
 
         <div class="offcanvas-body">
             <div class="box">
-                <div class="mainbox">
+                <div class="mainbox input_btn">
                     <div class="mb-2">
                         <span class="txt mt-5">Patient Profile</span>
                         <p></p>
@@ -38,7 +38,7 @@
                     <div>
                         <span class=" txt mt-5">User Name</span>
                         <p></p>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" required>
                     </div>
                     <br>
                     <div>
@@ -56,13 +56,13 @@
                     <div>
                         <span class="txt mt-5">Contact</span>
                         <p></p>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" required>
                     </div>
                     <br>
                     <div>
                         <span class=" txt mt-5">Address</span>
                         <p></p>
-                        <textarea class="form-control" "></textarea>
+                        <textarea class="form-control"></textarea>
                     </div>
                     <br>
 
