@@ -504,3 +504,9 @@ hr {
   float: right;
   padding-right: 8px;
 }
+
+
+/* Responsiv */
+.box{
+  width: 100%;
+}
