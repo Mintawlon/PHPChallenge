@@ -39,7 +39,7 @@
         <div class="first_aid_card my-4">
             <div class="wrapper">
                 <div class="info">
-                    <h2 class="first_aid_para_header display_top">Section-2</h2>
+                    <h2 class="display_top header-2">Section-2</h2>
                     <ol class="first_aid_para">
                         <li>
                             Find a person nearby. Make eye contact, point to them, and say:
@@ -70,33 +70,40 @@
 
         <!-- Section-3 -->
 
-        <div class>
+        <div class="content-container">
+            <div class="card p-3" style="width: 38rem;">
+                <p class="text-center content-card-header">Get In Touch</p>
+                <!--input Form -->
+                <form action="">
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                    </div>
+                    <!-- Blue Square Btn -->
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="submit">Button</button>
+                    </div>
 
-            <h3 class="about_header_1 my-4">Section-3</h3>
-            <p class="text-center first_aid_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui magnam, ipsa tenetur impedit, unde nisi repudiandae quidem voluptates at sapiente quisquam id obcaecati distinctio! Laborum ducimus magni labore, fugit rem quod delectus, atque facere quam, dolores natus! Incidunt sint voluptate dolorem nostrum architecto doloremque rem, dolor eum! Sunt sint error quaerat quisquam alias cupiditate tempore eveniet facilis, dolorum labore expedita amet illum quis. Nihil, beatae dolorem adipisci ratione accusamus unde veritatis soluta illum vel quas. Ad veritatis fugiat repellendus odio, doloribus quibusdam beatae at, aliquam sed corporis totam distinctio rerum adipisci atque expedita voluptatem soluta iusto voluptatibus. Totam, tempore.</p>
+                </form>
+            </div>
         </div>
 
         <hr class="about_line mt-4" />
         <!-- dropdown section -->
-        <h3 class="about_header_1 my-4">Section-4</h3>
-
-        <div class="dropdown_case ">
-            <div class="btn-group ">
-                <button type="button" class="btn btn-warning dropdown-toggle dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    Privacy policy for the website of Medplatform
-                </button>
-                <ul class="dropdown-menu">
-                    <p class="dropdown_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, repellendus vitae iste distinctio perspiciatis iusto ex saepe illo corrupti assumenda facilis rem ratione. Iste blanditiis officiis, aliquid aperiam ex corrupti autem nemo ipsam itaque, laborum nam totam, harum iusto! Deleniti voluptatum corrupti commodi at fugit excepturi officiis voluptatem iusto consequuntur.</p>
-                </ul>
-            </div></br>
-            <div class="btn-group my-3">
-                <button type="button" class="btn btn-warning dropdown-toggle dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    Privacy policy for the website of Medplatform
-                </button>
-                <ul class="dropdown-menu ">
-                    <p p class="dropdown_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, repellendus vitae iste distinctio perspiciatis iusto ex saepe illo corrupti assumenda facilis rem ratione. Iste blanditiis officiis, aliquid aperiam ex corrupti autem nemo ipsam itaque, laborum nam totam, harum iusto! Deleniti voluptatum corrupti commodi at fugit excepturi officiis voluptatem iusto consequuntur.</p>
-                </ul>
-            </div>
+        <div class="policy">
+            <h2 class="display_top header-2">Privacy Policy</h2>
+            <!-- Page Tab -->
+            <p class="text-center first_aid_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui magnam, ipsa tenetur impedit, unde nisi repudiandae quidem voluptates at sapiente quisquam id obcaecati distinctio! Laborum ducimus magni labore, fugit rem quod delectus, atque facere quam, dolores natus! Incidunt sint voluptate dolorem nostrum architecto doloremque rem, dolor eum! Sunt sint error quaerat quisquam alias cupiditate tempore eveniet facilis, dolorum labore expedita amet illum quis. Nihil, beatae dolorem adipisci ratione accusamus unde veritatis soluta illum vel quas. Ad veritatis fugiat repellendus odio, doloribus quibusdam beatae at, aliquam sed corporis totam distinctio rerum adipisci atque expedita voluptatem soluta iusto voluptatibus. Totam, tempore.</p>
+            <!-- Page Tab -->
+            <p class="text-center first_aid_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui magnam, ipsa tenetur impedit, unde nisi repudiandae quidem voluptates at sapiente quisquam id obcaecati distinctio! Laborum ducimus magni labore, fugit rem quod delectus, atque facere quam, dolores natus! Incidunt sint voluptate dolorem nostrum architecto doloremque rem, dolor eum! Sunt sint error quaerat quisquam alias cupiditate tempore eveniet facilis, dolorum labore expedita amet illum quis. Nihil, beatae dolorem adipisci ratione accusamus unde veritatis soluta illum vel quas. Ad veritatis fugiat repellendus odio, doloribus quibusdam beatae at, aliquam sed corporis totam distinctio rerum adipisci atque expedita voluptatem soluta iusto voluptatibus. Totam, tempore.</p>
         </div>
     </div>
     </div>

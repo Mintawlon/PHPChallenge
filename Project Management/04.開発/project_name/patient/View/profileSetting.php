@@ -10,9 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/profileSetting.css?v=" time()>
     <!-- Root Css -->
@@ -20,61 +17,66 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <!-- Header -->
-        <?php
-        include("./common/head.php");
-        ?>
-        <!-- Edit Profile -->
-
-        <div class="offcanvas-body">
-            <div class="box">
-                <div class="mainbox input_btn">
-                    <div class="mb-2">
-                        <span class="txt mt-5">Patient Profile</span>
-                        <p></p>
-                        <input class="form-control" type="file" id="formFile">
+    <!-- Header -->
+    <?php
+    include("./common/head.php");
+    ?>
+    <!-- Edit Profile -->
+    <h3 class="header my-4 text-center">Edit user Profile</h3>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="card p-3 cart" style="width: 45rem;">
+            <!--input Form -->
+            <form action="">
+                <div class="mt-3 row">
+                    <label for="inputfile" class="col-sm-2 col-form-label text-white">Image</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="inputfile">
                     </div>
-                    <div>
-                        <span class=" txt mt-5">User Name</span>
-                        <p></p>
-                        <input class="form-control" type="text" required>
-                    </div>
-                    <br>
-                    <div>
-                        <span class="txt mt-5">Age</span>
-                        <p></p>
-                        <input class="form-control" type="text">
-                    </div>  
-                    <br>
-                    <div>
-                        <span class=" txt mt-5">Email</span>
-                        <p></p>
-                        <input class="form-control" type="email">
-                    </div>
-                    <br>
-                    <div>
-                        <span class="txt mt-5">Contact</span>
-                        <p></p>
-                        <input class="form-control" type="text" required>
-                    </div>
-                    <br>
-                    <div>
-                        <span class=" txt mt-5">Address</span>
-                        <p></p>
-                        <textarea class="form-control"></textarea>
-                    </div>
-                    <br>
-
-                    <button type="submit" class="btn_save  mt-1  ">
-                        Save
-                    </button>
-
                 </div>
-            </div>
+                <div class="row">
+                    <label for="inputName" class="col-sm-2 col-form-label text-white">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputAge" class="col-sm-2 col-form-label text-white">Age</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputage">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label text-white">Email</label>
+                    <div class="col-sm-10">
+                        <input type="Email" class="form-control" id="inputEmail">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputContact" class="col-sm-2 col-form-label text-white">Age</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="inputContact">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputAddress" class="col-sm-2 col-form-label text-white">Address</label>
+                    <div class="col-sm-10">
+
+                        <textarea id="inputAddress" class="form-control" rows="4" cols="50">
+                    </textarea>
+                    </div>
+                </div>
+                <!-- Blue Square Btn -->
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="submit">Update</button>
+                </div>
+
+            </form>
         </div>
     </div>
-    </div>
+    <!-- Footer -->
+    <?php
+    include("./common/footer.php")
+    ?>
 </body>
 
 </html>
