@@ -25,13 +25,11 @@
             include("./common/nav.php")
             ?>
 
-            <div class="col-auto  col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto container">
-                <div class="container my-3">
-                    <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Date</span>
-                        </div>
-                    </nav>
+            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Date</span>
+                    </div>
                 </div>
                 <div class="sec_input choose_date mb-2">
                     <div class="input_one mb-2">
@@ -132,7 +130,6 @@
     </div>
     </div>
     </div>
-    <script src="./resources/js/dropdown_menu.js"></script>
 </body>
 
 </html>

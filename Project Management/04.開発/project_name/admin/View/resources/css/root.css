@@ -55,16 +55,25 @@
   background-color: var(--secondary_color) !important;
   border-radius: 10px !important;
 }
-.header_box {
-  width: 100%;
+.header_wrapper{
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ttl_admin {
-  width: 100%;
-  display: block;
-  text-align: center;
   color: var(--second_color) !important;
   font-family: var(--primary_font) !important;
   font-size: var(--small) !important;
+}
+@media only screen and (max-width:800px) {
+  .data_box{
+    width: 75% !important;
+  }
+  .ttl_admin{
+    font-size: var(--extra_small) !important;
+  }
+  
 }
 
 /* Common Button */
@@ -415,39 +424,40 @@ hr {
   border-radius: 3em;
 }
 
-@media only screen and (max-width: 700px) {
-
+@media only screen and (max-width: 800px) {
+  /* Side Nav */
+  .navbar_wrapper{
+    width: 25% !important;
+  }
   .navbar_btn_name{
     display: none;
   }
   .navbar_btn_name_o {
     display: none;
   }
-  .navbar_btn {
-    padding: 0 2em;
+  .navbar_btn{
+    padding: 0 !important;
   }
 
+  /* input_set */
   .input_set_text {
     font-size: var(--extra_extra_small);
   }
-
   .common_input{
     width: 100% !important;
     font-size: var(--extra_extra_small);
   }
-
+  /* choos file */
   .add_file {
     font-size: var(--extra_extra_small);
   }
-  
   .form-control-lg {
     width: 100% !important;  
   }
-  
   .form-control {
     font-size: var(--extra_extra_small) !important;
   }
-
+  /* table */
 .table {
   font-size: var(--extra_extra_small);
 }
@@ -507,7 +517,3 @@ hr {
 }
 
 
-/* Responsiv */
-.box{
-  width: 100%;
-}

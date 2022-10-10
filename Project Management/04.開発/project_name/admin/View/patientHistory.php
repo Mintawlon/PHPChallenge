@@ -26,13 +26,11 @@
             include("./common/nav.php")
             ?>
 
-            <div class="col-auto  col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto container">
-                <div class="container my-3">
-                    <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Patient History</span>
-                        </div>
-                    </nav>
+            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Patient History</span>
+                    </div>
                 </div>
                 <div class="sec_input mb-2">
                     <a href="" class="common_btn add_btn go_btn">Go to Add History

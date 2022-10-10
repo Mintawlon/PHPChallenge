@@ -26,33 +26,22 @@
             <?php
             include("./common/nav.php")
             ?>
-
-            <!-- Side Bar  -->
-
-            <div class="col-auto  col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto container">
-                <div class="container my-3">
-                    <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Dashboard</span>
-                        </div>
-                    </nav>
+            <div class=" data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                <!-- Header -->
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Dashboard</span>
+                    </div>
                 </div>
-
-                <!-- start here -->
-
-
                 <div class="container display">
                     <div class="row">
                         <div class="col ">
-
                             <div class="card  " style="width: 18rem;">
                                 <div class="card-body cardColor">
                                     <h5 class="card-title text-center text-white"><i class="fa-sharp fa-solid fa-bed cardTextAlign"></i>Inpatient</h5>
                                     <div class="display_bottom">
                                         <p class="card-text text-center mt-4 text_color"> 400</p>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -82,10 +71,7 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
-
-
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Today Patient List</h2>
                 </div>
@@ -113,9 +99,6 @@
                             <td>Contact</td>
                             <td>Address.</td>
                             <td>Status</td>
-
-
-
 
                         </tr>
                     </thead>

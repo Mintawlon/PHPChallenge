@@ -27,16 +27,15 @@
             include("./common/nav.php")
             ?>
 
-            <!-- Side Bar  -->
-
-            <div class="col-auto  col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto container">
-                <div class="container my-3">
-                    <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Inpatient</span>
-                        </div>
-                    </nav>
+            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                <!-- Header -->
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Inpatient</span>
+                    </div>
                 </div>
+
+
 
                 <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
 
@@ -79,68 +78,68 @@
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>                         
+                            <td>Address</td>
                             <td> <span class="ps-4"> Action</span></td>
 
-                            
+
 
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                            <td><span class="pe-4">  <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3">  <a href="#" class="stretched-link">Delete</a></span> </td>
+                            <td>Address</td>
+                            <td><span class="pe-4"> <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3"> <a href="#" class="stretched-link">Delete</a></span> </td>
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                            <td><span class="pe-4">  <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3">  <a href="#" class="stretched-link">Delete</a></span> </td>
+                            <td>Address</td>
+                            <td><span class="pe-4"> <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3"> <a href="#" class="stretched-link">Delete</a></span> </td>
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                            <td><span class="pe-4">  <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3">  <a href="#" class="stretched-link">Delete</a></span> </td>
+                            <td>Address</td>
+                            <td><span class="pe-4"> <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3"> <a href="#" class="stretched-link">Delete</a></span> </td>
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                            <td><span class="pe-4">  <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3">  <a href="#" class="stretched-link">Delete</a></span> </td>
+                            <td>Address</td>
+                            <td><span class="pe-4"> <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3"> <a href="#" class="stretched-link">Delete</a></span> </td>
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                            <td><span class="pe-4">  <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3">  <a href="#" class="stretched-link">Delete</a></span> </td>
+                            <td>Address</td>
+                            <td><span class="pe-4"> <a href="#" class="stretched-link">Edit</a></span> <span class="ps-3"> <a href="#" class="stretched-link">Delete</a></span> </td>
                         </tr>
 
                         <!-- Table  -->

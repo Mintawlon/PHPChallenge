@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class=" col-auto col-md-4 col-xl-2 navbar_wrapper ">
+    <div class="col-sm-3 col-md-4 col-xl-2 navbar_wrapper ">
         <div class="d-flex flex-column align-items-center align-items-sm-start min-vh-100 mt-2 navbar ">
             <div class="logo_btn "></div>
             <div class="navbar_btn">

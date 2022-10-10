@@ -22,13 +22,12 @@
             include("./common/nav.php")
             ?>
 
-            <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
-                <div class="container my-3">
-                    <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Blogs</span>
-                        </div>
-                    </nav>
+            <div class=" data_box   col-sm-9  col-md-8 col-xl-10 mt-3">
+                <!-- header -->
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Blogs</span>
+                    </div>
                 </div>
                 <div class="sec_input mb-2">
                     <a href="" class="common_btn add_btn go_btn">Go to Add Diseases
@@ -65,69 +64,67 @@
                         <hr />
                     </div>
                 </section>
-                <div class="col-auto col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto ">
-                <div class="container my-3">
-                <section class="diseases_table">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Update Current Diseases</h2>
-                    </div>
-                    <table class="table">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>No.</td>
-                                <td>Image</td>
-                                <td>Header</td>
-                                <td>Description</td>
-                                <td>Action</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 1</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 2</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum!</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <hr />
-                </section>
-                </div>
-                </div>
-            
+
+                        <section class="diseases_table">
+                            <div class="input_set">
+                                <h2 class="input_set_header my-4">Update Current Diseases</h2>
+                            </div>
+                            <table class="table">
+                                <thead class="table_bgcolor">
+                                    <tr>
+                                        <td>No.</td>
+                                        <td>Image</td>
+                                        <td>Header</td>
+                                        <td>Description</td>
+                                        <td>Action</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row_bdr">
+                                        <td>1</td>
+                                        <td>Image 1</td>
+                                        <td>Header</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
+                                        <td>
+                                            <span><a href="" class="color_sixth">Edit</a></span>
+                                            <span><a href="" class="color_fifth">Delete</a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="row_bdr">
+                                        <td>1</td>
+                                        <td>Image 2</td>
+                                        <td>Header</td>
+                                        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum!</td>
+                                        <td>
+                                            <span><a href="" class="color_sixth">Edit</a></span>
+                                            <span><a href="" class="color_fifth">Delete</a></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class='pagination_container'>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link pagi_color" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr />
+                        </section>
+
+
                 <section class="edit_diseases">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Edit Current Diseases</h2>

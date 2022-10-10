@@ -27,22 +27,18 @@
             include("./common/nav.php")
             ?>
 
-            <!-- Side Bar  -->
 
-            <div class="col-auto  col-md-8 col-xl-9 mx-xs-2 px-0 mx-auto container">
-                <div class="container my-3">
-                    <nav class="bg_header navbar navbar-expand-lg navbar-light bg-primary">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Inpatient</span>
-                        </div>
-                    </nav>
+            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Inpatient List</span>
+                    </div>
                 </div>
-
                 <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
 
                 <div class="sec_input mb-2">
 
-                <a href="" class="common_btn add_btn go_btn">Go to Add Inpatient
+                    <a href="" class="common_btn add_btn go_btn">Go to Add Inpatient
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                     <div class="tb_search">
@@ -78,68 +74,68 @@
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>                         
-                            
+                            <td>Address</td>
 
-                            
+
+
 
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                             
+                            <td>Address</td>
+
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                             
+                            <td>Address</td>
+
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                             
+                            <td>Address</td>
+
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                             
+                            <td>Address</td>
+
                         </tr>
                         <tr class="row_bdr">
-                        <td>No.</td>
+                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Disease</td>
                             <td>Status</td>
                             <td>Room.</td>
-                            <td>Address</td>  
-                             
+                            <td>Address</td>
+
                         </tr>
 
                         <!-- Table  -->
@@ -168,7 +164,7 @@
                 </div>
                 <hr class="about_line mt-5" />
 
-                
+
 
             </div>
         </div>
@@ -177,7 +173,7 @@
     </div>
     </div>
     </div>
-    <script src="./resources/js/dropdown_menu.js"></script>
+
 </body>
 
 </html>
