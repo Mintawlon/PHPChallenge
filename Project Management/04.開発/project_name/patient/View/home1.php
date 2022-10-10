@@ -16,7 +16,7 @@
     <!-- JS file for Slider -->
 
     <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources//css/root.css">
     <link rel="stylesheet" href="./resources/css/home1.css">
 </head>
 
@@ -25,7 +25,7 @@
     <?php
     include("./common/head.php")
     ?>
-    <!-- Medicine Slider -->
+    <!-- Carousel Slider -->
     <div class="carousel_slider">
         <section class="splide first_slide my-5" id="carousel" aria-label="Splide Basic HTML Example">
             <div class="splide__track first_slide_wrapper">
@@ -60,8 +60,8 @@
         <ul class="cards">
             <li class="card">
                 <div>
-                    <div class="card-image">
-                        <img src="./storages/image/vaccine.png">
+                    <div class="vaccine_div">
+                        <img src="./storages/image/vaccine.png" class="vaccine_img">
                     </div>
                     <h3 class="card-title">Service 1</h3>
                     <div class="card-content">
