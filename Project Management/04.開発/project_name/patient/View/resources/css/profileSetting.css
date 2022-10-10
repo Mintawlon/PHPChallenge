@@ -9,5 +9,26 @@ body{
     border-radius: 50px;
 }
 
+.input_btn{
+    
+    
+    align-items: center;
+    flex-direction: column;
+    
+}
 
+.txt{
+    display: flex;   
+    
+}
+@media screen and (max-width: 800px) {
+    .input_btn{
+        width: 100px !important;
+    }.btn_save{
+        width: 100px !important;
+    margin-left: 100px !important;
+    }
+    
+    
+  } 
 
