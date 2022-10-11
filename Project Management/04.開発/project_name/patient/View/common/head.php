@@ -56,7 +56,9 @@
           <button type="button" class="btn btn-lg btn-outline-primary">Patient History</button>
           <br>
           <br>
-          <button type="button" class="btn btn-lg btn-outline-warning">Logout</button>
+          <button type="button" class="btn btn-lg btn-outline-warning">
+            <a href="./login.php" class="text-decoration-none text-white">Logout</a>
+          </button>
         </div>
       </div>
     </div>
