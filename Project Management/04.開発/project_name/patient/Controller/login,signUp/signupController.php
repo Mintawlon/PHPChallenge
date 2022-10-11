@@ -24,7 +24,7 @@ if (isset($_POST["signUp"])) {
 
         $sql->bindValue(":regName", $regName);
         $sql->bindValue(":regEmail", $regEmail);
-        $sql->bindValue(":regPwd", password_hash($regPwd, PASSWORD_DEFAULT));
+        $sql->bindValue(":regPwd",password_hash($regPwd,PASSWORD_DEFAULT));
 
         $sql->execute();
          header("Location: ../../View/home1.php");
