@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="./resources/css/adminDashboard.css" <?= time() ?> />
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
-    <script src="./resources/js/script.js"></script>
 </head>
 
 <body>
@@ -176,7 +175,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="rows_count">Showing 11 to 20 of 91 entries</div>
+
                 </div>
                 <hr class="about_line mt-5" />
 

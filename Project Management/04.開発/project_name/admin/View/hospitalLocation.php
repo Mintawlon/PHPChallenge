@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="./resources/css/hospital_location.css" <?= time() ?> />
   <!-- js -->
   <script src="./resources/js/jquery3.6.0.js"></script>
-  <script src="./resources/js/script.js"></script>
 </head>
 
 <body>
