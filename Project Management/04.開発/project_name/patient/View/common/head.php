@@ -53,12 +53,13 @@
           <label for="email" id="email">Email</label>
           <br>
           <br>
-          <button type="button" class="btn btn-lg btn-outline-primary">Patient History</button>
+          <!-- Blue Square Btn -->
+          <button class="square_blue_btn">Continue</button>
           <br>
           <br>
-          <button type="button" class="btn btn-lg btn-outline-warning">
-            <a href="./login.php" class="text-decoration-none text-white">Logout</a>
-          </button>
+          <!-- Blue Square Btn -->
+          <button class="square_yellow_btn">
+            <a href="./login.php" class="text-decoration-none text-white logoutbtn">Logout</a></button>
         </div>
       </div>
     </div>
