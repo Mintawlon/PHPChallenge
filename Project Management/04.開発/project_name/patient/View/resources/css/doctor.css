@@ -17,7 +17,7 @@ body {
 /* doctor card*/
 .card{
   background-color: white !important;
-  width: 23rem;
+  width: 20rem !important;
   margin: 3rem !important;
 }
 
@@ -40,8 +40,19 @@ p {
   color: white !important;
 }
 .btk {
-  text-align: center !important;
+  text-align: left !important;
+  font-weight: bold;
   background-color: #ffc652 !important;
+  width:100%;
+  color: var(--first_color);
+}
+.title{
+   margin-left: 4rem !important;
+   margin-right: 4rem !important;
+}
+.form-check{
+  color: var(--secondary_color);
+  font-weight: 500 !important;
 }
 hr {
   color: #2535a1 !important;
@@ -66,25 +77,24 @@ p{
 color: white !important;
     
 }
-.btk{
-    text-align: center !important;
-    background-color: #FFC652 !important;
-}
+
 hr{
     color: #2535A1 !important;
 }
 
-.square_blue_btn{
-    background-color: var(--first_color) !important;
-    color:  var(--secondary_color);
+.square_special_btn{
+    background-color: var(--secondary_color) !important;
+    color:  var(--first_color);
     border: 2px solid var(--secondary_color);
     width: 250px;
     height: 50px;
     font-size: var(--extra_small);
+    border-radius: 0.25rem !important;
+    border: 1px solid var(--first_color);
     margin-left: 3rem;
 }
 
-.square_blue_btn:hover{
+.square_special_btn:hover{
     background-color: #FFC652 !important;
 }
 .btn-row{

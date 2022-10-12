@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
 </head>
+
 <body>
     <!-- Footer -->
     <footer class="text-center text-lg-start  text-muted footer">
@@ -29,7 +31,7 @@
                         <p class=" text-white">
                             Address:Nar Nat TawRoad, Yangon,Myanmar.
                         </p>
-                        <h6 class=" fw-bold mb-4 text-dark">
+                        <h6 class=" fw-bold mb-4 text-white">
                             Keep in Touch with Us
                         </h6>
                         <p class="link_color">
@@ -60,13 +62,13 @@
                         <!-- Links -->
                         <h6 class=" fw-semibold mb-4 text-white">Blogs</h6>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">Blood Donation</a>
+                            <a href="#!" class="link_color fw-semibold">Blood Donation</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">First Aid For Emergency Situations</a>
+                            <a href="#!" class="link_color fw-semibold">First Aid For Emergency Situations</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold hello">Knowledge About Dengue</a>
+                            <a href="#!" class="link_color fw-semibold hello">Knowledge About Dengue</a>
                         </p>
                     </div>
                     <!-- Grid column -->

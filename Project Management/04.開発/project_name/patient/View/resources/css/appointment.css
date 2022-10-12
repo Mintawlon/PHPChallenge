@@ -1,3 +1,8 @@
+body{
+  background-color:var(--primary_color) !important;
+}
+
+
 /* page header */
 .appointment_header {
   text-align: left;
