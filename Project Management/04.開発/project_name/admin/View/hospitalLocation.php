@@ -27,7 +27,7 @@
       include("./common/nav.php")
       ?>
       <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
-      <div class="header_wrapper bg_header ">
+        <div class="header_wrapper bg_header ">
           <div class="header_box">
             <span class="navbar-brand ttl_admin" href="#">Hospital Location</span>
           </div>
@@ -35,7 +35,7 @@
         <div class="input_set">
           <h2 class="input_set_header my-4">Hospital Location List</h2>
         </div>
-        <div class="num_rows">
+        <!-- <div class="num_rows">
           <div class="form-group">
             <select class="form-control" name="state" id="maxRows">
               <option value="10">10</option>
@@ -48,7 +48,7 @@
             </select>
 
           </div>
-        </div>
+        </div> -->
         <table class="table" id="table-id">
           <thead class="table_bgcolor">
             <tr>
@@ -90,7 +90,7 @@
 
           </tbody>
         </table>
-        <div class='pagination_container'>
+        <!-- <div class='pagination_container'>
           <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item">
@@ -109,35 +109,37 @@
             </ul>
           </nav>
           <div class="rows_count">Showing 11 to 20 of 91 entries</div>
-        </div>
+        </div> -->
         <hr class="about_line mt-5" />
 
         <div class="input_set">
           <h2 class="input_set_header my-4">Add Hospital</h2>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Hospital Name</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Address</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Phone Number</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Email</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Google Map</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class=" mb-2  display_top ">
-            <!-- Add Btn -->
-            <a href="" class="common_btn add_btn input_box display_bottom display_top">Add</a>
-          </div>
+          <form action="../Controller/hospital locations/hospitalLocation.php" method="POST" >
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display">Hospital Name</span>
+              <input type="text" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display">Address</span>
+              <input type="text" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display">Phone Number</span>
+              <input type="text" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display">Email</span>
+              <input type="text" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display">Google Map</span>
+              <input type="text" class="common_input input_box" />
+            </div>
+            <div class=" mb-2  display_top ">
+              <!-- Add Btn -->
+              <a href="" class="common_btn add_btn input_box display_bottom display_top">Add</a>
+            </div>
+          </form>
         </div>
 
       </div>
