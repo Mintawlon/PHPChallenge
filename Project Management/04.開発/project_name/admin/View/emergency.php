@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="" class="common_btn add_btn go_btn">Go to First Aid Kit
+                    <a href="./editEmergency.php" class="common_btn add_btn go_btn">Go to First Aid Kit
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                 </div>
@@ -107,25 +107,25 @@
                     <hr />
                 </section>
                 <section class="add_first_aid">
-                    <div class="input_set">
+                    <form class="input_set" action="../Controller/emergencyController.php" method="POST">
                         <h2 class="input_set_header my-4">Add First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Add image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" name="emergencyImage" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>
-                            <input type="text" class="common_input" />
+                            <input name="emergencyHeader" type="text" class="common_input" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
+                            <textarea name="emergencyParagraph" class="common_input" placeholder="Text"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <button type="submit" name="addEmergency" href="" class="common_btn add_btn">Add</button>
                         </div>
-                    </div>
+                    </form>
                 </section>
             </div>
         </div>
