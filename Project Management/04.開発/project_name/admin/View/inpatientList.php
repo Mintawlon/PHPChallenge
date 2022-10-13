@@ -1,3 +1,9 @@
+<?php
+include "../Controller/controller.php";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +27,7 @@
 <body>
     <!-- Side Bar -->
     <div class="container-fluid">
+        <form action="./addInpatient.php" method="post">
         <div class="row flex-nowrap">
             <!-- Side Bar Menu Copy Here -->
             <?php
@@ -34,19 +41,22 @@
                         <span class="navbar-brand ttl_admin" href="#">Inpatient List</span>
                     </div>
                 </div>
-                <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
 
                 <div class="sec_input mb-2">
 
-                    <a href="" class="common_btn add_btn go_btn">Go to Add Inpatient
+                    <!-- <form action="./addInpatient.php">
+                        <input type="submit" value="Go to Add Inpatient" class="common_btn add_btn go_btn" />
+                    </form> -->
+
+                    <a href="./addInpatient.php" class="common_btn add_btn go_btn">Go to Add Inpatient
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                     <div class="tb_search">
                         <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
                     </div>
 
-
                 </div>
+
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Inpatient List</h2>
                 </div>
@@ -67,7 +77,6 @@
                 <table class="table" id="table-id">
                     <thead class="table_bgcolor">
                         <tr>
-                            <td>No.</td>
                             <td>Date</td>
                             <td>Patient Name</td>
                             <td>Age</td>
@@ -75,69 +84,25 @@
                             <td>Status</td>
                             <td>Room.</td>
                             <td>Address</td>
-
-
-
-
+                            <td><span class="ps-4"> Action</span></td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
+                        <?php $count = 1; ?>
 
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
-
-                        </tr>
-
+                        <?php foreach ($inpatient as $key => $patient) { ?>
+                            <tr>
+                                <td><?= $patient["name"] ?></td>
+                                <td><?= $patient["age"] ?></td>
+                                <td><?= $patient["address"] ?></td>
+                                <td><?= $patient["status"] ?></td>
+                                <td><?= $patient["disease"] ?></td>
+                                <td><?= $patient["hospitalized_date"] ?></td>
+                                <td><?= $patient["room"] ?></td>
+                                <td> <a href="" class="stretched-link">Edit </a> </td>
+                            </tr>
+                        <?php } ?>
+                        <!-- <a href="./adminDashboard.php" class="stretched-link">Delete</a> -->
                         <!-- Table  -->
 
                     </tbody>
@@ -169,10 +134,9 @@
             </div>
         </div>
 
+        </form>
+    </div>
 
-    </div>
-    </div>
-    </div>
 
 </body>
 

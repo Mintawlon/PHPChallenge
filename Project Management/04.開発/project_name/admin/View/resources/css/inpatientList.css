@@ -10,3 +10,6 @@
   .merge{
     margin-left: 8%;
   }
+  .card .index {
+    z-index: 1;
+ }
