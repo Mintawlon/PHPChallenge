@@ -39,7 +39,7 @@
 
                 <div class="sec_input mb-2">
 
-                    <a href="" class="common_btn add_btn back_btn">Back to Inpatient List
+                    <a href="./blogAdd.php" class="common_btn add_btn back_btn">Back to Inpatient List
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
 

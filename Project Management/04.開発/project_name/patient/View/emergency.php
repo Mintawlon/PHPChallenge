@@ -38,21 +38,21 @@ include("../Controller/emergencyPage/emergencyController.php");
     <div class="important_tab text-center mt-5">
         <h3 class="text-uppercase important_tab_header ">
             <?php
-            if(count($emergencyTab)==0){
+            if (count($emergencyTab) == 0) {
                 "";
-            }else{?>
-                <p><?=$emergencyTab[0]["header"]?></p>
-           <?php }
+            } else { ?>
+                <p><?= $emergencyTab[0]["header"] ?></p>
+            <?php }
             ?>
         </h3>
         <div class="important_tab_para">
-        <?php
-            if(count($emergencyTab)==0){
+            <?php
+            if (count($emergencyTab) == 0) {
                 "";
-            }else{?>
-                <p><?=$emergencyTab[0]["text"]?></p>
-           <?php
-        }?>
+            } else { ?>
+                <p><?= $emergencyTab[0]["text"] ?></p>
+            <?php
+            } ?>
         </div>
         <hr class="line" />
     </div>
@@ -61,17 +61,21 @@ include("../Controller/emergencyPage/emergencyController.php");
     <?php foreach ($emergencyInfo as $emergency) { ?>
         <div class="first_aid_card my-4">
             <h1 class="first_aid_card_header mb-3">First Aid For <span>
-                <?= $emergency["article_header"] ?>
-            </span>
+                    <?= $emergency["article_header"] ?>
+                </span>
             </h1>
             <div class="wrapper">
                 <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
                 <div class="info">
                     <h2 class="first_aid_para_header">What to Do?</h2>
-                    <ol class="first_aid_para">
-                        <li id="listOne">
-                        <?= $emergency["article_text"] ?>
+                    <ol class='first_aid_para'>
+                       
+                    
+
+                        <li >
+                        list One
                         </li>
+
                     </ol>
                 </div>
             </div>
