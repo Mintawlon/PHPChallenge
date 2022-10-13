@@ -34,10 +34,10 @@
                         <h6 class=" fw-bold mb-4 text-white">
                             Keep in Touch with Us
                         </h6>
-                        <p class="link_color">
-                            <span class="me-3"><i class="fa-brands fa-facebook"></i></span>
-                            <span class="me-3"><i class="fa-brands fa-facebook-messenger"></i></span>
-                            <span class="me-3"><i class="fa-brands fa-instagram"></i></span>
+                        <p class="">
+                            <span class="me-3"><i class="fa-brands fa-facebook link_color"></i></span>
+                            <span class="me-3"><i class="fa-brands fa-facebook-messenger link_color"></i></span>
+                            <span class="me-3"><i class="fa-brands fa-instagram link_color"></i></span>
                         </p>
                     </div>
 
