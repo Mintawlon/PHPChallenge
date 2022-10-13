@@ -7,8 +7,30 @@ $sql = $pdo->prepare(
 );
 $sql->execute();
 $emergencyInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-echo "<pre>";
-var_export($emergencyInfo);
+
+// Add Tab
+if(isset($_POST["addEmergencyTab"])){
+    $header = $_POST["header"];
+    $para = $_POST["paragraph"];
+    $sql = $pdo->prepare(
+        "INSERT INTO 
+        emergency_page_header (
+        header,
+        text
+        ) 
+        VALUES 
+        (
+        :header,
+        :paragraph
+        );"
+    );
+    $sql->bindValue(":header",$header);
+    $sql->bindValue(":paragraph",$para);
+
+    $sql->execute();
+    header("Location: ../View/emergency.php");
+}
+// Add Article
 if(isset($_POST["addEmergency"])){
     $image = $_POST["emergencyImage"];
     $header = $_POST["emergencyHeader"];
@@ -33,5 +55,6 @@ if(isset($_POST["addEmergency"])){
     $sql->bindValue(":image",$image);
 
     $sql->execute();
+    header("Location: ../View/emergency.php");
 }
 ?>

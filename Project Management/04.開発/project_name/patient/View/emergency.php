@@ -36,9 +36,23 @@ include("../Controller/emergencyPage/emergencyController.php");
     </div>
     <!-- First Tab -->
     <div class="important_tab text-center mt-5">
-        <h3 class="text-uppercase important_tab_header ">why is it important to know first aid?</h3>
+        <h3 class="text-uppercase important_tab_header ">
+            <?php
+            if(count($emergencyTab)==0){
+                "";
+            }else{?>
+                <p><?=$emergencyTab[0]["header"]?></p>
+           <?php }
+            ?>
+        </h3>
         <div class="important_tab_para">
-            <p>Lorem ipsum dolor sit amet consectetur, ading elit. Quas maxime facere laboriosam id, quae sequi error veritatis culpa doloremque eveniet ipsum unde quibusdam sapiente, perspiciatis quisquam ipsa consectetur repudiandae quia?</p>
+        <?php
+            if(count($emergencyTab)==0){
+                "";
+            }else{?>
+                <p><?=$emergencyTab[0]["text"]?></p>
+           <?php
+        }?>
         </div>
         <hr class="line" />
     </div>
@@ -58,21 +72,6 @@ include("../Controller/emergencyPage/emergencyController.php");
                         <li id="listOne">
                         <?= $emergency["article_text"] ?>
                         </li>
-                        <!-- <li>
-                            Start doing chest compressions on the person who needs help. Using
-                            both your hands, push down hard and fast in the center of the
-                            person’s chest. Let their chest come back up naturally between
-                            compressions. Keep going until someone with more training arrives.
-                        </li>
-                        <li>
-                            If you’re trained in CPR, you can use chest compressions and
-                            rescue breathing.
-                        </li>
-                        <li>
-                            If it’s available, use an AED. However, do not put off doing chest
-                            compressions to go look for an AED. If possible, instruct someone
-                            else to go find the device and bring it to you.
-                        </li> -->
                     </ol>
                 </div>
             </div>
