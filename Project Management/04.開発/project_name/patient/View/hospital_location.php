@@ -1,55 +1,76 @@
+<?php
+include("../Controller/hospitalLocations/hospitalLocationController.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Locations</title>
-    <!-- Css Root  -->
-    <link rel="stylesheet" href="./resources/css/root.css">
-    <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/hospital_location.css?v="<?php echo time() ?>>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Locations</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+  <!-- Css Root  -->
+  <link rel="stylesheet" href="./resources/css/root.css">
+  <!-- Css -->
+  <link rel="stylesheet" href="./resources/css/hospital_location.css?v=" <?php echo time() ?>>
+
 </head>
+
 <body>
-    <!-- Header -->
-    <?php
-    include("./common/head.php")
-    ?>
-    <!-- hospital location Header -->
-    <h3 class="hospital_location_header my-5">Hospital Locations</h3>
-    <div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-    <div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-md-5 image-container">
-      <img src="./storages/image/profile.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-7">
-      <div class="card-body text-center">
-      <div class="center_name_div">
-                <h2 class="center_name">Center Name</h2>
-            </div>
-            <div class="center_address_div">
-                <p class="yellow_color center_phone"><span  class="name fw-bold">Phone Number</span> : <span class="white_color">01 2222222</span></p>
-                <p class="yellow_color center_address"><span  class="name fw-bold">Address</span>: <span class="white_color">Nar Nat Taw Road,Yangon,Myanmar</span></p>
-                
-            </div>
+  <!-- Header -->
+  <?php
+  include("./common/head.php");
+  ?>
+
+  <h3 class="hospital_location_header my-3">Hospital Locations</h3>
+
+  <?php foreach ($hospitalInfo as $hospital) { ?>
+    <div class="card_wrapper mb-5">
+
+      <div class="location_box">
+
+        <div class="map_image ">
+        <div class="map">
+        <?= $hospital["google_map_image"]?>
+        </div>
+        </div>
+        <div class="hospitalInfo mt-3">
+          <p class="yellow_color  location_data"> Hospital Name : <span class="white_color">
+              <?= $hospital["hospital_name"] ?>
+            </span></p>
+          <p class="yellow_color  location_data">Address :
+            <span class="white_color">
+              <?= $hospital["address"] ?>
+            </span>
+          </p>
+          <p class="yellow_color  location_data ">Phone Number : <span class="white_color"><?= $hospital["contact"]?></span></p>
+          <p class="yellow_color  location_data">Email : <span class="white_color">hospital@gmail.com</span></p>
+        </div>
+
       </div>
+
+      <hr class="line">
+
     </div>
-  </div>
-</div>
-        <!--hospital card-->
-    </div>
-  </div>
-</div>
-        <hr class="line" />
-    </div>
-    <!-- Footer -->
-    <?php
-    include("./common/footer.php")
-    ?>
+
+  <?php }
+  ?>
+
+
+
+
+  <!-- Footer -->
+  <?php
+  include("./common/footer.php")
+  ?>
+</body>
+
+
 </body>
 
 </html>

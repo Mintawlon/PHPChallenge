@@ -1,3 +1,7 @@
+<?php
+include("../Controller/emergencyEditController.php");
+$info= $_SESSION["articleInfo"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,30 +33,45 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="" class="common_btn add_btn back_btn">Back to Emergency
+                    <a href="./emergency.php" class="common_btn add_btn back_btn">Back to Emergency
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
                 </div>
+                <form method="POST" action="../Controller/emergencyEditController.php" class="input_set">
+                        <h2 class="input_set_header my-4">Edit First Aid Tab</h2>
+                        <div class="input_one mb-2">
+                            <span class="input_set_text">Header for paragraph</span>
+                            <input type="text" class="common_input " name="header" value="<?=$emergencyTab[0]["header"]?>" />
+                        </div>
+                        <div class="input_one mb-2">
+                            <span class="input_set_text">Add new paragraph</span>
+                            <textarea class="common_input " placeholder="Text" name="paragraph"><?=$emergencyTab[0]["text"]?></textarea>
+                        </div>
+                            <!-- Add Btn -->
+                            <button type="submit" name="edit_tab" class="common_btn add_btn">Edit</button>
+                        <hr />
+                    </form>
                 <section class="edit_first_aid">
-                    <div class="input_set">
+                    <form action="../Controller/emergencyEditController.php" method="POST" class="input_set">
                         <h2 class="input_set_header my-4">Edit First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Update image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="articleImage" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>
-                            <input type="text" class="common_input" />
+                            <input type="text" class="common_input" value="<?=$info[0]["article_header"]?>"  name="articleHeader"/>
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Update paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
+                            <textarea class="common_input" placeholder="Text" name="articleText"><?=$info[0]["article_text"]?></textarea>
                         </div>
+                        <input type="hidden" name="article_id" value="<?=$info[0]["id"]?>">
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <button type="submit" class="common_btn add_btn" name="edit_article">Update</button>
                         </div>
-                    </div>
+                    </form>
                 </section>
             </div>
         </div>

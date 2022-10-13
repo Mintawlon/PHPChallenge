@@ -121,7 +121,7 @@
                         About Us
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./hospitalLocation.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-location-pin color_green"></i>
                     <span class="navbar_btn_name_o">
                         Hospital Location
@@ -145,7 +145,7 @@
                         Blog
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./emergency.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-suitcase-medical color_green"></i>
                     <span class="navbar_btn_name">
                         First Aid

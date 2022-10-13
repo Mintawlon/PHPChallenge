@@ -22,10 +22,10 @@
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
       <div class="collapse navbar-collapse navbar_text_div" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="navbar_text  me-5" aria-current="page" href="#">Hospital List</a>
-          <a class="navbar_text me-5" href="#">Find Doctors</a>
-          <a class="navbar_text me-5" href="#">Booking</a>
-          <a class="navbar_text me-5 ">Blog</a>
+          <a class="navbar_text  me-5" aria-current="page" href="./hospital_location.php">Hospital List</a>
+          <a class="navbar_text me-5" href="./doctor.php">Find Doctors</a>
+          <a class="navbar_text me-5" href="./booking.php">Booking</a>
+          <a class="navbar_text me-5 " href="./blog.php">Blog</a>
           <a class="navbar_text me-5 ">
             <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="../storages/image/profile.jpg" class="profile"></span>
           </a>
@@ -53,10 +53,13 @@
           <label for="email" id="email">Email</label>
           <br>
           <br>
-          <button type="button" class="btn btn-lg btn-outline-primary">Patient History</button>
+          <!-- Blue Square Btn -->
+          <button class="square_blue_btn">Continue</button>
           <br>
           <br>
-          <button type="button" class="btn btn-lg btn-outline-warning">Logout</button>
+          <!-- Blue Square Btn -->
+          <button class="square_yellow_btn">
+            <a href="./login.php" class="text-decoration-none text-white logoutbtn">Logout</a></button>
         </div>
       </div>
     </div>

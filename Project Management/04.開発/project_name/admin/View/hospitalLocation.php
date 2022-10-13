@@ -1,3 +1,8 @@
+<?php
+
+include("../Controller/hosLocationController.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +20,6 @@
   <link rel="stylesheet" href="./resources/css/hospital_location.css" <?= time() ?> />
   <!-- js -->
   <script src="./resources/js/jquery3.6.0.js"></script>
-  <script src="./resources/js/script.js"></script>
 </head>
 
 <body>
@@ -27,7 +31,7 @@
       include("./common/nav.php")
       ?>
       <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
-      <div class="header_wrapper bg_header ">
+        <div class="header_wrapper bg_header ">
           <div class="header_box">
             <span class="navbar-brand ttl_admin" href="#">Hospital Location</span>
           </div>
@@ -35,7 +39,7 @@
         <div class="input_set">
           <h2 class="input_set_header my-4">Hospital Location List</h2>
         </div>
-        <div class="num_rows">
+        <!-- <div class="num_rows">
           <div class="form-group">
             <select class="form-control" name="state" id="maxRows">
               <option value="10">10</option>
@@ -48,49 +52,38 @@
             </select>
 
           </div>
-        </div>
+        </div> -->
         <table class="table" id="table-id">
-          <thead class="table_bgcolor">
+          <thead class="table_bgcolor" id="table_header">
             <tr>
               <td>No.</td>
               <td>Hospital Name</td>
               <td>Contact</td>
-              <td>Map</td>
+              <td id="map_header">Map</td>
               <td>Address</td>
               <td>Mail</td>
             </tr>
           </thead>
           <tbody>
+            <?php $number=1?>
+            <?php foreach ($hospitalInfo as $hospital) {?>
             <tr class="row_bdr">
-              <td>1</td>
-              <td>SSC</td>
-              <td>091234567</td>
-              <td>Map Image</td>
-              <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium amet cupiditate vel ab? Odio, harum!</td>
-              <td>blabla@gmail.com</td>
+              <td><?=$number++?></td>
+              <td><?= $hospital["hospital_name"]?></td>
+              <td><?= $hospital["contact"]?></td>
+              <td id= "map"><?= $hospital["google_map_image"]?></td>
+              <td><?= $hospital["address"]?></td>
+              <td><?= $hospital["email"]?></td>
             </tr>
-            <tr class="row_bdr">
-              <td>1</td>
-              <td>SSC</td>
-              <td>091234567</td>
-              <td>Map Image</td>
-              <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium amet cupiditate vel ab? Odio, harum!</td>
-              <td>blabla@gmail.com</td>
-            </tr>
-            <tr class="row_bdr">
-              <td>1</td>
-              <td>SSC</td>
-              <td>091234567</td>
-              <td>Map Image</td>
-              <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium amet cupiditate vel ab? Odio, harum!</td>
-              <td>blabla@gmail.com</td>
-            </tr>
-
+              <?php }
+            ?>
+            
+            
             <!-- Table  -->
 
           </tbody>
         </table>
-        <div class='pagination_container'>
+        <!-- <div class='pagination_container'>
           <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item">
@@ -109,36 +102,38 @@
             </ul>
           </nav>
           <div class="rows_count">Showing 11 to 20 of 91 entries</div>
-        </div>
+        </div> -->
         <hr class="about_line mt-5" />
 
-        <div class="input_set">
+        <form action="../Controller/hosLocationController.php" method="POST"  class="input_set">
           <h2 class="input_set_header my-4">Add Hospital</h2>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Hospital Name</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Address</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Phone Number</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Email</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Google Map</span>
-            <input type="text" class="common_input input_box" />
-          </div>
-          <div class=" mb-2  display_top ">
-            <!-- Add Btn -->
-            <a href="" class="common_btn add_btn input_box display_bottom display_top">Add</a>
-          </div>
-        </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display" >Hospital Name</span>
+              <input type="text" name="hospitalName" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display">Address</span>
+              <input type="text"  name = "hospitalAddress" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display" >Phone Number</span>
+              <input type="text" name = "hospitalPhone" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display" >Email</span>
+              <input type="text" name = "hospitalEmail" class="common_input input_box" />
+            </div>
+            <div class="input_one mb-2 display_top">
+              <span class="input_set_text text_display" >Google Map</span>
+              <input type="text" name = "hospitalMap" class="common_input input_box" />
+            </div>
+            <div class=" mb-2  display_top ">
+              <!-- Add Btn -->
+              <button type="submit" class="common_btn add_btn input_box display_bottom display_top"
+              name="hospitalInfo"
+              >Add</button>
+            </div>
+        </form>
 
       </div>
     </div>

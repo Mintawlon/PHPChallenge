@@ -14,7 +14,7 @@ body{
 }
 .important_tab_header{
     font-family: var(--secondary_font);
-    color: var(--first_color);
+    color: var(--tertiary_color);
 }
 .important_tab_para{
     width: 50%;

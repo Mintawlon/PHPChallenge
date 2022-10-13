@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
 </head>
+
 <body>
     <!-- Footer -->
     <footer class="text-center text-lg-start  text-muted footer">
-        <h1 class=" backlogo_name fw-bolder">MedPlatform</h1>
+        
         <!-- Section: Social media -->
 
         <!-- Section: Links  -->
@@ -29,13 +31,13 @@
                         <p class=" text-white">
                             Address:Nar Nat TawRoad, Yangon,Myanmar.
                         </p>
-                        <h6 class=" fw-bold mb-4 text-dark">
+                        <h6 class=" fw-bold mb-4 text-white">
                             Keep in Touch with Us
                         </h6>
-                        <p class="link_color">
-                            <span class="me-3"><i class="fa-brands fa-facebook"></i></span>
-                            <span class="me-3"><i class="fa-brands fa-facebook-messenger"></i></span>
-                            <span class="me-3"><i class="fa-brands fa-instagram"></i></span>
+                        <p class="">
+                            <span class="me-3"><i class="fa-brands fa-facebook link_color"></i></span>
+                            <span class="me-3"><i class="fa-brands fa-facebook-messenger link_color"></i></span>
+                            <span class="me-3"><i class="fa-brands fa-instagram link_color"></i></span>
                         </p>
                     </div>
 
@@ -47,10 +49,10 @@
                             About MedPlatform
                         </h6>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">About Us</a>
+                            <a href="./about_us.php" class="text-decoration-none link_color fw-semibold">About Us</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">Privacy Policy</a>
+                            <a href="./about_us.php" class="text-decoration-none link_color fw-semibold">Privacy Policy</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -60,13 +62,13 @@
                         <!-- Links -->
                         <h6 class=" fw-semibold mb-4 text-white">Blogs</h6>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">Blood Donation</a>
+                            <a href="./blooddonation.php" class="link_color fw-semibold">Blood Donation</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold">First Aid For Emergency Situations</a>
+                            <a href="./emergency.php" class="link_color fw-semibold">First Aid For Emergency Situations</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-decoration-none link_color fw-semibold hello">Knowledge About Dengue</a>
+                            <a href="#" class="link_color fw-semibold hello">Knowledge About Dengue</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -80,6 +82,7 @@
         <div class="text-center p-4 link_color " style="background-color: rgba(0, 0, 0, 0.025);">
             © 2022 Copyright: <span class="fw-bold">MedPlatform.com</span>
         </div>
+        <!-- <h1 class=" backlogo_name fw-bolder">MedPlatform</h1> -->
         <!-- Copyright -->
     </footer>
     <!-- Footer -->

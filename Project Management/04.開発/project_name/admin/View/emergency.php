@@ -1,3 +1,6 @@
+<?php
+include("../Controller/emergencyController.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +15,7 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+    <link rel="stylesheet" href="./resources/css/emergency.css">
 </head>
 
 <body>
@@ -29,60 +33,58 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="" class="common_btn add_btn go_btn">Go to First Aid Kit
+                    <a href="./editEmergency.php" class="common_btn add_btn go_btn">Go to First Aid Kit
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                 </div>
                 <section class="first_aid_tab">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Update First Aid Tab</h2>
+                    <form action="../Controller/emergencyController.php" method="POST" class="input_set">
+                        <h2 class="input_set_header my-4">Add First Aid Tab</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header for paragraph</span>
-                            <input type="text" class="common_input" />
+                            <input type="text" class="common_input" name="header" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add new paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
+                            <textarea class="common_input" placeholder="Text" name="paragraph"></textarea>
                         </div>
-                        <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
-                        </div>
+                            <button type="submit" name="addEmergencyTab" class="common_btn add_btn">Add</button>
                         <hr />
-                    </div>
+                    </form>
                 </section>
                 <section class="first_aid_table">
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
-                                <td>Image</td>
                                 <td>Header</td>
-                                <td>Description</td>
+                                <td id="img_header">Image</td>
+                                <td id="text_header">Description</td>
                                 <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 1</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 2</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum!</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
+                            <?php $number = 1 ?>
+                            <?php foreach ($emergencyInfo as $emergency) { ?>
+                                <tr class="row_bdr">
+                                    <td id="number"><?= $number++ ?></td>
+                                    <td id="header">
+                                        <?= $emergency["article_header"] ?>
+                                    </td>
+                                    <td id="image">
+                                        <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="image">
+                                    </td>
+
+                                    <td id="text"><?= $emergency["article_text"] ?></td>
+                                    <td>
+                                        <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?id=<?=$emergency["id"]?>" class="color_sixth me-2">Edit</a></span>
+                                        <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?delId=<?=$emergency["id"]?>"class="color_fifth">Delete</a></span>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+
+
                         </tbody>
                     </table>
                     <div class='pagination_container'>
@@ -107,25 +109,25 @@
                     <hr />
                 </section>
                 <section class="add_first_aid">
-                    <div class="input_set">
+                    <form class="input_set" action="../Controller/emergencyController.php" method="POST">
                         <h2 class="input_set_header my-4">Add First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Add image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" name="emergencyImage" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>
-                            <input type="text" class="common_input" />
+                            <input name="emergencyHeader" type="text" class="common_input" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
+                            <textarea name="emergencyParagraph" class="common_input" placeholder="Text"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <button type="submit" name="addEmergency" href="" class="common_btn add_btn">Add</button>
                         </div>
-                    </div>
+                    </form>
                 </section>
             </div>
         </div>

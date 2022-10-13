@@ -12,6 +12,7 @@
     --second_color:#000000;
     --third_color:#FFC652;
     --fourth_color:#1C92D2;
+    --fifth_color: ##ef233c;
 }
 /* Font Family */
 :root{
@@ -38,6 +39,7 @@
     color: #2535A1;
 }
 .box{
+    margin-top: 1.875rem !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,8 +59,9 @@
     border: none;
     position: absolute;
     top: 0;
-    right: -5rem;
+    right: -3rem !important;
 }
+
 
 /* Header */
 .navbar{
@@ -100,7 +103,12 @@
     opacity: 0.05;
   }
   .link_color {
-    color: var(--fourth_color);
+    cursor: pointer;
+    color: var(--first_color) !important;
+    text-decoration: none;
+  }
+  .link_color:hover{
+    color:var(--tertiary_color) !important; 
   }
   /* Tablet View */
   @media only screen and (max-width: 992px) {
@@ -180,15 +188,26 @@
 
 /* Blue Square Button */
 .square_blue_btn{
-    background-color: var(--secondary_color) !important;
+    background-color: var(--primary_color) !important;
     color: var(--first_color);
     border: none;
     width: 250px;
     height: 50px;
     font-size: var(--extra_small);
+    border-radius: 0.313rem !important;
+    border: 1px solid var(--tertiary_color) !important;
 }
-
-
+/* logout Button */
+.square_yellow_btn{
+  background-color: var(--tertiary_color) !important;
+  color: var(--first_color);
+  border: none;
+  width: 250px;
+  height: 50px;
+  font-size: var(--extra_small);
+  border-radius: 0.313rem !important;
+  border: 1px solid var(--first_color) !important;
+}
 /* White Square Button */
 .square_white_btn{
     background-color: var(--first_color) !important;

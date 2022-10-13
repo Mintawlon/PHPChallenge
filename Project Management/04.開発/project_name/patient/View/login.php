@@ -1,3 +1,6 @@
+<?php
+unset($_SESSION["email"]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +21,11 @@
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/fa91b09b37.js" crossorigin="anonymous"></script>
+    <script src="./resources/js/signUp.js" defer></script>
+
+
 </head>
 
 <body>
@@ -32,22 +40,23 @@
                     <p class="login  text-white">Login to your account</p>
                 </div>
                 <!-- input box -->
-                <div class="inpbox">
+                <form method="POST" action="../Controller/login,signUp/loginController.php" class="inpbox">
                     <br>
-                    <input type="text" class="name form-control mb-3" placeholder="Login with email">
-                    <input type="text" class="name form-control" placeholder="Password">
-
-
-                    <a href="">
+                    <input type="email" name="email" class="name form-control mb-3" placeholder="Login with email">
+                    <div class="password_box">
+                        <input type="password" name="pwd" class="name form-control" placeholder="Password"  id="pw">
+                        <i class="fa-solid fa-eye-slash" id="eye"></i>
+                    </div>
+                    <a href="./forgotpsw.php">
                         <p class="forgotpsw text-decoration-underline">Forgot Password?</p>
                     </a>
-                    <button type="submit" class="btnsignup mt-1 form-control">
-                        Login In
+                    <button type="submit" name="logIn" class="btnsignup mt-1 form-control">
+                        Log In
                     </button>
-                    <a href="">
+                    <a href="./signUp.php">
                         <p class="mt-2 reg text-white fs-6 text-decoration-underline ">Not Registered yet?</p>
                     </a>
-                </div>
+                </form>
             </div>
             <div>
                 <img class="login_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">

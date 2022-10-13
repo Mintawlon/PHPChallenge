@@ -66,3 +66,12 @@ body {
     display: none;
   }
 }
+/* Password Eyelash */
+.password_box{
+  position: relative;
+}
+#eye{
+  position: absolute;
+  right: 5%;
+  top: 10px;
+}
