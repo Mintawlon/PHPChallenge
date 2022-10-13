@@ -1,3 +1,7 @@
+<?php
+include "../Controller/controller.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,37 +24,149 @@
 
 <body>
     <!-- Side Bar -->
+
     <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <!-- Side Bar Menu Copy Here -->
-            <?php
-            include("./common/nav.php")
-            ?>
+        <form action="../Controller/controller.php" method="post">
+            <div class="row flex-nowrap">
+                <!-- Side Bar Menu Copy Here -->
+                <?php
+                include("./common/nav.php")
+                ?>
 
-            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
-                <!-- Header -->
-                <div class="header_wrapper bg_header ">
-                    <div class="header_box">
-                        <span class="navbar-brand ttl_admin" href="#">Inpatient</span>
+
+                <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                    <div class="header_wrapper bg_header ">
+                        <div class="header_box">
+                            <span class="navbar-brand ttl_admin" href="#">Add Inpatient</span>
+                        </div>
                     </div>
-                </div>
+                    <!--  -->
 
+                    <div class="sec_input mb-2">
 
+                        <a href="./inpatientList.php" class="common_btn add_btn back_btn">Go to Inpatient List
+                            <i class="fa-solid fa-arrow-left arrow_left"></i>
+                        </a>
+                        <div class="tb_search">
+                            <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
+                        </div>
 
-                <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
-
-                <div class="sec_input mb-2">
-
-                    <a href="" class="common_btn add_btn back_btn">Back to Inpatient List
-                        <i class="fa-solid fa-arrow-left arrow_left"></i>
-                    </a>
-
-                    <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
                     </div>
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Add Inpatient</h2>
+                    </div>
+                    <div class="num_rows">
+                        <div class="form-group">
+                            <select class="form-control" name="state" id="maxRows">
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="70">70</option>
+                                <option value="100">100</option>
+                                <option value="5000">Show ALL Rows</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <table class="table" id="table-id">
+                        <thead class="table_bgcolor">
+                            <tr>
+                                <td>Date</td>
+                                <td>Patient Name</td>
+                                <td>Age</td>
+                                <td>Disease</td>
+                                <td>Status</td>
+                                <td>Room.</td>
+                                <td>Address</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $count = 1; ?>
+
+                            <?php foreach ($inpatient as $key => $patient) { ?>
+                                <tr>
+                                    <td><?= $patient["name"] ?></td>
+                                    <td><?= $patient["age"] ?></td>
+                                    <td><?= $patient["address"] ?></td>
+                                    <td><?= $patient["status"] ?></td>
+                                    <td><?= $patient["disease"] ?></td>
+                                    <td><?= $patient["hospitalized_date"] ?></td>
+                                    <td><?= $patient["room"] ?></td>
+                                </tr>
+                            <?php } ?>
+
+
+
+                        </tbody>
+                    </table> -->
+                    <div class='pagination_container'>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="rows_count">Showing 11 to 20 of 91 entries</div>
+                    </div>
+                    <hr class="about_line mt-5" />
+
+
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Add Inpatient</h2>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Name</span>
+                            <input type="text" class="common_input input_box" name="name" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Age</span>
+                            <input type="text" class="common_input input_box" name="age" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Address</span>
+                            <input type="text" class="common_input input_box" name="address" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Status</span>
+                            <input type="text" class="common_input input_box" name="status" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Disease</span>
+                            <input type="text" class="common_input input_box" name="disease" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Hospitalized Date</span>
+                            <input type="text" class="common_input input_box" name="date" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Room Number</span>
+                            <input type="text" class="common_input input_box" name="room" />
+                        </div>
+                        <div class=" mb-2  display_top ">
+
+                            <button type="submit" class="common_btn add_btn input_box display_bottom display_top" name="addbtn">Add</button>
+                        </div>
+                    </div> -->
+
+
+
 
 
                 </div>
+<<<<<<< HEAD
+                <!-- class="" -->
+=======
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Inpatient List</h2>
                 </div>
@@ -204,14 +320,12 @@
                     </div>
                 </div>
 
+>>>>>>> origin/main
             </div>
-        </div>
+        </form>
 
-
+        <script src="./resources/js/dropdown_menu.js"></script>
     </div>
-    </div>
-    </div>
-    <script src="./resources/js/dropdown_menu.js"></script>
 </body>
 
 </html>
