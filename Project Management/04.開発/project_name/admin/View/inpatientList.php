@@ -37,7 +37,7 @@
 
                 <div class="sec_input mb-2">
 
-                    <a href="" class="common_btn add_btn go_btn">Go to Add Inpatient
+                    <a href="./addInpatient.php" class="common_btn add_btn go_btn">Go to Add Inpatient
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                     <div class="tb_search">
