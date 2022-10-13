@@ -68,37 +68,42 @@
 
                     </div>
                 </div>
-                <!-- <table class="table" id="table-id">
-                    <thead class="table_bgcolor">
+
+                <table class="table">
+                    <thead class="table_bgcolor" id="table_header">
                         <tr>
                             <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
-                            <td> <span class="ps-4"> Action</span></td>
-
-
-
+                            <td>Header</td>
+                            <td id="img_header">Image</td>
+                            <td id="text_header">Description</td>
+                            <td>Action</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Date</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Disease</td>
-                            <td>Status</td>
-                            <td>Room.</td>
-                            <td>Address</td>
-                            <td><span class="pe-4"> <a href="./blog.php" class="stretched-link">Edit</a></span> <span class="ps-3"> <a href="#" class="stretched-link">Delete</a></span> </td>
-                        </tr>
+                        <?php $number = 1 ?>
+                        <?php foreach ($emergencyInfo as $emergency) { ?>
+                            <tr class="row_bdr">
+                                <td id="number"><?= $number++ ?></td>
+                                <td id="header">
+                                    <?= $emergency["article_header"] ?>
+                                </td>
+                                <td id="image">
+                                    <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="image">
+                                </td>
+
+                                <td id="text"><?= $emergency["article_text"] ?></td>
+                                <td>
+                                    <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="color_sixth me-2">Edit</a></span>
+                                    <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="color_fifth">Delete</a></span>
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+
                     </tbody>
-                </table> -->
+                </table>
+
+
                 <div class='pagination_container'>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
