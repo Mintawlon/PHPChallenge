@@ -4,13 +4,13 @@
 :root{
     --primary_color:#1C92D2;
     --secondary_color:#2535A1;
-    --tertiary_color:#FFC652;
+    --tertiary_color:#fccb6a;
 }
 /* Text Color */
 :root{
     --first_color:#FFFFFF;
     --second_color:#000000;
-    --third_color:#FFC652;
+    --third_color:#fccb6a;
     --fourth_color:#1C92D2;
     --fifth_color: ##ef233c;
 }
@@ -240,7 +240,7 @@
 
 /* Search Box */
 .searchbox{
-    width: 20em;
+    width: 22em;
     height: 2.5em;
     border-radius: 5em;
     position: relative;
@@ -250,19 +250,19 @@
     height: 2.5em;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     border-radius: 5em;
     border: none;
 }
 .search_icon{
     position: absolute;
     top: 30%;
-    left: 5em;
+    left: 1em;
     font-size: var(--extra_small);
 }
 .search_text{
     position: absolute;
     top: 10%;
-    left: 0;
+    right: 0;
     font-size: var(--extra_small);
 }
