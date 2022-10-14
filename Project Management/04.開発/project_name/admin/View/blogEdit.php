@@ -26,7 +26,7 @@
                 <!-- Header -->
                 <div class="header_wrapper bg_header ">
                     <div class="header_box">
-                        <span class="navbar-brand ttl_admin" href="#">Add Current Diseases</span>
+                        <span class="navbar-brand ttl_admin" href="#">Edit Blog</span>
                     </div>
                 </div>
                 <div class="sec_input mb-2">
@@ -36,9 +36,9 @@
                 </div>
                 <section class="add_diseases">
                     <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Current Diseases</h2>
+                        <h2 class="input_set_header my-4">Edit Current Diseases</h2>
                         <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Add image</span>
+                            <span class="input_set_text add_file"> image</span>
                             <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
                         </div>
                         <div class="input_one mb-2">
@@ -46,13 +46,48 @@
                             <input type="text" class="common_input" />
                         </div>
                         <div class="input_one mb-2">
-                            <span class="input_set_text">Add paragraph</span>
+                            <span class="input_set_text"> paragraph</span>
                             <textarea class="common_input" placeholder="Text"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Add</a>
+                            <a href="" class="common_btn add_btn">Edit</a>
                         </div>
+                    </div>
+                </section>
+                <hr />
+
+                <section class="blog_tab">
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Edit Tab1</h2>
+                        <div class="input_one mb-2">
+                            <span class="input_set_text add_file">First Tab Image</span>
+                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                        </div>
+                        <div class="input_one mb-2">
+                            <span class="input_set_text">First Tab Text</span>
+                            <input type="text" class="common_input" />
+                        </div>
+                        <div class=" mb-2  ">
+                            <!-- Add Btn -->
+                            <a href="" class="common_btn add_btn">Edit</a>
+                        </div>
+
+                        <h2 class="input_set_header my-4">Edit Tab2</h2>
+                        <div class="input_one mb-2">
+
+                            <span class="input_set_text add_file">Second Tab Image</span>
+                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                        </div>
+                        <div class="input_one mb-2">
+                            <span class="input_set_text">Second Tab Text</span>
+                            <input type="text" class="common_input" />
+                        </div>
+                        <div class=" mb-2  ">
+                            <!-- Add Btn -->
+                            <a href="" class="common_btn add_btn">Edit</a>
+                        </div>
+                        <hr />
                     </div>
                 </section>
             </div>

@@ -267,7 +267,7 @@ tbody .row_bdr {
 .input_one {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 65%;
 }
 .input_set_header {
   color: var(--secondary_color);

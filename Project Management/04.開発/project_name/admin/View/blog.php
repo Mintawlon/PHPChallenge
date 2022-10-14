@@ -30,13 +30,13 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="./blogAdd.php" class="common_btn add_btn go_btn">Go to Add Blog
+                    <a href="./blogEdit.php" class="common_btn add_btn go_btn">Go to Edit Blog
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                 </div>
                 <section class="blog_tab">
                     <div class="input_set">
-                        <h2 class="input_set_header my-4">Update Tab</h2>
+                        <h2 class="input_set_header my-4">Add Tab1</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">First Tab Image</span>
                             <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
@@ -47,9 +47,12 @@
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <a href="" class="common_btn add_btn">Add</a>
                         </div>
+
+                        <h2 class="input_set_header my-4">Add Tab2</h2>
                         <div class="input_one mb-2">
+                            
                             <span class="input_set_text add_file">Second Tab Image</span>
                             <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
                         </div>
@@ -59,7 +62,7 @@
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <a href="" class="common_btn add_btn">Add</a>
                         </div>
                         <hr />
                     </div>
@@ -127,9 +130,9 @@
 
                 <section class="edit_diseases">
                     <div class="input_set">
-                        <h2 class="input_set_header my-4">Edit Current Diseases</h2>
+                        <h2 class="input_set_header my-4">Add Current Diseases</h2>
                         <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Update image</span>
+                            <span class="input_set_text add_file">Add image</span>
                             <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
                         </div>
                         <div class="input_one mb-2">
@@ -137,12 +140,12 @@
                             <input type="text" class="common_input" />
                         </div>
                         <div class="input_one mb-2">
-                            <span class="input_set_text">Update paragraph</span>
+                            <span class="input_set_text">Add paragraph</span>
                             <textarea class="common_input" placeholder="Text"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <a href="" class="common_btn add_btn">Add</a>
                         </div>
                     </div>
                 </section>
