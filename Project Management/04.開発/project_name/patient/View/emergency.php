@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../Controller/emergencyPage/emergencyController.php");
 ?>
 <!DOCTYPE html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../Controller/hospitalLocations/hospitalLocationController.php");
 ?>
 <!DOCTYPE html>

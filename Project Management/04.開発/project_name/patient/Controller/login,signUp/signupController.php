@@ -1,5 +1,8 @@
 <?php
+session_start();
 include("../../Model/dbConnection.php");
+
+// Get User Info to check Email Exist 
 if (isset($_POST["signUp"])) {
     $regName = $_POST["reg_name"];
     $regEmail = $_POST["reg_email"];
@@ -12,23 +15,24 @@ if (isset($_POST["signUp"])) {
     $sql->bindValue(":regEmail", $regEmail);
     $sql->execute();
     $reg_email_check = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
+
+    // Account already exist OR Not 
+    // If not Open an account
     if (count($reg_email_check) == 0) {
         $sql = $pdo->prepare(
             "INSERT INTO 
-            user_register (register_name,email_address,password) 
+            user_register (register_name,email_address,password,created_date) 
             VALUES 
-            (:regName,:regEmail,:regPwd); 
+            (:regName,:regEmail,:regPwd,:createdDate); 
             "
         );
-
         $sql->bindValue(":regName", $regName);
         $sql->bindValue(":regEmail", $regEmail);
-        $sql->bindValue(":regPwd",password_hash($regPwd,PASSWORD_DEFAULT));
-
+        $sql->bindValue(":regPwd", password_hash($regPwd, PASSWORD_DEFAULT));
+        $sql->bindValue(":createdDate", date("Y/m/d"));
         $sql->execute();
-         header("Location: ../../View/home1.php");
-
+        $_SESSION["email"] = $regEmail;
+        header("Location: ../../View/home1.php");
     } else {
         echo "<script>
         alert('Alerady Exist This Email');

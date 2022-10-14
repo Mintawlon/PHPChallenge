@@ -1,6 +1,8 @@
 <?php
 
 include("../Model/dbConnection.php");
+
+// get article info
 $sql = $pdo->prepare(
     "SELECT * FROM `first_aid` 
     "

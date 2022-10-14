@@ -18,15 +18,15 @@
 <body>
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <p class="logo" href="#">Logo</p>
+      <p class="logo mt-3" href="#">Logo</p>
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
       <div class="collapse navbar-collapse navbar_text_div" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="navbar_text  me-5" aria-current="page" href="./hospital_location.php">Hospital List</a>
-          <a class="navbar_text me-5" href="./doctor.php">Find Doctors</a>
-          <a class="navbar_text me-5" href="./booking.php">Booking</a>
-          <a class="navbar_text me-5 " href="./blog.php">Blog</a>
-          <a class="navbar_text me-5 ">
+          <a class="navbar_text mt-3  me-5" aria-current="page" href="./hospital_location.php">Hospital Locations</a>
+          <a class="navbar_text mt-3 me-5" href="./doctor.php">Find Doctors</a>
+          <a class="navbar_text mt-3 me-5" href="./booking.php">Booking Status</a>
+          <a class="navbar_text mt-3 me-5 " href="./blog.php">Blogs</a>
+          <a class="navbar_text mt-3 me-5 ">
             <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="../storages/image/profile.jpg" class="profile"></span>
           </a>
         </div>
@@ -35,22 +35,26 @@
   </nav>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-      <h5 id="offcanvasRightLabel">User Profile</h5>
+      <h5 id="offcanvasRightLabel">Your Profile</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <div class="box">
         <div class="mainbox">
-          <button class="usersetting"><i class="fa-solid fa-gear"></i></button>
+          <a href="./profileSetting.php" class="usersetting"><i class="fa-solid fa-gear"></i></a>
           <br>
           <br>
           <p>
             <img src="../storages/image/profile.jpg" class="profile">
           </p>
-          <label for="name" id="name">User Name</label>
+          <label for="name" id="name">
+            <?=$_SESSION["userName"]?>
+          </label>
           <br>
           <br>
-          <label for="email" id="email">Email</label>
+          <label for="email" id="email">
+            <?=$_SESSION["email"]?>
+          </label>
           <br>
           <br>
           <!-- Blue Square Btn -->

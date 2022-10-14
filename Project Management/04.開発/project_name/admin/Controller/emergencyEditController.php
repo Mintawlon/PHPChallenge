@@ -28,9 +28,7 @@ if(isset($_POST["edit_tab"])){
     header("Location: ../View/editEmergency.php");
 }
 
-
-
-// Get article info from database table
+// Get article info for Update
 if(isset($_GET["id"])){
     $id = $_GET["id"];
     $sql = $pdo->prepare(
@@ -46,17 +44,7 @@ if(isset($_GET["id"])){
     $_SESSION["articleInfo"] = $emergencyInfo;
     header("Location: ../View/editEmergency.php");
 }
-if(isset($_GET["delId"])){
-    $delId = $_GET["delId"];
-    $sql = $pdo->prepare(
-        "DELETE FROM `first_aid` WHERE id=:id
-        "
-    );
-    $sql->bindValue(":id",$delId);
-    $sql->execute();
-    header("Location: ../View/editEmergency.php");
-}
-
+// Update Article
 if(isset($_POST["edit_article"])){
     $id = $_POST["article_id"];
     $image = $_POST["articleImage"];
@@ -79,3 +67,16 @@ if(isset($_POST["edit_article"])){
 
     header("Location: ../View/editEmergency.php");
 }
+// Delete Article
+if(isset($_GET["delId"])){
+    $delId = $_GET["delId"];
+    $sql = $pdo->prepare(
+        "DELETE FROM `first_aid` WHERE id=:id
+        "
+    );
+    $sql->bindValue(":id",$delId);
+    $sql->execute();
+    header("Location: ../View/editEmergency.php");
+}
+
+
