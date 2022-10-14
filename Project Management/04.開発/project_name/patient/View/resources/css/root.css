@@ -69,7 +69,7 @@
     border-bottom: 0.12em solid var(--second_color);
 }
 .navbar_text:hover{
-   color:var(--tertiary_color);
+   color:var(--first_color);
 }
 .logo{
     color: var(--first_color);
@@ -81,10 +81,36 @@
 .navbar_text{
     color: var(--first_color);
     text-decoration: none;
+    font-weight: 500;
     font-size: var(--extra_small);
 }
 .menu_bar_icon{
     color: var(--first_color) !important;
+}
+/* Hover Design */
+.navbar_text {
+  margin: 20px auto;
+  padding: 0;
+  width: auto;
+  text-align: center;
+  display:inline-block;
+  transition-property: transform;
+  transition: 0.25s ease;
+}
+.navbar_text::after {
+  content: '';
+  border-top: 2px solid var(--first_color);
+  width: 100%;
+  position: absolute;
+  display: block;
+  transform: rotateY(90deg);
+  transition:transform 0.25s linear;
+}
+.navbar_text:hover {
+  transform: scale(1);
+}
+.navbar_text:hover::after {
+  transform: rotate(0deg);
 }
 
 /* Footer */

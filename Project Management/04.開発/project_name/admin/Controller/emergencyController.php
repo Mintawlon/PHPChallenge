@@ -18,16 +18,19 @@ if(isset($_POST["addEmergencyTab"])){
         "INSERT INTO 
         emergency_page_header (
         header,
-        text
+        text,
+        created_date
         ) 
         VALUES 
         (
         :header,
-        :paragraph
+        :paragraph,
+        :createdDate
         );"
     );
     $sql->bindValue(":header",$header);
     $sql->bindValue(":paragraph",$para);
+    $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
     header("Location: ../View/emergency.php");
@@ -43,18 +46,21 @@ if(isset($_POST["addEmergency"])){
         first_aid (
         article_header,
         article_text,
-        article_image
+        article_image,
+        created_date
         ) 
         VALUES 
         (
         :header,
         :paragraph,
-        :image
+        :image,
+        :createdDate
         );"
     );
     $sql->bindValue(":header",$header);
     $sql->bindValue(":paragraph",$paragraph);
     $sql->bindValue(":image",$image);
+    $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
     header("Location: ../View/emergency.php");
