@@ -48,17 +48,17 @@
             <img src="../storages/image/profile.jpg" class="profile">
           </p>
           <label for="name" id="name">
-            <?=$_SESSION["userName"]?>
+            <?= $_SESSION["userName"] ?>
           </label>
           <br>
           <br>
           <label for="email" id="email">
-            <?=$_SESSION["email"]?>
+            <?= $_SESSION["email"] ?>
           </label>
           <br>
           <br>
           <!-- Blue Square Btn -->
-          <button class="square_blue_btn">Continue</button>
+          <button class="square_blue_btn">Patient History</button>
           <br>
           <br>
           <!-- Blue Square Btn -->
