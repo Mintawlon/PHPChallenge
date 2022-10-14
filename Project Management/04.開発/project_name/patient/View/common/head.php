@@ -1,3 +1,7 @@
+<?php
+
+$updateInfo = $_SESSION["updatedInfo"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +31,13 @@
           <a class="navbar_text mt-3 me-5" href="./booking.php">Booking Status</a>
           <a class="navbar_text mt-3 me-5 " href="./blog.php">Blogs</a>
           <a class="navbar_text mt-3 me-5 ">
-            <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="../storages/image/profile.jpg" class="profile"></span>
+            <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./storages/image/<?php
+            if(!$_SESSION["updatedInfo"]){
+                echo $_SESSION["defaultPhoto"];
+            }else{
+              echo $updateInfo[0]["profile_image"];
+            }
+            ?>"class="profile"></span>
           </a>
         </div>
       </div>
@@ -41,11 +51,18 @@
     <div class="offcanvas-body">
       <div class="box">
         <div class="mainbox">
-          <a href="./profileSetting.php" class="usersetting"><i class="fa-solid fa-gear"></i></a>
+          <a href="../Controller/login,signUp,profile/profileEditController.php
+          " class="usersetting"><i class="fa-solid fa-gear"></i></a>
           <br>
           <br>
           <p>
-            <img src="../storages/image/profile.jpg" class="profile">
+            <img src="./storages/image/<?php
+            if(!$_SESSION["updatedInfo"]){
+                echo $_SESSION["defaultPhoto"];
+            }else{
+              echo $updateInfo[0]["profile_image"];
+            }
+            ?>" class="profile">
           </p>
           <label for="name" id="name">
             <?= $_SESSION["userName"] ?>

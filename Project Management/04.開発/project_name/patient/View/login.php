@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION["email"]);
+unset($_SESSION["userInfo"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +42,7 @@ unset($_SESSION["email"]);
                     <p class="login  text-white">Login to your account</p>
                 </div>
                 <!-- input box -->
-                <form method="POST" action="../Controller/login,signUp/loginController.php" class="inpbox">
+                <form method="POST" action="../Controller/login,signUp,profile/loginController.php" class="inpbox">
                     <br>
                     <input type="email" name="email" class="name form-control mb-3" placeholder="Login with email">
                     <div class="password_box">

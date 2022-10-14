@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+$userInfo = $_SESSION["userInfo"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +20,8 @@ session_start();
     <!-- Root Css -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/profile.css">
+    <!-- JS -->
+    <script src="./resources/js/uploadProfile.js" defer></script>
 </head>
 
 <body>
@@ -29,28 +33,30 @@ session_start();
 
     <h2 class="text-center text-white my-3">Profile</h2>
 
-    <div class="profile_wrapper">
+    <form action="../Controller/login,signUp,profile/profileController.php" method="POST" class="profile_wrapper" enctype="multipart/form-data">
 
         <div class="profile_photo_div">
             <div class="profile_photo">
                 <div class="photo">
+                    <img src="./storages/image/<?=$userInfo[0]["profile_image"]?>" alt="" id="photo">
                 </div>
-                <p class="text-white">phoopwintmaung@gmail.com</p>
+                <p class="text-white"><?= $_SESSION["email"]?> </p>
             </div>
         </div>
 
         <div class="profile_edit">
             <div class="name text-white">
                 <p>Name</p>
-                <input type="text" id="name_input" class="text-white">
+                <input type="text" id="name_input" name="changeName" class="text-white" value="<?=$userInfo[0]["register_name"]?> ">
             </div>
             <div class="name text-white mt-3">
                 <p>Profile Photo</p>
-                <input type="file" class="form-control"  id="file_input">
+                <input type="file" class="form-control"  id="file_input" onchange="setImage()" name="changePhoto">
             </div>
-            <button type="submit" id="save_btn" class="text-white mt-3">Save</button>
+            <input type="hidden" name="id" value="<?=$userInfo[0]["id"]?>">
+            <button type="submit" id="save_btn" name="changeProfile" class="text-white mt-3">Save</button>
         </div>
-    </div>
+    </form>
 
     <div class="col-sm-10">
         
