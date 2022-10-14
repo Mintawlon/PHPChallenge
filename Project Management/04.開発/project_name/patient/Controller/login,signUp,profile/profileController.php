@@ -13,14 +13,14 @@ if (isset($_POST["changeProfile"])) {
             user_register SET 
             register_name=:name,
             updated_date=:updatedDate WHERE id=:id"
-        );    
+        );
     } else {
         $file = $_FILES['changePhoto']['name'];
         $location = $_FILES['changePhoto']['tmp_name'];
         $extension = pathinfo($file)['extension'];
-        $path = $id.".".$extension;
-        
-        if (move_uploaded_file($location, "../../View/storages/image/".$id.".".$extension)) {
+        $path = $id . "." . $extension;
+
+        if (move_uploaded_file($location, "../../View/storages/image/" . $id . "." . $extension)) {
             $sql = $pdo->prepare(
                 "UPDATE
                 user_register SET 

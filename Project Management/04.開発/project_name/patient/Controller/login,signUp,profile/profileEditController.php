@@ -13,4 +13,3 @@ $userInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["userInfo"] = $userInfo;
 
 header("Location: ../../View/profile.php");
-?>

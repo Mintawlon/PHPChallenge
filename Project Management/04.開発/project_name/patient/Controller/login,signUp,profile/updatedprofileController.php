@@ -2,6 +2,7 @@
 session_start();
 include("../../Model/dbConnection.php");
 
+// Get Update UserInfo
 $loginEmail =$_SESSION["email"];
  $sql = $pdo->prepare(
     "SELECT * FROM user_register WHERE email_address = :Email
