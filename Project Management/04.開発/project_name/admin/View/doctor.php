@@ -32,6 +32,9 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
+                    <a href="./doctorEdit.php" class="common_btn add_btn go_btn">Go to edit doctor
+                        <i class="fa-solid fa-arrow-right arrow_right"></i>
+                    </a>
                     <div class="searchbox search">
                         <span class="search_text fw-semibold">Search</span>
                         <input type="text" class="search_input ps-5" placeholder="" />

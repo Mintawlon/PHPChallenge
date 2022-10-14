@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="" class="common_btn add_btn go_btn">Go to edit medicine
+                    <a href="./medicineEdit.php" class="common_btn add_btn go_btn">Go to edit medicine
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
                 </div>
