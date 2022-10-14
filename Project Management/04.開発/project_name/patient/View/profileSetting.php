@@ -26,7 +26,7 @@ session_start();
     ?>
     <!-- Edit Profile -->
     <h3 class="header my-4 text-center">Edit user Profile</h3>
-    <div class="container-fluid d-flex justify-content-center">
+    <div class="container-fluid d-flex justify-content-center mb-3">
         <div class="card p-3 cart" style="width: 45rem;">
             <!--input Form -->
             <form action="">

@@ -41,19 +41,19 @@
             <div class="dropdown-container">
                 <a href="#" class="nav-link dropdown_list">
                     <i class="fa-solid fa-calendar color_green px-1"></i>
-                    <span class="navbar_btn_name px-1">
+                    <span class="navbar_btn_name_o px-1">
                         Date
                     </span>
                 </a>
                 <a href="#" class="nav-link dropdown_list">
                     <i class="fa-solid fa-file-pen color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o">
                         Booking
                     </span>
                 </a>
                 <a href="#" class="nav-link dropdown_list">
                     <i class="fa-solid fa-user-doctor color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o">
                         Doctor
                     </span>
                 </a>
@@ -80,7 +80,7 @@
                 <a href="#" class="nav-link dropdown_list">
                     <i class="fa-brands fa-adversal
                         color_green"></i>
-                    <span class="navbar_btn_name px-1">
+                    <span class="navbar_btn_name_o px-1">
                         Carousel
                     </span>
                 </a>
@@ -93,7 +93,7 @@
                 </a>
                 <a href="#" class="nav-link dropdown_list">
                     <i class="fa-solid fa-user-doctor color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o">
                         Doctor
                     </span>
                 </a>
@@ -147,7 +147,7 @@
                 </a>
                 <a href="./emergency.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-suitcase-medical color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name dropdown_btn_name">
                         First Aid
                     </span>
                 </a>

@@ -18,10 +18,12 @@ if(isset($_POST["edit_tab"])){
         "UPDATE
         emergency_page_header SET 
         header=:header,
-        text=:para"
+        text=:para,
+        updated_date=:updatedDate"
     );
     $sql->bindValue(":header",$newheader);
     $sql->bindValue(":para",$newpara);
+    $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
 
@@ -56,12 +58,14 @@ if(isset($_POST["edit_article"])){
         first_aid SET 
         article_header=:header,
         article_text=:para,
-        article_image=:image WHERE id=:id"
+        article_image=:image,
+        updated_date=:updatedDate WHERE id=:id"
     );
     $sql->bindValue(":id",$id);
     $sql->bindValue(":header",$newheader);
     $sql->bindValue(":para",$newpara);
     $sql->bindValue(":image",$image);
+    $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
 

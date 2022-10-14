@@ -24,14 +24,16 @@ if(isset($_POST["hospitalInfo"])){
         address,
         email,
         contact,
-        google_map_image) 
+        google_map_image,
+        created_date) 
         VALUES 
         (
         :name,
         :address,
         :email,
         :contact,
-        :map); 
+        :map,
+        :createdDate); 
         "
     );
     $sql->bindValue(":name",$hospitalName);
@@ -39,6 +41,7 @@ if(isset($_POST["hospitalInfo"])){
     $sql->bindValue(":email",$hospitalEmail);
     $sql->bindValue(":contact",$hospitalPhone);
     $sql->bindValue(":map",$hospitalMap);
+    $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
 }
