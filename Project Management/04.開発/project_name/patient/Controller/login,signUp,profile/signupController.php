@@ -17,8 +17,8 @@ if (isset($_POST["signUp"])) {
     $reg_email_check = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     // Account already exist OR Not 
-    // If not Open an account
     if (count($reg_email_check) == 0) {
+        // Add user info to user_register table
         $sql = $pdo->prepare(
             "INSERT INTO 
             user_register (register_name,email_address,password,created_date) 
@@ -31,6 +31,7 @@ if (isset($_POST["signUp"])) {
         $sql->bindValue(":regPwd", password_hash($regPwd, PASSWORD_DEFAULT));
         $sql->bindValue(":createdDate", date("Y/m/d"));
         $sql->execute();
+        $_SESSION["defaultPhoto"] = "profile.jpg";
         $_SESSION["email"] = $regEmail;
         header("Location: ../../View/home1.php");
     } else {

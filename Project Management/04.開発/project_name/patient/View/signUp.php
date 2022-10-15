@@ -33,7 +33,7 @@
             <div class="inputbox_wrapper">
                 <p class="sign_up mt-3">Sign Up</p>
                 <!-- input box -->
-                <form method="POST" action="../Controller/login,signUp/signupController.php" class="inpbox mt-3">
+                <form method="POST" action="../Controller/login,signUp,profile/signupController.php" class="inpbox mt-3">
                     Name* <br>
                     <input type="text" name="reg_name" class="name form-control" placeholder="username">
                     <br>

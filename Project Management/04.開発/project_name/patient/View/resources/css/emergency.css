@@ -56,3 +56,6 @@ body{
         font-size: var(--extra_small);
     }
 }
+::placeholder {
+    color: var(--first_color);
+}

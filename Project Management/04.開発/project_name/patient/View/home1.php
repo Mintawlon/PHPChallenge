@@ -24,6 +24,7 @@ if(!isset($_SESSION["email"])){
     <!-- Css -->
     <link rel="stylesheet" href="./resources//css/root.css">
     <link rel="stylesheet" href="./resources/css/home1.css">
+
 </head>
 
 <body>

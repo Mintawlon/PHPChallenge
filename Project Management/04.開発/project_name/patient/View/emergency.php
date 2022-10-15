@@ -31,7 +31,7 @@ include("../Controller/emergencyPage/emergencyController.php");
     <!-- Search Box -->
     <div id="first_aid_search" class="me-4">
         <div class="searchbox mt-2">
-            <input type="text" class="search_input  ps-5" id="searchFirstaid" id="searchFirstaid" placeholder="" />
+            <input type="text" class="search_input  ps-5" id="searchFirstaid" id="searchFirstaid" placeholder="search by bodypart" />
             <i class="fa-solid fa-magnifying-glass search_icon text_white"></i>
             <button id="search" class="search_text">Search</button>
         </div>
