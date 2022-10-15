@@ -28,36 +28,35 @@ if (isset($_POST["addbtn"])) {
     
     INSERT INTO inpatient
   (
+        hospitalized_date,
         name,
         age,
-        address,
-        status,
         disease,
-        hospitalized_date,
-        room
+        status,
+        room,
+        address
         
         
      )
      VALUES
      (
+        :hospitalized_date,
         :name,
         :age,
-        :address,
-        :status,
         :disease,
-        :hospitalized_date,
-        :room
+        :status,
+        :room,
+        :address
      )
     
      ");
-
+     $sql->bindValue(":hospitalized_date", $date);
     $sql->bindValue(":name", $name);
     $sql->bindValue(":age", $age);
-    $sql->bindValue(":address", $address);
+    $sql->bindValue(":disease", $disease);  
     $sql->bindValue(":status", $status);
-    $sql->bindValue(":disease", $disease);
-    $sql->bindValue(":hospitalized_date", $date);
     $sql->bindValue(":room", $room);
+    $sql->bindValue(":address", $address);
 
     $sql->execute();
     

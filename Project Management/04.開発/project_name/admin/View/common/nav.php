@@ -99,7 +99,7 @@
                 </a>
             </div>
             <div class="navbar_btn">
-                <a href="#" class="nav-link align-middle py-2 ">
+                <a href="./inpatientList.php" class="nav-link align-middle py-2 ">
                     <i class="fa-solid fa-bed color_black"></i>
                     <span class="navbar_btn_name">Inpatient</span>
                 </a>
@@ -115,7 +115,7 @@
                 </a>
             </button>
             <div class="dropdown-container">
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./about.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-users color_green"></i>
                     <span class="navbar_btn_name px-1 ">
                         About Us

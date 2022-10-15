@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+// include("../Controller/inpatientEditController.php.php");
+$inpatientInfo = $_SESSION["inpatientInfo"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,50 +57,50 @@
 
                 </div>
 
+                <form action="../Controller/inpatientUpdateController.php" method="post">
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Edit Inpatient</h2>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Date</span>
+                            <input type="text" class="common_input input_box" name="date" value="<?php echo $inpatientInfo[0]["hospitalized_date"]?>" />
+                        </div>
+                        <div class=" input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Patient Name</span>
+                            <input type="text" class="common_input input_box" name="name" value="<?php echo $inpatientInfo[0]["name"] ?>" />
+                        </div>
+                        <div class=" input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Age</span>
+                            <input type="text" class="common_input input_box" name="age" value="<?php echo $inpatientInfo[0]["age"] ?>" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Disease</span>
+                            <input type="text" class="common_input input_box" name="disease" value="<?php echo $inpatientInfo[0]["disease"] ?>" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Status</span>
+                            <input type="text" class="common_input input_box" name="status" value="<?php echo $inpatientInfo[0]["status"] ?>" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Room</span>
+                            <input type="text" class="common_input input_box" name="room" value="<?php echo $inpatientInfo[0]["room"] ?>" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Address</span>
+                            <input type="text" class="common_input input_box" name="address" value="<?php echo $inpatientInfo[0]["address"] ?>" />
+                        </div>
+                        <div class=" mb-2  display_top ">
+                            <!-- Add Btn -->
+                            <button type="submit" class="common_btn add_btn input_box display_bottom display_top" name="inpatient_update_btn">Update</button>
+                        </div>
+                        <input type="hidden" name="id" value="<?php echo $inpatientInfo[0]["id"] ?>">
+                    </div>
+                </form>
 
-
-                <div class="input_set">
-                    <h2 class="input_set_header my-4">Edit Inpatient</h2>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Date</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Patient Name</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Age</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Disease</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Status</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Room</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Address</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class=" mb-2  display_top ">
-                        <!-- Add Btn -->
-                        <a href="" class="common_btn add_btn input_box display_bottom display_top">Edit</a>
-                    </div>
-                </div>
 
             </div>
         </div>
 
 
-    </div>
-    </div>
     </div>
     <script src="./resources/js/dropdown_menu.js"></script>
 </body>

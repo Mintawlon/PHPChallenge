@@ -1,3 +1,9 @@
+<?php
+include("../Controller/aboutusController.php");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,58 +27,60 @@
             <?php
             include("./common/nav.php")
             ?>
+            <form action="../Controller/aboutusController.php" method="post">
+                <div class=" data_box   col-sm-9  col-md-8 col-xl-10 mt-3">
+                    <!-- Header -->
+                    <div class="header_wrapper bg_header ">
+                        <div class="header_box">
+                            <span class="navbar-brand ttl_admin" href="#">About Us and Privacy Policy</span>
+                        </div>
+                    </div>
+                    <section class="about">
+                        <div class="input_set">
+                            <h2 class="input_set_header my-4">Update About Us Info</h2>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Add new about us info</span>
+                                <textarea class="common_input" placeholder="Text" name="text1"></textarea>
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text add_file">Add new about us image</span>
+                                <input type="file" id="formFileLg" class="form-control form-control-lg common_input" accept="image/*" name="image1" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Header for paragraph</span>
+                                <input type="text" class="common_input" name="header" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Add new paragraph</span>
+                                <textarea class="common_input" placeholder="Text" name="text2"></textarea>
 
-            <div class=" data_box   col-sm-9  col-md-8 col-xl-10 mt-3">
-                <!-- Header -->
-                <div class="header_wrapper bg_header ">
-                    <div class="header_box">
-                        <span class="navbar-brand ttl_admin" href="#">About Us and Privacy Policy</span>
-                    </div>
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text add_file">Add new about us image</span>
+                                <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="image2" />
+                            </div>
+                            <div class=" mb-2  ">
+                                <!-- Add Btn -->
+                                <button type="submit" class="common_btn add_btn" name="update">Update</button>
+                            </div>
+                            <hr />
+                        </div>
+                    </section>
+                    <section class="policy">
+                        <div class="input_set">
+                            <h2 class="input_set_header my-4">Update Privacy Policy Info</h2>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Add new Privacy Policy info</span>
+                                <textarea class="common_input" placeholder="Text" name="policy_text"></textarea>
+                            </div>
+                            <div class=" mb-2  ">
+                                <!-- Add Btn -->
+                                <button type="submit" class="common_btn add_btn" name="update2">Update</button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <section class="about">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Update About Us Info</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Add new about us info</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Add new about us image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input" accept="image/*" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Header for paragraph</span>
-                            <input type="text" class="common_input" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Add new paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Add new about us image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
-                        </div>
-                        <hr />
-                    </div>
-                </section>
-                <section class="policy">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Update Privacy Policy Info</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Add new Privacy Policy info</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            </form>
         </div>
 
     </div>
