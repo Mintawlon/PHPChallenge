@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../Controller/emergencyPage/emergencyController.php");
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,8 @@ include("../Controller/emergencyPage/emergencyController.php");
     <link rel="stylesheet" href="./resources/css/emergency.css?v=" time()>
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <script src="./resources/js/emergency.js"></script>
+    <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/emergency.js" defer></script>
 
 </head>
 
@@ -29,9 +31,9 @@ include("../Controller/emergencyPage/emergencyController.php");
     <!-- Search Box -->
     <div id="first_aid_search" class="me-4">
         <div class="searchbox mt-2">
-            <span class="search_text fw-semibold px-2">Search</span>
-            <input type="text" class="search_input ps-5" placeholder="" />
-            <i class="fa-solid fa-magnifying-glass search_icon"></i>
+            <input type="text" class="search_input  ps-5" id="searchFirstaid" id="searchFirstaid" placeholder="search by bodypart" />
+            <i class="fa-solid fa-magnifying-glass search_icon text_white"></i>
+            <button id="search" class="search_text">Search</button>
         </div>
     </div>
     <!-- First Tab -->
@@ -59,28 +61,30 @@ include("../Controller/emergencyPage/emergencyController.php");
 
     <!-- Cards -->
     <?php foreach ($emergencyInfo as $emergency) { ?>
-        <div class="first_aid_card my-4">
-            <h1 class="first_aid_card_header mb-3">First Aid For <span>
-                    <?= $emergency["article_header"] ?>
-                </span>
-            </h1>
-            <div class="wrapper">
-                <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
-                <div class="info">
-                    <h2 class="first_aid_para_header">What to Do?</h2>
-                    <ol class='first_aid_para'>
-                       
-                    
+        <div class="first_aid_card my-4" id="articleSearch">
+            <!-- <div class="first_aid_card">
+                <h1 class="first_aid_card_header mb-3">First Aid For <span>
+                        <?= $emergency["article_header"] ?>
+                    </span>
+                </h1>
+                <div class="wrapper">
+                    <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
+                    <div class="info">
+                        <h2 class="first_aid_para_header">What to Do?</h2>
+                        <ol class='first_aid_para'>
 
-                        <li >
-                        list One
-                        </li>
 
-                    </ol>
+
+                            <li>
+                                list One
+                            </li>
+
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <hr class="line" />
-        </div>
+                <hr class="line" />
+            </div> -->
+        </div> 
     <?php }
     ?>
 

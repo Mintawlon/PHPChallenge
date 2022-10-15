@@ -20,7 +20,7 @@
         <div class="d-flex flex-column align-items-center align-items-sm-start min-vh-100 mt-2 navbar ">
             <div class="logo_btn "></div>
             <div class="navbar_btn">
-                <a href="#" class="nav-link ">
+                <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
                     <span class="navbar_btn_name">
                         Dashboard
@@ -39,28 +39,28 @@
 
             </button>
             <div class="dropdown-container">
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./date.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-calendar color_green px-1"></i>
-                    <span class="navbar_btn_name px-1">
+                    <span class="navbar_btn_name_o px-1">
                         Date
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./booking.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-file-pen color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o">
                         Booking
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./doctor.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-user-doctor color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o">
                         Doctor
                     </span>
                 </a>
             </div>
 
             <div class="navbar_btn">
-                <a href="#" class="nav-link align-middle py-2 ">
+                <a href="./patientHistory.php" class="nav-link align-middle py-2 ">
                     <i class="fa-solid fa-folder color_black"></i>
                     <span class="navbar_btn_name">Patient History</span>
                 </a>
@@ -77,26 +77,21 @@
 
             </button>
             <div class="dropdown-container">
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./carousel.php" class="nav-link dropdown_list">
                     <i class="fa-brands fa-adversal
                         color_green"></i>
-                    <span class="navbar_btn_name px-1">
+                    <span class="navbar_btn_name_o px-1">
                         Carousel
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./medicineAdd.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-tablets
                         color_green"></i>
                     <span class="navbar_btn_name_o">
                         Medicine
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
-                    <i class="fa-solid fa-user-doctor color_green"></i>
-                    <span class="navbar_btn_name">
-                        Doctor
-                    </span>
-                </a>
+                
             </div>
             <div class="navbar_btn">
                 <a href="./inpatientList.php" class="nav-link align-middle py-2 ">
@@ -117,7 +112,7 @@
             <div class="dropdown-container">
                 <a href="./about.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-users color_green"></i>
-                    <span class="navbar_btn_name px-1 ">
+                    <span class="navbar_btn_name_o px-1 ">
                         About Us
                     </span>
                 </a>
@@ -139,21 +134,21 @@
                 </a>
             </button>
             <div class="dropdown-container">
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./blog.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-blog color_green"></i>
-                    <span class="navbar_btn_name px-1">
+                    <span class="navbar_btn_name_o px-1">
                         Blog
                     </span>
                 </a>
                 <a href="./emergency.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-suitcase-medical color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o text-white dropdown_btn_name">
                         First Aid
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
+                <a href="./donation.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-heart color_green"></i>
-                    <span class="navbar_btn_name">
+                    <span class="navbar_btn_name_o">
                         Blood Donation
                     </span>
                 </a>

@@ -1,7 +1,8 @@
 <?php
-// if(!isset($_SESSION["email"])){
-//     header("Location: ./login.php");
-// }
+session_start();
+if(!isset($_SESSION["email"])){
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +24,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./resources//css/root.css">
     <link rel="stylesheet" href="./resources/css/home1.css">
+
 </head>
 
 <body>

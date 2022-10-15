@@ -68,7 +68,7 @@
 }
 @media only screen and (max-width:800px) {
   .data_box{
-    width: 75% !important;
+    width: 80% !important;
   }
   .ttl_admin{
     font-size: var(--extra_small) !important;
@@ -120,8 +120,8 @@
 /* Add Button Hover State */
 .add_btn:hover {
   border: 1px solid var(--secondary_color);
-  background-color: var(--primary_color);
-  color: var(--third_color);
+  background-color: var(--second_color);
+  color: var(--first_color);
 }
 
 /* Go Back Button */
@@ -241,7 +241,7 @@ tbody .row_bdr {
 .sec_input{
   display: flex;
   justify-content: space-between;
-  margin: 80px 1.5%;
+  margin: 2em 1.5%;
 }
 
 .num_rows {
@@ -267,7 +267,7 @@ tbody .row_bdr {
 .input_one {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 65%;
 }
 .input_set_header {
   color: var(--secondary_color);
@@ -409,7 +409,7 @@ hr {
 }
 .navbar_btn_name_o{
   font-size: var(--extra_extra_small);
-  color: var(--first_color);
+  color: var(--second_color);
   padding-left: 0.5em;
   font-family: var(--primary_font);
 }
@@ -432,7 +432,7 @@ hr {
 @media only screen and (max-width: 800px) {
   /* Side Nav */
   .navbar_wrapper{
-    width: 25% !important;
+    width: 20% !important;
   }
   .navbar_btn_name{
     display: none;
@@ -498,7 +498,9 @@ hr {
   color: #f1f1f1;
 }
 
-
+.dropdown_btn_name{
+  color: var(--first_color) !important;
+}
 .main {
   margin-left: 200px; 
   font-size: 20px; 

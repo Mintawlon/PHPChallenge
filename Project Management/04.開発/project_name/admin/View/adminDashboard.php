@@ -186,7 +186,6 @@
 
 
     </div>
-    <script src="./resources/js/dropdown_menu.js"></script>
 </body>
 
 </html>

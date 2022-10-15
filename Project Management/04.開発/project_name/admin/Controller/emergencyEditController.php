@@ -18,19 +18,19 @@ if(isset($_POST["edit_tab"])){
         "UPDATE
         emergency_page_header SET 
         header=:header,
-        text=:para"
+        text=:para,
+        updated_date=:updatedDate"
     );
     $sql->bindValue(":header",$newheader);
     $sql->bindValue(":para",$newpara);
+    $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
 
     header("Location: ../View/editEmergency.php");
 }
 
-
-
-// Get article info from database table
+// Get article info for Update
 if(isset($_GET["id"])){
     $id = $_GET["id"];
     $sql = $pdo->prepare(
@@ -46,17 +46,7 @@ if(isset($_GET["id"])){
     $_SESSION["articleInfo"] = $emergencyInfo;
     header("Location: ../View/editEmergency.php");
 }
-if(isset($_GET["delId"])){
-    $delId = $_GET["delId"];
-    $sql = $pdo->prepare(
-        "DELETE FROM `first_aid` WHERE id=:id
-        "
-    );
-    $sql->bindValue(":id",$delId);
-    $sql->execute();
-    header("Location: ../View/editEmergency.php");
-}
-
+// Update Article
 if(isset($_POST["edit_article"])){
     $id = $_POST["article_id"];
     $image = $_POST["articleImage"];
@@ -68,14 +58,29 @@ if(isset($_POST["edit_article"])){
         first_aid SET 
         article_header=:header,
         article_text=:para,
-        article_image=:image WHERE id=:id"
+        article_image=:image,
+        updated_date=:updatedDate WHERE id=:id"
     );
     $sql->bindValue(":id",$id);
     $sql->bindValue(":header",$newheader);
     $sql->bindValue(":para",$newpara);
     $sql->bindValue(":image",$image);
+    $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
 
     header("Location: ../View/editEmergency.php");
 }
+// Delete Article
+if(isset($_GET["delId"])){
+    $delId = $_GET["delId"];
+    $sql = $pdo->prepare(
+        "DELETE FROM `first_aid` WHERE id=:id
+        "
+    );
+    $sql->bindValue(":id",$delId);
+    $sql->execute();
+    header("Location: ../View/editEmergency.php");
+}
+
+

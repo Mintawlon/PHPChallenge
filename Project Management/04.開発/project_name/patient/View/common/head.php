@@ -1,3 +1,12 @@
+<?php
+if (isset($_SESSION["updatedInfo"])) {
+  $updateInfo = $_SESSION["updatedInfo"];
+  $photo =  $updateInfo[0]["profile_image"];
+}else{
+  $photo =  $_SESSION["defaultPhoto"];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,52 +25,65 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg px-4 ">
     <div class="container-fluid">
-      <p class="logo" href="#">Logo</p>
+      <p class="logo mt-3" href="#">Logo</p>
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
       <div class="collapse navbar-collapse navbar_text_div" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="navbar_text  me-5" aria-current="page" href="./hospital_location.php">Hospital List</a>
-          <a class="navbar_text me-5" href="./doctor.php">Find Doctors</a>
-          <a class="navbar_text me-5" href="./booking.php">Booking</a>
-          <a class="navbar_text me-5 " href="./blog.php">Blog</a>
-          <a class="navbar_text me-5 ">
-            <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="../storages/image/profile.jpg" class="profile"></span>
+          <a class="navbar_text mt-4  me-5" aria-current="page" href="./hospital_location.php">Hospital Locations</a>
+          <a class="navbar_text mt-4 me-5" href="./doctor.php">Find Doctors</a>
+          <a class="navbar_text mt-4 me-5" href="./booking.php">Booking Status</a>
+          <a class="navbar_text mt-4 me-5 " href="./blog.php">Blogs</a>
+          <a class="navbar_text mt-3 me-4 ">
+            <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <span class="navbarProfileText me-3" class="navbarProfileText">Profile</span>
+              <img src="./storages/image/<?=$photo?>" class="profile">
+             
+            </span>
           </a>
         </div>
       </div>
     </div>
   </nav>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 id="offcanvasRightLabel">User Profile</h5>
+    <div id="offcanvas">
+    <div class="offcanvasheader mb-4">
+      <h5 class="your_profile">Your Profile</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <div class="box">
         <div class="mainbox">
-          <button class="usersetting"><i class="fa-solid fa-gear"></i></button>
+          <a href="../Controller/login,signUp,profile/profileEditController.php
+          " class="usersetting"><i class="fa-solid fa-gear"></i></a>
           <br>
           <br>
-          <p>
-            <img src="../storages/image/profile.jpg" class="profile">
+          <p class="text-center">
+            <img src="./storages/image/<?=$photo?>" class="profile" id="offcanvas_photo">
           </p>
-          <label for="name" id="name">User Name</label>
-          <br>
-          <br>
-          <label for="email" id="email">Email</label>
+          <span class="text-center offcanvas_text">
+          <label for="name" id="name">
+            <?= $_SESSION["userName"] ?>
+          </label>
+          </sp>
+          <span class="text-center offcanvas_text">
+          <label for="email" id="email">
+            <?= $_SESSION["email"] ?>
+          </label>
+          </span>
           <br>
           <br>
           <!-- Blue Square Btn -->
-          <button class="square_blue_btn">Continue</button>
+          <button class="square_blue_btn">Patient History</button>
           <br>
           <br>
           <!-- Blue Square Btn -->
-          <button class="square_yellow_btn">
-            <a href="./login.php" class="text-decoration-none text-white logoutbtn">Logout</a></button>
+
+            <a class=" text-white " id="logoutbtn">Logout</a>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </body>
