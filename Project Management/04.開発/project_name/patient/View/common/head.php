@@ -1,8 +1,10 @@
 <?php
 if (isset($_SESSION["updatedInfo"])) {
   $updateInfo = $_SESSION["updatedInfo"];
+  $name =  $updateInfo[0]["register_name"];
   $photo =  $updateInfo[0]["profile_image"];
 }else{
+  $name = $_SESSION["userName"];
   $photo =  $_SESSION["defaultPhoto"];
 }
 
@@ -64,7 +66,7 @@ if (isset($_SESSION["updatedInfo"])) {
           </p>
           <span class="text-center offcanvas_text">
           <label for="name" id="name">
-            <?= $_SESSION["userName"] ?>
+            <?=$name?>
           </label>
           </sp>
           <span class="text-center offcanvas_text">
@@ -80,7 +82,7 @@ if (isset($_SESSION["updatedInfo"])) {
           <br>
           <!-- Blue Square Btn -->
 
-            <a class=" text-white " id="logoutbtn">Logout</a>
+            <a href="./login.php" class=" text-white " id="logoutbtn">Logout</a>
         </div>
       </div>
     </div>
