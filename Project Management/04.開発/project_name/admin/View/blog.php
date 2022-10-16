@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../View/resources/css/root.css" />
     <link rel="stylesheet" href="../View/resources/css/blog.css" />
+    <script src="./resources/js/blog.js" defer></script>
 </head>
 
 <body>
@@ -29,27 +30,28 @@
                 </div>
                 <!--Add Form -->
                 <div class="m-3 d-flex justify-content-center">
-                    <form action="../Controller/blog/addBlogController.php" method="post">
+                    <form action="../Controller/blog/addBlogController.php" method="post" enctype="multipart/form-data">
+                        <img src="./storages/blog/default.png" alt="" width="100" id="image">
                         <div class="form-group row mb-3">
                             <label for="formFileMultiple" class="col-sm-2">Image</label>
                             <div class=" col-sm-10">
-                                <input class="form-control" type="file" id="formFileMultiple" />
+                                <input class="form-control" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" />
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputPassword" class="col-sm-2 col-form-label">header</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="header">
+                                <input type="text" class="form-control" name="header" placeholder="header">
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputPassword" class="col-sm-2 col-form-label">Warning</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
                             </div>
                         </div>
                         <div class="form-group d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary mb-2 w-30">Confirm</button>
+                            <button type="submit" name="addDieses" class="btn btn-primary mb-2 w-30">Confirm</button>
                         </div>
                     </form>
                 </div>
