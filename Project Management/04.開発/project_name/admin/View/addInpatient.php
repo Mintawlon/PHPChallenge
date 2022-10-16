@@ -19,6 +19,7 @@ include("../Controller/inpatientController.php");
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/script.js" ></script>
+    <script src="./resources/js/inpatientSearch.js?v="<?= time() ?> defer></script>
 
 </head>
 
@@ -47,8 +48,9 @@ include("../Controller/inpatientController.php");
                         </a>
 
                         <div class="tb_search">
-                            <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
-                        </div>
+                        <input type="text" class="common_input input_box form-control" id="searchText" name="text" placeholder="Search"  />
+                    </div>
+                        <button type="submit" class="common_btn add_btn btn-success" id="search" name="searchbtn">Search </button>
 
 
                     </div>

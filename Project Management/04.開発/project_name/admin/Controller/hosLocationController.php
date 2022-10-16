@@ -25,7 +25,7 @@ if(isset($_POST["hospitalInfo"])){
         email,
         contact,
         google_map_image,
-        created_date) 
+        create_date) 
         VALUES 
         (
         :name,

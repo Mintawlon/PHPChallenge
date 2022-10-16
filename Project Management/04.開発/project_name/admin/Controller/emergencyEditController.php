@@ -19,7 +19,7 @@ if(isset($_POST["edit_tab"])){
         emergency_page_header SET 
         header=:header,
         text=:para,
-        updated_date=:updatedDate"
+        update_date=:updatedDate"
     );
     $sql->bindValue(":header",$newheader);
     $sql->bindValue(":para",$newpara);
@@ -59,7 +59,7 @@ if(isset($_POST["edit_article"])){
         article_header=:header,
         article_text=:para,
         article_image=:image,
-        updated_date=:updatedDate WHERE id=:id"
+        update_date=:updatedDate WHERE id=:id"
     );
     $sql->bindValue(":id",$id);
     $sql->bindValue(":header",$newheader);
