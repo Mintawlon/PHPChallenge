@@ -103,11 +103,11 @@ include("../Controller/emergencyController.php");
                         <h2 class="input_set_header my-4">Add First Aid Tab</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header for paragraph</span>
-                            <input type="text" class="common_input" name="header" />
+                            <input type="text" class="common_input form-control" name="header" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add new paragraph</span>
-                            <textarea class="common_input" placeholder="Text" name="paragraph"></textarea>
+                            <textarea class="common_input form-control text_area" placeholder="Text" name="paragraph"></textarea>
                         </div>
                         <!-- Add Btn -->
                         <button type="submit" name="addEmergencyTab" class="common_btn add_btn">Add</button>
@@ -120,15 +120,15 @@ include("../Controller/emergencyController.php");
                         <h2 class="input_set_header my-4">Add First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Add image</span>
-                            <input type="file" name="emergencyImage" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" name="emergencyImage" id="formFileLg" class="form-control  common_input " accept="image/*" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>
-                            <input name="emergencyHeader" type="text" class="common_input" />
+                            <input name="emergencyHeader" type="text" class="common_input form-control" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add paragraph</span>
-                            <textarea name="emergencyParagraph" class="common_input" placeholder="Text"></textarea>
+                            <textarea name="emergencyParagraph" class="common_input text_area  form-control" placeholder="Text"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->

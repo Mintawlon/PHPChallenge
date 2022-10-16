@@ -119,31 +119,31 @@ include("../Controller/inpatientController.php");
                         <h2 class="input_set_header my-4">Add Inpatient</h2>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Date</span>
-                            <input type="text" class="common_input input_box" name="date" />
+                            <input type="text" class="common_input form-control" name="date" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Patient Name</span>
-                            <input type="text" class="common_input input_box" name="name" />
+                            <input type="text" class="common_input form-control" name="name" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Age</span>
-                            <input type="text" class="common_input input_box" name="age" />
+                            <input type="text" class="common_input form-control" name="age" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Disease</span>
-                            <input type="text" class="common_input input_box" name="disease" />
+                            <input type="text" class="common_input form-control" name="disease" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Status</span>
-                            <input type="text" class="common_input input_box" name="status" />
+                            <input type="text" class="common_input form-control" name="status" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Room</span>
-                            <input type="text" class="common_input input_box" name="room" />
+                            <input type="text" class="common_input form-control" name="room" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Address</span>
-                            <input type="text" class="common_input input_box" name="address" />
+                            <input type="text" class="common_input form-control" name="address" />
                         </div>
                         <div class=" mb-2  display_top ">
 

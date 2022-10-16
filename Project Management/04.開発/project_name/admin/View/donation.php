@@ -85,15 +85,15 @@
                         <h2 class="input_set_header my-4">Add Blood Donation Center</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Center Name</span>
-                            <input type="text" class="common_input" />
+                            <input type="text" class="common_input from-control" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Contact</span>
-                            <input type="text" class="common_input" />
+                            <input type="text" class="common_input from-control" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Address</span>
-                            <textarea class="common_input" placeholder="Address"></textarea>
+                            <textarea class="common_input from-control text_area"  placeholder="Address"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->

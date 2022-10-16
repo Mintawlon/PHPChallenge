@@ -35,19 +35,19 @@
                         <div class="form-group row mb-3">
                             <label for="formFileMultiple" class="col-sm-2">Image</label>
                             <div class=" col-sm-10">
-                                <input class="form-control" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" />
+                                <input class="form-control common_input" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" />
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputPassword" class="col-sm-2 col-form-label">header</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="header" placeholder="header">
+                                <input type="text" class="form-control common_input" name="header" placeholder="header">
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputPassword" class="col-sm-2 col-form-label">Warning</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
+                                <textarea class="form-control common_input text_area" id="exampleFormControlTextarea1" name="description" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="form-group d-flex justify-content-center">

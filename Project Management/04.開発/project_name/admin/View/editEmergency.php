@@ -48,11 +48,11 @@ if(isset($_SESSION["articleInfo"])){
                     <h2 class="input_set_header my-4">Edit First Aid Tab</h2>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Header for paragraph</span>
-                        <input type="text" class="common_input " name="header" value="<?= $emergencyTab[0]["header"] ?>" />
+                        <input type="text" class="common_input form-control " name="header" value="<?= $emergencyTab[0]["header"] ?>" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Add new paragraph</span>
-                        <textarea class="common_input " placeholder="Text" name="paragraph"><?= $emergencyTab[0]["text"] ?></textarea>
+                        <textarea class="common_input form-control text_area " placeholder="Text" name="paragraph"><?= $emergencyTab[0]["text"] ?></textarea>
                     </div>
                     <!-- Add Btn -->
                     <button type="submit" name="edit_tab" class="common_btn add_btn">Edit</button>
@@ -68,11 +68,11 @@ if(isset($_SESSION["articleInfo"])){
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>
-                            <input type="text" class="common_input" value="<?= $info[0]["article_header"] ?>" name="articleHeader" />
+                            <input type="text" class="common_input form-control" value="<?= $info[0]["article_header"] ?>" name="articleHeader" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Update paragraph</span>
-                            <textarea class="common_input" placeholder="Text" name="articleText"><?= $info[0]["article_text"] ?></textarea>
+                            <textarea class="common_input form-control text_area" placeholder="Text" name="articleText"><?= $info[0]["article_text"] ?></textarea>
                         </div>
                         <input type="hidden" name="article_id" value="<?= $info[0]["id"] ?>">
                         <div class=" mb-2  ">
