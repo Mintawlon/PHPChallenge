@@ -1,5 +1,5 @@
 <?php
-include("../Controller/controller.php");
+include("../Controller/inpatientController.php");
 ?>
 
 
@@ -18,119 +18,129 @@ include("../Controller/controller.php");
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
-    <link rel="stylesheet" href="./resources/css/inpatientList.css" <?= time() ?> />
+    <link rel="stylesheet" href="./resources/css/inpatientList.css?v=" <?= time() ?> />
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/inpatientSearch.js?v="<?= time() ?> defer></script>
+    
+    
 </head>
 
 <body>
+    <script src="./resources/js/script.js"></script>
     <!-- Side Bar -->
     <div class="container-fluid">
-        <form action="./addInpatient.php" method="post">
-            <div class="row flex-nowrap">
-                <!-- Side Bar Menu Copy Here -->
-                <?php
-                include("./common/nav.php")
-                ?>
+        <div class="row flex-nowrap">
+            <!-- Side Bar Menu Copy Here -->
+            <?php
+            include("./common/nav.php")
+            ?>
 
 
-                <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
-                    <div class="header_wrapper bg_header ">
-                        <div class="header_box">
-                            <span class="navbar-brand ttl_admin" href="#">Inpatient List</span>
-                        </div>
+            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                <div class="header_wrapper bg_header ">
+                    <div class="header_box">
+                        <span class="navbar-brand ttl_admin" href="#">Inpatient List</span>
                     </div>
+                </div>
 
-                    <!-- <div class="sec_input mb-2"> -->
-
-                    <!-- <form action="./addInpatient.php">
-                        <input type="submit" value="Go to Add Inpatient" class="common_btn add_btn go_btn" />
-                    </form> -->
+                <div class="sec_input mb-2">
 
                     <a href="./addInpatient.php" class="common_btn add_btn go_btn">Go to Add Inpatient
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
+
                     </a>
+
                     <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
+                        <input type="text" class="common_input input_box form-control" id="searchText" placeholder="Search"  />
                     </div>
+                    <button type="submit" class="common_btn add_btn btn-success" id="search">Search </button>
 
-                    <!-- </div> -->
 
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Inpatient List</h2>
-                    </div>
-                    <div class="num_rows">
-                        <div class="form-group">
-                            <select class="form-control" name="state" id="maxRows">
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="50">50</option>
-                                <option value="70">70</option>
-                                <option value="100">100</option>
-                                <option value="5000">Show ALL Rows</option>
-                            </select>
-
-                        </div>
-                    </div>
-                    <table class="table" id="table-id">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>Date</td>
-                                <td>Patient Name</td>
-                                <td>Age</td>
-                                <td>Disease</td>
-                                <td>Status</td>
-                                <td>Room.</td>
-                                <td>Address</td>
-                                <td><span class="ps-4"> Action</span></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $count = 1; ?>
-
-                            <?php foreach ($inpatient as $key => $patient) { ?>
-                                <tr>
-                                    <td><?= $patient["name"] ?></td>
-                                    <td><?= $patient["age"] ?></td>
-                                    <td><?= $patient["address"] ?></td>
-                                    <td><?= $patient["status"] ?></td>
-                                    <td><?= $patient["disease"] ?></td>
-                                    <td><?= $patient["hospitalized_date"] ?></td>
-                                    <td><?= $patient["room"] ?></td>
-                                    <td> <a href="" class="stretched-link">Edit </a> </td>
-                                </tr>
-                            <?php } ?>
-                            <!-- <a href="./adminDashboard.php" class="stretched-link">Delete</a> -->
-                            <!-- Table  -->
-
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <hr class="about_line mt-5" />
                 </div>
-            </div>
-        </form>
-    </div>
 
+
+
+                <div class="input_set">
+                    <h2 class="input_set_header my-4">Inpatient List</h2>
+                </div>
+                <div class="num_rows">
+                    <div class="form-group">
+                        <select class="form-control" name="state" id="maxRows">
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="100">100</option>
+                            <option value="5000">Show ALL Rows</option>
+                        </select>
+
+                    </div>
+                </div>
+                <table class="table">
+                    <thead class="table_bgcolor">
+                        <tr>
+                            <td>Date</td>
+                            <td>Name</td>
+                            <td>Age</td>
+                            <td>Disease</td>
+                            <td>Status</td>
+                            <td>Room</td>
+                            <td>Address</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="table_id">
+                        <?php $number = 1 ?>
+                        <?php foreach ($inpatient as $iPatient) { ?>
+                            <tr class="row_bdr">
+                                <!-- <td id="number"><?= $number++ ?></td> -->
+                                <td><?= $iPatient["hospitalized_date"] ?> </td>
+                                <td><?= $iPatient["name"] ?></td>
+                                <td><?= $iPatient["age"] ?></td>
+                                <td><?= $iPatient["disease"] ?></td>
+                                <td><?= $iPatient["status"] ?></td>
+                                <td><?= $iPatient["room"] ?></td>
+                                <td><?= $iPatient["address"]  ?></td>
+                                <td>
+                                    <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2">Edit</a></span>
+                                    <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="color_fifth">Delete</a></span>
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+
+                    </tbody>
+                </table>
+
+
+                <div class='pagination_container'>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link pagi_color" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link pagi_color" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <hr class="about_line mt-5" />
+
+            </div>
+
+        </div>
+    </div>
+    
 
 </body>
 

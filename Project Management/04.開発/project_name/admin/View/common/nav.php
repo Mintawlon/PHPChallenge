@@ -91,12 +91,7 @@
                         Medicine
                     </span>
                 </a>
-                <a href="#" class="nav-link dropdown_list">
-                    <i class="fa-solid fa-user-doctor color_green"></i>
-                    <span class="navbar_btn_name_o">
-                        Doctor
-                    </span>
-                </a>
+                
             </div>
             <div class="navbar_btn">
                 <a href="./inpatientList.php" class="nav-link align-middle py-2 ">

@@ -1,3 +1,6 @@
+<?php
+include("../Controller/inpatientController.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +18,7 @@
     <link rel="stylesheet" href="./resources/css/addInpatient.css" <?= time() ?> />
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/script.js" ></script>
 
 </head>
 
@@ -26,143 +30,128 @@
             <?php
             include("./common/nav.php")
             ?>
-
-            <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
-                <!-- Header -->
-                <div class="header_wrapper bg_header ">
-                    <div class="header_box">
-                        <span class="navbar-brand ttl_admin" href="#">Inpatient</span>
-                    </div>
-                </div>
-
-
-
-                <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
-
-                <div class="sec_input mb-2">
-
-                    <a href="./inpatientList.php" class="common_btn add_btn back_btn">Back to Inpatient List
-                        <i class="fa-solid fa-arrow-left arrow_left"></i>
-                    </a>
-
-                    <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
+            <form action="../Controller/inpatientController.php" method="post">
+                <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
+                    <!-- Header -->
+                    <div class="header_wrapper bg_header ">
+                        <div class="header_box">
+                            <span class="navbar-brand ttl_admin" href="#">Add Inpatient</span>
+                        </div>
                     </div>
 
 
-                </div>
-                <div class="input_set">
-                    <h2 class="input_set_header my-4">Inpatient List</h2>
-                </div>
-                <div class="num_rows">
-                    <div class="form-group">
-                        <select class="form-control" name="state" id="maxRows">
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
+                    <div class="sec_input mb-2">
+
+                        <a href="./inpatientList.php" class="common_btn add_btn back_btn">Back to Inpatient List
+                            <i class="fa-solid fa-arrow-left arrow_left"></i>
+                        </a>
+
+                        <div class="tb_search">
+                            <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
+                        </div>
+
 
                     </div>
-                </div>
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Inpatient List</h2>
+                    </div>
 
-                <table class="table">
-                    <thead class="table_bgcolor" id="table_header">
-                        <tr>
-                            <td>No.</td>
-                            <td>Header</td>
-                            <td id="img_header">Image</td>
-                            <td id="text_header">Description</td>
-                            <td>Action</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $number = 1 ?>
-                        <?php foreach ($emergencyInfo as $emergency) { ?>
-                            <tr class="row_bdr">
-                                <td id="number"><?= $number++ ?></td>
-                                <td id="header">
-                                    <?= $emergency["article_header"] ?>
-                                </td>
-                                <td id="image">
-                                    <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="image">
-                                </td>
+                    <table class="table">
+                        <thead class="table_bgcolor" id="table_header">
+                            <tr>
 
-                                <td id="text"><?= $emergency["article_text"] ?></td>
-                                <td>
-                                    <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="color_sixth me-2">Edit</a></span>
-                                    <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="color_fifth">Delete</a></span>
-                                </td>
+                                <td>Date</td>
+                                <td>Name</td>
+                                <td>Age</td>
+                                <td>Disease</td>
+                                <td>Status</td>
+                                <td>Room</td>
+                                <td>Address</td>
+                                <td>Action</td>
                             </tr>
-                        <?php } ?>
+                        </thead>
+                        <tbody>
+                            <?php $number = 1 ?>
+                            <?php foreach ($inpatient as $iPatient) { ?>
+                                <tr class="row_bdr">
+                                    <!-- <td id="number"><?= $number++ ?></td> -->
+                                    <td><?= $iPatient["hospitalized_date"] ?> </td>
+                                    <td><?= $iPatient["name"] ?></td>
+                                    <td><?= $iPatient["age"] ?></td>
+                                    <td><?= $iPatient["disease"] ?></td>
+                                    <td><?= $iPatient["status"] ?></td>
+                                    <td><?= $iPatient["room"] ?></td>
+                                    <td><?= $iPatient["address"]  ?></td>
+                                    <td>
+                                        <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2">Edit</a></span>
+                                        <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="color_fifth">Delete</a></span>
+                                    </td>
+                                </tr>
+                            <?php } ?>
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                    <div class='pagination_container'>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link pagi_color" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <hr class="about_line mt-5" />
+
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Add Inpatient</h2>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Date</span>
+                            <input type="text" class="common_input input_box" name="date" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Patient Name</span>
+                            <input type="text" class="common_input input_box" name="name" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Age</span>
+                            <input type="text" class="common_input input_box" name="age" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Disease</span>
+                            <input type="text" class="common_input input_box" name="disease" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Status</span>
+                            <input type="text" class="common_input input_box" name="status" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Room</span>
+                            <input type="text" class="common_input input_box" name="room" />
+                        </div>
+                        <div class="input_one mb-2 display_top">
+                            <span class="input_set_text text_display">Address</span>
+                            <input type="text" class="common_input input_box" name="address" />
+                        </div>
+                        <div class=" mb-2  display_top ">
 
 
-                <div class='pagination_container'>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                            <button type="submit" class="common_btn add_btn input_box display_bottom display_top" name="addbtn">Add</button>
+                        </div>
+                    </div>
 
                 </div>
-                <hr class="about_line mt-5" />
-
-                <div class="input_set">
-                    <h2 class="input_set_header my-4">Add Inpatient</h2>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Date</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Patient Name</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Age</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Disease</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Status</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Room</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class="input_one mb-2 display_top">
-                        <span class="input_set_text text_display">Address</span>
-                        <input type="text" class="common_input input_box" />
-                    </div>
-                    <div class=" mb-2  display_top ">
-                        <!-- Add Btn -->
-                        <a href="" class="common_btn add_btn input_box display_bottom display_top">Add</a>
-                    </div>
-                </div>
-
-            </div>
+            </form>
         </div>
     </div>
 

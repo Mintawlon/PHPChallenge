@@ -1,3 +1,9 @@
+<?php
+include "../Controller/doctorEditController.php";
+if (isset($_SESSION["doctorInfo"])) {
+    $doctorInfo = $_SESSION["doctorInfo"];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,39 +43,52 @@
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
                 </div>
-                <section class="edit_doctor">
+                <form action="../Controller/doctorEditController.php" method="POST" class="edit_doctor">
                     <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Doctor</h2>
+                        <h2 class="input_set_header my-4">Edit Selected Doctor Information</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Doctor Name</span>
-                            <input type="text" class="common_input " />
+                            <input type="text" class="common_input" name="updateDoctorName"  value="<?= $doctorInfo[0]["doctor_name"] ?>" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Age</span>
-                            <input type="text" class="common_input " />
+                            <input type="text" class="common_input" name="updateDoctorAge" value="<?= $doctorInfo[0]["age"] ?>" />
+                        </div>
+                        <div class="input_one mb-2">
+                            <span class="input_set_text">Gender</span>
+                            <select name="updateDoctorGender" id="" class="common_input" required>
+                                <?php
+                                if ($doctorInfo[0]["gender"] == 0) { ?>
+                                    <option value="0" selected>Male</option>
+                                    <option value="1">Female</option>
+                                <?php } else{?>
+                                    <option value="0" >Male</option>
+                                    <option value="1" selected>Female</option>
+                                <?php } ?>
+
+                            </select>
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Speciality</span>
-                            <input type="text" class="common_input " />
+                            <input type="text" class="common_input" name="updateDoctorSpeciality" value="<?= $doctorInfo[0]["speciality"] ?>" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Contact</span>
-                            <input type="text" class="common_input " />
+                            <input type="text" class="common_input" name="updateDoctorPhone" value="<?= $doctorInfo[0]["contact"] ?>" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Profile Photo</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="updateDoctorPhoto" />
                         </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Hospital Name</span>
-                            <input type="text" class="common_input" />
-                        </div>
+
+                        <input type="hidden" value="<?= $doctorInfo[0]["id"]?>" name="updateDoctorId">
+
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <button type="submit" name="updateDoctorInfo" class="common_btn add_btn">Update</button>
                         </div>
                     </div>
-                </section>
+                </form>
             </div>
         </div>
     </div>

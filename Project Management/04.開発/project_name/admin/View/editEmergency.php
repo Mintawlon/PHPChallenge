@@ -1,6 +1,9 @@
 <?php
 include("../Controller/emergencyEditController.php");
-$info = $_SESSION["articleInfo"];
+if(isset($_SESSION["articleInfo"])){
+    $info = $_SESSION["articleInfo"];
+}
+
 ?>
 
 <!DOCTYPE html>
