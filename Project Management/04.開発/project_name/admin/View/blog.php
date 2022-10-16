@@ -20,7 +20,7 @@
             include("./common/nav.php")
             ?>
 
-            <div class=" data_box   col-sm-9  col-md-8 col-xl-10 mt-3">
+            <div class=" data_box  col-sm-9  col-md-8 col-xl-10 mt-3">
                 <!-- header -->
                 <div class="header_wrapper bg_header ">
                     <div class="header_box">
