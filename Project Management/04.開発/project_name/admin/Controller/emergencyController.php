@@ -19,7 +19,7 @@ if(isset($_POST["addEmergencyTab"])){
         emergency_page_header (
         header,
         text,
-        created_date
+        create_date
         ) 
         VALUES 
         (
@@ -47,7 +47,7 @@ if(isset($_POST["addEmergency"])){
         article_header,
         article_text,
         article_image,
-        created_date
+        create_date
         ) 
         VALUES 
         (

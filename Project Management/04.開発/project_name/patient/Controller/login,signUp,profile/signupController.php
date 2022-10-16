@@ -21,7 +21,7 @@ if (isset($_POST["signUp"])) {
         // Add user info to user_register table
         $sql = $pdo->prepare(
             "INSERT INTO 
-            user_register (register_name,email_address,password,created_date) 
+            user_register (register_name,email_address,password,create_date) 
             VALUES 
             (:regName,:regEmail,:regPwd,:createdDate); 
             "
