@@ -81,7 +81,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                     <td class="p-3">
                                     <a href="../Controller/doctorEditController.php?id=<?=$doctor["id"]?>" class="edit_btn me-4">
                                     Edit</a>
-                                        <a href="" class="trash "><i class="fa-solid fa-trash"></i></a>
+                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>
