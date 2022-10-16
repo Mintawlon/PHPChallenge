@@ -8,7 +8,8 @@
     <title>Blog</title>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+    <link rel="stylesheet" href="../View/resources/css/root.css" />
+    <link rel="stylesheet" href="../View/resources/css/blog.css" />
 </head>
 
 <body>
@@ -26,48 +27,33 @@
                         <span class="navbar-brand ttl_admin" href="#">Blogs</span>
                     </div>
                 </div>
-                <div class="sec_input mb-2">
-                    <a href="./blogEdit.php" class="common_btn add_btn go_btn">Go to Edit Blog
-                        <i class="fa-solid fa-arrow-right arrow_right"></i>
-                    </a>
+                <!--Add Form -->
+                <div class="m-3 d-flex justify-content-center">
+                    <form action="../Controller/blog/addBlogController.php" method="post">
+                        <div class="form-group row mb-3">
+                            <label for="formFileMultiple" class="col-sm-2">Image</label>
+                            <div class=" col-sm-10">
+                                <input class="form-control" type="file" id="formFileMultiple" />
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">header</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="header">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Warning</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary mb-2 w-30">Confirm</button>
+                        </div>
+                    </form>
                 </div>
-                <section class="blog_tab">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Tab1</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">First Tab Image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">First Tab Text</span>
-                            <input type="text" class="common_input" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Add</a>
-                        </div>
-<<<<<<< HEAD
-=======
-
-                        <h2 class="input_set_header my-4">Add Tab2</h2>
-                        <div class="input_one mb-2">
-                            
-                            <span class="input_set_text add_file">Second Tab Image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Second Tab Text</span>
-                            <input type="text" class="common_input" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Add</a>
-                        </div>
->>>>>>> ed7c6bb5c859161899c22a6d63d646b273a25b72
-                        <hr />
-                    </div>
-                </section>
-
+                <hr />
                 <section class="diseases_table">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Update Current Diseases</h2>
@@ -124,31 +110,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <hr />
                 </section>
 
-
-                <section class="edit_diseases">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Current Diseases</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Add image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Header</span>
-                            <input type="text" class="common_input" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Add paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Add</a>
-                        </div>
-                    </div>
-                </section>
             </div>
         </div>
     </div>
