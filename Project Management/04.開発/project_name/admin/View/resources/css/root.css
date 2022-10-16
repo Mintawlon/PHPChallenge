@@ -265,8 +265,8 @@ tbody .row_bdr {
   width: 100%;
 }
 .input_one {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
   width: 65%;
 }
 .input_set_header {
