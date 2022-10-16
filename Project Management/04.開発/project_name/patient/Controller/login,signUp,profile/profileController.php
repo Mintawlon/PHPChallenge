@@ -12,7 +12,7 @@ if (isset($_POST["changeProfile"])) {
             "UPDATE
             user_register SET 
             register_name=:name,
-            updated_date=:updatedDate WHERE id=:id"
+            update_date=:updatedDate WHERE id=:id"
         );
     } else {
         $file = $_FILES['changePhoto']['name'];
@@ -26,7 +26,7 @@ if (isset($_POST["changeProfile"])) {
                 user_register SET 
                 register_name=:name,
                 profile_image=:photo,
-                updated_date=:updatedDate WHERE id=:id"
+                update_date=:updatedDate WHERE id=:id"
             );
             $sql->bindValue(":photo", $path);
         } else {

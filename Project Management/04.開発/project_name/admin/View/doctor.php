@@ -114,15 +114,15 @@ include "../Controller/doctor/getDoctorInfoController.php";
                         <h2 class="input_set_header my-4"><u>Add Doctor</u></h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Doctor Name</span>
-                            <input type="text" class="common_input " name="doctorName" required />
+                            <input type="text" class="common_input form-control " name="doctorName" required />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Age</span>
-                            <input type="text" class="common_input " name="doctorAge" required />
+                            <input type="text" class="common_input form-control " name="doctorAge" required />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Gender</span>
-                            <select name="doctorGender" id="" class="common_input" required>
+                            <select name="doctorGender" id="" class="common_input form-control" required>
                                 <option value="0">Male</option>
                                 <option value="1">Female</option>
                             </select>
@@ -130,15 +130,15 @@ include "../Controller/doctor/getDoctorInfoController.php";
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Speciality</span>
-                            <input type="text" class="common_input " name="doctorSpeciality" required />
+                            <input type="text" class="common_input form-control " name="doctorSpeciality" required />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Contact</span>
-                            <input type="text" class="common_input " name="doctorPhone" required />
+                            <input type="text" class="common_input form-control " name="doctorPhone" required />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Profile Photo</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="doctorPhoto" required />
+                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input form-control " accept="image/*" name="doctorPhoto" required />
                         </div>
 
                         <div class=" mb-2  ">

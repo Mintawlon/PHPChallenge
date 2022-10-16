@@ -1,3 +1,6 @@
+body{
+    background-color: var(--primary_color) !important;
+}
 .profile_wrapper{
     height: 20em;
     width: 100%;
