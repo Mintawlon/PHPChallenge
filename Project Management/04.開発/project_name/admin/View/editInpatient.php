@@ -46,14 +46,9 @@ $inpatientInfo = $_SESSION["inpatientInfo"];
 
                 <div class="sec_input mb-2">
 
-                    <a href="./blogAdd.php" class="common_btn add_btn back_btn">Back to Inpatient List
+                    <a href="./inpatientList.php" class="common_btn add_btn back_btn">Back to Inpatient List
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
-
-                    <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
-                    </div>
-
 
                 </div>
 

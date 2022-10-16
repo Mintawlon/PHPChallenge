@@ -1,9 +1,6 @@
 <?php
 include("../Controller/inpatientController.php");
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,9 +49,9 @@ include("../Controller/inpatientController.php");
                     </a>
 
                     <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="searchText" placeholder="Search"  />
+                        <input type="text" class="common_input input_box form-control" id="searchText" name="text" placeholder="Search"  />
                     </div>
-                    <button type="submit" class="common_btn add_btn btn-success" id="search">Search </button>
+                    <button type="submit" class="common_btn add_btn btn-success" id="search" name="searchbtn">Search </button>
 
 
                 </div>
