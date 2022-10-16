@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-
-
-
-=======
 <?php
 session_start();
 ?>
->>>>>>> origin/main
 <!DOCTYPE html>
 <html lang="en">
 

@@ -40,6 +40,7 @@ if (isset($_POST["doctorAdd"])) {
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
+    header("Location: ../../View/doctor.php");
 }else{
     echo "<script>
     alert ('Error');

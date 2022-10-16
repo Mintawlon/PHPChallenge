@@ -33,11 +33,13 @@ if (isset($_POST["signUp"])) {
         $sql->execute();
         $_SESSION["defaultPhoto"] = "profile.jpg";
         $_SESSION["email"] = $regEmail;
+        $_SESSION["userName"] = $regName;
         header("Location: ../../View/home1.php");
     } else {
+        $_SESSION["aleradyExistEmail"] =  $regEmail ;
         echo "<script>
         alert('Alerady Exist This Email');
         </script>";
-        // header("Location: ../../View/signUp.php");
+        header("Location: ../../View/signUp.php");
     }
 }

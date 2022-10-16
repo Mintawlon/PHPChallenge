@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,10 +41,18 @@
                     Name* <br>
                     <input type="text" name="reg_name" class="name form-control" placeholder="username">
                     <br>
-                    <br>
                     Email* <br>
-                    <input type="email" name="reg_email" class="name form-control" placeholder="email">
-                    <br>
+                    <input type="email" name="reg_email" class="name form-control" placeholder="email" value="
+                    <?php
+                    if(isset($_SESSION["aleradyExistEmail"])){
+                    echo $_SESSION["aleradyExistEmail"];
+                     } ?>
+                    ">
+                    <?php
+                    if(isset($_SESSION["aleradyExistEmail"])){?>
+                        <p id="alreadyExist"><u>This Email Address Already has an Account</u></p>
+                    <?php } ?>
+                    
                     <br>
                     Password* <br>
                     <div class="password_box">

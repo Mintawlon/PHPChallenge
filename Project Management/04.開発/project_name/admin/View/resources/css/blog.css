@@ -1,0 +1,11 @@
+
+.add_dieses{
+    margin-left: 8rem !important;
+}
+
+@media only screen and (max-width:900px) {
+    .form-container{
+        margin-left: 3rem !important;
+    }
+  }
+  
