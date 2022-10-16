@@ -7,4 +7,3 @@ $password = "";
 $pdo = new PDO(
     "mysql:host=$hostname;port=$port;dbname=$dbname", 
 $username, $password);
-?>
