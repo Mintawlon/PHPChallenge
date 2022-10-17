@@ -48,7 +48,7 @@ if (isset($_SESSION["doctorInfo"])) {
                         <h2 class="input_set_header my-4">Edit Selected Doctor Information</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Doctor Name</span>
-                            <input type="text" class="common_input" name="updateDoctorName"  value="<?= $doctorInfo[0]["doctor_name"] ?>" />
+                            <input type="text" class="common_input form" name="updateDoctorName" value="<?= $doctorInfo[0]["doctor_name"] ?>" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Age</span>
@@ -61,8 +61,8 @@ if (isset($_SESSION["doctorInfo"])) {
                                 if ($doctorInfo[0]["gender"] == 0) { ?>
                                     <option value="0" selected>Male</option>
                                     <option value="1">Female</option>
-                                <?php } else{?>
-                                    <option value="0" >Male</option>
+                                <?php } else { ?>
+                                    <option value="0">Male</option>
                                     <option value="1" selected>Female</option>
                                 <?php } ?>
 
@@ -81,7 +81,7 @@ if (isset($_SESSION["doctorInfo"])) {
                             <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="updateDoctorPhoto" />
                         </div>
 
-                        <input type="hidden" value="<?= $doctorInfo[0]["id"]?>" name="updateDoctorId">
+                        <input type="hidden" value="<?= $doctorInfo[0]["id"] ?>" name="updateDoctorId">
 
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
