@@ -12,6 +12,7 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+    <script src="./resources/js/editblog.js" defer></script>
 </head>
 
 <body>
@@ -37,9 +38,12 @@
                 <section class="add_diseases">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Edit Current Diseases</h2>
+                        <div class="image-box d-flex justify-content-center mb-3">
+                            <img src="./storages/blog/default.png" alt="" width="100" id="image" class="rounded- border border-2">
+                        </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file"> image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" id="uploadFile" onchange="setImage()" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>
@@ -56,40 +60,6 @@
                     </div>
                 </section>
                 <hr />
-
-                <section class="blog_tab">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Edit Tab1</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">First Tab Image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">First Tab Text</span>
-                            <input type="text" class="common_input" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Edit</a>
-                        </div>
-
-                        <h2 class="input_set_header my-4">Edit Tab2</h2>
-                        <div class="input_one mb-2">
-
-                            <span class="input_set_text add_file">Second Tab Image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Second Tab Text</span>
-                            <input type="text" class="common_input" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Edit</a>
-                        </div>
-                        <hr />
-                    </div>
-                </section>
             </div>
         </div>
     </div>

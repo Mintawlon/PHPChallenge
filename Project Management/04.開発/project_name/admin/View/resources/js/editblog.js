@@ -11,4 +11,3 @@ function setImage() {
         img.src = reader.result;
     }
 }
-

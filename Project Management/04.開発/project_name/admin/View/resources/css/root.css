@@ -161,6 +161,9 @@
   font-weight: 400 !important;
 }
 
+.text_area{
+  height: 5em !important;
+}
 .common_input::placeholder{
   color: var(--first_color);
   font-family: var(--primary_font);
@@ -212,14 +215,14 @@
   font-size: var(--extra_small);
 }
 
-.form-control-lg {
+/* .form-control-lg {
   width: 25em !important;
   border-radius: 0 !important;
 }
 
 .form-control {
  border: 1px solid var(--secondary_color) !important;
-}
+} */
 
 /* Table */
 .table {
@@ -314,9 +317,9 @@ textarea {
     font-weight: 300;
     font-size: var(--extra_extra_small) !important;
   }
-  .form-control-lg{
+  /* .form-control-lg{
     width: 100% !important;
-  }
+  } */
 
   .input_set_text {
     font-size: var(--extra_extra_small);
@@ -456,12 +459,7 @@ hr {
   .add_file {
     font-size: var(--extra_extra_small);
   }
-  .form-control-lg {
-    width: 100% !important;  
-  }
-  .form-control {
-    font-size: var(--extra_extra_small) !important;
-  }
+ 
   /* table */
 .table {
   font-size: var(--extra_extra_small);

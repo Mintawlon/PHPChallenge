@@ -110,23 +110,23 @@ include("../Controller/hosLocationController.php");
           <h2 class="input_set_header my-4">Add Hospital</h2>
           <div class="input_one mb-2 display_top">
             <span class="input_set_text text_display">Hospital Name</span>
-            <input type="text" name="hospitalName" class="common_input input_box" />
+            <input type="text" name="hospitalName" class="common_input form-control" />
           </div>
           <div class="input_one mb-2 display_top">
             <span class="input_set_text text_display">Address</span>
-            <input type="text" name="hospitalAddress" class="common_input input_box" />
+            <input type="text" name="hospitalAddress" class="common_input form-control" />
           </div>
           <div class="input_one mb-2 display_top">
             <span class="input_set_text text_display">Phone Number</span>
-            <input type="text" name="hospitalPhone" class="common_input input_box" />
+            <input type="text" name="hospitalPhone" class="common_input form-control" />
           </div>
           <div class="input_one mb-2 display_top">
             <span class="input_set_text text_display">Email</span>
-            <input type="text" name="hospitalEmail" class="common_input input_box" />
+            <input type="text" name="hospitalEmail" class="common_input form-control" />
           </div>
           <div class="input_one mb-2 display_top">
             <span class="input_set_text text_display">Google Map</span>
-            <input type="text" name="hospitalMap" class="common_input input_box" />
+            <input type="text" name="hospitalMap" class="common_input form-control" />
           </div>
           <div class=" mb-2  display_top ">
             <!-- Add Btn -->

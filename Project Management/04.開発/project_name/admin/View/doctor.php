@@ -138,7 +138,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Profile Photo</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input form-control " accept="image/*" name="doctorPhoto" required />
+                            <input type="file" id="formFileLg" class="form-control common_input" accept="image/*" name="doctorPhoto" required />
                         </div>
 
                         <div class=" mb-2  ">
