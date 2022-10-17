@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION["blogInfo"])) {
+    $blogInfo = $_SESSION["blogInfo"];
+    print_r($_SESSION["blogInfo"]);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,31 +42,37 @@
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
                 </div>
-                <section class="add_diseases">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Edit Current Diseases</h2>
-                        <div class="image-box d-flex justify-content-center mb-3">
-                            <img src="./storages/blog/default.png" alt="" width="100" id="image" class="rounded- border border-2">
+                <!--Add Form -->
+                <div class="m-3 d-flex justify-content-center border border-primary rounded">
+                    <form action="../Controller/blog/updateBlogController.php" method="post" enctype="multipart/form-data">
+                        <div class="image-box d-flex justify-content-center m-3">
+                            <img src="./storages/blog/<?php echo $blogInfo[0]["image"] ?>" alt="" width="100" id="image" class="rounded-circle">
                         </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file"> image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" id="uploadFile" onchange="setImage()" />
+                        <div class="form-group row mb-3">
+                            <label for="formFileMultiple" class="col-sm-2">Image</label>
+                            <div class=" col-sm-10">
+                                <input class="form-control common_input" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" />
+                            </div>
                         </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Header</span>
-                            <input type="text" class="common_input" />
+                        <div class="form-group row mb-3">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">header</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control common_input" name="header" placeholder="header" value="<?php echo $blogInfo[0]["header"] ?>">
+                            </div>
                         </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text"> paragraph</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
+                        <div class="form-group row mb-3">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Warning</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control common_input text_area" id="exampleFormControlTextarea1" name="description" rows="5"><?php echo $blogInfo[0]["description"] ?></textarea>
+                            </div>
                         </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Edit</a>
+                        <input type="hidden" name="id" value="<?php echo $blogInfo[0]["id"] ?>">
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="submit" name="updateBlog" class="btn btn-primary mb-2 w-50">Update</button>
                         </div>
-                    </div>
-                </section>
-                <hr />
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

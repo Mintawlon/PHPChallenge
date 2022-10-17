@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../../Model/dbConnection.php";
 if (isset($_GET["id"])) {
     $updateId = $_GET["id"];
