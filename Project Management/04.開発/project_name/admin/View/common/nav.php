@@ -84,6 +84,13 @@
                         Carousel
                     </span>
                 </a>
+                <a href="./article.php" class="nav-link dropdown_list">
+                    <i class="fa-brands fa-adversal
+                        color_green"></i>
+                    <span class="navbar_btn_name_o px-1">
+                        Articles
+                    </span>
+                </a>
                 <a href="./medicineAdd.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-tablets
                         color_green"></i>
