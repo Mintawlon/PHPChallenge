@@ -29,6 +29,6 @@ if (isset($_POST['addDieses'])) {
         $sql->execute();
         header("Location: ../../View/blog.php");
     } else {
-        echo 'Ther was some error moving to upload directory';
+        echo 'There was some error moving to upload directory';
     }
 }
