@@ -49,10 +49,10 @@
                             About MedPlatform
                         </h6>
                         <p>
-                            <a href="./about_us.php" class="text-decoration-none link_color fw-semibold">About Us</a>
+                            <a href="./about_us.php" class="text-decoration-none link_color fw-semibold"><u>About Us</u></a>
                         </p>
                         <p>
-                            <a href="./about_us.php" class="text-decoration-none link_color fw-semibold">Privacy Policy</a>
+                            <a href="./about_us.php" class="text-decoration-none link_color fw-semibold"><u>Privacy Policy</u></a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -60,15 +60,17 @@
                     <!-- Grid column -->
                     <div class="col-4 mx-auto mb-md-0 mb-3 mt-5">
                         <!-- Links -->
-                        <h6 class=" fw-semibold mb-4 text-white">Blogs</h6>
+                        <h6 class="text-uppercase fw-bold mb-4 text-white">
+                            Blogs
+                        </h6>
                         <p>
-                            <a href="./blooddonation.php" class="link_color fw-semibold">Blood Donation</a>
+                            <a href="./blooddonation.php" class="link_color fw-semibold"><u>Blood Donation</u></a>
                         </p>
                         <p>
-                            <a href="./emergency.php" class="link_color fw-semibold">First Aid For Emergency Situations</a>
+                            <a href="./emergency.php" class="link_color fw-semibold"><u>First Aid For Emergency Situations</u></a>
                         </p>
                         <p>
-                            <a href="#" class="link_color fw-semibold hello">Knowledge About Dengue</a>
+                            <a href="#" class="link_color fw-semibold hello"><u>Knowledge About Dengue</u></a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -79,7 +81,7 @@
         <!-- Section: Links  -->
 
         <!-- Copyright -->
-        <div class="text-center p-4 link_color " style="background-color: rgba(0, 0, 0, 0.025);">
+        <div class="text-center p-4">
             © 2022 Copyright: <span class="fw-bold">MedPlatform.com</span>
         </div>
         <!-- <h1 class=" backlogo_name fw-bolder">MedPlatform</h1> -->

@@ -71,15 +71,17 @@ include("../Controller/emergencyPage/emergencyController.php");
                     <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
                     <div class="info">
                         <h2 class="first_aid_para_header">What to Do?</h2>
-                        <ol class='first_aid_para'>
-
-
-
-                            <li>
-                                list One
-                            </li>
-
-                        </ol>
+                        <?php
+                        $html = "<ol class='first_aid_para'>
+                        <li>Find a person nearby. Make eye contact, point to them, and say: “Call 911.”</li>
+                        <li>Start doing chest compressions on the person who needs help. Using both your hands, push down hard and fast in the center of the person’s chest. Let their chest come back up naturally between compressions. Keep going until someone with more training arrives.
+                        </li>
+                        <li>If you’re trained in CPR, you can use chest compressions and rescue breathing.
+                        </li>
+                        <li>If it’s available, use an AED. However, do not put off doing chest compressions to go look for an AED. If possible, instruct someone else to go find the device and bring it to you.</li>
+                        </ol>";
+                        echo $html;
+                        ?>
                     </div>
                 </div>
                 <hr class="line" />

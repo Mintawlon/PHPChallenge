@@ -33,7 +33,7 @@ if (isset($_SESSION["updatedInfo"])) {
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
       <div class="collapse navbar-collapse navbar_text_div" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="navbar_text mt-4  me-5" aria-current="page" href="./hospital_location.php">Hospital Locations</a>
+          <a class="navbar_text mt-4  me-5" aria-current="page" href="./home1.php">Home</a>
           <a class="navbar_text mt-4 me-5" href="./doctor.php">Find Doctors</a>
           <a class="navbar_text mt-4 me-5" href="./booking.php">Booking Status</a>
           <a class="navbar_text mt-4 me-5 " href="./blog.php">Blogs</a>
