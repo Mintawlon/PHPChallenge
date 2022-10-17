@@ -21,6 +21,8 @@ if (!isset($_SESSION["email"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/themes/splide-skyblue.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
     <!-- JS file for Slider -->
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
 
     <!-- Css -->
     <link rel="stylesheet" href="./resources//css/root.css">
@@ -70,7 +72,12 @@ if (!isset($_SESSION["email"])) {
     <div class="articles px-2">
         <div class="article">
             <div class="article_header_div">
-            <h1 class="text-white mt-4  article_header"> <?= $info["header"] ?></h1>
+            <h1 class="text-white mt-4  article_header"> 
+                <?= $info["header"] ?>
+            
+            </h1>
+            <a  href="./<?= $info["page_link"] ?>" class="text-white 
+            " id="seeMore">See More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="article_text">
                 <h3 class="text-white"> <?= $info["para_header"] ?></h3>

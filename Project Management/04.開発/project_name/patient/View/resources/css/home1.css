@@ -95,10 +95,18 @@ body {
   margin: 0 auto;
   margin-bottom: 2em;
 }
+#seeMore{
+  text-decoration: none;
+  cursor: pointer;
+}
+#seeMore:hover{
+  color: var(--third_color) !important;
+}
 @media only screen and (max-width:1200px) {
   .article_header{
     font-size: var(--small);
   }
+  
   .article_text{
     width: 30%;
     height: 100%;
@@ -108,7 +116,7 @@ body {
   .article_text>h3{
     font-size: var(--extra_small);
   }
-  .article_text>p{
+  .article_text>p,#seeMore{
     font-size: var(--extra_extra_small);
   }
   .article_image{
@@ -122,7 +130,7 @@ body {
   .article_text>h3{
     font-size: var(--extra_extra_small);
   }
-  .article_text>p{
+  .article_text>p,#seeMore{
     font-size: 0.5em;
   }
   .article_text{
@@ -153,7 +161,7 @@ body {
   .article_text>h3{
     font-size: 0.5em;
   }
-  .article_text>p{
+  .article_text>p,#seeMore{
     font-size: 0.3em;
   }
   .articles{

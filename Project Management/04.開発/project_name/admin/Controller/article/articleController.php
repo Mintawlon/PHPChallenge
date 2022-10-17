@@ -7,6 +7,7 @@ if (isset($_POST["homeArticleAdd"])) {
     $paraHeader = $_POST["homeArticleParaHeader"];
     $paragraph = $_POST["homeArticlePara"];
     $photo = $_POST["homeArticlePhoto"];
+    $link = $_POST["pageLink"];
 
 
     $sql = $pdo->prepare(
@@ -16,6 +17,7 @@ if (isset($_POST["homeArticleAdd"])) {
         para_header,
         para_text,
         image,
+        page_link,
         create_date
         ) 
         VALUES 
@@ -24,6 +26,7 @@ if (isset($_POST["homeArticleAdd"])) {
         :para_header,
         :para_text,
         :image,
+        :link,
         :createdDate
         );"
     );
@@ -31,6 +34,7 @@ if (isset($_POST["homeArticleAdd"])) {
     $sql->bindValue(":para_header", $paraHeader);
     $sql->bindValue(":para_text", $paragraph);
     $sql->bindValue(":image", $photo);
+    $sql->bindValue(":link", $link);
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();

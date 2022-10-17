@@ -1,5 +1,5 @@
 <?php
-include("../Controller/emergencyController.php");
+include("../Controller/article/articleInfoController.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include("../Controller/emergencyController.php");
     <title>Article</title>
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
-    <link rel="stylesheet" href="./resources/css/emergency.css">
+    <link rel="stylesheet" href="./resources/css/article.css">
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -49,8 +49,23 @@ include("../Controller/emergencyController.php");
                             </tr>
                         </thead>
                         <tbody id="table_text">
-                            
-
+                            <?php $number = 1 ?>
+                            <?php foreach ($homeArticleInfo as $info) { ?>
+                                <tr>
+                                <td id="number"><?= $number++ ?></td>
+                                <td ><?= $info["header"] ?></td>
+                                    <td id="paraHeader"> <?= $info["para_header"] ?></td>
+                                    <td id="paragraph" ><?= $info["para_text"] ?></td>
+                                    <td id="image"><img src="./storages/image/<?= $info["image"] ?>" alt="" class="image"></td>
+                                    <td >
+                                    <a href="../Controller/doctorEditController.php?id=<?=$doctor["id"]?>" class="edit_btn me-4">
+                                    Edit</a>
+                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                    </td>
+                                    </span>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class='pagination_container'>
@@ -93,8 +108,12 @@ include("../Controller/emergencyController.php");
                             <textarea class="common_input form-control text_area" placeholder="Text" name="homeArticlePara" required></textarea>
                         </div>
                         <div class="input_one mb-2">
+                            <span class="input_set_text">Page Link Name</span>
+                            <textarea class="common_input form-control text_area" placeholder="Text" name="pageLink" required></textarea>
+                        </div>
+                        <div class="input_one mb-2">
                             <span class="input_set_text add_file">Article Photo</span>
-                            <input type="file" id="formFileLg" class="form-control common_input" accept="image/*" name="homeArticlePhoto"  required />
+                            <input type="file" id="formFileLg" class="form-control common_input" accept="image/*" name="homeArticlePhoto" required />
                         </div>
                         <!-- Add Btn -->
                         <button type="submit" name="homeArticleAdd" class="common_btn add_btn">Add</button>
