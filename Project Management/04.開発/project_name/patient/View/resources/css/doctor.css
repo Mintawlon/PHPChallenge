@@ -33,6 +33,7 @@ p {
 .image {
   margin-top: 5px !important;
   display: flex !important;
+  flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
 }
@@ -96,6 +97,8 @@ hr{
 
 .square_special_btn:hover{
     background-color: #FFC652 !important;
+    color: var(--second_color) !important;
+    border: 2px solid var(--second_color);
 }
 .btn-row{
     display: flex;
