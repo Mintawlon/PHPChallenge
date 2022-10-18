@@ -27,12 +27,10 @@ body {
   border-radius: 50% !important;
 }
 
-p {
-  margin-left: 1rem !important;
-}
 .image {
   margin-top: 5px !important;
   display: flex !important;
+  flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
 }
@@ -68,11 +66,6 @@ hr {
     color: white !important;
     width: 100% !important;
 }
-
-p{
-    margin-left: 1rem !important;
-}
-
 .list-inline{
 color: white !important;
     
@@ -96,6 +89,8 @@ hr{
 
 .square_special_btn:hover{
     background-color: #FFC652 !important;
+    color: var(--second_color) !important;
+    border: 2px solid var(--second_color);
 }
 .btn-row{
     display: flex;
@@ -123,7 +118,7 @@ hr{
 .mobile{
   margin-left: 0.5rem !important;
 }
-.square_blue_btn{
+.square_special_btn{
   font-size: 0.75rem !important;
 }
 }

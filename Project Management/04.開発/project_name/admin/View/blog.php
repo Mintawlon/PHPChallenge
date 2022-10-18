@@ -1,3 +1,7 @@
+<?php
+include "../Controller/blog/listBlogController.php";
+//print_r($blogList);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +22,8 @@
         <div class="row flex-nowrap">
             <!-- Side Bar Menu Copy Here -->
             <?php
-            include("./common/nav.php")
+            include("./common/nav.php");
+
             ?>
 
             <div class=" data_box  col-sm-9  col-md-8 col-xl-10 mt-3">
@@ -31,7 +36,9 @@
                 <!--Add Form -->
                 <div class="m-3 d-flex justify-content-center">
                     <form action="../Controller/blog/addBlogController.php" method="post" enctype="multipart/form-data">
-                        <img src="./storages/blog/default.png" alt="" width="100" id="image">
+                        <div class="image-box d-flex justify-content-center mb-3">
+                            <img src="./storages/blog/default.png" alt="" width="100" id="image" class="rounded-circle">
+                        </div>
                         <div class="form-group row mb-3">
                             <label for="formFileMultiple" class="col-sm-2">Image</label>
                             <div class=" col-sm-10">
@@ -71,26 +78,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 1</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 2</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum!</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
+                            <?php $count = 0; ?>
+                            <?php foreach ($blogList as $blog) {
+
+                            ?>
+                                <tr class="row_bdr">
+                                    <td><?php echo ++$count ?></td>
+                                    <td>
+                                        <img src="./storages/blog/<?php echo $blog["image"] ?>" alt="" width="100">
+                                    </td>
+                                    <td><?php echo $blog["header"] ?></td>
+                                    <td><?php echo $blog["description"] ?></td>
+                                    <td>
+                                        <span><a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="color_sixth">Edit</a></span>
+                                        <span><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="color_fifth">Delete</a></span>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class='pagination_container'>
