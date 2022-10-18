@@ -1,8 +1,8 @@
 <?php
 session_start();
-
-$userInfo = $_SESSION["userInfo"];
+include("../Controller/aboutUs/aboutUsController.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +35,14 @@ $userInfo = $_SESSION["userInfo"];
     ?>
     <div class="container">
         <!-- Page header -->
-        <h3 class="about_header my-4">About Us</h3>
-
-        <!-- Page Tab -->
-        <p class="text-center first_aid_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui magnam, ipsa tenetur impedit, unde nisi repudiandae quidem voluptates at sapiente quisquam id obcaecati distinctio! Laborum ducimus magni labore, fugit rem quod delectus, atque facere quam, dolores natus! Incidunt sint voluptate dolorem nostrum architecto doloremque rem, dolor eum! Sunt sint error quaerat quisquam alias cupiditate tempore eveniet facilis, dolorum labore expedita amet illum quis. Nihil, beatae dolorem adipisci ratione accusamus unde veritatis soluta illum vel quas. Ad veritatis fugiat repellendus odio, doloribus quibusdam beatae at, aliquam sed corporis totam distinctio rerum adipisci atque expedita voluptatem soluta iusto voluptatibus. Totam, tempore.</p>
-        <img src="./storages/image/emergency.jpg" alt="" class="about_us_center mt-5" />
-        <hr class="about_line mt-5" />
+        
+        <?php foreach ($aboutInfo as $info) { ?>
+            <h3 class="about_header my-4">About Us</h3>
+            <!-- Page Tab -->
+            <p class="text-center first_aid_para"><?= $info["text1"] ?></p>
+            <img src="./storages/image/<?= $info["image1"] ?>" alt="" class="about_us_center mt-5" />
+            <hr class="about_line mt-5" />
+        <?php  } ?>
 
         <!-- Section-2 -->
 
@@ -49,28 +51,23 @@ $userInfo = $_SESSION["userInfo"];
                 <div class="info" data-aos="flip-down">
                     <h2 class="display_top header-2">Section-2</h2>
                     <ol class="first_aid_para">
-                        <li>
-                            Find a person nearby. Make eye contact, point to them, and say:
-                            “Call 911.”
+                    <p class="first_aid_para"><?= $info["text2"] ?></p>
+                        <!-- <li>
+                            
+                        </li> -->
+                        <!-- <li>
+                            <p class="first_aid_para"><?= $info["text2"] ?></p>
                         </li>
                         <li>
-                            Start doing chest compressions on the person who needs help. Using
-                            both your hands, push down hard and fast in the center of the
-                            person’s chest. Let their chest come back up naturally between
-                            compressions. Keep going until someone with more training arrives.
+                            <p class="first_aid_para"><?= $info["text2"] ?></p>
                         </li>
                         <li>
-                            If you’re trained in CPR, you can use chest compressions and
-                            rescue breathing.
-                        </li>
-                        <li>
-                            If it’s available, use an AED. However, do not put off doing chest
-                            compressions to go look for an AED. If possible, instruct someone
-                            else to go find the device and bring it to you.
-                        </li>
+                            <p class="first_aid_para"><?= $info["text2"] ?></p>
+                        </li> -->
                     </ol>
+                    <!-- <p class="first_aid_para"><?= $info["text2"] ?></p> -->
                 </div>
-                <img src="./storages/image/emergency.jpg" alt="" class="card_img" />
+                <img src="./storages/image/<?= $info["image2"] ?>" alt="" class="card_img" />
 
             </div>
             <hr class="about_line" />
@@ -79,7 +76,7 @@ $userInfo = $_SESSION["userInfo"];
         <!-- Section-3 -->
 
         <div class="content-container">
-            
+
             <div class="card p-3" style="width: 38rem;">
                 <p class="text-center content-card-header">Get In Touch</p>
                 <!--input Form -->
@@ -109,10 +106,13 @@ $userInfo = $_SESSION["userInfo"];
         <!-- dropdown section -->
         <div class="policy">
             <h2 class="display_top header-2">Privacy Policy</h2>
-            <!-- Page Tab -->
-            <p class="text-center first_aid_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui magnam, ipsa tenetur impedit, unde nisi repudiandae quidem voluptates at sapiente quisquam id obcaecati distinctio! Laborum ducimus magni labore, fugit rem quod delectus, atque facere quam, dolores natus! Incidunt sint voluptate dolorem nostrum architecto doloremque rem, dolor eum! Sunt sint error quaerat quisquam alias cupiditate tempore eveniet facilis, dolorum labore expedita amet illum quis. Nihil, beatae dolorem adipisci ratione accusamus unde veritatis soluta illum vel quas. Ad veritatis fugiat repellendus odio, doloribus quibusdam beatae at, aliquam sed corporis totam distinctio rerum adipisci atque expedita voluptatem soluta iusto voluptatibus. Totam, tempore.</p>
-            <!-- Page Tab -->
-            <p class="text-center first_aid_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui magnam, ipsa tenetur impedit, unde nisi repudiandae quidem voluptates at sapiente quisquam id obcaecati distinctio! Laborum ducimus magni labore, fugit rem quod delectus, atque facere quam, dolores natus! Incidunt sint voluptate dolorem nostrum architecto doloremque rem, dolor eum! Sunt sint error quaerat quisquam alias cupiditate tempore eveniet facilis, dolorum labore expedita amet illum quis. Nihil, beatae dolorem adipisci ratione accusamus unde veritatis soluta illum vel quas. Ad veritatis fugiat repellendus odio, doloribus quibusdam beatae at, aliquam sed corporis totam distinctio rerum adipisci atque expedita voluptatem soluta iusto voluptatibus. Totam, tempore.</p>
+
+            <?php foreach ($policyInfo as $info1) { ?>
+                <!-- Page Tab -->
+                <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p>
+                <!-- Page Tab -->
+                <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p>
+            <?php } ?>
         </div>
     </div>
     </div>

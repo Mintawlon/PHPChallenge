@@ -40,11 +40,11 @@ include("../Controller/aboutusController.php");
                         <div class="input_set">
                             <h2 class="input_set_header my-4">Update About Us Info</h2>
                             <div class="input_one mb-2">
-                                <span class="input_set_text">Add new about us info</span>
+                                <span class="input_set_text">Add new info</span>
                                 <textarea class="form-control common_input text_area " placeholder="Text" name="text1"></textarea>
                             </div>
                             <div class="input_one mb-2">
-                                <span class="input_set_text add_file">Add new about us image</span>
+                                <span class="input_set_text add_file">Add new image</span>
                                 <input type="file" id="formFileLg" class="form-control form-control-lg common_input" accept="image/*" name="image1" />
                             </div>
                             <div class="input_one mb-2">
@@ -57,16 +57,19 @@ include("../Controller/aboutusController.php");
 
                             </div>
                             <div class="input_one mb-2">
-                                <span class="input_set_text add_file">Add new about us image</span>
+                                <span class="input_set_text add_file">Add new image</span>
                                 <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="image2" />
                             </div>
-                            <div class=" mb-2  ">
+                            <div class="mb-2  ">
                                 <!-- Add Btn -->
                                 <button type="submit" class="common_btn add_btn" name="update">Update</button>
                             </div>
                             <hr />
                         </div>
+
+
                     </section>
+
                     <section class="policy">
                         <div class="input_set">
                             <h2 class="input_set_header my-4">Update Privacy Policy Info</h2>
