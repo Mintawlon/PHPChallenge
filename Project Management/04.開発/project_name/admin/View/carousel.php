@@ -32,19 +32,19 @@
                     <h2 class="input_set_header my-4">Edit Carousel Image</h2>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 1</span>
-                        <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 2</span>
-                        <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 3</span>
-                        <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 4</span>
-                        <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control common_input " accept="image/*" />
                     </div>
                     <div class=" mb-2  ">
                         <!-- Add Btn -->

@@ -41,7 +41,7 @@ include("../Controller/aboutusController.php");
                             <h2 class="input_set_header my-4">Update About Us Info</h2>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Add new about us info</span>
-                                <textarea class="common_input" placeholder="Text" name="text1"></textarea>
+                                <textarea class="form-control common_input text_area " placeholder="Text" name="text1"></textarea>
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text add_file">Add new about us image</span>
@@ -49,11 +49,11 @@ include("../Controller/aboutusController.php");
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Header for paragraph</span>
-                                <input type="text" class="common_input" name="header" />
+                                <input type="text" class="common_input form-control" name="header" />
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Add new paragraph</span>
-                                <textarea class="common_input" placeholder="Text" name="text2"></textarea>
+                                <textarea class=" form-control common_input text_area" placeholder="Text" name="text2"></textarea>
 
                             </div>
                             <div class="input_one mb-2">
@@ -72,7 +72,7 @@ include("../Controller/aboutusController.php");
                             <h2 class="input_set_header my-4">Update Privacy Policy Info</h2>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Add new Privacy Policy info</span>
-                                <textarea class="common_input" placeholder="Text" name="policy_text"></textarea>
+                                <textarea class="text_area common_input form-control" placeholder="Text" name="policy_text"></textarea>
                             </div>
                             <div class=" mb-2  ">
                                 <!-- Add Btn -->

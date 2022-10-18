@@ -37,31 +37,31 @@
                     <h2 class="input_set_header my-4">Add Patient History</h2>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Patient Name</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Date</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Doctor Name</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Disease</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Medicine</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Next Appointment</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Hospital</span>
-                        <input type="text" class="common_input " />
+                        <input type="text" class="common_input form-control " />
                     </div>
                     <div class=" mb-2  ">
                         <!-- Add Btn -->

@@ -38,19 +38,19 @@
                         <h2 class="input_set_header my-4">Edit Medicine</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Medicine Name</span>
-                            <input type="text" class="common_input" />
+                            <input type="text" class="common_input form-control" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Description</span>
-                            <textarea class="common_input" placeholder="Text"></textarea>
+                            <textarea class="common_input text_area  form-control" placeholder="Text"></textarea>
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Add Medicine Image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" />
+                            <input type="file" id="formFileLg" class="form-control common_input " accept="image/*" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Good For</span>
-                            <input type="text" class="common_input" />
+                            <input type="text" class="common_input form-control" />
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->

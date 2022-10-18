@@ -18,7 +18,7 @@ if (isset($_POST["doctorAdd"])) {
         gender,
         contact,
         profile_photo,
-        created_date
+        create_date
         ) 
         VALUES 
         (

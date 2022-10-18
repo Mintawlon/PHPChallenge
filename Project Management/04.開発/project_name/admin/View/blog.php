@@ -1,3 +1,7 @@
+<?php
+include "../Controller/blog/listBlogController.php";
+//print_r($blogList);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +14,7 @@
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../View/resources/css/root.css" />
     <link rel="stylesheet" href="../View/resources/css/blog.css" />
+    <script src="./resources/js/blog.js" defer></script>
 </head>
 
 <body>
@@ -17,10 +22,11 @@
         <div class="row flex-nowrap">
             <!-- Side Bar Menu Copy Here -->
             <?php
-            include("./common/nav.php")
+            include("./common/nav.php");
+
             ?>
 
-            <div class=" data_box   col-sm-9  col-md-8 col-xl-10 mt-3">
+            <div class=" data_box  col-sm-9  col-md-8 col-xl-10 mt-3">
                 <!-- header -->
                 <div class="header_wrapper bg_header ">
                     <div class="header_box">
@@ -29,27 +35,30 @@
                 </div>
                 <!--Add Form -->
                 <div class="m-3 d-flex justify-content-center">
-                    <form action="../Controller/blog/addBlogController.php" method="post">
+                    <form action="../Controller/blog/addBlogController.php" method="post" enctype="multipart/form-data">
+                        <div class="image-box d-flex justify-content-center mb-3">
+                            <img src="./storages/blog/default.png" alt="" width="100" id="image" class="rounded-circle">
+                        </div>
                         <div class="form-group row mb-3">
                             <label for="formFileMultiple" class="col-sm-2">Image</label>
                             <div class=" col-sm-10">
-                                <input class="form-control" type="file" id="formFileMultiple" />
+                                <input class="form-control common_input" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" />
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputPassword" class="col-sm-2 col-form-label">header</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="header">
+                                <input type="text" class="form-control common_input" name="header" placeholder="header">
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputPassword" class="col-sm-2 col-form-label">Warning</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control common_input text_area" id="exampleFormControlTextarea1" name="description" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="form-group d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary mb-2 w-30">Confirm</button>
+                            <button type="submit" name="addDieses" class="btn btn-primary mb-2 w-30">Confirm</button>
                         </div>
                     </form>
                 </div>
@@ -69,26 +78,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 1</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 2</td>
-                                <td>Header</td>
-                                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum!</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
+                            <?php $count = 0; ?>
+                            <?php foreach ($blogList as $blog) {
+
+                            ?>
+                                <tr class="row_bdr">
+                                    <td><?php echo ++$count ?></td>
+                                    <td>
+                                        <img src="./storages/blog/<?php echo $blog["image"] ?>" alt="" width="100">
+                                    </td>
+                                    <td><?php echo $blog["header"] ?></td>
+                                    <td><?php echo $blog["description"] ?></td>
+                                    <td>
+                                        <span><a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="color_sixth">Edit</a></span>
+                                        <span><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="color_fifth">Delete</a></span>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class='pagination_container'>

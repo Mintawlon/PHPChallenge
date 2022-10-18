@@ -28,15 +28,7 @@ $("#search").click(function () {
                 <img src="./storages/image/${article.article_image}" alt="" class="card_img" />
                 <div class="info">
                     <h2 class="first_aid_para_header">What to Do?</h2>
-                    <ol class='first_aid_para'>
-                       
-                    
-
-                        <li >
-                        list One
-                        </li>
-
-                    </ol>
+                    ${article.article_text}
                 </div>
             </div>
             <hr class="line" />

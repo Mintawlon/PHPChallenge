@@ -28,9 +28,9 @@ session_start();
     include("./common/head.php")
     ?>
     <!-- Page header -->
-    <h3 class="blog_header my-4">Blog</h3>
+    <!-- <h3 class="blog_header my-4">Blog</h3> -->
     <!-- Page Tab -->
-    <div class="blog_tab_wrapper">
+    <!-- <div class="blog_tab_wrapper">
         <a class="blog_tab mb-4" href="./emergency.php">
             <div class="blog_tab_text_div">
                 <h3 class="blog_tab_text">Emergency First Aid</h3>
@@ -40,9 +40,9 @@ session_start();
             </div>
         </a>
         <hr class="line" />
-    </div>
+    </div> -->
     <!-- Page Tab -->
-    <div class="blog_tab_wrapper">
+    <!-- <div class="blog_tab_wrapper">
         <a class="blog_tab mb-4" href="./blooddonation.php">
             <div class="blog_tab_text_div">
                 <h3 class="blog_tab_text">Blood Donation</h3>
@@ -52,9 +52,9 @@ session_start();
             </div>
         </a>
         <hr class="line" />
-    </div>
+    </div> -->
     <!-- Current Diseases header -->
-    <h1 class="current_disease_header mb-5">Current Disease</h1>
+    <h1 class="current_disease_header my-5">Current Diseases</h1>
     <!-- Current Diseases card -->
     <div class="first_aid_card my-4">
         <div class="wrapper">

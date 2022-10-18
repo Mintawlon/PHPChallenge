@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 session_start();
 // include("../Controller/inpatientEditController.php.php");
@@ -57,31 +57,31 @@ $inpatientInfo = $_SESSION["inpatientInfo"];
                         <h2 class="input_set_header my-4">Edit Inpatient</h2>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Date</span>
-                            <input type="text" class="common_input input_box" name="date" value="<?php echo $inpatientInfo[0]["hospitalized_date"]?>" />
+                            <input type="text" class="common_input form-control" name="date" value="<?php echo $inpatientInfo[0]["hospitalized_date"]?>" />
                         </div>
                         <div class=" input_one mb-2 display_top">
                             <span class="input_set_text text_display">Patient Name</span>
-                            <input type="text" class="common_input input_box" name="name" value="<?php echo $inpatientInfo[0]["name"] ?>" />
+                            <input type="text" class="common_input form-control" name="name" value="<?php echo $inpatientInfo[0]["name"] ?>" />
                         </div>
                         <div class=" input_one mb-2 display_top">
                             <span class="input_set_text text_display">Age</span>
-                            <input type="text" class="common_input input_box" name="age" value="<?php echo $inpatientInfo[0]["age"] ?>" />
+                            <input type="text" class="common_input form-control" name="age" value="<?php echo $inpatientInfo[0]["age"] ?>" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Disease</span>
-                            <input type="text" class="common_input input_box" name="disease" value="<?php echo $inpatientInfo[0]["disease"] ?>" />
+                            <input type="text" class="common_input form-control" name="disease" value="<?php echo $inpatientInfo[0]["disease"] ?>" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Status</span>
-                            <input type="text" class="common_input input_box" name="status" value="<?php echo $inpatientInfo[0]["status"] ?>" />
+                            <input type="text" class="common_input form-control" name="status" value="<?php echo $inpatientInfo[0]["status"] ?>" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Room</span>
-                            <input type="text" class="common_input input_box" name="room" value="<?php echo $inpatientInfo[0]["room"] ?>" />
+                            <input type="text" class="common_input form-control" name="room" value="<?php echo $inpatientInfo[0]["room"] ?>" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Address</span>
-                            <input type="text" class="common_input input_box" name="address" value="<?php echo $inpatientInfo[0]["address"] ?>" />
+                            <input type="text" class="common_input form-control" name="address" value="<?php echo $inpatientInfo[0]["address"] ?>" />
                         </div>
                         <div class=" mb-2  display_top ">
                             <!-- Add Btn -->
