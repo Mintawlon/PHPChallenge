@@ -95,27 +95,28 @@
                     <hr />
                 </section>
                 <section class="add_medicine">
-                <form action="../Controller/medicineController.php" method="post" enctype="multipart/form-data">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Medicine</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Medicine Name</span>
-                            <input type="text" name="name" class="common_input form-control" />
+                    <form action="../Controller/medicineController.php" method="post">
+                        <div class="input_set">
+                            <h2 class="input_set_header my-4">Add Medicine</h2>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Medicine Name</span>
+                                <input type="text" name="name" class="common_input form-control" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Description</span>
+                                <textarea class="common_input form-control text_area" name="description" placeholder="Text"></textarea>
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text add_file">Add Medicine Image</span>
+                                <input type="file" id="formFileLg" name="medicineImg" class="form-control common_input " accept="image/*" />
+                            </div>
+                            <div class=" mb-2  ">
+                                <!-- Add Btn -->
+                                <button type="submit" name="addMedicine" class="common_btn add_btn">Add</button>
+
+                            </div>
                         </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Description</span>
-                            <textarea class="common_input form-control text_area" name="description" placeholder="Text"></textarea>
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Add Medicine Image</span>
-                            <input type="file" id="formFileLg" name="medicineImg" class="form-control common_input " accept="image/*" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <button type="submit" name="addMedicine" class="common_btn add_btn">Add</button>
-                            
-                        </div>
-                    </div>
+                    </form>
                 </section>
             </div>
 
