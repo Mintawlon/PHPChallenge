@@ -24,7 +24,7 @@ if (isset($_POST["inpatient_update_btn"])) {
     address =:address,
     status =:status,
     room=:room,
-    updated_date = :updateDate
+    update_date = :updateDate
     WHERE id=:id");
 
      $sql->bindValue(":date", $date);

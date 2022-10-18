@@ -1,10 +1,21 @@
 <?php
 session_start();
+include "../Controller/medicineController.php";
+// echo "<pre>";
+// print_r($medicineInfo);
 include "../Controller/articleInfoController.php";
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
+    
+    
 }
 ?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,188 +76,58 @@ if (!isset($_SESSION["email"])) {
         </section>
     </div>
     <!-- Articles -->
-   <div class="article_wrapper">
-   <h2 class="text-white text-center py-3 "> <u> Know More</u></h2>
+    <div class="article_wrapper">
+        <h2 class="text-white text-center py-3 "> <u> Know More</u></h2>
 
-   <?php foreach ($homeArticleInfo as $info) { ?>
-    <div class="articles px-2">
-        <div class="article">
-            <div class="article_header_div">
-            <h1 class="text-white mt-4  article_header"> 
-                <?= $info["header"] ?>
-            
-            </h1>
-            <a  href="./<?= $info["page_link"] ?>" class="text-white 
+        <?php foreach ($homeArticleInfo as $info) { ?>
+            <div class="articles px-2">
+                <div class="article">
+                    <div class="article_header_div">
+                        <h1 class="text-white mt-4  article_header">
+                            <?= $info["header"] ?>
+
+                        </h1>
+                        <a href="./<?= $info["page_link"] ?>" class="text-white 
             " id="seeMore">See More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="article_text">
+                        <h3 class="text-white"> <?= $info["para_header"] ?></h3>
+                        <p class="text-white"> <?= $info["para_text"] ?></p>
+                    </div>
+                    <div class="article_image">
+                        <img src="./storages/image/<?= $info["image"] ?>" alt="" id="article_image">
+                    </div>
+                </div>
             </div>
-            <div class="article_text">
-                <h3 class="text-white"> <?= $info["para_header"] ?></h3>
-                <p class="text-white"> <?= $info["para_text"] ?></p>
-            </div>
-            <div class="article_image">
-                <img src="./storages/image/<?= $info["image"] ?>" alt="" id="article_image">
-            </div>
-        </div>
+            <hr id="line" />
+        <?php }
+        ?>
+
     </div>
-    <hr id="line" />
-    <?php }
-    ?>
 
-
-  
-
-  
-
-   </div>
-    
     <!--scroll card-->
     <div class="container">
+
         <ul class="cards">
-            <li class="card">
-                <div>
-                    <div class="vaccine_div">
-                        <img src="./storages/image/vaccine.png" class="vaccine_img">
+            <?php $count = 1; ?>
+
+            <?php foreach ($medicineInfo as $medicine) {
+
+            ?>
+                <li class="card">
+                    <div>
+                        <div class="vaccine_div">
+                            <img src="./storages/medicineImage/<?php echo $medicine["medicine_image"] ?>" class="vaccine_img" width="30">
+                        </div>
+                        <h3 class="card-title"><?php echo $medicine["medicine_name"] ?></h3>
+                        <div class="card-content">
+                            <p ipsum><?php echo $medicine["description"] ?></p>
+                        </div>
                     </div>
-                    <h3 class="card-title">Service 1</h3>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 2</h3>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repudiandae magnam harum natus
-                            fuga et repellat in maiores.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 3</h3>
-                    <div class="card-content">
-                        <p>Phasellus ultrices lorem vel bibendum ultricies. In hendrerit nulla a ante dapibus pulvinar
-                            eu eget quam.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 4</h3>
-                    <div class="card-content">
-                        <p>Aenean posuere mauris quam, pellentesque auctor mi bibendum nec. Sed scelerisque lacus nisi,
-                            quis auctor lorem ornare vel.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 5</h3>
-                    <div class="card-content">
-                        <p>Vestibulum pharetra fringilla felis sit amet tempor. Interdum et malesuada fames ac ante
-                            ipsum primis in faucibus. Cras et arcu sit amet est consequat feugiat. Nam ut sapien
-                            pulvinar.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 6</h3>
-                    <div class="card-content">
-                        <p>Donec ut tincidunt nisl. Vivamus eget eros id elit feugiat mollis. Nam sed sem quis libero
-                            finibus tempor.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 7</h3>
-                    <div class="card-content">
-                        <p>Aliquam eget nisl auctor, sollicitudin ipsum at, dignissim ligula. Donec tincidunt in elit et
-                            pellentesque. Integer posuere metus ac massa mollis euismod.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 8</h3>
-                    <div class="card-content">
-                        <p> Vivamus eget eros id elit feugiat mollis. Nam sed sem quis libero finibus tempor.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 9</h3>
-                    <div class="card-content">
-                        <p>Duis id congue turpis. Donec sodales porta felis, nec ultricies ante. Nam placerat vitae
-                            metus sit amet tempor. Aliquam ac dictum est.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 10</h3>
-                    <div class="card-content">
-                        <p>Pellentesque eget eros eget justo efficitur fermentum.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <h3 class="card-title">Service 11</h3>
-                    <div class="card-content">
-                        <p>Phasellus posuere nec nibh ut tincidunt. Aenean mollis turpis non eros posuere, at luctus leo
-                            hendrerit. Integer non libero sapien.</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
-            <li class="card">
-                <div>
-                    <img src="./storages/image/vaccine.png">
-                    <h3 class="card-title">Service 12</h3>
-                    <div class="card-content">
-                        <p>Vestibulum ante ipsum primis in</p>
-                    </div>
-                </div>
-                <div class="card-link-wrapper">
-                    <a href="" class="card-link">Learn More</a>
-                </div>
-            </li>
+                
+                    <div class="card-link-wrapper"><a href="" class="card-link">Learn More</a>
+                    <?php } ?>
+                </div>              
         </ul>
     </div>
     <!--scorll card-->
