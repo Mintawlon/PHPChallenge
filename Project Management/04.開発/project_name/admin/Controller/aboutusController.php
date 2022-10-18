@@ -10,6 +10,7 @@ if(isset($_POST["update"])){
     $text2 = $_POST["text2"];
     $image2 = $_POST["image2"];
 
+
     $sql = $pdo->prepare(
         "INSERT INTO 
         about_us (
@@ -17,7 +18,8 @@ if(isset($_POST["update"])){
         image1,
         header,
         text2,
-        image2
+        image2,
+        create_date
         ) 
         VALUES 
         (
@@ -25,7 +27,8 @@ if(isset($_POST["update"])){
         :image1,
         :header,
         :text2,
-        :image2
+        :image2,
+        :createdDate
         );"
     );
     $sql->bindValue(":text1",$text1);
@@ -33,6 +36,7 @@ if(isset($_POST["update"])){
     $sql->bindValue(":header",$header);
     $sql->bindValue(":text2",$text2);
     $sql->bindValue(":image2",$image2);
+    $sql->bindValue(":createdDate", date("Y/m/d"));
 
 
     $sql->execute();

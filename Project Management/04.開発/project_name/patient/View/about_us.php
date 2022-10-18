@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+$userInfo = $_SESSION["userInfo"];
 ?>
 <!DOCTYPE html>
 <html lang="en">

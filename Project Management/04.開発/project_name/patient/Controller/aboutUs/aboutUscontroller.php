@@ -1,34 +1,17 @@
 <?php
+include("../Model/dbConnection.php");
 
-include("../../Model/dbConnection.php");
-
-// Add About Us Info
-if(isset($_POST["contact"])){
-    $name = $_POST["name"];
-    $reason = $_POST["reason"];
-    $contact = $_POST["comment"];
-
-    $sql = $pdo->prepare(
-        "INSERT INTO 
-        get_in_touch (
-        name,
-        reason,
-        contact_text
-        ) 
-        VALUES 
-        (
-        :name,
-        :reason,
-        :contact
-        );"
-    );
-    $sql->bindValue(":name",$name);
-    $sql->bindValue(":reason",$reason);
-    $sql->bindValue(":contact",$contact);
-
-
-    $sql->execute();
-    header("Location: ../../View/about_us.php");
-}
-
-?>
+$sql = $pdo->prepare(
+    "SELECT * FROM `about_us` 
+    "
+);
+// $sql->execute();
+// $aboutInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+// echo "<pre>";
+// var_export($aboutInfo);
+// echo $hospitalInfo[0]["hospital_id"];
+// echo $hospitalInfo[0]["hospital_name"];
+// echo $hospitalInfo[0]["address"];
+// echo $hospitalInfo[0]["email"];
+// echo $hospitalInfo[0]["contact"];
+// echo $hospitalInfo[0]["google_map_image"];
