@@ -15,17 +15,20 @@ if (isset($_POST['addDieses'])) {
         $sql = $pdo->prepare("INSERT INTO blog(
             image,
             header,
-            description
+            description,
+            created_date
         )
         VALUES(
             :image,
             :header,
-            :description
+            :description,
+            :created_date
         )
         ");
         $sql->bindValue(":image", $path);
         $sql->bindValue(":header", $header);
         $sql->bindValue(":description", $description);
+        $sql->bindValue(":created_date", date("Y/m/d"));
         $sql->execute();
         header("Location: ../../View/blog.php");
     } else {

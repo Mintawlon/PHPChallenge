@@ -28,6 +28,43 @@
                         <span class="navbar-brand ttl_admin" href="#">Blood Donation</span>
                     </div>
                 </div>
+                <section class="add_center">
+                    <div class="input_set mt-3">
+                        <div class="input_set">
+                            <h2 class="input_set_header my-4">Add New Blood Donation Center</h2>
+                        </div>
+                        <form action="../Controller/bloodDonationCenter/addBloodDonation.php" method="post">
+                            <div class="form-group row mb-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Center Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control common_input" name="center" placeholder="Center Name">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Contact</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control common_input" name="contact" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control common_input" name="email" placeholder="Center Email">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Causes</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control common_input text_area" id="exampleFormControlTextarea1" name="address" rows="5" placeholder="Address"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex justify-content-center">
+                                <button type="submit" name="addCenter" class="btn btn-primary mb-2 w-50">Save</button>
+                            </div>
+                        </form>
+                        <hr />
+                    </div>
+                </section>
                 <section class="center_list">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Blood Donation Center List</h2>
@@ -79,27 +116,6 @@
                         </nav>
                     </div>
                     <hr />
-                </section>
-                <section class="add_center">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Blood Donation Center</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Center Name</span>
-                            <input type="text" class="common_input from-control" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Contact</span>
-                            <input type="text" class="common_input from-control" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Address</span>
-                            <textarea class="common_input from-control text_area"  placeholder="Address"></textarea>
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Add</a>
-                        </div>
-                    </div>
                 </section>
             </div>
         </div>

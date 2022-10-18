@@ -4,13 +4,26 @@ if (isset($_POST["updateBlog"])) {
     $header = $_POST["header"];
     $id = $_POST["id"];
     $description = $_POST["description"];
-    echo $description;
-    echo $header;
+
 
     //get imag info
     if ($_FILES["uploadFile"]["name"] == "") {
         //file not exist
         echo "File Not Exist";
+        $sql = $pdo->prepare(
+            "UPDATE blog SET
+             header =:header,
+             description=:description,
+             updated_date=:updated_date 
+             where id=:id
+            "
+        );
+        $sql->bindValue(":header", $header);
+        $sql->bindValue(":description", $description);
+        $sql->bindValue(":updated_date", date("Y/m/d"));
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+        header("Location: ../../View/blog.php");
     } else {
         echo "File Exist";
         $file = $_FILES["uploadFile"]['name'];
@@ -23,13 +36,15 @@ if (isset($_POST["updateBlog"])) {
                 "UPDATE blog SET
                  image=:profile,
                  header =:header,
-                 description=:description 
+                 description=:description,
+                 updated_date=:updated_date
                  where id=:id
                 "
             );
             $sql->bindValue(":profile", $path);
             $sql->bindValue(":header", $header);
             $sql->bindValue(":description", $description);
+            $sql->bindValue(":updated_date", date("Y/m/d"));
             $sql->bindValue(":id", $id);
             $sql->execute();
             header("Location: ../../View/blog.php");
