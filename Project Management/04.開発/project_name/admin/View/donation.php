@@ -1,3 +1,6 @@
+<?php
+include "../Controller/bloodDonationCenter/donationListController.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,25 +78,28 @@
                                 <td>No.</td>
                                 <td>Center Name</td>
                                 <td>Contact</td>
+                                <td>Email</td>
                                 <td>Address</td>
                                 <td>Remove</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Center Name</td>
-                                <td>Contact</td>
-                                <td>Address</td>
-                                <td><a href="" class="color_fifth">Remove</a></td>
-                            </tr>
-                            <tr class="row_bdr">
-                                <td>2</td>
-                                <td>Center Name</td>
-                                <td>Contact</td>
-                                <td>Address</td>
-                                <td><a href="" class="color_fifth">Remove</a></td>
-                            </tr>
+                            <?php $count = 0; ?>
+                            <?php foreach ($centerList as $center) {
+
+                            ?>
+                                <tr class="row_bdr">
+                                    <td><?php echo ++$count ?></td>
+                                    <td><?php echo $center["center_name"] ?></td>
+                                    <td><?php echo $center["center_contact"] ?></td>
+                                    <td><?php echo $center["center_email"] ?></td>
+                                    <td><?php echo $center["center_address"] ?></td>
+                                    <td>
+                                        <span><a href="../Controller/bloodDonationCenter/EditDonationController.php?id=<?php echo $center["id"] ?>" class="color_sixth">Edit</a></span>
+                                        <a href="../Controller/bloodDonationCenter/deleteCenterController.php?id=<?php echo $center["id"] ?>" class="color_fifth">Remove</a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class='pagination_container'>

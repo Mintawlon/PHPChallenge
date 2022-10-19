@@ -134,7 +134,7 @@ body{
 
 .arrow_right{
   position: absolute;
-  color: var(--sixth_color);
+  color: var(--primary_color) !important;
   right: 5%;
   top: 30%;
   font-size: var(--extra_extra_small);
@@ -146,7 +146,7 @@ body{
 
 .arrow_left{
   position: absolute;
-  color: var(--sixth_color);
+  color: var(--primary_color) !important;
   left: 5%;
   top: 30%;
   font-size: var(--extra_extra_small);
