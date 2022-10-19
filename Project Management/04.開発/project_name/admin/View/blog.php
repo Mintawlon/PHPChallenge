@@ -42,7 +42,7 @@ include "../Controller/blog/listBlogController.php";
                         <div class="form-group row mb-3">
                             <label for="formFileMultiple" class="col-sm-2">Image</label>
                             <div class=" col-sm-10">
-                                <input class="form-control common_input" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" />
+                                <input class="form-control common_input" type="file" id="uploadFile" name="uploadFile" onchange="setImage()" required />
                             </div>
                         </div>
                         <div class="form-group row mb-3">
@@ -52,7 +52,7 @@ include "../Controller/blog/listBlogController.php";
                             </div>
                         </div>
                         <div class="form-group row mb-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Warning</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Causes</label>
                             <div class="col-sm-10">
                                 <textarea class="form-control common_input text_area" id="exampleFormControlTextarea1" name="description" rows="5"></textarea>
                             </div>

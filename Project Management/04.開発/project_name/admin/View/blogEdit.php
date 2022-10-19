@@ -2,7 +2,6 @@
 session_start();
 if (isset($_SESSION["blogInfo"])) {
     $blogInfo = $_SESSION["blogInfo"];
-    print_r($_SESSION["blogInfo"]);
 }
 ?>
 <!DOCTYPE html>
