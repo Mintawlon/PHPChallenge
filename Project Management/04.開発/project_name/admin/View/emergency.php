@@ -34,15 +34,10 @@ include("../Controller/emergencyController.php");
                         <span class="navbar-brand ttl_admin" href="#">Emergency</span>
                     </div>
                 </div>
-                <!-- Go to Button -->
-                <div class="sec_input mb-2">
-                    <a href="./editEmergency.php" class="common_btn add_btn go_btn">Go to First Aid Kit
-                        <i class="fa-solid fa-arrow-right arrow_right"></i>
-                    </a>
-                </div>
+               
                 
                 <!-- Show Article Table -->
-                <section class="first_aid_table">
+                <section class="first_aid_table mt-4">
                     <table class="table">
                         <thead class="table_bgcolor" id="table_header">
                             <tr>
@@ -67,8 +62,12 @@ include("../Controller/emergencyController.php");
 
                                     <td id="text"><?= $emergency["article_text"] ?></td>
                                     <td>
-                                        <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="color_sixth me-2">Edit</a></span>
-                                        <span class="edit_delete_btn"><a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="color_fifth">Delete</a></span>
+                                    <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>"class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+
+                                        <!-- <span class="edit_delete_btn"><a  class="color_sixth me-2">Edit</a></span>
+                                        <span class="edit_delete_btn"><a  class="color_fifth">Delete</a></span> -->
                                     </td>
                                 </tr>
                             <?php } ?>

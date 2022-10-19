@@ -95,7 +95,7 @@
                     <hr />
                 </section>
                 <section class="add_medicine">
-                <form action="../Controller/medicineController.php" method="post" enctype="multipart/form-data">
+                <form action="../Controller/medicineController.php" method="post"  enctype="multipart/form-data">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Add Medicine</h2>
                         <div class="input_one mb-2">
@@ -116,7 +116,7 @@
                             
                         </div>
                     </div>
-                </section>
+                </form>
             </div>
 
 
