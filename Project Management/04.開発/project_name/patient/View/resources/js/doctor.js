@@ -1,21 +1,21 @@
 $("#generalHealth").click(function () {
-          let sendData = {
-          searchText: $("#generalHealth").text()
-          }
-  
-      $.ajax({
-        url: "../Controller/doctor/searchDoctorController.php",
-        type: "POST",
-        data: sendData,
-  
-        success: function (res) {
-         let doctorSpeciality = JSON.parse(res);
-         console.log(doctorSpeciality);
-         $("#doctorSearch").empty();
-  
-         for (const doctor of doctorSpeciality) {
-          $("#doctorSearch").append(
-              `
+  let sendData = {
+    searchText: $("#generalHealth").text(),
+  };
+
+  $.ajax({
+    url: "../Controller/doctor/searchDoctorController.php",
+    type: "POST",
+    data: sendData,
+
+    success: function (res) {
+      let doctorSpeciality = JSON.parse(res);
+      console.log(doctorSpeciality);
+      $("#doctorSearch").empty();
+
+      for (const doctor of doctorSpeciality) {
+        $("#doctorSearch").append(
+          `
               <div class="col-sm-12 col-md-6 col-lg-4 text-center">
               <div class="card cart" style="width: 23rem;">
                   <dvi class="image">
@@ -49,60 +49,58 @@ $("#generalHealth").click(function () {
               </div>
           </div>
               `
-          )
-         }
-        },
-        error: function(err){
-          alert(err);
-        }
-      });
-    // }
+        );
+      }
+    },
+    error: function (err) {
+      alert(err);
+    },
   });
+  // }
+});
 
-
-  $("#generalHealth").click(function () {
-    getData($("#generalHealth").text());
-})
+$("#generalHealth").click(function () {
+  getData($("#generalHealth").text());
+});
 
 $("#pulmonology").click(function () {
-    getData($("#pulmonology").text());
-})
+  getData($("#pulmonology").text());
+});
 
 $("#ophthalmology").click(function () {
-    getData($("#ophthalmology").text());
-})
+  getData($("#ophthalmology").text());
+});
 $("#neurology").click(function () {
-    getData($("#neurology").text());
-})
+  getData($("#neurology").text());
+});
 $("#og").click(function () {
-    getData($("#og").text());
-})
+  getData($("#og").text());
+});
 $("#dentist").click(function () {
-    getData($("#dentist").text());
-})
+  getData($("#dentist").text());
+});
 $("#paediatric").click(function () {
-    getData($("#paediatric").text());
-})
-
+  getData($("#paediatric").text());
+});
 
 function getData(text) {
-    let sendData = {
-        searchText: text
-        }
+  let sendData = {
+    searchText: text,
+  };
 
-    $.ajax({
-      url: "../Controller/doctor/searchDoctorController.php",
-      type: "POST",
-      data: sendData,
+  $.ajax({
+    url: "../Controller/doctor/searchDoctorController.php",
+    type: "POST",
+    data: sendData,
 
-      success: function (res) {
-       let doctorSpeciality = JSON.parse(res);
-       console.log(doctorSpeciality);
-       $("#doctorSearch").empty();
+    success: function (res) {
+      let doctorSpeciality = JSON.parse(res);
+      console.log(doctorSpeciality);
+      $("#doctorSearch").empty();
 
-       for (const doctor of doctorSpeciality) {
+      for (const doctor of doctorSpeciality) {
         $("#doctorSearch").append(
-            `
+          `
             <div class="col-sm-12 col-md-6 col-lg-4 text-center">
             <div class="card cart" style="width: 23rem;">
                 <dvi class="image">
@@ -136,12 +134,11 @@ function getData(text) {
             </div>
         </div>
             `
-        )
-       }
-      },
-      error: function(err){
-        alert(err);
+        );
       }
-    });
-
+    },
+    error: function (err) {
+      alert(err);
+    },
+  });
 }

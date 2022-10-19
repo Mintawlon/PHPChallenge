@@ -31,7 +31,7 @@ include("../Controller/article/articleInfoController.php");
                 <!-- Header -->
                 <div class="header_wrapper bg_header ">
                     <div class="header_box">
-                        <span class="navbar-brand ttl_admin" href="#">Articles</span>
+                        <span class="navbar-brand ttl_admin" href="#">Home Articles</span>
                     </div>
                 </div>
 
@@ -58,9 +58,9 @@ include("../Controller/article/articleInfoController.php");
                                     <td id="paragraph" ><?= $info["para_text"] ?></td>
                                     <td id="image"><img src="./storages/image/<?= $info["image"] ?>" alt="" class="image"></td>
                                     <td >
-                                    <a href="../Controller/doctorEditController.php?id=<?=$doctor["id"]?>" class="edit_btn me-4">
+                                    <a href="../Controller/articleEditController.php?id=<?= $info["id"] ?>" class="edit_btn me-4">
                                     Edit</a>
-                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                        <a href="../Controller/articleEditController.php?delId=<?= $info["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                     </span>
                                     </td>

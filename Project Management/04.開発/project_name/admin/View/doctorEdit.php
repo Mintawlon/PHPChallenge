@@ -40,7 +40,7 @@ if (isset($_SESSION["doctorInfo"])) {
                 </div>
                 <div class="sec_input mb-2">
                     <a href="./doctor.php" class="common_btn add_btn back_btn">Back to Doctor List
-                        <i class="fa-solid fa-arrow-left arrow_left"></i>
+                        <i class="fa-solid fa-arrow-left arrow_left color_green"></i>
                     </a>
                 </div>
                 <form action="../Controller/doctorEditController.php" method="POST" class="edit_doctor">
@@ -48,7 +48,6 @@ if (isset($_SESSION["doctorInfo"])) {
                         <h2 class="input_set_header my-4">Edit Selected Doctor Information</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Doctor Name</span>
-                            <input type="text" class="common_input form" name="updateDoctorName" value="<?= $doctorInfo[0]["doctor_name"] ?>" />
 
                             <input type="text" class="common_input form-control" name="updateDoctorName" value="<?= $doctorInfo[0]["doctor_name"] ?>" />
 

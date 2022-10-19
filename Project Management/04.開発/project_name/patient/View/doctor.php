@@ -14,6 +14,11 @@ include "../Controller/doctor/doctorInfoController.php";
     <link rel="stylesheet" href="./resources/css/doctor.css?v=" time()>
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css?v=" time()>
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/doctor.js" defer></script>
 </head>

@@ -426,7 +426,7 @@ hr {
   color: var(--first_color);
 }
 .color_green {
-  color: var(--sixth_color);
+  color: var(--primary_color);
 }
 .log_out{
   color: var(--third_color);

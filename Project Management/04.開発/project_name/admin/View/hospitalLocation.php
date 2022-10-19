@@ -36,25 +36,8 @@ include("../Controller/hosLocationController.php");
             <span class="navbar-brand ttl_admin" href="#">Hospital Location</span>
           </div>
         </div>
-        <!-- Hospital List Table -->
-        <div class="input_set">
-          <h2 class="input_set_header my-4">Hospital Location List</h2>
-        </div>
-        <!-- <div class="num_rows">
-          <div class="form-group">
-            <select class="form-control" name="state" id="maxRows">
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-              <option value="50">50</option>
-              <option value="70">70</option>
-              <option value="100">100</option>
-              <option value="5000">Show ALL Rows</option>
-            </select>
-
-          </div>
-        </div> -->
-        <table class="table" id="table-id">
+        <!-- Hospital List -->
+        <table class="table mt-4" id="table-id">
           <thead class="table_bgcolor" id="table_header">
             <tr>
               <td>No.</td>
@@ -62,7 +45,8 @@ include("../Controller/hosLocationController.php");
               <td>Contact</td>
               <td id="map_header">Map</td>
               <td>Address</td>
-              <td>Mail</td>
+              <td id="email_header">Mail</td>
+              <td>Remove </td>
             </tr>
           </thead>
           <tbody>
@@ -74,14 +58,14 @@ include("../Controller/hosLocationController.php");
                 <td><?= $hospital["contact"] ?></td>
                 <td id="map"><?= $hospital["google_map_image"] ?></td>
                 <td><?= $hospital["address"] ?></td>
-                <td><?= $hospital["email"] ?></td>
+                <td id="email"><?= $hospital["email"] ?></td>
+                </td>
+                <td class="p-3">
+                  <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                </td>
               </tr>
             <?php }
             ?>
-
-
-            <!-- Table  -->
-
           </tbody>
         </table>
         <!-- <div class='pagination_container'>

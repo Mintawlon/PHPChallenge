@@ -76,8 +76,13 @@ if (!isset($_SESSION["email"])) {
         </section>
     </div>
     <!-- Articles -->
+<<<<<<< HEAD
+   <div class="article_wrapper">
+   <h1 class="text-white text-center py-3 ">Articles</h1>
+=======
     <div class="article_wrapper">
         <h2 class="text-white text-center py-3 "> <u> Know More</u></h2>
+>>>>>>> origin/main
 
         <?php foreach ($homeArticleInfo as $info) { ?>
             <div class="articles px-2">
