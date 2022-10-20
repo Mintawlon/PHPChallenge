@@ -8,7 +8,7 @@
   margin-left: 2.5em;
 }
 @media only screen and (max-width:800px) {
-  #map,#map_header{
+  #map,#map_header,#email,#email_header{
     display: none;
   }
 }
@@ -17,8 +17,10 @@
     display: none;
   }
 }
-
 #table_header>tr>td{
   color: white;
   font-size: var(--extra_extra_small);
+}
+.trash {
+  color: var(--fifth_color);
 }

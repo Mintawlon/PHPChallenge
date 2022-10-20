@@ -54,7 +54,7 @@
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
-                            <a href="" class="common_btn add_btn">Update</a>
+                            <a href=""  class="common_btn add_btn">Update</a>
                         </div>
                     </div>
                 </section>
