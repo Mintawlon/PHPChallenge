@@ -16,14 +16,19 @@ if (isset($_SESSION["doctorInfo"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="./resources/css/date.css">
+    <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/date.js" defer></script>
+
 </head>
 
 <body>
@@ -43,16 +48,24 @@ if (isset($_SESSION["doctorInfo"])) {
                         <span class="navbar-brand ttl_admin" href="#">Date</span>
                     </div>
                 </div>
-                <div class="sec_input choose_date mb-2">
+                <div class="sec_input  mb-2">
                     <div class="input_one mb-2">
-                        <span class="input_set_text">Choose Date</span>
-                        <input type="date" class="common_input form-control " />
+                        <input type="text" id="searchDay" class="common_input form-control " placeholder="Search By Day" />
+                        <button class="searchDay px-5" id="search">search</button>
                     </div>
                 </div>
+                <!-- Go Back Button -->
+                <div class="sec_input mb-2">
+                    <a href="./doctor.php" class="common_btn add_btn back_btn">Back to Doctor
+                        <i class="fa-solid fa-arrow-left arrow_left"></i>
+                    </a>
+                </div>
+
                 <section class="timetable">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Doctor Timetable</h2>
                     </div>
+                    <button id="allDoctor" class="mb-4"> Show All Doctors</button>
                     <table class="table">
                         <thead class="table_bgcolor">
                             <tr>
@@ -67,6 +80,8 @@ if (isset($_SESSION["doctorInfo"])) {
                             </tr>
                         </thead>
                         <tbody>
+                        <tbody id="dayTable">
+
                             <?php $number = 1 ?>
                             <?php foreach ($dateInfo as $date) { ?>
                                 <tr class="row_bdr">
@@ -79,13 +94,8 @@ if (isset($_SESSION["doctorInfo"])) {
                                     <td><?php echo $date["endTime"] ?></td>
                                 </tr>
                             <?php } ?>
-
-
-
                             </tr>
                             </tr>
-
-
                         </tbody>
 
                     </table>

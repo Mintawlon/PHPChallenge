@@ -24,6 +24,7 @@ if (isset($_POST["makeBooking"])) {
                 speciality,
                 patient_status,
                 patient_id,
+                patient_name,
                 email,
                 contact,
                 age,
@@ -38,6 +39,7 @@ if (isset($_POST["makeBooking"])) {
                 :speciality,
                 :patient_status,
                 :patient_id,
+                :patient_name,
                 :email,
                 :contact,
                 :age,
@@ -51,6 +53,7 @@ if (isset($_POST["makeBooking"])) {
     $sql->bindValue(":speciality", $special);
     $sql->bindValue(":patient_status", $remark);
     $sql->bindValue(":patient_id", $patientId);
+    $sql->bindValue(":patient_name", $name);
     $sql->bindValue(":email", $email);
     $sql->bindValue(":contact", $contact);
     $sql->bindValue(":age", $age);

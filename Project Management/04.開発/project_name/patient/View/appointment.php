@@ -47,10 +47,10 @@ if (isset($_SESSION["userInfo"])) {
                         <input type="text" id="TextInput" class="form-control" name="speciality" value=" <?= $docotrInfo[0]["speciality"] ?>" readonly>
                     </div>
                     <div class="input_align m-3">
-                        <input type="date" id="TextInput" class="form-control" name="date" placeholder="Booking Date">
+                        <input type="date" id="TextInput" class="form-control" name="date" placeholder="Booking Date" required>
                     </div>
                     <div class="input_align m-3">
-                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Name" name="patient" value="<?= $userInfo[0]["register_name"] ?>">
+                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Name" name="patient" value="<?= $userInfo[0]["register_name"] ?>" required>
                     </div>
                     <div class="input_align m-3">
                         <input type="number" id="TextInput" class="form-control" name="age" placeholder="Patient Age">
@@ -65,7 +65,7 @@ if (isset($_SESSION["userInfo"])) {
                     </div>
                     <div class="input_align m-3">
 
-                        <input type="email" id="TextInput" class="form-control" placeholder="Email Address" name="email" value="<?= $userInfo[0]["email_address"] ?>">
+                        <input type="email" id="TextInput" class="form-control" placeholder="Email Address" name="email" value="<?= $userInfo[0]["email_address"] ?>" readonly>
                     </div>
                     <input type="hidden" name="id" value="<?= $userInfo[0]["id"] ?>">
                     <input type="hidden" name="doctorId" value="<?= $docotrInfo[0]["id"] ?>">

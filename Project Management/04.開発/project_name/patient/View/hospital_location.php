@@ -23,6 +23,10 @@ include("../Controller/hospitalLocations/hospitalLocationController.php");
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <!-- Js -->
+  <script src="./resources/js/jquery3.6.0.js"></script>
+  <script src="./resources/js/hospital.js" defer></script>
+
 </head>
 
 <body>
@@ -31,53 +35,56 @@ include("../Controller/hospitalLocations/hospitalLocationController.php");
   include("./common/head.php");
   ?>
 
-  <!-- <h3 class="hospital_location_header my-5">Hospital Locations</h3> -->
+  <div class="searcBox mt-3 ms-3">
+  <input type="text"  id="searchHospital">
+  <button id="search">Search</button>
+  <br>
+  <button id="allHospital" class="mt-3">Show All Hospitals</button>
 
-  <?php foreach ($hospitalInfo as $hospital) { ?>
-    <div class="card_wrapper mb-5">
+  </div>
 
-      <h2  data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000"
-     
-     class="text-center text-white my-4 fw-bold" id="hosname"> <?= $hospital["hospital_name"] ?></h2>
+  <div id="hospitalCard">
+    <?php foreach ($hospitalInfo as $hospital) { ?>
+      <div class="card_wrapper mb-5" >
 
-      <div class="location_box">
-        <div class="map_image ">
-          <div class="map">
-            <?= $hospital["google_map_image"] ?>
+        <h2 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="text-center text-white my-4 fw-bold" id="hosname"> <?= $hospital["hospital_name"] ?></h2>
+        <div class="location_box">
+          <div class="map_image ">
+            <div class="map">
+              <?= $hospital["google_map_image"] ?>
+            </div>
           </div>
+          <div class="hospitalInfo mt-3">
+            <p class="yellow_color  location_data"> Hospital Name : <span class="white_color">
+                <?= $hospital["hospital_name"] ?>
+              </span></p>
+            <p class="yellow_color  location_data">Address :
+              <span class="white_color">
+                <?= $hospital["address"] ?>
+              </span>
+            </p>
+            <p class="yellow_color  location_data ">Phone Number : <span class="white_color"><?= $hospital["contact"] ?></span></p>
+            <p class="yellow_color  location_data">Email : <span class="white_color"><?= $hospital["email"] ?></span></p>
+          </div>
+
         </div>
-        <div class="hospitalInfo mt-3">
-          <p class="yellow_color  location_data"> Hospital Name : <span class="white_color">
-              <?= $hospital["hospital_name"] ?>
-            </span></p>
-          <p class="yellow_color  location_data">Address :
-            <span class="white_color">
-              <?= $hospital["address"] ?>
-            </span>
-          </p>
-          <p class="yellow_color  location_data ">Phone Number : <span class="white_color"><?= $hospital["contact"] ?></span></p>
-          <p class="yellow_color  location_data">Email : <span class="white_color"><?= $hospital["email"] ?></span></p>
-        </div>
+
+        <hr class="line ">
 
       </div>
+  </div>
+  <br>
 
-      <hr class="line ">
-
-    </div>
-    <br>
-
-  <?php }
-  ?>
+<?php }
+?>
 
 
 
 
-  <!-- Footer -->
-  <?php
-  include("./common/footer.php")
-  ?>
+<!-- Footer -->
+<?php
+include("./common/footer.php")
+?>
 
 <script>
   AOS.init();
