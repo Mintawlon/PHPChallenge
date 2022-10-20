@@ -49,6 +49,13 @@ if (isset($_SESSION["doctorInfo"])) {
                         <input type="date" class="common_input form-control " />
                     </div>
                 </div>
+                <!-- Go Back Button -->
+                <div class="sec_input mb-2">
+                    <a href="./doctor.php" class="common_btn add_btn back_btn">Back to Doctor
+                        <i class="fa-solid fa-arrow-left arrow_left"></i>
+                    </a>
+                </div>
+
                 <section class="timetable">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Doctor Timetable</h2>
@@ -78,12 +85,7 @@ if (isset($_SESSION["doctorInfo"])) {
                                 <td><?php echo $date["startTime"]?></td>
                                 <td><?php echo $date["endTime"]?></td>
                                 </tr>
-                            <?php } ?>
-                                  
-                        
-                                     
-                                </tr>
-                            </tr>                        
+                            <?php } ?>                     
                             
                         
                         </tbody>
