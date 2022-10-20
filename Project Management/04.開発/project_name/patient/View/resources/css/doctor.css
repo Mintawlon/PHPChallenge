@@ -70,7 +70,6 @@ hr {
 .card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 #submit_atag {
   text-decoration: none;
@@ -123,15 +122,15 @@ hr {
   .square_blue_btn {
     font-size: 0.75rem !important;
   }
-  .cart {
+  /* .cart {
     margin-left: 15rem !important;
-  }
+  } */
 }
 
 @media screen and (max-width: 720px) {
-  .cart {
+  /* .cart {
     margin-left: 10rem !important;
-  }
+  } */
   .mobile {
     margin-left: 0.5rem !important;
   }
@@ -141,9 +140,9 @@ hr {
 }
 
 @media screen and (max-width: 545px) {
-  .cart {
+  /* .cart {
     margin-left: 3rem !important;
-  }
+  } */
   .mobile {
     margin-left: 0.5rem !important;
   }
@@ -151,4 +150,15 @@ hr {
 
 .hidden{
   display: none;
+}
+
+#allDoctor{
+  background-color: var(--secondary_color);
+  color: var(--first_color);
+  border: 2px solid var(--secondary_color);
+  border-radius: 10px;
+  padding: 0.3em 1em;
+}
+#allDoctor:hover{
+  background-color: transparent;
 }

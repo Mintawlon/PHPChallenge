@@ -32,24 +32,25 @@ if (!isset($_SESSION["email"])) {
     <?php
     include("./common/head.php");
     ?>
+      <button id="allDoctor" class="mt-3 ms-4">Show All Doctors</button>
 
     <div class="container-fluid">
         <!--doctor specility-->
         <div class="row">
             <div class="col-12 mt-5 btn-row">
                 <!-- Blue Square Btn -->
-                <button class="square_special_btn mobile" id="generalHealth"><i class="fa-solid fa-stethoscope me-3"></i>General Health</button>
-                <button class="square_special_btn" id="pulmonology"><i class="fa-solid fa-lungs me-3"></i>Pulmonology </button>
-                <button class="square_special_btn" id="paediatric"><i class="fa-solid fa-baby me-3"></i>Paediatric </button>
-                <button class="square_special_btn" id="ophthalmology"><i class="fa-solid fa-eye me-3"></i>Ophthalmology</button>
+                <button class="square_special_btn mobile" id="General Health" onclick="speciality(this.id)"><i class="fa-solid fa-stethoscope me-3"></i>General Health</button>
+                <button class="square_special_btn" id="Pulmonology" onclick="speciality(this.id)"><i class="fa-solid fa-lungs me-3"></i>Pulmonology</button>
+                <button class="square_special_btn" id="Paediatric" onclick="speciality(this.id)"><i class="fa-solid fa-baby me-3"></i>Paediatric </button>
+                <button class="square_special_btn" id="Ophthalmology" onclick="speciality(this.id)"><i class="fa-solid fa-eye me-3"></i>Ophthalmology</button>
             </div>
         </div>
         <div class="row">
             <div class="col-12 mt-5 btn-row">
                 <!-- Blue Square Btn -->
-                <button class="square_special_btn mobile" id="neurology"><i class="fa-solid fa-brain me-3"></i>Neurology</button>
-                <button class="square_special_btn" id="og"><i class="fa-solid fa-person-pregnant me-3"></i>OB-GYN</button>
-                <button class="square_special_btn" id="dentist"><i class="fa-solid fa-tooth me-3"></i>Dentist</button>
+                <button class="square_special_btn mobile" id="Neurology" onclick="speciality(this.id)"><i class="fa-solid fa-brain me-3"></i>Neurology</button>
+                <button class="square_special_btn" id="OB-GYN" onclick="speciality(this.id)"><i class="fa-solid fa-person-pregnant me-3"></i>OB-GYN</button>
+                <button class="square_special_btn" id="Dentist" onclick="speciality(this.id)"> <i class="fa-solid fa-tooth me-3"></i>Dentist</button>
                 </form>
             </div>
         </div>
@@ -57,7 +58,7 @@ if (!isset($_SESSION["email"])) {
         <div class="row mt-5" id="doctorSearch">
             <!--card-->
             <?php foreach ($doctorInfo as $doctor) { ?>
-                <div class="col-sm-12 col-md-6 col-lg-4 text-center" id="<?= $doctor["speciality"] ?>">
+                <div class="col-sm-12 col-md-6 col-lg-4 text-center card-container searchSpeciality" id="<?= $doctor["speciality"] ?>">
                     <div class="card cart" style="width: 23rem;">
                         <dvi class="image">
                             <img src="./storages/image/<?= $doctor["profile_photo"] ?>" class="card-img-top" alt="...">
