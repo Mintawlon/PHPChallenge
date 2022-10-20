@@ -9,6 +9,9 @@ if (isset($_SESSION["userInfo"])) {
 
     print_r($userInfo);
 }
+if (!isset($_SESSION["email"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

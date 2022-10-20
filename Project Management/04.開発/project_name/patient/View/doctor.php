@@ -2,6 +2,9 @@
 session_start();
 include "../Controller/doctor/doctorInfoController.php";
 include "../Controller/doctor/doctorDressingTimeController.php";
+if (!isset($_SESSION["email"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +57,7 @@ include "../Controller/doctor/doctorDressingTimeController.php";
         <div class="row mt-5" id="doctorSearch">
             <!--card-->
             <?php foreach ($doctorInfo as $doctor) { ?>
-                <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+                <div class="col-sm-12 col-md-6 col-lg-4 text-center" id="<?= $doctor["speciality"] ?>">
                     <div class="card cart" style="width: 23rem;">
                         <dvi class="image">
                             <img src="./storages/image/<?= $doctor["profile_photo"] ?>" class="card-img-top" alt="...">

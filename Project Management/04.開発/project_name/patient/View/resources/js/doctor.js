@@ -35,6 +35,7 @@ function getData(text) {
 
     success: function (res) {
       doctorSpeciality = JSON.parse(res);
+      console.log(doctorSpeciality);
       
       $("#doctorSearch").empty();
 
@@ -76,3 +77,4 @@ function getData(text) {
 
 
 }
+

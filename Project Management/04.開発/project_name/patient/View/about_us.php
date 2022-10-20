@@ -1,6 +1,9 @@
 <?php
 session_start();
 include("../Controller/aboutUs/aboutUsController.php");
+if (!isset($_SESSION["email"])) {
+    header("Location: ./login.php");
+}
 ?>
 
 <!DOCTYPE html>
