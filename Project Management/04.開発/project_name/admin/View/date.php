@@ -16,20 +16,25 @@ if (isset($_SESSION["doctorInfo"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="./resources/css/date.css">
+    <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/date.js" defer></script>
+
 </head>
 
 <body>
     <!-- Side Bar -->
     <div class="container-fluid">
-    
+
 
         <div class="row flex-nowrap">
             <!-- Side Bar Menu Copy Here -->
@@ -43,10 +48,10 @@ if (isset($_SESSION["doctorInfo"])) {
                         <span class="navbar-brand ttl_admin" href="#">Date</span>
                     </div>
                 </div>
-                <div class="sec_input choose_date mb-2">
+                <div class="sec_input  mb-2">
                     <div class="input_one mb-2">
-                        <span class="input_set_text">Choose Date</span>
-                        <input type="date" class="common_input form-control " />
+                        <input type="text" id="searchDay" class="common_input form-control " placeholder="Search By Day" />
+                        <button class="searchDay px-5" id="search">search</button>
                     </div>
                 </div>
                 <!-- Go Back Button -->
@@ -60,6 +65,7 @@ if (isset($_SESSION["doctorInfo"])) {
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Doctor Timetable</h2>
                     </div>
+                    <button id="allDoctor" class="mb-4"> Show All Doctors</button>
                     <table class="table">
                         <thead class="table_bgcolor">
                             <tr>
@@ -73,23 +79,23 @@ if (isset($_SESSION["doctorInfo"])) {
                                 <td>End Time</td>
                             </tr>
                         </thead>
-                        <tbody>                                
-                                <?php $number = 1 ?>
+                        <tbody id="dayTable">
+                            <?php $number = 1 ?>
                             <?php foreach ($dateInfo as $date) { ?>
                                 <tr class="row_bdr">
-                                <td><?= $number++ ?></td>
-                                <td><?php echo $date["doctor_name"]?></td>
-                                <td><?php echo $date["age"]?></td>
-                                <td><?php echo $date["speciality"]?></td>
-                                <td><?php echo $date["date"]?></td>
-                                <td><?php echo $date["startTime"]?></td>
-                                <td><?php echo $date["endTime"]?></td>
+                                    <td><?= $number++ ?></td>
+                                    <td><?php echo $date["doctor_name"] ?></td>
+                                    <td><?php echo $date["age"] ?></td>
+                                    <td><?php echo $date["speciality"] ?></td>
+                                    <td><?php echo $date["date"] ?></td>
+                                    <td><?php echo $date["startTime"] ?></td>
+                                    <td><?php echo $date["endTime"] ?></td>
                                 </tr>
-                            <?php } ?>                     
-                            
-                        
+                            <?php } ?>
+
+
                         </tbody>
-                        
+
                     </table>
                     <div class='pagination_container'>
                         <nav aria-label="Page navigation example">
@@ -113,38 +119,38 @@ if (isset($_SESSION["doctorInfo"])) {
                     <hr />
                 </section>
                 <section class="dressing_time">
-                <form action="../Controller/addDateController.php" method="post">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Dressing Time</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Doctor Name</span>
-                            <input type="text" class="common_input form-control" value="<?php echo $doctorInfo[0]["doctor_name"]?>" />
+                    <form action="../Controller/addDateController.php" method="post">
+                        <div class="input_set">
+                            <h2 class="input_set_header my-4">Add Dressing Time</h2>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Doctor Name</span>
+                                <input type="text" class="common_input form-control" value="<?php echo $doctorInfo[0]["doctor_name"] ?>" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Age</span>
+                                <input type="text" class="common_input form-control " value="<?php echo $doctorInfo[0]["age"] ?>" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Speciality</span>
+                                <input type="text" class="common_input form-control " value="<?php echo $doctorInfo[0]["speciality"] ?>" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Date</span>
+                                <input type="text" class="common_input form-control" name="date" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">Start Time</span>
+                                <input type="time" class="common_input form-control " name="startTime" />
+                            </div>
+                            <div class="input_one mb-2">
+                                <span class="input_set_text">End Time</span>
+                                <input type="time" class="common_input form-control " name="endTime" />
+                            </div>
+                            <div class=" mb-2  ">
+                                <!-- Add Btn -->
+                                <button type="submit" class="common_btn add_btn" name="dateadd"> Add </button>
+                            </div>
                         </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Age</span>
-                            <input type="text" class="common_input form-control " value="<?php echo $doctorInfo[0]["age"]?>" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Speciality</span>
-                            <input type="text" class="common_input form-control " value="<?php echo $doctorInfo[0]["speciality"]?>" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Date</span>
-                            <input type="text" class="common_input form-control" name="date" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Start Time</span>
-                            <input type="time" class="common_input form-control " name="startTime"/>
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">End Time</span>
-                            <input type="time" class="common_input form-control " name="endTime" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <button type="submit" class="common_btn add_btn" name="dateadd"> Add </button>
-                        </div>
-                    </div>
                 </section>
                 </form>
             </div>
