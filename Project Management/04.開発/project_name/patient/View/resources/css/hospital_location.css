@@ -7,45 +7,11 @@ body {
   font-family: var(--secondary_font);
   font-size: var(--large);
 }
-/* .image-container{
-  border-right: 2px solid var(--tertiary_color) !important;
-  overflow: hidden !important;
-}
-
-.col-sm-md-12{
-   margin-left: 8rem !important;
-  
-}
-.card{
-  background-color: var(--primary_color) !important;
-  color:var(--first_color) !important;
-} */
-/* for image size
-img{
-  width: 15rem;
-  height: 15rem;
-}
-
-.name{
-  color: var(--tertiary_color);
-}
-
-@media only screen and (max-width: 700px) {
-  .image-container{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .col-sm-md-12{
-    margin-left: 4rem !important;
- }
-
-} */
-
 
 .card_wrapper{
   width: 100%;
   height: 18em;
+
 }
 .location_box{
   width: 80%;
@@ -54,10 +20,15 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--secondary_color);
+  border-radius: 10px;
 }
+/* #hosname{
+  color: var(--secondary_color) !important;
+} */
 .map_image{
   width: 40%;
-  height: 100%;
+  height: 90%;
 }
 .map{
   width: 100%;
@@ -102,7 +73,7 @@ img{
   }
   .card_wrapper{
     width: 100%;
-    height: 30em;
+    height: 35em;
   }
   .hospitalInfo{
     padding:0;
@@ -114,7 +85,7 @@ img{
   }
   .map_image{
     width: 90%;
-    height: 100%;
+    height: 90%;
   }
   
 }

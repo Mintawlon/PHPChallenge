@@ -1,5 +1,5 @@
 <?php
-include("../../Model/dbConnection.php");
+include "../Model/dbConnection.php";
 
 $sql = $pdo->prepare(
     "SELECT * FROM `hospital_location` 

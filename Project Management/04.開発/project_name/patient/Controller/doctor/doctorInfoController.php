@@ -8,4 +8,5 @@ $sql = $pdo->prepare(
 );
 $sql->execute();
 $doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
