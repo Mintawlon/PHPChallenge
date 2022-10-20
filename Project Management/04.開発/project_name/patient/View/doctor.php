@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../Controller/doctor/doctorInfoController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +15,8 @@ include "../Controller/doctor/doctorInfoController.php";
     <link rel="stylesheet" href="./resources/css/doctor.css?v=" time()>
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css?v=" time()>
-        <!-- Google Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
@@ -58,7 +59,7 @@ include "../Controller/doctor/doctorInfoController.php";
                         <dvi class="image">
                             <img src="./storages/image/<?= $doctor["profile_photo"] ?>" class="card-img-top" alt="...">
                             <h5 class="mt-2"><?= $doctor["doctor_name"] ?></h5>
-                            <p ><?= $doctor["speciality"] ?></p>
+                            <p><?= $doctor["speciality"] ?></p>
                         </dvi>
                         <div class="card-body">
                             <div class="contact">
@@ -67,14 +68,12 @@ include "../Controller/doctor/doctorInfoController.php";
                                     <span>Time</span>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         Mon &nbsp; &nbsp; 9:00Am ~ 11:00AM
                                     </label>
                                 </div>
                                 <hr>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         Mon &nbsp; &nbsp; 9:00Am ~ 11:00AM
                                     </label>
