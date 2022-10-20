@@ -6,8 +6,6 @@ include "../Controller/medicineController.php";
 include "../Controller/articleInfoController.php";
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
-    
-    
 }
 ?>
 
@@ -37,7 +35,7 @@ if (!isset($_SESSION["email"])) {
 
     <!-- Css -->
     <link rel="stylesheet" href="./resources//css/root.css">
-    <link rel="stylesheet" href="./resources/css/home1.css">
+    <link rel="stylesheet" href="./resources/css/home1.css?v=" <?php time() ?>>
 
 </head>
 
@@ -117,17 +115,17 @@ if (!isset($_SESSION["email"])) {
                 <li class="card">
                     <div>
                         <div class="vaccine_div">
-                            <img src="./storages/medicineImage/<?php echo $medicine["medicine_image"] ?>" class="vaccine_img" width="30">
+                            <img src="./storages/medicineImage/<?php echo $medicine["medicine_image"] ?>" class="vaccine_img">
                         </div>
                         <h3 class="card-title"><?php echo $medicine["medicine_name"] ?></h3>
                         <div class="card-content">
                             <p ipsum><?php echo $medicine["description"] ?></p>
                         </div>
                     </div>
-                
+
                     <div class="card-link-wrapper"><a href="" class="card-link">Learn More</a>
                     <?php } ?>
-                </div>              
+                    </div>
         </ul>
     </div>
     <!--scorll card-->
