@@ -128,7 +128,7 @@ if (isset($_SESSION["doctorInfo"])) {
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Date</span>
-                            <input type="date" class="common_input form-control" name="date" />
+                            <input type="text" class="common_input form-control" name="date" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Start Time</span>
