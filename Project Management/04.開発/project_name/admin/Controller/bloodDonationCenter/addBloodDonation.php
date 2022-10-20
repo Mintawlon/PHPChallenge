@@ -3,53 +3,38 @@
 include "../../Model/dbConnection.php";
 
 if (isset($_POST["addCenter"])) {
+    $center = $_POST["center"];
+    $contact = $_POST["contact"];
+    $email = $_POST["email"];
+    $address = $_POST["address"];
 
-    //     $sql = $pdo->prepare("SELECT id FROM patient WHERE name=:username");
-    //     $sql->bindValue(":username", $name);
-    //     $sql->execute();
-    //     $patientInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+    echo $contact;
+    $sql = $pdo->prepare(
+        "INSERT INTO blood_donation
+         (
+             center_name,
+             center_address,
+             center_contact,
+             center_email,
+             created_date
+         ) 
+         VALUES 
+         (
+             :name,
+             :address,
+             :contact,
+             :email,
+             :created_date
+         )"
+    );
 
-    //     // echo "<pre>";
-    //     // print_r($patientInfo);
+    $sql->bindValue(":name", $center);
+    $sql->bindValue(":address", $address);
+    $sql->bindValue(":contact", $contact);
+    $sql->bindValue(":email", $email);
+    $sql->bindValue(":created_date", date("Y/m/d"));
 
-    //     $patientID = $patientInfo[0]['id'];
-    //     $sql = $pdo->prepare(
-    //         "INSERT INTO booking 
-    //     (
-    //         date,
-    //         time,
-    //         doctor,
-    //         department,
-    //         feeling,
-    //         patient_id,
-    //         status,
-    //         create_date
-    //     ) 
-    //     VALUES 
-    //     (
-    //         :date,
-    //         :time,
-    //         :doctor,
-    //         :department,
-    //         :feeling,
-    //         :patientID,
-    //         :status,
-    //         :createDate
-    //     )"
-    //     );
+    $sql->execute();
 
-    //     $sql->bindValue(":date", $date);
-    //     $sql->bindValue(":time", $time);
-    //     $sql->bindValue(":doctor", $doctor);
-    //     $sql->bindValue(":department", $dep);
-    //     $sql->bindValue(":feeling", $feeling);
-    //     $sql->bindValue(":patientID", $patientID);
-    //     $sql->bindValue(":status", 0);
-    //     $sql->bindValue(":createDate", date("Y/m/d"));
-
-    //     $sql->execute();
-
-    //     header("Location: ../../View/home.php");
-    // } else {
-    //     header("Location: ../View/login.php");
+    header("Location: ../../View/donation.php");
 }

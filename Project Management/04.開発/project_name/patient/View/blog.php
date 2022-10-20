@@ -57,7 +57,7 @@ include "../Controller/blog/showblogController.php";
     <?php foreach ($blogList as $blog) { ?>
         <div class="first_aid_card my-4">
             <div class="wrapper">
-                <img src="../../admin/View/storages/blog/<?php echo $blog["image"] ?>" alt="" class="card_img" />
+                <img src="./storages/blogImage/blog/<?php echo $blog["image"] ?>" alt="" class="card_img" />
                 <div class="info">
                     <h2 class="first_aid_para_header"><?php echo $blog["header"] ?></h2>
                     <ul class="first_aid_para">
