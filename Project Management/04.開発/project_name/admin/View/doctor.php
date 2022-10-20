@@ -76,11 +76,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                         <img src="./storages/image/<?= $doctor["profile_photo"] ?>" alt="" class="image">
                                     </td>
                                     <td>
-<<<<<<< HEAD
                                         <a href="../Controller/dateController.php?id=<?= $doctor["id"] ?>" class="color_sixth"><button class="edit_btn me-4" value="<?= $doctor["id"] ?>">Add</button></a>
-=======
-                                        <a href="" class="color_sixth"><button class="edit_btn me-4">Add</button></a>
->>>>>>> origin/main
                                     </td>
                                     <td class="p-3">
                                         <a href="../Controller/doctorEditController.php?id=<?= $doctor["id"] ?>" class="edit_btn me-4">
