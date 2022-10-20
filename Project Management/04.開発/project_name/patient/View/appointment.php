@@ -1,10 +1,13 @@
 <?php
 session_start();
-if(isset($_SESSION["appointmentDoctorInfo"])){
+if (isset($_SESSION["appointmentDoctorInfo"])) {
     $docotrInfo = $_SESSION["appointmentDoctorInfo"];
+    print_r($docotrInfo);
 }
-if(isset($_SESSION["userInfo"] )){
-    $userInfo = $_SESSION["userInfo"] ;
+if (isset($_SESSION["userInfo"])) {
+    $userInfo = $_SESSION["userInfo"];
+
+    print_r($userInfo);
 }
 ?>
 <!DOCTYPE html>
@@ -36,39 +39,46 @@ if(isset($_SESSION["userInfo"] )){
                 <!-- Page title -->
                 <h3 class="appointment_header my-4 ">Make an Appointment</h3>
                 <!-- Appointment form -->
-                <form class="form_box">
-
-                    <div class="input_align mb-3">
-
-                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Name" value="<?=$userInfo[0]["register_name"]?>">
+                <form class="form_box border border-2 border-warning rounded" action="../Controller/booking/appointmentController.php" method="POST">
+                    <div class="input_align m-3">
+                        <input type="text" id="TextInput" class="form-control" name="doctor" value=" <?= $docotrInfo[0]["doctor_name"] ?>" readonly>
                     </div>
-
-                    <div class="input_align mb-3">
-
-                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Age">
+                    <div class="input_align m-3">
+                        <input type="text" id="TextInput" class="form-control" name="speciality" value=" <?= $docotrInfo[0]["speciality"] ?>" readonly>
                     </div>
-                    <div class="input_align mb-3">
-
-                        <input type="time" id="TextInput" class="form-control" placeholder="Booking Time">
+                    <div class="input_align m-3">
+                        <input type="date" id="TextInput" class="form-control" name="date" placeholder="Booking Date">
                     </div>
-                    <div class="input_align mb-3">
-
-                        <input type="text" id="TextInput" class="form-control" placeholder="Phone Number">
+                    <div class="input_align m-3">
+                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Name" name="patient" value="<?= $userInfo[0]["register_name"] ?>">
                     </div>
-                    <div class="input_align mb-3">
-
-                        <input type="text" id="TextInput" class="form-control" placeholder="Contact">
+                    <div class="input_align m-3">
+                        <input type="number" id="TextInput" class="form-control" name="age" placeholder="Patient Age">
                     </div>
-                    <div class="input_align mb-3">
+                    <div class="input_align m-3">
 
-                        <input type="text" id="TextInput" class="form-control" placeholder="Email Address"  value="<?=$userInfo[0]["email_address"]?>">
+                        <input type="number" id="TextInput" class="form-control" name="contact" placeholder="Phone Number">
+                    </div>
+                    <div class="input_align m-3">
+
+                        <input type="text" id="TextInput" class="form-control" name="remark" placeholder="Remark From Doctor If Have">
+                    </div>
+                    <div class="input_align m-3">
+
+                        <input type="email" id="TextInput" class="form-control" placeholder="Email Address" name="email" value="<?= $userInfo[0]["email_address"] ?>">
+                    </div>
+                    <input type="hidden" name="id" value="<?= $userInfo[0]["id"] ?>">
+                    <input type="hidden" name="doctorId" value="<?= $docotrInfo[0]["id"] ?>">
+                    <!-- Button -->
+                    <div class="d-flex justify-content-center m-3">
+                        <button type="submit" name="makeBooking" class=" btn text-white square_yellow_btn ">Submit Appointment</button>
                     </div>
                 </form>
                 <!-- Display -->
 
                 <div class="badge display_top display_bottom display">
                     <div class="text">
-                        <?=$docotrInfo[0]["doctor_name"]?>
+                        <?= $docotrInfo[0]["doctor_name"] ?>
                     </div>
                 </div>
                 <div class="badge text-wrap display_bottom display">
@@ -77,12 +87,10 @@ if(isset($_SESSION["userInfo"] )){
                         Time Here
                     </div>
                 </div>
-                <!-- Button -->
-                <div class="book_btn my-4 display">
-                    <button type="button" class="btn btn_color">Book an Appointment</button>
-                </div>
+
             </div>
             <div class="col-md-6 col-sm-12">
+
                 <!-- Image-->
                 <div>
                     <img src="../View/components/card/image/image_login.png.png" class="img-fluid appointmentImg  " alt="...">
