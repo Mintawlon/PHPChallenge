@@ -61,6 +61,10 @@ if (isset($_SESSION["userInfo"])) {
                     </div>
                     <div class="input_align m-3">
 
+                        <input type="text" id="TextInput" class="form-control" name="address" placeholder="address">
+                    </div>
+                    <div class="input_align m-3">
+
                         <input type="text" id="TextInput" class="form-control" name="remark" placeholder="Remark From Doctor If Have">
                     </div>
                     <div class="input_align m-3">

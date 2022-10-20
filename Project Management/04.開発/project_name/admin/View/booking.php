@@ -1,3 +1,7 @@
+<?php
+include "../Controller/booking/bookingStatusController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking</title>
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
@@ -47,26 +48,29 @@
                                 <td>Doctor Name</td>
                                 <td>Specility</td>
                                 <td>Date</td>
-                                <td>Booking Time</td>
+                                <td>Status</td>
                                 <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Mary</td>
-                                <td>20</td>
-                                <td>123456789</td>
-                                <td>Yangon</td>
-                                <td>Dr. Knight Crawler</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                                <td>
-                                    <span><i class="fa-solid fa-square-check check_icon"></i></span>
-                                    <span><i class="fa-solid fa-square-xmark xmark_icon"></i></span>
-                                </td>
-                            </tr>
+                            <?php $count = 0; ?>
+                            <?php foreach ($patientBookingList as $list) { ?>
+                                <tr class="row_bdr">
+                                    <td><?php echo ++$count ?></td>
+                                    <td><?php echo $list["patient_name"] ?></td>
+                                    <td><?php echo $list["age"] ?></td>
+                                    <td><?php echo $list["contact"] ?></td>
+                                    <td><?php echo $list["address"] ?></td>
+                                    <td><?php echo $list["doctor_name"] ?></td>
+                                    <td><?php echo $list["speciality"] ?></td>
+                                    <td><?php echo $list["date"] ?></td>
+                                    <td><?php echo $list["patient_status"] ?></td>
+                                    <td>
+                                        <span class="iconic"><a href="../Controller/booking/updateBookingController.php?id=<?php echo $list["id"] ?>"><i class="fa-solid fa-square-check check_icon"></i></a></span>
+                                        <span class="iconic"><a href="../Controller/booking/rejectController.php?id=<?php echo $list["id"] ?>"><i class="fa-solid fa-square-xmark xmark_icon"></i></a></span>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class='pagination_container'>
@@ -106,21 +110,21 @@
                                 <td>Doctor Name</td>
                                 <td>Specility</td>
                                 <td>Date</td>
-                                <td>Booking Time</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Mary</td>
-                                <td>20</td>
-                                <td>123456789</td>
-                                <td>Yangon</td>
-                                <td>Dr. Knight Crawler</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
+                            <?php foreach ($approved as $patient) { ?>
+                                <tr class="row_bdr">
+                                    <td><?php echo ++$count ?></td>
+                                    <td><?php echo $patient["patient_name"] ?></td>
+                                    <td><?php echo $patient["age"] ?></td>
+                                    <td><?php echo $patient["contact"] ?></td>
+                                    <td><?php echo $patient["address"] ?></td>
+                                    <td><?php echo $patient["doctor_name"] ?></td>
+                                    <td><?php echo $patient["speciality"] ?></td>
+                                    <td><?php echo $patient["date"] ?></td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class='pagination_container'>

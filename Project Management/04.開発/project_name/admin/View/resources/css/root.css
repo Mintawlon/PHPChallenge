@@ -523,5 +523,8 @@ hr {
   float: right;
   padding-right: 8px;
 }
+.iconic{
+  font-size: 1.5rem !important;
+}
 
 

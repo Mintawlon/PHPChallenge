@@ -5,6 +5,7 @@ if (isset($_POST["makeBooking"])) {
     $name = $_POST["patient"];
     $email = $_POST["email"];
     $age = $_POST["age"];
+    $address = $_POST["address"];
     $contact = $_POST["contact"];
     $remark = $_POST["remark"];
     $date = $_POST["date"];
@@ -26,6 +27,7 @@ if (isset($_POST["makeBooking"])) {
                 patient_id,
                 patient_name,
                 email,
+                address,
                 contact,
                 age,
                 created_date
@@ -41,6 +43,7 @@ if (isset($_POST["makeBooking"])) {
                 :patient_id,
                 :patient_name,
                 :email,
+                :address,
                 :contact,
                 :age,
                 :created_date
@@ -55,6 +58,7 @@ if (isset($_POST["makeBooking"])) {
     $sql->bindValue(":patient_id", $patientId);
     $sql->bindValue(":patient_name", $name);
     $sql->bindValue(":email", $email);
+    $sql->bindValue(":address", $address);
     $sql->bindValue(":contact", $contact);
     $sql->bindValue(":age", $age);
     $sql->bindValue(":created_date", date("Y/m/d"));
