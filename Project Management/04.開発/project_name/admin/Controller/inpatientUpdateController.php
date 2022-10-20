@@ -12,10 +12,6 @@ if (isset($_POST["inpatient_update_btn"])) {
     $address  = $_POST["address"];
     $id       = $_POST["id"];
        
-    
-   
-
-
     $sql = $pdo->prepare("UPDATE inpatient SET 
     hospitalized_date = :date, 
     name = :name, 

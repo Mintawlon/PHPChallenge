@@ -75,7 +75,7 @@ if (!isset($_SESSION["email"])) {
     </div>
     <!-- Articles -->
     <div class="article_wrapper">
-        <h2 class="text-white text-center py-3 "> <u> Know More</u></h2>
+        <h1 class="text-white text-center py-3 ">Articles</h1>
 
         <?php foreach ($homeArticleInfo as $info) { ?>
             <div class="articles px-2">
@@ -122,8 +122,13 @@ if (!isset($_SESSION["email"])) {
                             <p ipsum><?php echo $medicine["description"] ?></p>
                         </div>
                     </div>
+<<<<<<< HEAD
 
                     <div class="card-link-wrapper"><a href="" class="card-link">Learn More</a>
+=======
+                
+                    <!-- <div class="card-link-wrapper"><a href="" class="card-link">Learn More</a> -->
+>>>>>>> origin/main
                     <?php } ?>
                     </div>
         </ul>

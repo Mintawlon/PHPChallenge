@@ -18,9 +18,9 @@ include("../Controller/inpatientController.php");
     <link rel="stylesheet" href="./resources/css/inpatientList.css?v=" <?= time() ?> />
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
-    <script src="./resources/js/inpatientSearch.js?v="<?= time() ?> defer></script>
-    
-    
+    <script src="./resources/js/inpatientSearch.js?v=" <?= time() ?> defer></script>
+
+
 </head>
 
 <body>
@@ -49,7 +49,7 @@ include("../Controller/inpatientController.php");
                     </a>
 
                     <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="searchText" name="text" placeholder="Search"  />
+                        <input type="text" class="common_input input_box form-control" id="searchText" name="text" placeholder="Search" />
                     </div>
                     <button type="submit" class="common_btn add_btn btn-success" id="search" name="searchbtn">Search </button>
 
@@ -85,7 +85,9 @@ include("../Controller/inpatientController.php");
                             <td>Status</td>
                             <td>Room</td>
                             <td>Address</td>
-                            <td>Action</td>
+                            <td>Edit</td>
+                            <td>Delete</td>
+                            
                         </tr>
                     </thead>
                     <tbody id="table_id">
@@ -100,10 +102,20 @@ include("../Controller/inpatientController.php");
                                 <td><?= $iPatient["status"] ?></td>
                                 <td><?= $iPatient["room"] ?></td>
                                 <td><?= $iPatient["address"]  ?></td>
-                                <td>
+                                <!-- <td>
                                     <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2">Edit</a></span>
                                     <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="color_fifth">Delete</a></span>
+                                </td> -->
+                                <!-- <td>
+                                    <a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2"><button class="edit_btn me-4">Add</button></a>
+                                </td> -->
+                                <td>
+                                        <a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>"  class="color_sixth"><button class="edit_btn me-4">Edit</button></a>
                                 </td>
+                                
+                                    <td class="p-3">
+                                        <a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                    </td>
                             </tr>
                         <?php } ?>
 
@@ -137,7 +149,7 @@ include("../Controller/inpatientController.php");
 
         </div>
     </div>
-    
+
 
 </body>
 

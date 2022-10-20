@@ -19,6 +19,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/doctor.js" defer></script>
 </head>
 
 <body>
@@ -37,18 +38,17 @@ include "../Controller/doctor/getDoctorInfoController.php";
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="./doctorEdit.php" class="common_btn add_btn go_btn">Go to edit doctor
-                        <i class="fa-solid fa-arrow-right arrow_right"></i>
-                    </a>
                     <div class="searchbox search">
-                        <span class="search_text fw-semibold">Search</span>
-                        <input type="text" class="search_input ps-5" placeholder="" />
-                        <i class="fa-solid fa-magnifying-glass search_icon"></i>
+                        <input type="text" class="search_input  ps-5" id="searchDoctor" />
+                        <i class="fa-solid fa-magnifying-glass search_icon text_white"></i>
+                        <button id="search" class="search_text">Search</button>
                     </div>
                 </div>
+                <button id="allDoctor" >All Doctors</button>
                 <section class="doctor_list">
                     <div class="input_set">
                         <h2 class="input_set_header  my-4"><u>Doctor List</u></h2>
+                        
                     </div>
                     <table class="table">
                         <thead class="table_bgcolor" id="table_header">
@@ -76,12 +76,12 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                         <img src="./storages/image/<?= $doctor["profile_photo"] ?>" alt="" class="image">
                                     </td>
                                     <td>
-                                        <a  href=""  class="color_sixth"><button class="edit_btn me-4">Add</button></a>
-                                </td>
+                                        <a href="../Controller/dateController.php?id=<?= $doctor["id"] ?>" class="color_sixth"><button class="edit_btn me-4" value="<?= $doctor["id"] ?>">Add</button></a>
+                                    </td>
                                     <td class="p-3">
-                                    <a href="../Controller/doctorEditController.php?id=<?=$doctor["id"]?>" class="edit_btn me-4">
-                                    Edit</a>
-                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                        <a href="../Controller/doctorEditController.php?id=<?= $doctor["id"] ?>" class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>

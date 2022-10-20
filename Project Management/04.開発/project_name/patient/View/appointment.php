@@ -1,5 +1,11 @@
 <?php
 session_start();
+if(isset($_SESSION["appointmentDoctorInfo"])){
+    $docotrInfo = $_SESSION["appointmentDoctorInfo"];
+}
+if(isset($_SESSION["userInfo"] )){
+    $userInfo = $_SESSION["userInfo"] ;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +40,9 @@ session_start();
 
                     <div class="input_align mb-3">
 
-                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Name">
+                        <input type="text" id="TextInput" class="form-control" placeholder="Patient Name" value="<?=$userInfo[0]["register_name"]?>">
                     </div>
+
                     <div class="input_align mb-3">
 
                         <input type="text" id="TextInput" class="form-control" placeholder="Patient Age">
@@ -54,14 +61,14 @@ session_start();
                     </div>
                     <div class="input_align mb-3">
 
-                        <input type="text" id="TextInput" class="form-control" placeholder="Email Address">
+                        <input type="text" id="TextInput" class="form-control" placeholder="Email Address"  value="<?=$userInfo[0]["email_address"]?>">
                     </div>
                 </form>
                 <!-- Display -->
 
                 <div class="badge display_top display_bottom display">
                     <div class="text">
-                        Doctor Name Here
+                        <?=$docotrInfo[0]["doctor_name"]?>
                     </div>
                 </div>
                 <div class="badge text-wrap display_bottom display">

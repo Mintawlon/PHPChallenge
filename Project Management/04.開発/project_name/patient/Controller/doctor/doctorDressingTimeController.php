@@ -3,10 +3,9 @@ include "../Model/dbConnection.php";
 
 // get doctor info
 $sql = $pdo->prepare(
-    "SELECT * FROM `doctor` 
+    "SELECT * FROM `date` 
     "
 );
 $sql->execute();
-$doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-
+$doctorDressingTime = $sql->fetchAll(PDO::FETCH_ASSOC);
 ?>
