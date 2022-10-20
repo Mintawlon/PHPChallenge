@@ -122,13 +122,8 @@ if (!isset($_SESSION["email"])) {
                             <p ipsum><?php echo $medicine["description"] ?></p>
                         </div>
                     </div>
-<<<<<<< HEAD
-
-                    <div class="card-link-wrapper"><a href="" class="card-link">Learn More</a>
-=======
                 
                     <!-- <div class="card-link-wrapper"><a href="" class="card-link">Learn More</a> -->
->>>>>>> origin/main
                     <?php } ?>
                     </div>
         </ul>
