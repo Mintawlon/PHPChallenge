@@ -76,12 +76,12 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                         <img src="./storages/image/<?= $doctor["profile_photo"] ?>" alt="" class="image">
                                     </td>
                                     <td>
-                                        <a  href=""  class="color_sixth"><button class="edit_btn me-4">Add</button></a>
-                                </td>
+                                        <a href="../Controller/dateController.php?id=<?= $doctor["id"] ?>" class="color_sixth"><button class="edit_btn me-4" value="<?= $doctor["id"] ?>">Add</button></a>
+                                    </td>
                                     <td class="p-3">
-                                    <a href="../Controller/doctorEditController.php?id=<?=$doctor["id"]?>" class="edit_btn me-4">
-                                    Edit</a>
-                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                        <a href="../Controller/doctorEditController.php?id=<?= $doctor["id"] ?>" class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>

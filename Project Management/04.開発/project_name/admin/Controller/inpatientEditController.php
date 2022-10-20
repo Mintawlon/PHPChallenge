@@ -4,6 +4,7 @@ include("../Model/dbConnection.php");
 
 session_start();
 
+//get info from database//
 
 if (isset($_GET["id"])) {
     // echo $_GET["id"];
