@@ -7,8 +7,7 @@ if(isset($_POST["searchText"])){
     $sql->bindValue(":search","%".$search."%");
     $sql->execute();
     $doctorList = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
-    
     echo json_encode($doctorList);
+
 }
 ?>
