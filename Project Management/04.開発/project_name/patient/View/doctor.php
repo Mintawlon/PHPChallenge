@@ -1,11 +1,7 @@
 <?php
 session_start();
 include "../Controller/doctor/doctorInfoController.php";
-<<<<<<< HEAD
 include "../Controller/doctor/doctorDressingTimeController.php";
-=======
-
->>>>>>> origin/main
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +67,6 @@ include "../Controller/doctor/doctorDressingTimeController.php";
                                     <span class="title">Day</span>
                                     <span>Time</span>
                                 </div>
-<<<<<<< HEAD
                                 <?php foreach ($doctorDressingTime as $time) {
                                     if ($time["doctor_id"] == $doctor["id"]) {    ?>
                                         <div class="form-check">
@@ -81,26 +76,11 @@ include "../Controller/doctor/doctorDressingTimeController.php";
                                                <span id="time"><?= $time["startTime"]?>  ~ <?= $time["endTime"]?> </span>
                                             </label>
                                         </div>
-                                        <hr>
+                                        <hr> 
                                 <?php }
                                 }
                                 ?>
                                 <button class=" btn btn-outline-primary submit"><a href="../Controller/booking/bookingFormInfoController.php?doctorId=<?= $doctor["id"] ?>" id="submit_atag">Continued</a></button>
-=======
-                                <div class="form-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Mon &nbsp; &nbsp; 9:00Am ~ 11:00AM
-                                    </label>
-                                </div>
-                                <hr>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Mon &nbsp; &nbsp; 9:00Am ~ 11:00AM
-                                    </label>
-                                </div>
-                                <hr>
-                                <button class=" btn btn-outline-primary submit"><a href="../Controller/booking/bookingFormInfoController.php?doctorId=<?=$doctor["id"]?>">continued</a></button>
->>>>>>> origin/main
                             </div>
                         </div>
                     </div>
