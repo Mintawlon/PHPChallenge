@@ -48,17 +48,13 @@ if (isset($_SESSION["doctorInfo"])) {
                         <span class="navbar-brand ttl_admin" href="#">Date</span>
                     </div>
                 </div>
-                <div class="sec_input  mb-2">
-                    <div class="input_one mb-2">
-                        <input type="text" id="searchDay" class="common_input form-control " placeholder="Search By Day" />
-                        <button class="searchDay px-5" id="search">search</button>
-                    </div>
-                </div>
                 <!-- Go Back Button -->
                 <div class="sec_input mb-2">
                     <a href="./doctor.php" class="common_btn add_btn back_btn">Back to Doctor
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
+                    <input type="text" id="searchDay" class="common_input form-control " placeholder="Search By Day" />
+                        <button class="searchDay px-5" id="search">search</button>
                 </div>
 
                 <section class="timetable">
@@ -67,7 +63,7 @@ if (isset($_SESSION["doctorInfo"])) {
                     </div>
                     <button id="allDoctor" class="mb-4"> Show All Doctors</button>
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <!-- <td class="hidden">ID</td> -->
                                 <td>No.</td>

@@ -23,4 +23,3 @@ $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC) [0]["total"];
 
 $totalPages = ceil($totalRecord/$rowLimit);
-?>

@@ -19,12 +19,9 @@ include("../Controller/inpatientController.php");
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/inpatientSearch.js?v=" <?= time() ?> defer></script>
-
-
 </head>
 
 <body>
-    <script src="./resources/js/script.js"></script>
     <!-- Side Bar -->
     <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -32,51 +29,26 @@ include("../Controller/inpatientController.php");
             <?php
             include("./common/nav.php")
             ?>
-
-
             <div class="data_box col-sm-9 col-md-8 col-xl-10 mt-3">
                 <div class="header_wrapper bg_header ">
                     <div class="header_box">
                         <span class="navbar-brand ttl_admin" href="#">Inpatient List</span>
                     </div>
                 </div>
-
                 <div class="sec_input mb-2">
-
                     <a href="./addInpatient.php" class="common_btn add_btn go_btn">Go to Add Inpatient
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
-
                     </a>
-
                     <div class="tb_search">
                         <input type="text" class="common_input input_box form-control" id="searchText" name="text" placeholder="Search" />
                     </div>
                     <button type="submit" class="common_btn add_btn btn-success" id="search" name="searchbtn">Search </button>
-
-
                 </div>
-
-
-
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Inpatient List</h2>
                 </div>
-                <div class="num_rows">
-                    <div class="form-group">
-                        <select class="form-control" name="state" id="maxRows">
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
-
-                    </div>
-                </div>
                 <table class="table">
-                    <thead class="table_bgcolor">
+                    <thead class="table_bgcolor" id="table_header">
                         <tr>
                             <td>Date</td>
                             <td>Name</td>
@@ -87,7 +59,7 @@ include("../Controller/inpatientController.php");
                             <td>Address</td>
                             <td>Edit</td>
                             <td>Delete</td>
-                            
+
                         </tr>
                     </thead>
                     <tbody id="table_id">
@@ -102,55 +74,99 @@ include("../Controller/inpatientController.php");
                                 <td><?= $iPatient["status"] ?></td>
                                 <td><?= $iPatient["room"] ?></td>
                                 <td><?= $iPatient["address"]  ?></td>
-                                <!-- <td>
-                                    <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2">Edit</a></span>
-                                    <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="color_fifth">Delete</a></span>
-                                </td> -->
-                                <!-- <td>
-                                    <a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2"><button class="edit_btn me-4">Add</button></a>
-                                </td> -->
                                 <td>
-                                        <a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>"  class="color_sixth"><button class="edit_btn me-4">Edit</button></a>
+                                    <a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth"><button class="edit_btn me-4">Edit</button></a>
                                 </td>
-                                
-                                    <td class="p-3">
-                                        <a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
-                                    </td>
+
+                                <td class="p-3">
+                                    <a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                                </td>
                             </tr>
                         <?php } ?>
-
-
                     </tbody>
                 </table>
-
-
-                <div class='pagination_container'>
+                <!-- Pagination -->
+                <?php
+                if ($totalPages < 3) { ?>
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item pagination_li
+                            <?php if ($page <= 1) {
+                                echo "disabled";
+                            } ?>
+                            ">
+
+                                <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
                                 </a>
                             </li>
-                            <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link pagi_color" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
+
+                            <li class="page-item pagination_li ">
+                                <a class="page-link pagination_item
+                                " href="?page=
+                                <?php for ($i = 1; $i <= $totalPages; $i++) {
+                                    echo $i;
+                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
+                            </li>
+
+
+                            <li class="page-item pagination_li  
+                            <?php if ($page >= $totalPages) {
+                                echo "disabled";
+                            } ?>
+                            ">
+                                <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                </div>
+                <?php
+                } else { ?>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item 
+                            <?php if ($page <= 1) {
+                                echo "disabled";
+                            } ?>
+                            ">
+
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
+                                </a>
+                            </li>
+
+                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                <li class="page-item 
+                                <?php
+                                if ($page == $i) {
+                                    echo "active";
+                                }
+                                ?>
+                                "><a class="page-link 
+                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+
+
+                            <li class="page-item   
+                            <?php if ($page >= $totalPages) {
+                                echo "disabled";
+                            } ?>
+                            ">
+                                <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                <?php
+                }
+                ?>
+                <!-- Pagination -->
                 <hr class="about_line mt-5" />
-
             </div>
-
         </div>
     </div>
-
-
 </body>
 
 </html>

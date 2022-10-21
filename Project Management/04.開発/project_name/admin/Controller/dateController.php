@@ -64,14 +64,16 @@ if (isset($_POST["dateadd"])) {
         doctor_id,
         date,
         startTime,
-        endTime
+        endTime,
+        create_date
     ) 
     VALUES 
     (
         :doctor_id,
         :date,
         :startTime,
-        :endTime
+        :endTime,
+        :createdDate
     );"
 
     );
@@ -79,6 +81,7 @@ if (isset($_POST["dateadd"])) {
     $sql->bindValue(":date", $date);
     $sql->bindValue(":startTime", $startTime);
     $sql->bindValue(":endTime", $endTime);
+    $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
 

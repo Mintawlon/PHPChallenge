@@ -34,7 +34,7 @@ if (isset($_SESSION["centerInfo"])) {
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="./blog.php" class="common_btn add_btn back_btn">Go to Center Info
+                    <a href="./donation.php" class="common_btn add_btn back_btn">Go to Center Info
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
                 </div>

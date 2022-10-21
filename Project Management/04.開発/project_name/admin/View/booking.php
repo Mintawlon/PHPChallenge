@@ -14,7 +14,9 @@ include "../Controller/booking/bookingStatusController.php";
     <title>Booking</title>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
+    <!-- Css -->
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
 </head>
@@ -40,7 +42,7 @@ include "../Controller/booking/bookingStatusController.php";
                         <h2 class="input_set_header my-4 color_fourth">Booking Pending List</h2>
                     </div>
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
                                 <td>Patient Name</td>
@@ -102,7 +104,7 @@ include "../Controller/booking/bookingStatusController.php";
                         <h2 class="input_set_header my-4">Booking Approved List</h2>
                     </div>
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
                                 <td>Patient Name</td>

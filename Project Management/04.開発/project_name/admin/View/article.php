@@ -52,15 +52,15 @@ include("../Controller/article/articleInfoController.php");
                             <?php $number = 1 ?>
                             <?php foreach ($homeArticleInfo as $info) { ?>
                                 <tr>
-                                <td id="number"><?= $number++ ?></td>
-                                <td ><?= $info["header"] ?></td>
+                                    <td id="number"><?= $number++ ?></td>
+                                    <td><?= $info["header"] ?></td>
                                     <td id="paraHeader"> <?= $info["para_header"] ?></td>
-                                    <td id="paragraph" ><?= $info["para_text"] ?></td>
+                                    <td id="paragraph"><?= $info["para_text"] ?></td>
                                     <td id="image"><img src="./storages/image/<?= $info["image"] ?>" alt="" class="image"></td>
-                                    <td >
-                                    <a href="../Controller/articleEditController.php?id=<?= $info["id"] ?>" class="edit_btn me-4">
-                                    Edit</a>
-                                        <a href="../Controller/articleEditController.php?delId=<?= $info["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                    <td>
+                                        <a href="../Controller/articleEditController.php?id=<?= $info["id"] ?>" class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/articleEditController.php?delId=<?= $info["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                     </span>
                                     </td>
@@ -68,25 +68,9 @@ include("../Controller/article/articleInfoController.php");
                             <?php } ?>
                         </tbody>
                     </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <?php
+                    include "./common/pagination.php"
+                    ?>
                     <hr />
                 </section>
 

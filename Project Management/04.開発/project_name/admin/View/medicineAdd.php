@@ -1,3 +1,7 @@
+<?php
+include("../Controller/medicineInfoController.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,97 +32,41 @@
                         <span class="navbar-brand ttl_admin" href="#">Add Medicine</span>
                     </div>
                 </div>
-                <div class="sec_input mb-2">
-                    <a href="./medicineEdit.php" class="common_btn add_btn go_btn">Go to edit medicine
-                        <i class="fa-solid fa-arrow-right arrow_right"></i>
-                    </a>
-                </div>
                 <section class="medicine_table">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Medicine List</h2>
                     </div>
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
-                                <td>Image</td>
                                 <td>Medicine Name</td>
                                 <td>Description</td>
-                                <td>Good For</td>
                                 <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
+                        <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
+                            <?php foreach ($medicineInfo as $medicine) { ?>
                             <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 1</td>
-                                <td>Medicine Name</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
-                                <td>Headache</td>
+                                <td><?= $number++ ?></td>
+                                <td><?= $medicine["medicine_name"] ?></td>
+                                <td><?= $medicine["description"] ?></td>
                                 <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
                                     <span><a href="" class="color_fifth">Delete</a></span>
                                 </td>
                             </tr>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Image 2</td>
-                                <td>Medicine Name</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</td>
-                                <td>Headache</td>
-                                <td>
-                                    <span><a href="" class="color_sixth">Edit</a></span>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
+                            <?php
+                            }
+                            ?>
                         </tbody>
                     </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                 <?php
+                 include "./common/pagination.php"
+                 ?>
                     <hr />
                 </section>
                 <section class="add_medicine">
-<<<<<<< HEAD
-                <form action="../Controller/medicineController.php" method="post"  enctype="multipart/form-data">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Medicine</h2>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Medicine Name</span>
-                            <input type="text" name="name" class="common_input form-control" />
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text">Description</span>
-                            <textarea class="common_input form-control text_area" name="description" placeholder="Text"></textarea>
-                        </div>
-                        <div class="input_one mb-2">
-                            <span class="input_set_text add_file">Add Medicine Image</span>
-                            <input type="file" id="formFileLg" name="medicineImg" class="form-control common_input " accept="image/*" />
-                        </div>
-                        <div class=" mb-2  ">
-                            <!-- Add Btn -->
-                            <button type="submit" name="addMedicine" class="common_btn add_btn">Add</button>
-                            
-                        </div>
-                    </div>
-                </form>
-=======
                     <form action="../Controller/medicineController.php" method="post">
                         <div class="input_set">
                             <h2 class="input_set_header my-4">Add Medicine</h2>
@@ -142,7 +90,6 @@
                         </div>
                     </form>
                 </section>
->>>>>>> origin/main
             </div>
 
 

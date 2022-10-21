@@ -366,6 +366,12 @@ hr {
   border: none !important;
 }
 
+/* Table Header */
+#table_header > tr > td {
+  color: white;
+  font-size: var(--extra_extra_small);
+}
+
 /* Side Nav Bar */
 
 .navbar_wrapper {
