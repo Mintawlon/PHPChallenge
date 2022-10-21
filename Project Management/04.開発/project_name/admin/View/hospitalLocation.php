@@ -109,8 +109,9 @@ include("../Controller/hosLocationController.php");
             <input type="text" name="hospitalEmail" class="common_input form-control" />
           </div>
           <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display">Google Map</span>
-            <input type="text" name="hospitalMap" class="common_input form-control" />
+            <span class="input_set_text text_display ">Google Map</span>
+            <textarea  id="" class="common_input form-control text_area"  name="hospitalMap" rows="5"></textarea>
+            <!-- <input type="text" name="hospitalMap" class="common_input form-control " /> -->
           </div>
           <div class=" mb-2  display_top ">
             <!-- Add Btn -->

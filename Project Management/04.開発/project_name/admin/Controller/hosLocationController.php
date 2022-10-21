@@ -44,4 +44,6 @@ if(isset($_POST["hospitalInfo"])){
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
+
+    header("Location: ../View/hospitalLocation.php");
 }
