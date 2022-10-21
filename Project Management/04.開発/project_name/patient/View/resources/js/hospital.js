@@ -19,7 +19,7 @@ $("#search").click(function () {
           $("#hospitalCard").append(
             `
             <div class="card_wrapper mb-5" >
-             <h2 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="text-center text-white my-4 fw-bold" id="hosname"> ${hospital.hospital_name}</h2>
+             <h2  class="text-center text-white my-4 fw-bold" id="hosname"> ${hospital.hospital_name}</h2>
             <div class="location_box">
               <div class="map_image ">
                 <div class="map">
@@ -43,6 +43,7 @@ $("#search").click(function () {
 
       <hr class="line ">
       </div>
+      <br>
              `
           );
         }
