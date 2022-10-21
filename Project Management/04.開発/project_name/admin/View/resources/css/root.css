@@ -357,30 +357,14 @@ hr {
   background-color: var(--third_color);
 }
 
-/* Pagination */
-.pagination_container {
-  display: flex;
-  justify-content: space-between;
+/* pagination */
+.pagination_item{
+  background-color: transparent !important;
+  border: none !important;
 }
-
-.pagination {
-  margin: 0;
+.pagination_li{
+  border: none !important;
 }
-
-.pagination li:hover{
-    cursor: pointer;
-}
-
-.rows_count {
-  width: 20%;
-  color: var(--first_color) !important;
-  text-align: right;
-}
-
-.pagi_color {
-  color: var(--first_color) !important;
-}
-
 
 /* Side Nav Bar */
 

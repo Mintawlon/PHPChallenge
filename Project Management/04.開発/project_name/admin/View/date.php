@@ -81,8 +81,7 @@ if (isset($_SESSION["doctorInfo"])) {
                         </thead>
                         <tbody>
                         <tbody id="dayTable">
-
-                            <?php $number = 1 ?>
+                            <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                             <?php foreach ($dateInfo as $date) { ?>
                                 <tr class="row_bdr">
                                     <td><?= $number++ ?></td>
@@ -94,30 +93,87 @@ if (isset($_SESSION["doctorInfo"])) {
                                     <td><?php echo $date["endTime"] ?></td>
                                 </tr>
                             <?php } ?>
-                            </tr>
-                            </tr>
                         </tbody>
 
                     </table>
-                    <div class='pagination_container'>
+                    <!-- Pagination -->
+                    <?php
+                    if ($totalPages < 3) { ?>
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item pagination_li
+                            <?php if ($page <= 1) {
+                                echo "disabled";
+                            } ?>
+                            ">
+
+                                    <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
+
+                                <li class="page-item pagination_li ">
+                                    <a class="page-link pagination_item
+                                " href="?page=
+                                <?php for ($i = 1; $i <= $totalPages; $i++) {
+                                    echo $i;
+                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
+                                </li>
+
+
+                                <li class="page-item pagination_li  
+                            <?php if ($page >= $totalPages) {
+                                echo "disabled";
+                            } ?>
+                            ">
+                                    <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    <?php
+                    } else { ?>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item 
+                            <?php if ($page <= 1) {
+                                echo "disabled";
+                            } ?>
+                            ">
+
+                                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
+                                    </a>
+                                </li>
+
+                                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                    <li class="page-item 
+                                <?php
+                                    if ($page == $i) {
+                                        echo "active";
+                                    }
+                                ?>
+                                "><a class="page-link 
+                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
+                                <?php } ?>
+
+
+                                <li class="page-item   
+                            <?php if ($page >= $totalPages) {
+                                echo "disabled";
+                            } ?>
+                            ">
+                                    <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    <?php
+                    }
+                    ?>
+                    <!-- Pagination -->
                     <hr />
                 </section>
                 <section class="dressing_time">

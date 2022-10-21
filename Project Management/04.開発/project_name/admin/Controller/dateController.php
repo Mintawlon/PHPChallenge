@@ -5,12 +5,13 @@ session_start();
 
 include "../Model/dbConnection.php";
 
-//get doctor info
+$rowLimit = 10;
+$page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
+$startPage = ($page-1)*$rowLimit;
 
+//get doctor info
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
-    // echo $id;
-
     $sql = $pdo->prepare(
         "SELECT id,doctor_name,profile_photo,speciality,age FROM `doctor` WHERE id=:id
         "
@@ -21,13 +22,9 @@ if (isset($_GET["id"])) {
     $_SESSION["doctorInfo"] = $doctorInfo;
     $id = $doctorInfo[0]["id"];
     $doctorName = $doctorInfo[0]["doctor_name"];
-
-
     header("Location: ../View/date.php");
-
-    // echo "$id,$name,$speciality,$age";
-    // print_r($doctorInfo);
 }
+
 
 //display date info
 $sql = $pdo->prepare(
@@ -35,14 +32,22 @@ $sql = $pdo->prepare(
         "SELECT doctor_name,age,speciality,date,startTime,endTime
         FROM doctor
         LEFT JOIN date
-        ON doctor.id = date.doctor_id WHERE date.startTime != 'NULL' ; 
+        ON doctor.id = date.doctor_id WHERE date.startTime != 'NULL'  LIMIT  $startPage,$rowLimit ; 
     "
 );
 $sql->execute();
-
-
 $dateInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-//  print_r($dateInfo);
+
+
+// Pagination
+$sql = $pdo->prepare(
+    "SELECT COUNT(id) As total FROM `date` 
+    "
+);
+$sql->execute();
+$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC) [0]["total"];
+
+$totalPages = ceil($totalRecord/$rowLimit);
 
 if (isset($_POST["dateadd"])) {
 

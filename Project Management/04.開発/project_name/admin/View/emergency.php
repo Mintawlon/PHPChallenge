@@ -13,6 +13,7 @@ include("../Controller/emergencyController.php");
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
     <link rel="stylesheet" href="./resources/css/emergency.css">
+    <link rel="stylesheet" href="./resources/css/pagination.scss">
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -34,8 +35,8 @@ include("../Controller/emergencyController.php");
                         <span class="navbar-brand ttl_admin" href="#">Emergency</span>
                     </div>
                 </div>
-               
-                
+
+
                 <!-- Show Article Table -->
                 <section class="first_aid_table mt-4">
                     <table class="table">
@@ -49,7 +50,7 @@ include("../Controller/emergencyController.php");
                             </tr>
                         </thead>
                         <tbody id="table_text">
-                            <?php $number = 1 ?>
+                            <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                             <?php foreach ($emergencyInfo as $emergency) { ?>
                                 <tr class="row_bdr">
                                     <td id="number"><?= $number++ ?></td>
@@ -62,9 +63,9 @@ include("../Controller/emergencyController.php");
 
                                     <td id="text"><?= $emergency["article_text"] ?></td>
                                     <td>
-                                    <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>"class="edit_btn me-4">
+                                        <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="edit_btn me-4">
                                             Edit</a>
-                                        <a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>"class="trash "><i class="fa-solid fa-trash"></i></a>
+                                        <a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
 
                                         <!-- <span class="edit_delete_btn"><a  class="color_sixth me-2">Edit</a></span>
                                         <span class="edit_delete_btn"><a  class="color_fifth">Delete</a></span> -->
@@ -75,25 +76,85 @@ include("../Controller/emergencyController.php");
 
                         </tbody>
                     </table>
-                    <div class='pagination_container'>
+                    <!-- Pagination -->
+                    <?php
+                    if ($totalPages <= 2) { ?>
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item pagination_li
+                            <?php if ($page <= 1) {
+                                echo "disabled";
+                            } ?>
+                            ">
+
+                                    <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
+
+                                <li class="page-item pagination_li ">
+                                    <a class="page-link pagination_item
+                                " href="?page=
+                                <?php for ($i = 1; $i <= $totalPages; $i++) {
+                                    echo $i;
+                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
+                                </li>
+
+
+                                <li class="page-item pagination_li  
+                            <?php if ($page >= $totalPages) {
+                                echo "disabled";
+                            } ?>
+                            ">
+                                    <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    <?php
+                    } else {?>
+                        <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item 
+                            <?php if ($page <= 1) {
+                                echo "disabled";
+                            } ?>
+                            ">
+
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
+                                </a>
+                            </li>
+
+                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                <li class="page-item 
+                                <?php
+                                if ($page == $i) {
+                                    echo "active";
+                                }
+                                ?>
+                                "><a class="page-link 
+                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+
+
+                            <li class="page-item   
+                            <?php if ($page >= $totalPages) {
+                                echo "disabled";
+                            } ?>
+                            ">
+                                <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <?php 
+                    }
+                    ?>
+                    <!-- Pagination -->
+
                     <hr />
                 </section>
                 <!-- Add First Aid Tab Form -->
@@ -127,7 +188,7 @@ include("../Controller/emergencyController.php");
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add paragraph</span>
-                            <textarea name="emergencyParagraph" class="common_input text_area  form-control" placeholder="Text"></textarea>
+                            <textarea name="emergencyParagraph" class="common_input text_area  form-control" placeholder="<ol class='first_aid_para'><li></li></ol>"></textarea>
                         </div>
                         <div class=" mb-2  ">
                             <!-- Add Btn -->
