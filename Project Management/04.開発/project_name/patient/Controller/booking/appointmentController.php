@@ -23,8 +23,7 @@ if (isset($_POST["makeBooking"])) {
     $sql->bindValue(":useremail", $userEmail);
     $sql->execute();
     $check = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-    if((count($check) == 0)){
+    if ((count($check) == 0)) {
         $sql = $pdo->prepare(
             "INSERT INTO booking
             (
@@ -74,67 +73,69 @@ if (isset($_POST["makeBooking"])) {
         $sql->execute();
 
         header("Location: ../../View/booking.php");
-    }else{
-        for ($i=0; $i < count($check) ; $i++) { 
-            if($check[$i]["doctor_id"] == $doctorId ){
-                header("Location: ../../View/appointment.php");
-                echo "<script>
-                alert('Alerady Exist This Email');
-                </script>";
-            }else{
-                $sql = $pdo->prepare(
-                    "INSERT INTO booking
-                    (
-                        date,
-                        doctor_id,
-                        doctor_name,
-                        speciality,
-                        patient_status,
-                        patient_id,
-                        patient_name,
-                        email,
-                        address,
-                        contact,
-                        age,
-                        created_date
-        
-                    ) 
-                    VALUES 
-                    (
-                        :date,
-                        :doctor_id,
-                        :doctor_name,
-                        :speciality,
-                        :patient_status,
-                        :patient_id,
-                        :patient_name,
-                        :email,
-                        :address,
-                        :contact,
-                        :age,
-                        :created_date
-                    )"
-                );
-        
-                $sql->bindValue(":date", $date);
-                $sql->bindValue(":doctor_id", $doctorId);
-                $sql->bindValue(":doctor_name", $doctor);
-                $sql->bindValue(":speciality", $special);
-                $sql->bindValue(":patient_status", $remark);
-                $sql->bindValue(":patient_id", $patientId);
-                $sql->bindValue(":patient_name", $name);
-                $sql->bindValue(":email", $email);
-                $sql->bindValue(":address", $address);
-                $sql->bindValue(":contact", $contact);
-                $sql->bindValue(":age", $age);
-                $sql->bindValue(":created_date", date("Y/m/d"));
-                $sql->execute();
-        
-                header("Location: ../../View/booking.php");
-            }
-         }
-    }
+    } else {
+        $count = 0;
+        for ($i = 0; $i < count($check); $i++) {
+            if ($check[$i]["doctor_id"] == $doctorId) $count++;
+        }
+        if ($count == 0) {
+            $sql = $pdo->prepare(
+                "INSERT INTO booking
+                (
+                    date,
+                    doctor_id,
+                    doctor_name,
+                    speciality,
+                    patient_status,
+                    patient_id,
+                    patient_name,
+                    email,
+                    address,
+                    contact,
+                    age,
+                    created_date
     
+                ) 
+                VALUES 
+                (
+                    :date,
+                    :doctor_id,
+                    :doctor_name,
+                    :speciality,
+                    :patient_status,
+                    :patient_id,
+                    :patient_name,
+                    :email,
+                    :address,
+                    :contact,
+                    :age,
+                    :created_date
+                )"
+            );
+    
+            $sql->bindValue(":date", $date);
+            $sql->bindValue(":doctor_id", $doctorId);
+            $sql->bindValue(":doctor_name", $doctor);
+            $sql->bindValue(":speciality", $special);
+            $sql->bindValue(":patient_status", $remark);
+            $sql->bindValue(":patient_id", $patientId);
+            $sql->bindValue(":patient_name", $name);
+            $sql->bindValue(":email", $email);
+            $sql->bindValue(":address", $address);
+            $sql->bindValue(":contact", $contact);
+            $sql->bindValue(":age", $age);
+            $sql->bindValue(":created_date", date("Y/m/d"));
+            $sql->execute();
+    
+            header("Location: ../../View/booking.php");
+        } else {
+            header("Location: ../../View/appointment.php");
+            echo "<script>
+            alert('Alerady Exist This Email');
+            </script>";
+        }
+    }
+
 
     // if (count($check) == 0) {
     //     $sql = $pdo->prepare(
