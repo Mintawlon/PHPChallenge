@@ -3,8 +3,8 @@ include "../../Model/dbConnection.php";
 session_start();
 
 // Get User Info
-if(isset($_SESSION["email"] )){
-    $loginEmail =  $_SESSION["email"] ;
+if(isset($_SESSION["email"])){
+    $loginEmail =  $_SESSION["email"];
     $sql = $pdo->prepare(
         "SELECT * FROM user_register WHERE email_address = :Email
         "
@@ -27,4 +27,3 @@ if (isset($_GET["doctorId"])) {
     $_SESSION["appointmentDoctorInfo"] = $doctorInfo;
     header("Location: ../../View/appointment.php");
 }
-?>

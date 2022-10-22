@@ -29,16 +29,18 @@ session_start();
         <img class=" mt-5 ms-5" src="" alt="LOGO">
         <!-- body -->
         <div class="body ">
+            <form action="../Controller/forgotPasswordController.php" method="post">
             <br><br><br><br>
             <div class="inputbox_wrapper">
                 <p class="pasw mt-5 fw-semibold">Forgot Your Password?</p>
                 <!-- input box -->
                 <div class="inpbox ms-5 mt-5">
-                    <input type="text" class="name form-control" placeholder="Email Address">
+                    <input type="text" class="name form-control" name="email" placeholder="Email Address">
                     <br>
-                    <button type="submit" class="btnsignup mt-1 form-control">
+                    <button type="submit" name="resetPsw" class="btnsignup mt-1 form-control">
                         Send Email
                     </button>
+                    </form>
                 </div>
             </div>
             <div>

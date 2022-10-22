@@ -2,11 +2,11 @@ body {
   background-color: #1c92d2 !important;
 }
 
-.select-doctor{
-    height:3.125rem !important;
-    width: 15.625rem !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+.select-doctor {
+  height: 3.125rem !important;
+  width: 15.625rem !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 .btn-row {
   display: flex !important;
@@ -15,7 +15,7 @@ body {
 }
 
 /* doctor card*/
-.card{
+.card {
   background-color: white !important;
   width: 20rem !important;
   margin: 3rem !important;
@@ -40,95 +40,111 @@ body {
 .btk {
   text-align: left !important;
   font-weight: bold;
-  background-color: #ffc652 !important;
-  width:100%;
+  background-color: var(--secondary_color) !important;
+  width: 100%;
   color: var(--first_color);
 }
-.title{
-   margin-left: 4rem !important;
-   margin-right: 4rem !important;
+.title {
+  margin-left: 4rem !important;
+  margin-right: 4rem !important;
 }
-.form-check{
+.form-check {
   color: var(--secondary_color);
   font-weight: 500 !important;
+}
+.form-check-label{
+  display: block;
+  position: relative;
+}
+#day{
+  position: absolute;
+  left: 2.5em;
+}
+#time{
+  position: absolute;
+ 
 }
 hr {
   color: #2535a1 !important;
 }
-.card-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#submit_atag {
+  text-decoration: none;
+  color: white !important;
+  display: block;
+}
+.submit {
+  background-color: var(--secondary_color) !important;
+  width: 100% !important;
+  border: 2px solid var(--secondary_color);
+}
+.submit:hover {
+  background-color: var(--first_color) !important;
+}
+#submit_atag:hover {
+  color: var(--secondary_color) !important;
+}
+.list-inline {
+  color: white !important;
 }
 
-.submit{
-    background-color: #FFC652 !important;
-    color: white !important;
-    width: 100% !important;
-}
-.list-inline{
-color: white !important;
-    
+hr {
+  color: #2535a1 !important;
 }
 
-hr{
-    color: #2535A1 !important;
+.square_special_btn {
+  background-color: var(--secondary_color) !important;
+  color: var(--first_color);
+  border: 2px solid var(--secondary_color);
+  width: 250px;
+  height: 50px;
+  font-size: var(--extra_small);
+  border-radius: 0.25rem !important;
+  border: 1px solid var(--first_color);
+  margin-left: 3rem;
 }
 
-.square_special_btn{
-    background-color: var(--secondary_color) !important;
-    color:  var(--first_color);
-    border: 2px solid var(--secondary_color);
-    width: 250px;
-    height: 50px;
-    font-size: var(--extra_small);
-    border-radius: 0.25rem !important;
-    border: 1px solid var(--first_color);
-    margin-left: 3rem;
+.square_special_btn:hover {
+  background-color: #ffc652 !important;
+  color: var(--second_color) !important;
+  border: 2px solid var(--second_color);
 }
-
-.square_special_btn:hover{
-    background-color: #FFC652 !important;
-    color: var(--second_color) !important;
-    border: 2px solid var(--second_color);
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.btn-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 @media screen and (max-width: 600px) {
-       
-    .square_blue_btn{
-        font-size: 0.75rem !important;
-    }
-    .cart{
-      margin-left: 15rem !important;
+  .square_blue_btn {
+    font-size: 0.75rem !important;
   }
-
+  .cart {
+    margin-left: 15rem !important;
+  }
 }
 
 @media screen and (max-width: 720px) {
-       
-  .cart{
-      margin-left: 10rem !important;
+  .cart {
+    margin-left: 10rem !important;
   }
-.mobile{
-  margin-left: 0.5rem !important;
-}
-.square_special_btn{
-  font-size: 0.75rem !important;
-}
+  .mobile {
+    margin-left: 0.5rem !important;
+  }
+  .square_special_btn {
+    font-size: 0.75rem !important;
+  }
 }
 
 @media screen and (max-width: 545px) {
-       
-  .cart{
-      margin-left: 3rem !important;
+  .cart {
+    margin-left: 3rem !important;
   }
-  .mobile{
-      margin-left: 0.5rem !important;
+  .mobile {
+    margin-left: 0.5rem !important;
   }
 }

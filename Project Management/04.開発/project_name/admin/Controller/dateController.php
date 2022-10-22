@@ -12,7 +12,7 @@ if (isset($_GET["id"])) {
     // echo $id;
 
     $sql = $pdo->prepare(
-        "SELECT id,doctor_name,speciality,age FROM `doctor` WHERE id=:id
+        "SELECT id,doctor_name,profile_photo,speciality,age FROM `doctor` WHERE id=:id
         "
     );
     $sql->bindValue(":id", $id);
