@@ -1,12 +1,14 @@
 <?php
 include "../Model/dbConnection.php";
 
-$rowLimit = 1;
+$rowLimit = 10;
 $page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
 $startPage = ($page-1)*$rowLimit;
 
+
 //approved list
-$sql = $pdo->prepare("SELECT * FROM booking WHERE status=1 LIMIT  $startPage,$rowLimit");
+$sql = $pdo->prepare("SELECT * FROM booking WHERE status=1 AND history = 0 AND date =:today LIMIT  $startPage,$rowLimit");
+$sql->bindValue(":today",date("Y-m-d"));
 $sql->execute();
 $approved = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -19,3 +21,12 @@ $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC) [0]["total"];
 
 $totalPages = ceil($totalRecord/$rowLimit);
+
+
+// Get history info
+$sql = $pdo->prepare(
+    "SELECT * FROM patient_history"
+);
+$sql->execute();
+$historyList = $sql->fetchAll(PDO::FETCH_ASSOC);
+

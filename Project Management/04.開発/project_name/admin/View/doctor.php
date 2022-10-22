@@ -109,7 +109,6 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                 <option value="0">Male</option>
                                 <option value="1">Female</option>
                             </select>
-                            <!-- <input type="text" class="common_input " name="doctorGender" /> -->
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Speciality</span>

@@ -141,6 +141,12 @@
     display: inline;
   }
 }
+/* patient history */
+#patient_history{
+  text-decoration: none;
+  color: var(--first_color);
+}
+
 /* Hover Design */
 .navbar_text {
   margin: 20px auto;

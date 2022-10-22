@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (isset($_SESSION["patientInfoHistory"])) {
+    $patientInfo = $_SESSION["patientInfoHistory"];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,45 +35,52 @@
                     </div>
                 </div>
                 <div class="sec_input mb-2">
-                    <a href="" class="common_btn add_btn back_btn">Back to History List
+                    <a href="./patientHistory.php" class="common_btn add_btn back_btn">Back to History List
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
                 </div>
-                <div class="input_set">
+                <form action="../Controller/patientHistoryController.php" method="POST" class="input_set">
                     <h2 class="input_set_header my-4">Add Patient History</h2>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Patient Name</span>
-                        <input type="text" class="common_input form-control " />
+                        <input type="text" class="common_input form-control" value="<?= $patientInfo[0]["patient_name"] ?>" disabled />
+                        <input type="text" name="patientName" value="<?= $patientInfo[0]["patient_name"] ?>" hidden>
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Date</span>
-                        <input type="text" class="common_input form-control " />
+                        <input type="text" class="common_input form-control " value="<?= $patientInfo[0]["date"] ?>" disabled />
+                        <input type="text" name="dateBooking" value="<?= $patientInfo[0]["date"] ?>" hidden>
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Doctor Name</span>
-                        <input type="text" class="common_input form-control " />
+                        <input type="text" class="common_input form-control " value="<?= $patientInfo[0]["doctor_name"] ?>" disabled />
+                        <input type="text" name="doctorName" value="<?= $patientInfo[0]["doctor_name"] ?>" hidden>
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Disease</span>
-                        <input type="text" class="common_input form-control " />
+                        <input type="text" class="common_input form-control " name="diseaseHistory" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Medicine</span>
-                        <input type="text" class="common_input form-control " />
+                        <input type="text" class="common_input form-control " name="medicineHistory" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Next Appointment</span>
-                        <input type="text" class="common_input form-control " />
+                        <input type="date" class="common_input form-control " name="nextAppointment" />
                     </div>
                     <div class="input_one mb-2">
-                        <span class="input_set_text">Hospital</span>
-                        <input type="text" class="common_input form-control " />
+                        <span class="input_set_text">Symptoms</span>
+                        <input type="text" class="common_input form-control " name="symptoms" />
+                    </div>
+                    <div class="input_one mb-2">
+                        <span class="input_set_text">To Avoid</span>
+                        <input type="text" class="common_input form-control " name="avoid" />
                     </div>
                     <div class=" mb-2  ">
                         <!-- Add Btn -->
-                        <a href="" class="common_btn add_btn  ">Add</a>
+                        <button type="submit" href="" class="common_btn add_btn " name="addHistory">Add</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
