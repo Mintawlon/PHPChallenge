@@ -76,7 +76,7 @@ if (isset($_SESSION["updatedInfo"])) {
               <br>
               <br>
               <!-- Blue Square Btn -->
-              <button class="square_blue_btn">Patient History</button>
+              <button class="square_blue_btn"><a href="./patientHistory.php" id="patient_history">Patient History</a></button>
               <br>
               <br>
               <!-- Blue Square Btn -->

@@ -11,7 +11,7 @@ $sql->execute();
 $patientBookingList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 //approved list
-$sql = $pdo->prepare("SELECT * FROM booking WHERE status=1");
+$sql = $pdo->prepare("SELECT * FROM booking WHERE status=1 AND history=0");
 $sql->execute();
 $approved = $sql->fetchAll(PDO::FETCH_ASSOC);
 

@@ -1,3 +1,9 @@
+<?php
+
+include "../Controller/booking/approvedPatientListController.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,29 +37,8 @@
                         <span class="navbar-brand ttl_admin" href="#">Patient History</span>
                     </div>
                 </div>
-                <div class="sec_input mb-2">
-                    <a href="" class="common_btn add_btn go_btn">Go to Add History
-                        <i class="fa-solid fa-arrow-right arrow_right"></i>
-                    </a>
-                    <div class="tb_search">
-                        <input type="text" class="common_input  form-control" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search" />
-                    </div>
-                </div>
                 <div class="input_set">
-                    <h2 class="input_set_header my-4">Patient History List</h2>
-                </div>
-                <div class="num_rows">
-                    <div class="form-group">
-                        <select class="form-control" name="state" id="maxRows">
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
-                    </div>
+                    <h2 class="input_set_header my-4">Today Approved Patient List</h2>
                 </div>
                 <table class="table" id="table-id">
                     <thead class="table_bgcolor" id="table_header">
@@ -61,122 +46,70 @@
                             <td>No.</td>
                             <td>Patient Name</td>
                             <td>Age</td>
-                            <td>Doctor Name</td>
                             <td>Contact</td>
                             <td>Address</td>
+                            <td>Doctor Name</td>
+                            <td>Specility</td>
+                            <td>Booking Date</td>
+                            <td>Status</td>
+                            <td>Add</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="row_bdr">
-                            <td>1</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr. Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>2</td>
-                            <td>Leo</td>
-                            <td>20</td>
-                            <td>Dr.Lucifer </td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>3</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>4</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>5</td>
-                            <td>Mary</td>
-                            <td>20</td>
-                            <td>Dr.Knight Crawler</td>
-                            <td>123456789</td>
-                            <td>Yangon</td>
-                        </tr>
+                        <?php $count = 0; ?>
+                        <?php foreach ($approved as $patient) { ?>
+                            <tr class="row_bdr">
+                                <td><?php echo ++$count ?></td>
+                                <td><?php echo $patient["patient_name"] ?></td>
+                                <td><?php echo $patient["age"] ?></td>
+                                <td><?php echo $patient["contact"] ?></td>
+                                <td><?php echo $patient["address"] ?></td>
+                                <td><?php echo $patient["doctor_name"] ?></td>
+                                <td><?php echo $patient["speciality"] ?></td>
+                                <td><?php echo $patient["date"] ?></td>
+                                <td><?php echo $patient["patient_status"] ?></td>
+                                <td>
+                                    <a href="../Controller/patientHistoryController.php?id=<?php echo $patient["id"] ?>" class="color_sixth"><button class="edit_btn me-4" value="">Add</button></a>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
-                <div class='pagination_container'>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-
+             
+                <div class="input_set">
+                    <h2 class="input_set_header my-4">Patient History List</h2>
                 </div>
+                <table class="table" id="table-id">
+                    <thead class="table_bgcolor" id="table_header">
+                        <tr>
+                            <td>No.</td>
+                            <td>Patient Name</td>
+                            <td>Doctor Name</td>
+                            <td>Booking Date</td>
+                            <td>Disease</td>
+                            <td>Medicine</td>
+                            <td>Next Appointment</td>
+                            <td>Symptoms</td>
+                            <td>To Avoid</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $count = 0; ?>
+                        <?php foreach ($historyList as $history) { ?>
+                            <tr class="row_bdr">
+                                <td><?php echo ++$count ?></td>
+                                <td><?php echo $history["patient_name"] ?></td>
+                                <td><?php echo $history["doctor_name"] ?></td>
+                                <td><?php echo $history["booking_date"] ?></td>
+                                <td><?php echo $history["disease"] ?></td>
+                                <td><?php echo $history["medicine"] ?></td>
+                                <td><?php echo $history["next_appointment_date"] ?></td>
+                                <td><?php echo $history["symptoms"] ?></td>
+                                <td><?php echo $history["to_avoid"] ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
