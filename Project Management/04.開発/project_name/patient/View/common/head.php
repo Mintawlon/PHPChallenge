@@ -3,7 +3,7 @@ if (isset($_SESSION["updatedInfo"])) {
   $updateInfo = $_SESSION["updatedInfo"];
   $name =  $updateInfo[0]["register_name"];
   $photo =  $updateInfo[0]["profile_image"];
-}else{
+} else {
   $name = $_SESSION["userName"];
   $photo =  $_SESSION["defaultPhoto"];
 }
@@ -16,7 +16,7 @@ if (isset($_SESSION["updatedInfo"])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header</title>
+  <title>Header</title> 
   <!-- Boostrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -29,7 +29,7 @@ if (isset($_SESSION["updatedInfo"])) {
 <body>
   <nav class="navbar navbar-expand-lg px-4 ">
     <div class="container-fluid">
-      <p class="logo mt-3" href="#">Logo</p>
+      <img class="vrcarer" src="./storages/logo/VR2.png" alt="Vr_Carer" width="104px">
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
       <div class="collapse navbar-collapse navbar_text_div" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
@@ -39,9 +39,8 @@ if (isset($_SESSION["updatedInfo"])) {
           <a class="navbar_text mt-4 me-5 " href="./blog.php">Blogs</a>
           <a class="navbar_text mt-3 me-4 ">
             <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <span class="navbarProfileText me-3" class="navbarProfileText">Profile</span>
-              <img src="./storages/image/<?=$photo?>" class="profile">
-             
+              <span class="navbarProfileText me-3" class="navbarProfileText">Profile</span>
+              <img src="./storages/image/<?= $photo ?>" class="profile">
             </span>
           </a>
         </div>
@@ -50,42 +49,42 @@ if (isset($_SESSION["updatedInfo"])) {
   </nav>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div id="offcanvas">
-    <div class="offcanvasheader mb-4">
-      <h5 class="your_profile">Your Profile</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="box">
-        <div class="mainbox">
-          <a href="../Controller/login,signUp,profile/profileEditController.php
+      <div class="offcanvasheader mb-4">
+        <h5 class="your_profile">Your Profile</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="box">
+          <div class="mainbox">
+            <a href="../Controller/login,signUp,profile/profileEditController.php
           " class="usersetting"><i class="fa-solid fa-gear"></i></a>
-          <br>
-          <br>
-          <p class="text-center">
-            <img src="./storages/image/<?=$photo?>" class="profile" id="offcanvas_photo">
-          </p>
-          <span class="text-center offcanvas_text">
-          <label for="name" id="name">
-            <?=$name?>
-          </label>
-          </sp>
-          <span class="text-center offcanvas_text">
-          <label for="email" id="email">
-            <?= $_SESSION["email"] ?>
-          </label>
-          </span>
-          <br>
-          <br>
-          <!-- Blue Square Btn -->
-          <button class="square_blue_btn">Patient History</button>
-          <br>
-          <br>
-          <!-- Blue Square Btn -->
+            <br>
+            <br>
+            <p class="text-center">
+              <img src="./storages/image/<?= $photo ?>" class="profile" id="offcanvas_photo">
+            </p>
+            <span class="text-center offcanvas_text">
+              <label for="name" id="name">
+                <?= $name ?>
+              </label>
+              </sp>
+              <span class="text-center offcanvas_text">
+                <label for="email" id="email">
+                  <?= $_SESSION["email"] ?>
+                </label>
+              </span>
+              <br>
+              <br>
+              <!-- Blue Square Btn -->
+              <button class="square_blue_btn">Patient History</button>
+              <br>
+              <br>
+              <!-- Blue Square Btn -->
 
-            <a href="./login.php" class=" text-white " id="logoutbtn">Logout</a>
+              <a href="./login.php" class=" text-white " id="logoutbtn">Logout</a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 </body>

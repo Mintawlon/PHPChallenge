@@ -9,7 +9,7 @@ include "./common/mailSender.php";
 if(isset($_POST["resetPsw"])){
     $userEmail = $_POST["email"];
     
-    $sql = $pdo->prepare("SELECT * FROM user_register WHERE email= :email");
+    $sql = $pdo->prepare("SELECT * FROM user_register WHERE email_address = :email");
     $sql->bindValue(":email", $userEmail);
     $sql->execute();
     $userInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -36,12 +36,12 @@ if(isset($_POST["resetPsw"])){
          //mail send
         $mail = new SendMail();
         $mail->sendMail(
-            $userInfo[0]['email'],
+            $userInfo[0]['email_address'],
             "Reset Password Complete",
             "<h1>Password Reset Complete</h1>
             <p>New Password : $newPassword</p>"
         );
-        header("Location: ../View/login.php");
+         header("Location: ../View/login.php");
     }else{
 
     }

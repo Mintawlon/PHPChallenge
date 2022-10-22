@@ -26,7 +26,7 @@ session_start();
 <body>
     <div class="conainer">
         <!-- Logo  -->
-        <img class=" mt-5 ms-5" src="" alt="LOGO">
+        <img class=" mt-5 ms-5" src="../View/storages/logo/VR2.png" alt="LOGO" width="104px">
         <!-- body -->
         <div class="body ">
             <form action="../Controller/forgotPasswordController.php" method="post">
