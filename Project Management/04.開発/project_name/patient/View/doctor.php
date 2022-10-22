@@ -5,6 +5,8 @@ include "../Controller/doctor/doctorDressingTimeController.php";
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
 }
+
+unset($_SESSION["selectedDoctorDuty"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

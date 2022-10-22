@@ -1,22 +1,18 @@
 <?php
 include "../Model/dbConnection.php";
 
-
-$rowLimit = 5;
+$rowLimit = 1;
 $page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
 $startPage = ($page-1)*$rowLimit;
 
-// get doctor info
-$sql = $pdo->prepare(
-    "SELECT * FROM `doctor` WHERE del_flg != 1  LIMIT  $startPage,$rowLimit  ;
-    "
-);
+//approved list
+$sql = $pdo->prepare("SELECT * FROM booking WHERE status=1 LIMIT  $startPage,$rowLimit");
 $sql->execute();
-$doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+$approved = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // Pagination
 $sql = $pdo->prepare(
-    "SELECT COUNT(id) As total FROM `doctor` 
+    "SELECT COUNT(id) As total FROM `booking` WHERE status=1
     "
 );
 $sql->execute();

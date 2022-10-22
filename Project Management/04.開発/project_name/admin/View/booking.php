@@ -1,6 +1,5 @@
 <?php
 include "../Controller/booking/bookingStatusController.php";
-
 //print_r($rejected);
 ?>
 
@@ -39,7 +38,7 @@ include "../Controller/booking/bookingStatusController.php";
 
                 <section class="booking_pending">
                     <div class="input_set">
-                        <h2 class="input_set_header my-4 color_fourth">Booking Pending List</h2>
+                        <h2 class="input_set_header my-4 ">Booking Pending List</h2>
                     </div>
                     <table class="table">
                         <thead class="table_bgcolor" id="table_header">
@@ -57,10 +56,10 @@ include "../Controller/booking/bookingStatusController.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $count = 0; ?>
+                        <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                             <?php foreach ($patientBookingList as $list) { ?>
                                 <tr class="row_bdr">
-                                    <td><?php echo ++$count ?></td>
+                                    <td><?php echo $number++ ?></td>
                                     <td><?php echo $list["patient_name"] ?></td>
                                     <td><?php echo $list["age"] ?></td>
                                     <td><?php echo $list["contact"] ?></td>
@@ -77,25 +76,9 @@ include "../Controller/booking/bookingStatusController.php";
                             <?php } ?>
                         </tbody>
                     </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <?php
+                    include "./common/pagination.php";
+                    ?>
                     <hr />
                 </section>
 
@@ -118,6 +101,7 @@ include "../Controller/booking/bookingStatusController.php";
                             </tr>
                         </thead>
                         <tbody>
+                        <?php $count = 0; ?>
                             <?php foreach ($approved as $patient) { ?>
                                 <tr class="row_bdr">
                                     <td><?php echo ++$count ?></td>
@@ -133,25 +117,6 @@ include "../Controller/booking/bookingStatusController.php";
                             <?php } ?>
                         </tbody>
                     </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
                     <hr />
                 </section>
             </div>
