@@ -27,7 +27,7 @@ if (isset($_SESSION["updatedInfo"])) {
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg px-4 ">
+  <nav class="navbar navbar-expand-lg px-3 ">
     <div class="container-fluid">
       <img class="vrcarer" src="./storages/logo/VR2.png" alt="Vr_Carer" width="104px">
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
