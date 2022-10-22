@@ -12,12 +12,6 @@ if (isset($_POST["searchText"])) {
 
 
     echo json_encode($inpatientList);
-    // print_r($inpatientList);
-
-//     // $_SESSION["doctorInfo"] = $doctorInfo;
-//     // header("Location: ../View/doctorEdit.php");
-
-//     print_r($inpatientInfo);
  }
 
 

@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <table class="table" id="table-id">
-                    <thead class="table_bgcolor">
+                    <thead class="table_bgcolor" id="table_header">
                         <tr>
                             <td>No.</td>
                             <td>Patient Name</td>

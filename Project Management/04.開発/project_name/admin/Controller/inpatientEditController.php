@@ -16,8 +16,8 @@ if (isset($_GET["id"])) {
     $sql->execute();
 
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    // echo "<pre>";
-    // print_r($result);
+    echo "<pre>";
+    print_r($result);
 
     $_SESSION["inpatientInfo"] = $result;
 
@@ -26,16 +26,23 @@ if (isset($_GET["id"])) {
 
 if(isset($_GET["delId"])){
 
-    
-    $delId = $_GET["delId"];
+     $id =  $_GET["delId"];
 
-     $sql = $pdo->prepare(
-        "DELETE FROM `inpatient` WHERE id=:id");
-     $sql->bindValue(":id",$delId);
+
+     $sql = $pdo->prepare("UPDATE inpatient SET 
+    del_flg = 1
+     WHERE id=:id"
+     );
+    $sql->bindValue(":id", $id);
+
     $sql->execute();
+    
+    // $delId = $_GET["delId"];
 
-    header("Location: ../View/inpatientList.php");
+    //  $sql = $pdo->prepare(
+    //     "DELETE FROM `inpatient` WHERE id=:id");
+    //  $sql->bindValue(":id",$delId);
+    // $sql->execute();
+
+    // header("Location: ../View/inpatientList.php");
 }
-
-
-?>

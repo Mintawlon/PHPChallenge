@@ -31,6 +31,45 @@ include "../Controller/bloodDonationCenter/donationListController.php";
                         <span class="navbar-brand ttl_admin" href="#">Blood Donation</span>
                     </div>
                 </div>
+                <section class="center_list">
+                    <div class="input_set">
+                        <h2 class="input_set_header my-4">Blood Donation Center List</h2>
+                    </div>
+                    <table class="table">
+                        <thead class="table_bgcolor" id="table_header">
+                            <tr>
+                                <td>No.</td>
+                                <td>Center Name</td>
+                                <td>Contact</td>
+                                <td>Email</td>
+                                <td>Address</td>
+                                <td>Remove</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $count = 0; ?>
+                            <?php foreach ($centerList as $center) {
+
+                            ?>
+                                <tr class="row_bdr">
+                                    <td><?php echo ++$count ?></td>
+                                    <td><?php echo $center["center_name"] ?></td>
+                                    <td><?php echo $center["center_contact"] ?></td>
+                                    <td><?php echo $center["center_email"] ?></td>
+                                    <td><?php echo $center["center_address"] ?></td>
+                                    <td>
+                                        <span><a href="../Controller/bloodDonationCenter/EditDonationController.php?id=<?php echo $center["id"] ?>" class="color_sixth">Edit</a></span>
+                                        <a href="../Controller/bloodDonationCenter/deleteCenterController.php?id=<?php echo $center["id"] ?>" class="color_fifth">Remove</a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                   <?php
+                   include "./common/pagination.php";
+                   ?>
+                    <hr />
+                </section>
                 <section class="add_center">
                     <div class="input_set mt-3">
                         <div class="input_set">
@@ -65,64 +104,10 @@ include "../Controller/bloodDonationCenter/donationListController.php";
                                 <button type="submit" name="addCenter" class="btn btn-primary mb-2 w-50">Save</button>
                             </div>
                         </form>
-                        <hr />
-                    </div>
-                </section>
-                <section class="center_list">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4">Blood Donation Center List</h2>
-                    </div>
-                    <table class="table">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>No.</td>
-                                <td>Center Name</td>
-                                <td>Contact</td>
-                                <td>Email</td>
-                                <td>Address</td>
-                                <td>Remove</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $count = 0; ?>
-                            <?php foreach ($centerList as $center) {
 
-                            ?>
-                                <tr class="row_bdr">
-                                    <td><?php echo ++$count ?></td>
-                                    <td><?php echo $center["center_name"] ?></td>
-                                    <td><?php echo $center["center_contact"] ?></td>
-                                    <td><?php echo $center["center_email"] ?></td>
-                                    <td><?php echo $center["center_address"] ?></td>
-                                    <td>
-                                        <span><a href="../Controller/bloodDonationCenter/EditDonationController.php?id=<?php echo $center["id"] ?>" class="color_sixth">Edit</a></span>
-                                        <a href="../Controller/bloodDonationCenter/deleteCenterController.php?id=<?php echo $center["id"] ?>" class="color_fifth">Remove</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
-                    <hr />
                 </section>
+                
             </div>
         </div>
     </div>

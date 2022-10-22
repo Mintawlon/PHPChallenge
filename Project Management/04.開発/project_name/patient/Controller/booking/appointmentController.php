@@ -1,6 +1,10 @@
 <?php
 include "../../Model/dbConnection.php";
+session_start();
+$userEmail = $_SESSION["email"];
+//echo $userEmail;
 if (isset($_POST["makeBooking"])) {
+
     $patientId = $_POST["id"];
     $name = $_POST["patient"];
     $email = $_POST["email"];
@@ -13,11 +17,16 @@ if (isset($_POST["makeBooking"])) {
     $doctorId = $_POST["doctorId"];
     $special = $_POST["speciality"];
 
-    echo $name;
-    echo $special;
-
     $sql = $pdo->prepare(
-        "INSERT INTO booking
+        "SELECT doctor_id FROM booking WHERE email = :useremail"
+    );
+    $sql->bindValue(":useremail", $userEmail);
+    $sql->execute();
+    $check = $sql->fetchAll(PDO::FETCH_ASSOC);
+    echo $check;
+    if (count($check) == 0) {
+        $sql = $pdo->prepare(
+            "INSERT INTO booking
             (
                 date,
                 doctor_id,
@@ -48,21 +57,27 @@ if (isset($_POST["makeBooking"])) {
                 :age,
                 :created_date
             )"
-    );
+        );
 
-    $sql->bindValue(":date", $date);
-    $sql->bindValue(":doctor_id", $doctorId);
-    $sql->bindValue(":doctor_name", $doctor);
-    $sql->bindValue(":speciality", $special);
-    $sql->bindValue(":patient_status", $remark);
-    $sql->bindValue(":patient_id", $patientId);
-    $sql->bindValue(":patient_name", $name);
-    $sql->bindValue(":email", $email);
-    $sql->bindValue(":address", $address);
-    $sql->bindValue(":contact", $contact);
-    $sql->bindValue(":age", $age);
-    $sql->bindValue(":created_date", date("Y/m/d"));
-    $sql->execute();
+        $sql->bindValue(":date", $date);
+        $sql->bindValue(":doctor_id", $doctorId);
+        $sql->bindValue(":doctor_name", $doctor);
+        $sql->bindValue(":speciality", $special);
+        $sql->bindValue(":patient_status", $remark);
+        $sql->bindValue(":patient_id", $patientId);
+        $sql->bindValue(":patient_name", $name);
+        $sql->bindValue(":email", $email);
+        $sql->bindValue(":address", $address);
+        $sql->bindValue(":contact", $contact);
+        $sql->bindValue(":age", $age);
+        $sql->bindValue(":created_date", date("Y/m/d"));
+        $sql->execute();
 
-    header("Location: ../../View/booking.php");
+        header("Location: ../../View/booking.php");
+    } else {
+        header("Location: ../../View/appointment.php");
+        echo "<script>
+        alert('Alerady Exist This Email');
+        </script>";
+    }
 }

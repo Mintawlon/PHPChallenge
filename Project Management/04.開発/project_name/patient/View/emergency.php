@@ -63,9 +63,10 @@ if (!isset($_SESSION["email"])) {
     </div>
 
     <!-- Cards -->
-    <?php foreach ($emergencyInfo as $emergency) { ?>
+
         <div class="first_aid_card my-4" id="articleSearch">
-            <!-- <div class="first_aid_card">
+        <?php foreach ($emergencyInfo as $emergency) { ?>
+             <div class="first_aid_card">
                 <h1 class="first_aid_card_header mb-3">First Aid For <span>
                         <?= $emergency["article_header"] ?>
                     </span>
@@ -74,24 +75,15 @@ if (!isset($_SESSION["email"])) {
                     <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
                     <div class="info">
                         <h2 class="first_aid_para_header">What to Do?</h2>
-                        <?php
-                        $html = "<ol class='first_aid_para'>
-                        <li>Find a person nearby. Make eye contact, point to them, and say: “Call 911.”</li>
-                        <li>Start doing chest compressions on the person who needs help. Using both your hands, push down hard and fast in the center of the person’s chest. Let their chest come back up naturally between compressions. Keep going until someone with more training arrives.
-                        </li>
-                        <li>If you’re trained in CPR, you can use chest compressions and rescue breathing.
-                        </li>
-                        <li>If it’s available, use an AED. However, do not put off doing chest compressions to go look for an AED. If possible, instruct someone else to go find the device and bring it to you.</li>
-                        </ol>";
-                        echo $html;
-                        ?>
+                        <?= $emergency["article_text"] ?>
                     </div>
                 </div>
                 <hr class="line" />
-            </div> -->
-        </div> 
-    <?php }
+            </div>
+            <?php }
     ?>
+        </div> 
+   
 
     <!-- Footer -->
     <?php

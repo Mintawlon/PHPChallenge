@@ -5,7 +5,7 @@ $("#search").click(function () {
     let sendData = {
         searchText: $("#searchFirstaid").val()
     };
-
+    console.log(sendData);
     $.ajax({
       url: "../Controller/emergencyPage/searchFirstaidController.php",
       type: "POST",

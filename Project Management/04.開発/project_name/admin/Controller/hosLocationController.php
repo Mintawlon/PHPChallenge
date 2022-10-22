@@ -1,13 +1,33 @@
 <?php
 include("../Model/dbConnection.php");
 
+
+$rowLimit = 3;
+$page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
+$startPage = ($page-1)*$rowLimit;
+
+
 // Get Hospital Info
 $sql = $pdo->prepare(
-    "SELECT * FROM `hospital_location` 
+<<<<<<< HEAD
+    "SELECT * FROM `hospital_location` WHERE del_flg != 1
+=======
+    "SELECT * FROM `hospital_location`  LIMIT  $startPage,$rowLimit 
+>>>>>>> origin/main
     "
 );
 $sql->execute();
 $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+// Pagination
+$sql = $pdo->prepare(
+    "SELECT COUNT(id) As total FROM `hospital_location` 
+    "
+);
+$sql->execute();
+$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC) [0]["total"];
+
+$totalPages = ceil($totalRecord/$rowLimit);
 
 // Add Hospital Info
 if(isset($_POST["hospitalInfo"])){
@@ -44,4 +64,6 @@ if(isset($_POST["hospitalInfo"])){
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
+
+    header("Location: ../View/hospitalLocation.php");
 }

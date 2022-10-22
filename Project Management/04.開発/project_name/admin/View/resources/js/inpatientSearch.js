@@ -14,10 +14,10 @@ $("#search").click(function (){
 
             success: function(res){
                 
-                let inpatients = JSON.parse(res);
+                let inpatientList = JSON.parse(res);
 
                 $("#table_id").empty();
-                for (const inpatient of inpatients) {
+                for (const inpatient of inpatientList) {
                     $("#table_id").append(
                         `<tr class="row_bdr">
                         <td>1</td> -->

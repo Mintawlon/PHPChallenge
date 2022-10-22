@@ -1,5 +1,7 @@
 <?php
 include "../Controller/booking/bookingStatusController.php";
+
+//print_r($rejected);
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +14,9 @@ include "../Controller/booking/bookingStatusController.php";
     <title>Booking</title>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
+    <!-- Css -->
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
+
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
 </head>
@@ -38,7 +42,7 @@ include "../Controller/booking/bookingStatusController.php";
                         <h2 class="input_set_header my-4 color_fourth">Booking Pending List</h2>
                     </div>
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
                                 <td>Patient Name</td>
@@ -47,7 +51,7 @@ include "../Controller/booking/bookingStatusController.php";
                                 <td>Address</td>
                                 <td>Doctor Name</td>
                                 <td>Specility</td>
-                                <td>Date</td>
+                                <td>Booking Date</td>
                                 <td>Status</td>
                                 <td>Action</td>
                             </tr>
@@ -100,7 +104,7 @@ include "../Controller/booking/bookingStatusController.php";
                         <h2 class="input_set_header my-4">Booking Approved List</h2>
                     </div>
                     <table class="table">
-                        <thead class="table_bgcolor">
+                        <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
                                 <td>Patient Name</td>
@@ -109,7 +113,8 @@ include "../Controller/booking/bookingStatusController.php";
                                 <td>Address</td>
                                 <td>Doctor Name</td>
                                 <td>Specility</td>
-                                <td>Date</td>
+                                <td>Booking Date</td>
+                                <td>Status</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -123,6 +128,7 @@ include "../Controller/booking/bookingStatusController.php";
                                     <td><?php echo $patient["doctor_name"] ?></td>
                                     <td><?php echo $patient["speciality"] ?></td>
                                     <td><?php echo $patient["date"] ?></td>
+                                    <td><?php echo $patient["patient_status"] ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
@@ -148,61 +154,6 @@ include "../Controller/booking/bookingStatusController.php";
                     </div>
                     <hr />
                 </section>
-
-                <section class="booking_reject">
-                    <div class="input_set">
-                        <h2 class="input_set_header my-4 color_fifth">Booking Reject List</h2>
-                    </div>
-                    <table class="table">
-                        <thead class="table_bgcolor">
-                            <tr>
-                                <td>No.</td>
-                                <td>Patient Name</td>
-                                <td>Age</td>
-                                <td>Contact</td>
-                                <td>Address</td>
-                                <td>Doctor Name</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row_bdr">
-                                <td>1</td>
-                                <td>Mary</td>
-                                <td>20</td>
-                                <td>123456789</td>
-                                <td>Yangon</td>
-                                <td>Dr. Knight Crawler</td>
-                                <td>Specility</td>
-                                <td>Date</td>
-                                <td>Booking Time</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='pagination_container'>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link pagi_color" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link pagi_color" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <hr />
-                </section>
-
             </div>
         </div>
     </div>

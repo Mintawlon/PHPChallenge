@@ -85,8 +85,7 @@
                     </span>
                 </a>
                 <a href="./article.php" class="nav-link dropdown_list">
-                    <i class="fa-brands fa-adversal
-                        color_green"></i>
+                <i class="fa-solid fa-newspaper color_green"></i>
                     <span class="navbar_btn_name_o px-1">
                         Articles
                     </span>
