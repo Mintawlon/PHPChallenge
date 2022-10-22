@@ -10,7 +10,7 @@ $sql = $pdo->prepare(
 $sql->execute();
 $emergencyTab = $sql->fetchAll(PDO::FETCH_ASSOC);
 // Upadate Tab
-if(isset($_POST["edit_tab"])){
+if (isset($_POST["edit_tab"])) {
     $newheader = $_POST["header"];
     $newpara = $_POST["paragraph"];
 
@@ -21,8 +21,8 @@ if(isset($_POST["edit_tab"])){
         text=:para,
         update_date=:updatedDate"
     );
-    $sql->bindValue(":header",$newheader);
-    $sql->bindValue(":para",$newpara);
+    $sql->bindValue(":header", $newheader);
+    $sql->bindValue(":para", $newpara);
     $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
@@ -31,13 +31,13 @@ if(isset($_POST["edit_tab"])){
 }
 
 // Get article info for Update
-if(isset($_GET["id"])){
+if (isset($_GET["id"])) {
     $id = $_GET["id"];
     $sql = $pdo->prepare(
         "SELECT * FROM `first_aid` WHERE id=:id
         "
     );
-    $sql->bindValue(":id",$id);
+    $sql->bindValue(":id", $id);
     $sql->execute();
     $emergencyInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
     echo "<pre>";
@@ -47,7 +47,7 @@ if(isset($_GET["id"])){
     header("Location: ../View/editEmergency.php");
 }
 // Update Article
-if(isset($_POST["edit_article"])){
+if (isset($_POST["edit_article"])) {
     $id = $_POST["article_id"];
     $image = $_POST["articleImage"];
     $newheader = $_POST["articleHeader"];
@@ -61,10 +61,10 @@ if(isset($_POST["edit_article"])){
         article_image=:image,
         update_date=:updatedDate WHERE id=:id"
     );
-    $sql->bindValue(":id",$id);
-    $sql->bindValue(":header",$newheader);
-    $sql->bindValue(":para",$newpara);
-    $sql->bindValue(":image",$image);
+    $sql->bindValue(":id", $id);
+    $sql->bindValue(":header", $newheader);
+    $sql->bindValue(":para", $newpara);
+    $sql->bindValue(":image", $image);
     $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
@@ -72,15 +72,12 @@ if(isset($_POST["edit_article"])){
     header("Location: ../View/editEmergency.php");
 }
 // Delete Article
-if(isset($_GET["delId"])){
+if (isset($_GET["delId"])) {
     $delId = $_GET["delId"];
     $sql = $pdo->prepare(
-        "DELETE FROM `first_aid` WHERE id=:id
-        "
-    );
-    $sql->bindValue(":id",$delId);
+        "UPDATE first_aid SET del_flg = 1 WHERE id=:id
+     ");
+    $sql->bindValue(":id", $delId);
     $sql->execute();
-    header("Location: ../View/editEmergency.php");
+    header("Location: ../View/Emergency.php");
 }
-
-

@@ -3,9 +3,7 @@
 include "../Model/dbConnection.php";
 
 
-$sql = $pdo->prepare("
-
-        SELECT * FROM inpatient
+$sql = $pdo->prepare("SELECT * FROM inpatient 
     ");
 
 $sql->execute();
@@ -50,18 +48,15 @@ if (isset($_POST["addbtn"])) {
      )
     
      ");
-     $sql->bindValue(":hospitalized_date", $date);
+    $sql->bindValue(":hospitalized_date", $date);
     $sql->bindValue(":name", $name);
     $sql->bindValue(":age", $age);
-    $sql->bindValue(":disease", $disease);  
+    $sql->bindValue(":disease", $disease);
     $sql->bindValue(":status", $status);
     $sql->bindValue(":room", $room);
     $sql->bindValue(":address", $address);
 
     $sql->execute();
-    
+
     header("Location: ../View/inpatientList.php");
-
-
 };
-

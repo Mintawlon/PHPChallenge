@@ -61,7 +61,7 @@ include("../Controller/hosLocationController.php");
                 <td id="email"><?= $hospital["email"] ?></td>
                 </td>
                 <td class="p-3">
-                  <a href="../Controller/doctorEditController.php?delId=<?= $doctor["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                  <a href="../Controller/hospitalEditController.php?delId=<?= $hospital["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                 </td>
               </tr>
             <?php }

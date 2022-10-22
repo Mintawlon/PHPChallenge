@@ -46,4 +46,20 @@ if(isset($_POST["homeArticleEdit"])){
 
     header("Location: ../View/article.php");
 }
+
+if(isset($_GET["delId"])){
+    $id = $_GET["delId"];
+
+    echo $id;
+
+    $sql = $pdo->prepare("UPDATE article SET 
+    del_flg = 1
+     WHERE id=:id"
+     );
+    $sql->bindValue(":id", $id);
+
+    $sql->execute();
+
+    header("Location: ../View/article.php");
+}
 ?>

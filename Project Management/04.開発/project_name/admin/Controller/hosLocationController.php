@@ -3,7 +3,7 @@ include("../Model/dbConnection.php");
 
 // Get Hospital Info
 $sql = $pdo->prepare(
-    "SELECT * FROM `hospital_location` 
+    "SELECT * FROM `hospital_location` WHERE del_flg != 1
     "
 );
 $sql->execute();
