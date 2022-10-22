@@ -9,6 +9,9 @@ if (isset($_SESSION["userInfo"])) {
 
     print_r($userInfo);
 }
+if (!isset($_SESSION["email"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +61,10 @@ if (isset($_SESSION["userInfo"])) {
                     <div class="input_align m-3">
 
                         <input type="number" id="TextInput" class="form-control" name="contact" placeholder="Phone Number">
+                    </div>
+                    <div class="input_align m-3">
+
+                        <input type="text" id="TextInput" class="form-control" name="address" placeholder="address">
                     </div>
                     <div class="input_align m-3">
 

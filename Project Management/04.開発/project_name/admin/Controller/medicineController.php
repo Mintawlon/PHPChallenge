@@ -1,7 +1,7 @@
 <?php
 
 include "../Model/dbConnection.php";
-
+// Add Medicine
 if (isset($_POST["addMedicine"])) {
 
     $name = $_POST['name'];
@@ -17,14 +17,16 @@ if (isset($_POST["addMedicine"])) {
     (   
         medicine_name,
         description,
-        medicine_image
+        medicine_image,
+        create_date
         
     )
     VALUES
     (
         :name,
         :description,
-        :img
+        :img.
+        :createdDate
     )
     "
     );
@@ -32,15 +34,13 @@ if (isset($_POST["addMedicine"])) {
     $sql->bindValue(":name", $name);
     $sql->bindValue(":description", $description);
     $sql->bindValue(":img", $medicineImg);
-
+    $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
-
-
-    // header("Location: ../../../View/medicineAdd.php");
+    // header("Location: ../View/medicineAdd.php");
 } else {
     echo "<script>
     alert ('ERROR');
     </script>";
-    header("Location: ../../../View/medicineAdd.php");
+    // header("Location: ../View/medicineAdd.php");
 };

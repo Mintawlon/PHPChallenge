@@ -1,6 +1,9 @@
 <?php
 session_start();
 include("../Controller/hospitalLocations/hospitalLocationController.php");
+if (!isset($_SESSION["email"])) {
+  header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,11 +75,13 @@ include("../Controller/hospitalLocations/hospitalLocationController.php");
         <hr class="line ">
 
       </div>
-  </div>
-  <br>
-
-<?php }
+      <br>
+      <?php }
 ?>
+  </div>
+
+
+
 
 
 
