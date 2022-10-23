@@ -39,7 +39,7 @@ include "../Controller/blog/listBlogController.php";
                     <div class="input_set">
                         <h2 class="input_set_header my-4"> Current Diseases</h2>
                     </div>
-                    <table class="table">
+                    <table class="table text-center">
                         <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>
@@ -50,7 +50,7 @@ include "../Controller/blog/listBlogController.php";
                             </tr>
                         </thead>
                         <tbody>
-                        <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
+                            <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                             <?php foreach ($blogList as $blog) {
 
                             ?>
@@ -60,7 +60,7 @@ include "../Controller/blog/listBlogController.php";
                                         <img src="./storages/blog/<?php echo $blog["image"] ?>" alt="" width="100">
                                     </td>
                                     <td><?php echo $blog["header"] ?></td>
-                                    <td><?php echo $blog["description"] ?></td>
+                                    <td class="desc"><?php echo $blog["description"] ?></td>
                                     <td>
                                         <span><a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="color_sixth">Edit</a></span>
                                         <span><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="color_fifth">Delete</a></span>
@@ -72,12 +72,12 @@ include "../Controller/blog/listBlogController.php";
                     <?php
                     include "./common/pagination.php"
                     ?>
-                         <hr />
+                    <hr />
                 </section>
                 <!--Add Form -->
                 <div class="input_set">
-                        <h2 class="input_set_header my-4">Add Current Diseases</h2>
-                    </div>
+                    <h2 class="input_set_header my-4">Add Current Diseases</h2>
+                </div>
                 <div class="m-3 d-flex justify-content-center">
                     <form action="../Controller/blog/addBlogController.php" method="post" enctype="multipart/form-data">
                         <div class="image-box d-flex justify-content-center mb-3">
