@@ -1,9 +1,7 @@
 $("#search").click(function () {
-  if ($("#searchFirstaid").val() == "") {
-    alert("search something");
-  } else {
-    let sendData = {
-        searchText: $("#searchFirstaid").val()
+  console.log($("#first_aid_select option:selected").text());
+  let sendData = {
+        searchText:$("#first_aid_select option:selected").text()
     };
     console.log(sendData);
     $.ajax({
@@ -41,5 +39,9 @@ $("#search").click(function () {
         alert(err);
       }
     });
-  }
+  // if ($("#searchFirstaid").val() == "") {
+  //   // alert("search something");
+  // } else {
+    
+  // }
 });

@@ -17,10 +17,11 @@ if (!isset($_SESSION["email"])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!-- Css -->
-    <link rel="stylesheet" href="./resources/css/emergency.css?v=" time()>
+
     <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
+        <!-- Css -->
+        <link rel="stylesheet" href="./resources/css/emergency.css?v=" time()>
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/emergency.js" defer></script>
 
@@ -31,12 +32,22 @@ if (!isset($_SESSION["email"])) {
     <?php
     include("./common/head.php")
     ?>
+
     <!-- Search Box -->
     <div id="first_aid_search" class="me-4">
         <div class="searchbox mt-2">
-            <input type="text" class="search_input  ps-5" id="searchFirstaid" placeholder="search by bodypart" />
-            <i class="fa-solid fa-magnifying-glass search_icon text_white"></i>
-            <button id="search" class="search_text">Search</button>
+            <select name="" id="first_aid_select" class="form-select">
+                <?php foreach ($emergencyInfo as $emergency) { ?>
+                    <option value="<?= $emergency["article_header"] ?>"><?= $emergency["article_header"] ?></option>
+
+                <?php }
+                ?>
+            </select>
+            <button id="search"  class="fw-bold mt-2 allDoctor">Search</button>
+            <button  class="mt-3 ms-4 allDoctor">Show All First Aid</button>
+            <!-- <input type="text" class="search_input  ps-5" id="searchFirstaid" placeholder="search by bodypart" />
+            <i class="fa-solid fa-magnifying-glass search_icon text_white"></i> -->
+            <!-- <button class="search_text">Search</button> -->
         </div>
     </div>
     <!-- First Tab -->
@@ -64,9 +75,9 @@ if (!isset($_SESSION["email"])) {
 
     <!-- Cards -->
 
-        <div class="first_aid_card my-4" id="articleSearch">
+    <div class="first_aid_card my-4" id="articleSearch">
         <?php foreach ($emergencyInfo as $emergency) { ?>
-             <div class="first_aid_card">
+            <div class="first_aid_card">
                 <h1 class="first_aid_card_header mb-3">First Aid For <span>
                         <?= $emergency["article_header"] ?>
                     </span>
@@ -80,10 +91,10 @@ if (!isset($_SESSION["email"])) {
                 </div>
                 <hr class="line" />
             </div>
-            <?php }
-    ?>
-        </div> 
-   
+        <?php }
+        ?>
+    </div>
+
 
     <!-- Footer -->
     <?php

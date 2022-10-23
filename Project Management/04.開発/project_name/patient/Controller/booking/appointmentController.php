@@ -18,7 +18,7 @@ if (isset($_POST["makeBooking"])) {
     $special = $_POST["speciality"];
 
     $sql = $pdo->prepare(
-        "SELECT doctor_id FROM booking WHERE email = :useremail"
+        "SELECT doctor_id FROM booking WHERE email = :useremail AND history=0"
     );
     $sql->bindValue(":useremail", $userEmail);
     $sql->execute();
