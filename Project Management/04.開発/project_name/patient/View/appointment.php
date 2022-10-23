@@ -91,7 +91,7 @@ if (!isset($_SESSION["email"])) {
                     <div class="doctorInfo mt-5">
                         <div class="doctorCard">
                             <div class="doctorImg">
-                                <img src="./storages/image/female_doctor.png" alt="" class="doctorImgSize">
+                                <img src="./storages/image/<?= $docotrInfo[0]["profile_photo"] ?>" alt="" class="doctorImgSize">
                             </div>
                             <div class="doctorDuty mt-3 pt-3">
                                 <h5> <?= $docotrInfo[0]["doctor_name"] ?></h5>

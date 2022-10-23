@@ -3,6 +3,11 @@ session_start();
 if (!isset($_SESSION["email"])) {
   header("Location: ./login.php");
 }
+
+include "../Controller/patientHistoryController.php";
+
+// echo "<pre>";
+// var_export($history);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,36 +29,34 @@ if (!isset($_SESSION["email"])) {
     <table class="table table-bordered border-warning mt-3">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">No.</th>
+      <th scope="col">Patient Name</th>
+      <th scope="col">Doctor Name</th>
+      <th scope="col">Booking Date</th>
+      <th scope="col">Disease</th>
+      <th scope="col">Medicine</th>
+      <th scope="col">Next Appointment</th>
+      <th scope="col">Symptoms</th>
+      <th scope="col">To Avoid</th>
     </tr>
   </thead>
   <tbody>
+    <?php $number = 1?>
+  <?php foreach ($history as $userHistory) { ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?=$number++?></th>
+      <td><?=$userHistory["patient_name"]?></td>
+      <td><?=$userHistory["doctor_name"]?></td>
+      <td><?=$userHistory["booking_date"]?></td>
+      <td><?=$userHistory["disease"]?></td>
+      <td><?=$userHistory["medicine"]?></td>
+      <td><?=$userHistory["next_appointment_date"]?></td>
+      <td><?=$userHistory["symptoms"]?></td>
+      <td><?=$userHistory["to_avoid"]?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
-<div class="btn-container">
-  <!-- White Square Btn -->
-  <button class="square_white_btn">Back To Home Page</button>
-</div>
 <!-- Footer -->
 <?php
     include("./common/footer.php")

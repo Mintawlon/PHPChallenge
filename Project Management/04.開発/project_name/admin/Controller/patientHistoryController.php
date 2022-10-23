@@ -20,6 +20,7 @@ if (isset($_GET["id"])) {
 // Add History
 if (isset($_POST["addHistory"])) {
     $name = $_POST["patientName"];
+    $email = $_SESSION["email"] ;
     $date = $_POST["dateBooking"];
     $doctorName = $_POST["doctorName"];
     $diseaseHistory = $_POST["diseaseHistory"];
@@ -31,6 +32,7 @@ if (isset($_POST["addHistory"])) {
         "INSERT INTO 
         patient_history (
         patient_name,
+        email,
         doctor_name,
         booking_date,
         disease,
@@ -43,6 +45,7 @@ if (isset($_POST["addHistory"])) {
         VALUES 
         (
         :patient_name,
+        :email,
         :doctor_name,
         :booking_date,
         :disease,
@@ -54,6 +57,7 @@ if (isset($_POST["addHistory"])) {
         );"
     );
     $sql->bindValue(":patient_name", $name);
+    $sql->bindValue(":email", $email);
     $sql->bindValue(":doctor_name", $doctorName);
     $sql->bindValue(":booking_date", $date);
     $sql->bindValue(":disease", $diseaseHistory);
