@@ -21,13 +21,13 @@ class SendMail
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = ''; // <<< Change 
-            $mail->Password   = ''; // <<< Change
+            $mail->Username   = 'vrcarer1010@gmail.com'; // <<< Change 
+            $mail->Password   = 'qxihpkxqyzimkijv'; // <<< Change
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('', ''); //<<< Change
+            $mail->setFrom('vrcarer1010@gmail.com', 'VrCarer'); //<<< Change
             $mail->addAddress($toMail);
 
             //Content

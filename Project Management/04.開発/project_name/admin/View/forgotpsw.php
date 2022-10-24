@@ -22,21 +22,23 @@
 
     <!-- Main Content -->
     <div class="container">
-        <p class="adm_login text-center align-items-center fw-bold">Forgot Your Password?</p>
-        <!-- Input Box -->
-        <div class="inp_box">
-            <br>
-            <p></p>
-            <p class="fw-semibold text-white fs-5"></p>
-            <input type="text" value="" class="form-control " placeholder="Email Address">
-             
-            <br>
-            <br>
-            <button type="submit" class="fw-bold  btn_login form-control">
-                Send Email
-            </button>
-            
-        </div>
+        <form action="../Controller/forgotpswController.php" method="post">
+            <p class="adm_login text-center align-items-center fw-bold">Forgot Your Password?</p>
+            <!-- Input Box -->
+            <div class="inp_box">
+                <br>
+                <p></p>
+                <p class="fw-semibold text-white fs-5"></p>
+                <input type="text" value="" class="form-control " name="email" placeholder="Email Address">
+
+                <br>
+                <br>
+                <button type="submit" name="resetPwd"  class="fw-bold  btn_login form-control">
+                    Send Email
+                </button>
+
+            </div>
+        </form>
     </div>
 
 

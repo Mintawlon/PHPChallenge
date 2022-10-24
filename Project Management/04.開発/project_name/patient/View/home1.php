@@ -115,11 +115,11 @@ if (!isset($_SESSION["email"])) {
                 <li class="card">
                     <div>
                         <div class="vaccine_div">
-                            <img src="./storages/medicineImage/<?php echo $medicine["medicine_image"] ?>" class="vaccine_img">
+                            <img src="../../admin/View/storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
                         </div>
-                        <h3 class="card-title"><?php echo $medicine["medicine_name"] ?></h3>
+                        <h3 class="card-title"><?=$medicine["medicine_name"] ?></h3>
                         <div class="card-content">
-                            <p ipsum><?php echo $medicine["description"] ?></p>
+                            <p ipsum><?= $medicine["description"] ?></p>
                         </div>
                     </div>
                     <?php } ?>
