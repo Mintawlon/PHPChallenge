@@ -6,7 +6,7 @@ if (isset($_POST["addMedicine"])) {
 
     $name = $_POST['name'];
     $description = $_POST["description"];
-    $medicineImg = $_POST["medicineImg"];
+    $medicineImage = $_POST["medicine_image"];
 
     echo $name;
     echo $description;
@@ -25,7 +25,7 @@ if (isset($_POST["addMedicine"])) {
     (
         :name,
         :description,
-        :img.
+        :image,
         :createdDate
     )
     "
@@ -33,14 +33,16 @@ if (isset($_POST["addMedicine"])) {
 
     $sql->bindValue(":name", $name);
     $sql->bindValue(":description", $description);
-    $sql->bindValue(":img", $medicineImg);
+    $sql->bindValue(":image", $medicineImage);
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
-    // header("Location: ../View/medicineAdd.php");
+    header("Location: ../View/medicineAdd.php");
 } else {
     echo "<script>
     alert ('ERROR');
     </script>";
     // header("Location: ../View/medicineAdd.php");
 };
+
+
