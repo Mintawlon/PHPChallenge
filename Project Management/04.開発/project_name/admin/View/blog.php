@@ -39,7 +39,7 @@ include "../Controller/blog/listBlogController.php";
                     <div class="input_set">
                         <h2 class="input_set_header my-4"> Current Diseases</h2>
                     </div>
-                    <table class="table text-center">
+                    <table class="table">
                         <thead class="table_bgcolor" id="table_header">
                             <tr>
                                 <td>No.</td>

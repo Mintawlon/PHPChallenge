@@ -44,5 +44,5 @@ if(isset($_GET["delId"])){
     //  $sql->bindValue(":id",$delId);
     // $sql->execute();
 
-    // header("Location: ../View/inpatientList.php");
+    header("Location: ../View/inpatientList.php");
 }
