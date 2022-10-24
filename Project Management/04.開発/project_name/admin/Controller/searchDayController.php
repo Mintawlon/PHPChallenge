@@ -1,7 +1,7 @@
 <?php
 include("../Model/dbConnection.php");
-if(isset($_POST["searchDay"])){
-    $search = $_POST["searchDay"];
+if(isset($_POST["searchText"])){
+    $search = $_POST["searchText"];
     
     $sql = $pdo->prepare("SELECT doctor_name,age,speciality,date,startTime,endTime
     FROM doctor

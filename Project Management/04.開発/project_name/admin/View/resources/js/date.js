@@ -2,6 +2,7 @@ $("#search").click(function () {
     if ($("#searchDay").val() == "") {
       alert("search something");
     } else {
+      console.log($("#searchDay").val());
       let sendData = {
         searchText: $("#searchDay").val()
       };
