@@ -1,3 +1,6 @@
+<?php
+include "../Controller/dashboard/dashbaordController.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +35,7 @@
                         <span class="navbar-brand ttl_admin" href="#">Dashboard</span>
                     </div>
                 </div>
+                <!--Card-->
                 <div class="container display">
                     <div class="row">
                         <div class="col ">
@@ -39,7 +43,7 @@
                                 <div class="card-body cardColor">
                                     <h5 class="card-title text-center text-white"><i class="fa-sharp fa-solid fa-bed cardTextAlign"></i>Inpatient</h5>
                                     <div class="display_bottom">
-                                        <p class="card-text text-center mt-4 text_color"> 400</p>
+                                        <p class="card-text text-center mt-4 text_color"><?= $inHospital[0]['COUNT(id)'] ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +54,7 @@
                                     <h5 class="card-title text-center text-white"><i class="fa-solid fa-user-doctor cardTextAlign"></i></i>Doctors</h5>
 
                                     <div class="display_bottom">
-                                        <p class="card-text text-center mt-4 text_color"> 180</p>
+                                        <p class="card-text text-center mt-4 text_color"><?= $countDoctor[0]['COUNT(id)'] ?> </p>
                                     </div>
 
                                 </div>
@@ -62,7 +66,8 @@
                                     <h5 class="card-title text-center text-white"><i class="fa-solid fa-calendar-check cardTextAlign"></i>Bookings</h5>
 
                                     <div class="display_bottom">
-                                        <p class="card-text text-center mt-4 text_color"> 890</p>
+                                        <p class="card-text text-center mt-4 text_color"><?= $countBooking[0]['COUNT(id)'] ?> </p>
+                                        </p>
                                     </div>
 
                                 </div>
@@ -70,24 +75,16 @@
                         </div>
                     </div>
                 </div>
+                <!--Search Box-->
+                <div class="sec_input mb-2 d-flex justify-content-end">
+                    <input type="text" id="searchDay" class="common_input form-control" placeholder="Search By Day" />
+                    <button class="searchDay px-5 ms-5 border rounded" id="search">search</button>
+                </div>
                 <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Today Patient List</h2>
                 </div>
-                <div class="num_rows">
-                    <div class="form-group">
-                        <select class="form-control" name="state" id="maxRows">
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
 
-                    </div>
-                </div>
                 <table class="table" id="table-id">
                     <thead class="table_bgcolor">
                         <tr class="text-white">

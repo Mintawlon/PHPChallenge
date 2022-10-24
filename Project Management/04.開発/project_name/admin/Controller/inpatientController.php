@@ -11,9 +11,7 @@ $sql = $pdo->prepare("SELECT * FROM inpatient");
 
 // get inpatient info
 $sql = $pdo->prepare("
-        SELECT * FROM inpatient  LIMIT  $startPage,$rowLimit
-
-    ");
+        SELECT * FROM inpatient  LIMIT  $startPage,$rowLimit");
 
 $sql->execute();
 
