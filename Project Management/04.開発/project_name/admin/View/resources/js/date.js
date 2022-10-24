@@ -3,7 +3,7 @@ $("#search").click(function () {
       alert("search something");
     } else {
       let sendData = {
-        searchText: $("#searchDay").val(),
+        searchText: $("#searchDay").val()
       };
   
       $.ajax({
