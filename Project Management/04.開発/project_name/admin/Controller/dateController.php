@@ -85,5 +85,10 @@ if (isset($_POST["dateadd"])) {
 
     $sql->execute();
 
+    
+
     // header("Location: ../View/date.php");
+
+
+
 }

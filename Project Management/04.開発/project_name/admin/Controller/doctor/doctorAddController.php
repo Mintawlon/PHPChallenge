@@ -9,7 +9,8 @@ if (isset($_POST["doctorAdd"])) {
     $speciality = $_POST["doctorSpeciality"];
     $phone = $_POST["doctorPhone"];
     $photo = $_POST["doctorPhoto"];
-    $_SESSION["doctorName"]= $name; 
+    $_SESSION["doctorName"]= $name;
+    
     $sql = $pdo->prepare(
         "INSERT INTO 
         doctor (

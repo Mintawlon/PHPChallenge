@@ -19,11 +19,7 @@ include("../Controller/inpatientController.php");
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
-<<<<<<< HEAD
-    <script src="./resources/js/inpatientSearch.js"defer></script>
-=======
-    <script src="./resources/js/inpatientSearch.js?v=" <?= time() ?> defer></script>
->>>>>>> origin/main
+    <script src="./resources/js/inpatientSearch.js"  defer></script>
 </head>
 
 <body>
@@ -44,11 +40,13 @@ include("../Controller/inpatientController.php");
                     <a href="./addInpatient.php" class="common_btn add_btn go_btn">Go to Add Inpatient
                         <i class="fa-solid fa-arrow-right arrow_right"></i>
                     </a>
-                    <div class="tb_search">
-                        <input type="text" class="common_input input_box form-control" id="searchText" name="text" placeholder="Search" />
+                    <div class="searchbox search">
+                        <input type="text" class="search_input  ps-5" id="searchText" name="text" />
+                        <i class="fa-solid fa-magnifying-glass search_icon text_white"></i>
+                        <button id="search" class="search_text" name="searchbtn">Search</button>
                     </div>
-                    <button type="submit" class="common_btn add_btn btn-success" id="search" name="searchbtn">Search </button>
                 </div>
+                <button id="allInpatient" class="sec_input mb-2 common_btn add_btn">All Inpatients List</button>
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Inpatient List</h2>
                 </div>
@@ -60,51 +58,33 @@ include("../Controller/inpatientController.php");
                             <td>Name</td>
                             <td>Age</td>
                             <td>Disease</td>
-                            <td>Room</td>
                             <td>Status</td>
+                            <td>Room</td>
                             <td>address</td>
                             <td>Edit</td>
                             <td>Delete</td>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
                         </tr>
                     </thead>
                     <tbody id="table_text">
                         <?php $number = 1 ?>
                         <?php foreach ($inpatient as $ipatient) { ?>
                             <tr class="row_bdr">
-<<<<<<< HEAD
                                 <td><?= $number++ ?></td>
                                 <td><?= $ipatient["hospitalized_date"] ?></td>
                                 <td><?= $ipatient["name"] ?></td>
                                 <td><?= $ipatient["age"] ?></td>
                                 <td><?= $ipatient["disease"] ?></td>
-                                <td><?= $ipatient["room"] ?></td>
                                 <td><?= $ipatient["status"] ?></td>
+                                <td><?= $ipatient["room"] ?></td>
                                 <td><?= $ipatient["address"] ?></td>
                                 <td class="p-3">
                                     <a href="../Controller/inpatientEditController.php?id=<?= $ipatient["id"] ?>" class="edit_btn me-4">
                                         Edit</a>
-                                    <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
-=======
-                                <!-- <td id="number"><?= $number++ ?></td> -->
-                                <td><?= $iPatient["hospitalized_date"] ?> </td>
-                                <td><?= $iPatient["name"] ?></td>
-                                <td><?= $iPatient["age"] ?></td>
-                                <td><?= $iPatient["disease"] ?></td>
-                                <td><?= $iPatient["status"] ?></td>
-                                <td><?= $iPatient["room"] ?></td>
-                                <td><?= $iPatient["address"]  ?></td>
-                                <td>
-                                    <a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth"><button class="edit_btn me-4">Edit</button></a>
-                                </td>
-
-                                <td class="p-3">
-                                    <a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
->>>>>>> origin/main
-                                </td>
+                                 </td>
+                                 <td>
+                                 <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                                 </td>
+                               
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -191,12 +171,6 @@ include("../Controller/inpatientController.php");
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
-
-</body>
-=======
 </body>
 
 </html>
->>>>>>> origin/main

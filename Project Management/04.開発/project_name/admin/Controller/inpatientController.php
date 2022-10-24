@@ -6,13 +6,10 @@ $rowLimit = 10;
 $page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
 $startPage = ($page-1)*$rowLimit;
 
-<<<<<<< HEAD
-$sql = $pdo->prepare("SELECT * FROM inpatient 
-=======
+
 // get inpatient info
-$sql = $pdo->prepare("
-        SELECT * FROM inpatient  LIMIT  $startPage,$rowLimit
->>>>>>> origin/main
+ $sql = $pdo->prepare(
+    "SELECT * FROM inpatient WHERE del_flg != 1 LIMIT  $startPage,$rowLimit
     ");
 
 $sql->execute();
