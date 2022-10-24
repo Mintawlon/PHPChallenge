@@ -20,7 +20,7 @@
     font-size: var(--large);
 }
 .cardColor{
-    background-color: #000000;
+    background-color: #0ED2F7 !important;
 }
 .cardTextAlign{
     margin-right: 6%;

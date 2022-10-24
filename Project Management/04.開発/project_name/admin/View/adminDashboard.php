@@ -90,13 +90,13 @@
                 </div>
                 <table class="table" id="table-id">
                     <thead class="table_bgcolor">
-                        <tr>
+                        <tr class="text-white">
                             <td>No.</td>
                             <td>Patient Name</td>
                             <td>Age</td>
                             <td>Doctor Name</td>
                             <td>Contact</td>
-                            <td>Address.</td>
+                            <td>Address</td>
                             <td>Status</td>
 
                         </tr>
