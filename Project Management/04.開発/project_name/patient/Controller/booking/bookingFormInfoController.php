@@ -25,5 +25,17 @@ if (isset($_GET["doctorId"])) {
     $sql->execute();
     $doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION["appointmentDoctorInfo"] = $doctorInfo;
+
+
+    $sql = $pdo->prepare(
+        "SELECT * FROM `date` WHERE doctor_id=:id
+        "
+    );
+    $sql->bindValue(":id", $id);
+    $sql->execute();
+    $selectedDoctorDuty = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION["selectedDoctorDuty"] = $selectedDoctorDuty;
+
     header("Location: ../../View/appointment.php");
 }
+

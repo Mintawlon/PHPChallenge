@@ -1,13 +1,14 @@
 <?php
 session_start();
+include "../Controller/doctor/doctorDressingTimeController.php";
 if (isset($_SESSION["appointmentDoctorInfo"])) {
     $docotrInfo = $_SESSION["appointmentDoctorInfo"];
-    print_r($docotrInfo);
 }
 if (isset($_SESSION["userInfo"])) {
     $userInfo = $_SESSION["userInfo"];
-
-    print_r($userInfo);
+}
+if (isset($_SESSION["selectedDoctorDuty"])) {
+    $selectedDoctorDuty = $_SESSION["selectedDoctorDuty"];
 }
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
@@ -36,7 +37,7 @@ if (!isset($_SESSION["email"])) {
     <?php
     include("./common/head.php")
     ?>
-    <div class="container body">
+    <div class="container body mb-4">
         <div class="row">
             <div class="col-md-6 col-sm-12 inputbox_wrapper">
                 <!-- Page title -->
@@ -78,29 +79,33 @@ if (!isset($_SESSION["email"])) {
                     <input type="hidden" name="doctorId" value="<?= $docotrInfo[0]["id"] ?>">
                     <!-- Button -->
                     <div class="d-flex justify-content-center m-3">
-                        <button type="submit" name="makeBooking" class=" btn text-white square_yellow_btn ">Submit Appointment</button>
+                        <button type="submit" name="makeBooking" class=" btn fw-bold submit_btn text-white ">Submit Appointment</button>
                     </div>
                 </form>
-                <!-- Display -->
-
-                <div class="badge display_top display_bottom display">
-                    <div class="text">
-                        <?= $docotrInfo[0]["doctor_name"] ?>
-                    </div>
-                </div>
-                <div class="badge text-wrap display_bottom display">
-
-                    <div class="text">
-                        Time Here
-                    </div>
-                </div>
 
             </div>
             <div class="col-md-6 col-sm-12">
 
                 <!-- Image-->
                 <div>
-                    <img src="../View/components/card/image/image_login.png.png" class="img-fluid appointmentImg  " alt="...">
+                    <div class="doctorInfo mt-5">
+                        <div class="doctorCard">
+                            <div class="doctorImg">
+                                <img src="./storages/image/<?= $docotrInfo[0]["profile_photo"] ?>" alt="" class="doctorImgSize">
+                            </div>
+                            <div class="doctorDuty mt-3 pt-3">
+                                <h5> <?= $docotrInfo[0]["doctor_name"] ?></h5>
+                                <p><?=$docotrInfo[0]["speciality"] ?></p>
+                                <div class="text">
+                                    <?php foreach ($selectedDoctorDuty as $time) { ?>
+                                        <p> <?= $time["date"] ?> <span><?= $time["startTime"] ?> </span> ~ <span> <?= $time["endTime"] ?></span></p>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

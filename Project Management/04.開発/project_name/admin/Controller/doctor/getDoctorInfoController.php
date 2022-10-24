@@ -8,7 +8,11 @@ $startPage = ($page-1)*$rowLimit;
 
 // get doctor info
 $sql = $pdo->prepare(
+<<<<<<< HEAD
     "SELECT * FROM `doctor`  WHERE del_flg != 1 LIMIT  $startPage,$rowLimit
+=======
+    "SELECT * FROM `doctor` WHERE del_flg != 1  LIMIT  $startPage,$rowLimit  ;
+>>>>>>> origin/main
     "
 );
 $sql->execute();
