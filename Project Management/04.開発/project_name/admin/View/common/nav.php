@@ -13,12 +13,19 @@
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <!-- Root Css -->
     <link rel="stylesheet" href="../resources/css/root.css">
+    <link rel="stylesheet" href="../resources/css/icon.css">
 </head>
 
 <body>
     <div class="col-sm-3 col-md-4 col-xl-2 navbar_wrapper ">
         <div class="d-flex flex-column align-items-center align-items-sm-start min-vh-100 mt-2 navbar ">
+<<<<<<< HEAD
             <img class="logo_btn" src="../../../patient/View/storages/logo/VR2.png" alt="Vr_Carer" width="104px">
+=======
+            <div class="logo_btn ">
+            <img src="./storages/logo/VR2.png" alt="" id="logo">
+            </div>
+>>>>>>> origin/main
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
