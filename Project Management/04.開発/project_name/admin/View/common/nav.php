@@ -18,7 +18,9 @@
 <body>
     <div class="col-sm-3 col-md-4 col-xl-2 navbar_wrapper ">
         <div class="d-flex flex-column align-items-center align-items-sm-start min-vh-100 mt-2 navbar ">
-            <div class="logo_btn "></div>
+            <div class="logo_btn ">
+            <img src="./storages/logo/VR2.png" alt="" id="logo">
+            </div>
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
