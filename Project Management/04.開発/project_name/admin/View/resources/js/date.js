@@ -38,7 +38,7 @@ $("#search").click(function () {
     }
   });
   
-  $("#allDoctor").click(function(){
+  $("#allDate").click(function(){
     location.reload();
   })
   

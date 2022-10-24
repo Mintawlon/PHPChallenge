@@ -4,8 +4,7 @@ $("#search").click(function (){
         window.alert("Please Type Something");
     }else{
         let sendData = {
-           searchText: $("#searchText").val()
-            
+            searchText: $("#searchText").val(),   
         };
          $.ajax({
             url: "../Controller/inpatientSearchcontroller.php",
@@ -16,9 +15,9 @@ $("#search").click(function (){
                 
                 let inpatientList = JSON.parse(res);
 
-                $("#table_id").empty();
+                $("#table_text").empty();
                 for (const inpatient of inpatientList) {
-                    $("#table_id").append(
+                    $("#table_text").append(
                         `<tr class="row_bdr">
                         <td>1</td> -->
                         <td>${inpatient.hospitalized_date} </td>
@@ -28,10 +27,12 @@ $("#search").click(function (){
                         <td>${inpatient.status}</td>
                         <td>${inpatient.room}</td>
                         <td>${inpatient.address}</td>    
+                        <td class="p-3">
+                                    <a href="../Controller/inpatientEditController.php?id=${inpatient.id}" class="edit_btn me-4">
+                                        Edit</a> </td>
                         <td>
-                                    <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?id=<?= $iPatient["id"] ?>" class="color_sixth me-2">Edit</a></span>
-                                    <span class="edit_delete_btn"><a href="../Controller/inpatientEditController.php?delId=<?= $iPatient["id"] ?>" class="color_fifth">Delete</a></span>
-                         </td>                   
+                                    <a href="../Controller/inpatientEditController.php?delId=${inpatient.id}" class="trash "><i class="fa-solid fa-trash"></i></a>
+                        </td>                  
                     </tr>`
                     );
                
@@ -41,7 +42,9 @@ $("#search").click(function (){
             error: function(err){
                 alert(err);
             }
-         })
+        });
     }
-
+  });
+    $("#allInpatient").click(function(){
+        location.reload();
 })

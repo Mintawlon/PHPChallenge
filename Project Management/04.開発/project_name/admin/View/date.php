@@ -50,18 +50,21 @@ if (isset($_SESSION["doctorInfo"])) {
                 </div>
                 <!-- Go Back Button -->
                 <div class="sec_input mb-2">
-                    <a href="./doctor.php" class="common_btn add_btn back_btn">Back to Doctor
+                    <a href="./doctor.php" class="common_btn add_btn back_btn">Back to Doctors Page
                         <i class="fa-solid fa-arrow-left arrow_left"></i>
                     </a>
-                    <input type="text" id="searchDay" class="common_input form-control " placeholder="Search By Day" />
-                        <button class="searchDay px-5" id="search">search</button>
+                    <div class="searchbox search">
+                        <input type="text" class="search_input  ps-5" id="searchDay" placeholder="Search By Day" name="searchDay"/>
+                        <i class="fa-solid fa-magnifying-glass search_icon text_white"></i>
+                        <button id="search" class="search_text">Search</button>
+                    </div>
                 </div>
 
                 <section class="timetable">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Doctor Timetable</h2>
                     </div>
-                    <button id="allDoctor" class="mb-4"> Show All Doctors</button>
+                    <button id="allDate" class="mb-4"> Show All Dates</button>
                     <table class="table">
                         <thead class="table_bgcolor" id="table_header">
                             <tr>

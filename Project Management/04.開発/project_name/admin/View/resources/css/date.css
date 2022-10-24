@@ -13,13 +13,22 @@
   color: white;
   font-size: var(--extra_extra_small);
 }
-#allDoctor {
+#allDate {
   background-color: var(--secondary_color);
   color: white;
   border: none;
   padding: 0.3em 0.6em;
 }
-#allDoctor:hover {
+#allDate:hover {
   background-color: var(--second_color);
   color: var(--first_color);
+}
+#search{
+  background-color: var(--second_colors);
+  border: none;
+  border-radius: 50px;
+  color: var(--first_color);
+}
+#search:hover{
+  color: var(--secondary_color);
 }

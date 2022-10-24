@@ -43,3 +43,12 @@
   background-color: transparent;
   color: var(--first_color);
 }
+#search{
+  background-color: var(--second_colors);
+  border: none;
+  border-radius: 50px;
+  color: var(--first_color);
+}
+#search:hover{
+  color: var(--secondary_color);
+}

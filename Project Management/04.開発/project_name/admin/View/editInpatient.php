@@ -57,7 +57,7 @@
                           <h2 class="input_set_header my-4">Edit Inpatient</h2>
                           <div class="input_one mb-2 display_top">
                               <span class="input_set_text text_display">Date</span>
-                              <input type="text" class="common_input form-control" name="date" value="<?php echo $inpatientInfo[0]["hospitalized_date"] ?>" />
+                              <input type="date" class="common_input form-control" name="date" value="<?php echo $inpatientInfo[0]["hospitalized_date"] ?>" />
                           </div>
                           <div class=" input_one mb-2 display_top">
                               <span class="input_set_text text_display">Patient Name</span>
@@ -96,7 +96,7 @@
               
           </div>
       </div>
-      <script src="./resources/js/dropdown_menu.js"></script>
+
   </body>
 
   </html>

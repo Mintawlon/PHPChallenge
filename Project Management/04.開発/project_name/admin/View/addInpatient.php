@@ -49,7 +49,7 @@ include("../Controller/inpatientController.php");
                         <h2 class="input_set_header my-4">Add Inpatient</h2>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Date</span>
-                            <input type="text" class="common_input form-control" name="date" />
+                            <input type="date" class="common_input form-control" name="date" />
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Patient Name</span>
@@ -83,7 +83,6 @@ include("../Controller/inpatientController.php");
             </div>
         </div>
     </div>
-    <script src="./resources/js/dropdown_menu.js"></script>
 </body>
 
 </html>
