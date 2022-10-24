@@ -2,7 +2,7 @@
 
 /* Background Color */
 :root {
-  --primary_color: #a8ff78;
+  --primary_color: #bdc3c7;
   --secondary_color: #4361ee;
   --tertiary_color: #000000;
 }
@@ -397,10 +397,16 @@ hr {
 
 .logo_btn {
   width: 100% !important;
-  height: 3.5em !important;
+  height: 5em !important;
   margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+#logo{
+  width: 50%;
+  height: 100%;
+}
 .navbar_btn,
 .dropdown_list {
   width: 100% !important;

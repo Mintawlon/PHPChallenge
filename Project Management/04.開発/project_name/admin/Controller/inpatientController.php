@@ -3,18 +3,27 @@
 include "../Model/dbConnection.php";
 
 $rowLimit = 10;
-$page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
-$startPage = ($page-1)*$rowLimit;
+$page = (isset($_GET["page"])) ? $_GET["page"] : 1;
+$startPage = ($page - 1) * $rowLimit;
 
+
+$sql = $pdo->prepare("SELECT * FROM inpatient");
+
+<<<<<<< HEAD
 
 // get inpatient info
  $sql = $pdo->prepare(
     "SELECT * FROM inpatient WHERE del_flg != 1 LIMIT  $startPage,$rowLimit
     ");
+=======
+// get inpatient info
+$sql = $pdo->prepare("SELECT * FROM inpatient WHERE del_flg != 1   LIMIT  $startPage,$rowLimit");
+>>>>>>> origin/main
 
 $sql->execute();
 
 $inpatient = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 
 // Pagination
 $sql = $pdo->prepare(
@@ -22,9 +31,9 @@ $sql = $pdo->prepare(
     "
 );
 $sql->execute();
-$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC) [0]["total"];
+$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]["total"];
 
-$totalPages = ceil($totalRecord/$rowLimit);
+$totalPages = ceil($totalRecord / $rowLimit);
 
 // Add inpatient
 if (isset($_POST["addbtn"])) {
