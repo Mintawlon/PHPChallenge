@@ -75,36 +75,6 @@ if (!isset($_SESSION["email"])) {
             </div>
             <hr class="about_line" />
         </div>
-
-        <!-- Section-3 -->
-
-        <div class="content-container">
-
-            <div class="card p-3" style="width: 38rem;">
-                <p class="text-center content-card-header">Get In Touch</p>
-                <!--input Form -->
-                <form action="../Controller/aboutUs/aboutUscontroller.php" method="post">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingPassword" placeholder="Your Name" name="name">
-                        <label for="floatingPassword">Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingPassword" placeholder="Reason" name="reason">
-                        <label for="floatingPassword">Reason for Contact</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="comment"></textarea>
-                        <label for="floatingTextarea2">Comments</label>
-                    </div>
-                    <!-- Blue Square Btn -->
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-primary" type="submit" name="contact">Submit</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-
         <hr class="about_line mt-4" />
         <!-- dropdown section -->
         <div class="policy">
