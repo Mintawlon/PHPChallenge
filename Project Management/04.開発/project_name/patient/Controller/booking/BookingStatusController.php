@@ -4,7 +4,7 @@ include "../Model/dbConnection.php";
 if (isset($_SESSION["email"])) {
     $email = $_SESSION["email"];
     $sql = $pdo->prepare(
-        "SELECT * FROM booking WHERE email = :useremail"
+        "SELECT * FROM booking WHERE email = :useremail AND history= 0"
     );
     $sql->bindValue(":useremail", $email);
     $sql->execute();

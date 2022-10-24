@@ -63,11 +63,9 @@ if (!isset($_SESSION["email"])) {
                 <img src="./storages/blogImage/blog/<?php echo $blog["image"] ?>" alt="" class="card_img" />
                 <div class="info">
                     <h2 class="first_aid_para_header"><?php echo $blog["header"] ?></h2>
-                    <ul class="first_aid_para">
-                        <li>
-                            <?php echo $blog["description"] ?>
-                        </li>
-                    </ul>
+                    <p class="first_aid_para">
+                        <?php echo $blog["description"] ?>
+                    </p>
                 </div>
             </div>
             <hr class="line" />

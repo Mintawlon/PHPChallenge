@@ -234,6 +234,10 @@ body {
   .blog_tab_text {
     font-size: var(--extra_extra_small);
   }
+  .card-content .card-title{
+    font-size: 12px !important;
+  }
+
 }
 
 /* scroll card*/
@@ -293,7 +297,7 @@ h2 {
 }
 
 .card .card-title {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .card .card-content {
@@ -374,12 +378,14 @@ h2 {
 
 .vaccine_div {
   width: 50% !important;
-  height: 50% !important;
   border-radius: 10px;
 }
 .vaccine_img {
-  width: 100% !important;
-  height: 100% !important;
+  width: 75% !important;
+ 
 }
+
+
+
 /* FOOTER STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
