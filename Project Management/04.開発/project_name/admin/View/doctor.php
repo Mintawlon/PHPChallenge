@@ -60,7 +60,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                 <td>Contact</td>
                                 <td>Profile Photo</td>
                                 <td>Add Dressing Time</td>
-                                <td>Remove Doctor</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
                         <tbody id="table_text">

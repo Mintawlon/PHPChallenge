@@ -16,8 +16,8 @@ if (isset($_GET["id"])) {
     $sql->execute();
 
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    echo "<pre>";
-    print_r($result);
+    // echo "<pre>";
+    // print_r($result);
 
     $_SESSION["inpatientInfo"] = $result;
 
