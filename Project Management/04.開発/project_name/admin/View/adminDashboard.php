@@ -1,5 +1,9 @@
 <?php
+$view = 1;
 include "../Controller/dashboard/dashbaordController.php";
+
+include "../Controller/dashboard/searchController.php";
+$view = 2;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +20,6 @@ include "../Controller/dashboard/dashbaordController.php";
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
     <link rel="stylesheet" href="./resources/css/adminDashboard.css" <?= time() ?> />
-    <!-- js -->
-    <script src="./resources/js/jquery3.6.0.js"></script>
 </head>
 
 <body>
@@ -77,8 +79,8 @@ include "../Controller/dashboard/dashbaordController.php";
                 </div>
                 <!--Search Box-->
                 <div class="sec_input mb-2 d-flex justify-content-end">
-                    <input type="text" id="searchDay" class="common_input form-control" placeholder="Search By Day" />
-                    <button class="searchDay px-5 ms-5 border rounded" id="search">search</button>
+                    <input type="date" id="todayList" class="common_input form-control" name="serachText" placeholder="yyyy-mm-dd" />
+                    <button class="searchDay px-5 ms-5 border rounded" id="boom">search</button>
                 </div>
                 <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
                 <div class="input_set">
@@ -98,7 +100,7 @@ include "../Controller/dashboard/dashbaordController.php";
 
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="resultData">
                         <tr class="row_bdr">
                             <td>No.</td>
                             <td>Patient Name</td>
@@ -176,13 +178,14 @@ include "../Controller/dashboard/dashbaordController.php";
                 </div>
                 <hr class="about_line mt-5" />
 
-
-
             </div>
         </div>
 
 
     </div>
+    <!-- js -->
+    <script src="../View/resources/js/jquery3.6.0.js"></script>
+    <script src="../View/resources/js/dashboard.js"></script>
 </body>
 
 </html>
