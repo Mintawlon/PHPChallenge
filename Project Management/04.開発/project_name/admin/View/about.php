@@ -41,7 +41,7 @@ include("../Controller/aboutusController.php");
                             <h2 class="input_set_header my-4">Update About Us Info</h2>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Add new info</span>
-                                <textarea class="form-control common_input text_area " placeholder="Text" name="text1"></textarea>
+                                <textarea class="form-control common_input text_area " placeholder="Text" name="text1" value="<?php echo $about[0]["text1"]?>"></textarea>
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text add_file">Add new image</span>
