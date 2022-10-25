@@ -59,10 +59,10 @@ unset($_SESSION["userInfo"]);
                     } ?>"  required>
                         <i class="fa-solid fa-eye-slash" id="eye"></i>
                     </div>
-                    <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation "></i>  Password Wrong</p>
+                   
                     <?php
                     if (isset($_SESSION["wrongLoginPwd"])) { ?>
-                        
+                         <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation "></i>  Password Wrong</p>
                     <?php } ?>
                     <a href="./forgotpsw.php">
                         <p class="forgotpsw text-decoration-underline text-white">Forgot Password?</p>

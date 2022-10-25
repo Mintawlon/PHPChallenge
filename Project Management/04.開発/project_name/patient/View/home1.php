@@ -8,12 +8,6 @@ if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
 }
 ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,14 +111,14 @@ if (!isset($_SESSION["email"])) {
                         <div class="vaccine_div">
                             <img src="./storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
                         </div>
-                        <h3 class="card-title"><?=$medicine["medicine_name"] ?></h3>
+                        <h3 class="card-title"><?= $medicine["medicine_name"] ?></h3>
                         <div class="card-content">
                             <p ipsum><?= $medicine["description"] ?></p>
                         </div>
                     </div>
-                    <?php } ?>
-                    </div>
-        </ul>
+                <?php } ?>
+    </div>
+    </ul>
     </div>
     <!--scorll card-->
     <!-- Footer -->
