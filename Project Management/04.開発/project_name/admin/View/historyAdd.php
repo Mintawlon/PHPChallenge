@@ -58,11 +58,11 @@ if (isset($_SESSION["patientInfoHistory"])) {
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Disease</span>
-                        <input type="text" class="common_input form-control " name="diseaseHistory" />
+                        <input type="text" class="common_input form-control " name="diseaseHistory" required />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Medicine</span>
-                        <input type="text" class="common_input form-control " name="medicineHistory" />
+                        <input type="text" class="common_input form-control " name="medicineHistory" required/>
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Next Appointment</span>
@@ -70,7 +70,7 @@ if (isset($_SESSION["patientInfoHistory"])) {
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">Symptoms</span>
-                        <input type="text" class="common_input form-control " name="symptoms" />
+                        <input type="text" class="common_input form-control " name="symptoms" required />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text">To Avoid</span>

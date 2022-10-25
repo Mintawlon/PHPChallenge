@@ -75,3 +75,6 @@ body {
   right: 5%;
   top: 10px;
 }
+.icon{
+  color: var(--third_color);
+}

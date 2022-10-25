@@ -20,8 +20,16 @@
     <div class="col-sm-3 col-md-4 col-xl-2 navbar_wrapper ">
         <div class="d-flex flex-column align-items-center align-items-sm-start min-vh-100 mt-2 navbar ">
             <div class="logo_btn ">
-            <img src="./storages/logo/VR2.png" alt="" id="logo">
+<<<<<<< HEAD
+            <img src="./storages/logo/VR2.png" alt="" id="logo" wid>
+=======
+                <img src="./storages/logo/VR2.png" alt="" id="logo">
+>>>>>>> origin/main
             </div>
+<<<<<<< HEAD
+            <!-- <img class="logo_btn" src="../../../patient//View/storages/logo/VR2.png" alt="Vr_Carer" width="104px"> -->
+=======
+>>>>>>> origin/main
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
@@ -88,7 +96,7 @@
                     </span>
                 </a>
                 <a href="./article.php" class="nav-link dropdown_list">
-                <i class="fa-solid fa-newspaper color_green"></i>
+                    <i class="fa-solid fa-newspaper color_green"></i>
                     <span class="navbar_btn_name_o px-1">
                         Articles
                     </span>
@@ -100,7 +108,7 @@
                         Medicine
                     </span>
                 </a>
-                
+
             </div>
             <div class="navbar_btn">
                 <a href="./inpatientList.php" class="nav-link align-middle py-2 ">
@@ -119,12 +127,21 @@
                 </a>
             </button>
             <div class="dropdown-container">
-                <a href="./about.php" class="nav-link dropdown_list">
+                <!-- <a href="./about.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-users color_green"></i>
                     <span class="navbar_btn_name_o px-1 ">
                         About Us
                     </span>
-                </a>
+                </a> -->
+                <div>
+                    <a href="./about.php" class="nav-link dropdown_list">
+                        <i class="fa-solid fa-users color_green"></i>
+                        <span class="navbar_btn_name_o px-1 ">
+                            About Us
+                        </span>
+                    </a>
+                </div>
+
                 <a href="./hospitalLocation.php" class="nav-link dropdown_list">
                     <i class="fa-solid fa-location-pin color_green"></i>
                     <span class="navbar_btn_name_o">
@@ -165,7 +182,7 @@
 
             </div>
             <div class="navbar_btn log_out_btn">
-                <a href="#" class="nav-link align-middle py-2 ">
+                <a href="./login.php" class="nav-link align-middle py-2 " >
                     <i class="fa-solid fa-arrow-left color_black"></i>
                     <span class="navbar_btn_name log_out fw-bold">Log Out</span>
                 </a>

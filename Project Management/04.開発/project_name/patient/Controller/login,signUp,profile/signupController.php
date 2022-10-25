@@ -37,9 +37,6 @@ if (isset($_POST["signUp"])) {
         header("Location: ../../View/home1.php");
     } else {
         $_SESSION["aleradyExistEmail"] =  $regEmail ;
-        echo "<script>
-        alert('Alerady Exist This Email');
-        </script>";
         header("Location: ../../View/signUp.php");
     }
 }

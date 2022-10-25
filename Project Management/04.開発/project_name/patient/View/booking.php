@@ -51,7 +51,7 @@ include "../Controller/booking/BookingStatusController.php";
                                 ?>
                                     <img src="./Qrcodes/<?= $booking["id"] ?>.png" alt="" width="150">
                                 <?php  } else {
-                                    echo "Your Booking is Panding";
+                                    echo "Your Booking is Pending";
                                 } ?>
                             </p>
                         </div>

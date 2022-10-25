@@ -43,7 +43,7 @@ include "../Controller/bloodDonationCenter/donationListController.php";
                                 <td>Contact</td>
                                 <td>Email</td>
                                 <td>Address</td>
-                                <td>Remove</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>

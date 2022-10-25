@@ -19,7 +19,11 @@ include("../Controller/inpatientController.php");
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <!-- js -->
     <script src="./resources/js/jquery3.6.0.js"></script>
+<<<<<<< HEAD
+    <script src="./resources/js/inpatientSearch.js"  defer></script>
+=======
     <script src="./resources/js/inpatientSearch.js" defer></script>
+>>>>>>> origin/main
 </head>
 
 <body>
@@ -61,8 +65,13 @@ include("../Controller/inpatientController.php");
                             <td>Status</td>
                             <td>Room</td>
                             <td>address</td>
+<<<<<<< HEAD
+                            <td>Action</td>
+
+=======
                             <td>Edit</td>
                             <td>Delete</td>
+>>>>>>> origin/main
                         </tr>
                     </thead>
                     <tbody id="table_text">
@@ -84,6 +93,12 @@ include("../Controller/inpatientController.php");
                                 <?php } ?>
                                 <td><?= $ipatient["address"] ?></td>
                                 <td class="p-3">
+<<<<<<< HEAD
+                                        <a href="../Controller/inpatientEditController.php?id=<?= $ipatient["id"] ?>" class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                                 </td>
+=======
                                     <a href="../Controller/inpatientEditController.php?id=<?= $ipatient["id"] ?>" class="me-4">
                                         Edit</a>
                                 </td>
@@ -91,6 +106,7 @@ include("../Controller/inpatientController.php");
                                     <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                 </td>
 
+>>>>>>> origin/main
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -179,5 +195,8 @@ include("../Controller/inpatientController.php");
     </div>
 </body>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 </html>
