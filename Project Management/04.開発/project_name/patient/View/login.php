@@ -44,13 +44,28 @@ unset($_SESSION["userInfo"]);
                 <!-- input box -->
                 <form method="POST" action="../Controller/login,signUp,profile/loginController.php" class="inpbox">
                     <br>
-                    <input type="email" name="email" class="name form-control mb-3" placeholder="Login with email">
+                    <input type="email" name="email" class="name form-control mb-3" placeholder="Login with email" value="<?php
+                    if (isset($_SESSION["wrongEmail"])) {
+                        echo $_SESSION["wrongEmail"];
+                    } ?>" required>
+                    <?php
+                    if (isset($_SESSION["wrongEmail"])) { ?>
+                        <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation  "></i>  Email Address Wrong</p>
+                    <?php } ?>
                     <div class="password_box">
-                        <input type="password" name="pwd" class="name form-control" placeholder="Password"  id="pw">
+                        <input type="password" name="pwd" class="name form-control mb-3" placeholder="Password"  id="pw" value="<?php
+                    if (isset($_SESSION["wrongLoginPwd"])) {
+                        echo $_SESSION["wrongLoginPwd"];
+                    } ?>"  required>
                         <i class="fa-solid fa-eye-slash" id="eye"></i>
                     </div>
+                    <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation "></i>  Password Wrong</p>
+                    <?php
+                    if (isset($_SESSION["wrongLoginPwd"])) { ?>
+                        
+                    <?php } ?>
                     <a href="./forgotpsw.php">
-                        <p class="forgotpsw text-decoration-underline">Forgot Password?</p>
+                        <p class="forgotpsw text-decoration-underline text-white">Forgot Password?</p>
                     </a>
                     <button type="submit" name="logIn" class="btnsignup mt-1 form-control">
                         Log In

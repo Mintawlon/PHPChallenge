@@ -165,7 +165,7 @@
 
             </div>
             <div class="navbar_btn log_out_btn">
-                <a href="#" class="nav-link align-middle py-2 ">
+                <a href="./login.php" class="nav-link align-middle py-2 " >
                     <i class="fa-solid fa-arrow-left color_black"></i>
                     <span class="navbar_btn_name log_out fw-bold">Log Out</span>
                 </a>
