@@ -69,9 +69,6 @@
                         <p>
                             <a href="./emergency.php" class="link_color fw-semibold"><u>First Aid For Emergency Situations</u></a>
                         </p>
-                        <p>
-                            <a href="#" class="link_color fw-semibold hello"><u>Knowledge About Dengue</u></a>
-                        </p>
                     </div>
                     <!-- Grid column -->
                 </div>

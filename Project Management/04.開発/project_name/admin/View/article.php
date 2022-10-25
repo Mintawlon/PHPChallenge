@@ -57,8 +57,8 @@ include("../Controller/article/articleInfoController.php");
                                     <td id="paraHeader"> <?= $info["para_header"] ?></td>
                                     <td id="paragraph"><?= $info["para_text"] ?></td>
                                     <td id="image"><img src="./storages/image/<?= $info["image"] ?>" alt="" class="image"></td>
-                                    <td>
-                                        <a href="../Controller/articleEditController.php?id=<?= $info["id"] ?>" class="edit_btn me-4">
+                                    <td class="pt-3">
+                                        <a href="../Controller/articleEditController.php?id=<?= $info["id"] ?>" class="edit_btn me-4 mt-3">
                                             Edit</a>
                                         <a href="../Controller/articleEditController.php?delId=<?= $info["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>

@@ -44,21 +44,21 @@ session_start();
                     Email* <br>
                     <input type="email" name="reg_email" class="name form-control" placeholder="email" value="
                     <?php
-                    if(isset($_SESSION["aleradyExistEmail"])){
-                    echo $_SESSION["aleradyExistEmail"];
-                     } ?>
+                    if (isset($_SESSION["aleradyExistEmail"])) {
+                        echo $_SESSION["aleradyExistEmail"];
+                    } ?>
                     ">
                     <?php
-                    if(isset($_SESSION["aleradyExistEmail"])){?>
+                    if (isset($_SESSION["aleradyExistEmail"])) { ?>
                         <p id="alreadyExist"><u>This Email Address Already has an Account</u></p>
                     <?php } ?>
-                    
+
                     <br>
                     Password* <br>
                     <div class="password_box">
-                    <input type="password" name="reg_pwd" class="name form-control" placeholder="password" id="pw">
-                    <i class="fa-solid fa-eye-slash" id="eye"></i>
-                    </div> 
+                        <input type="password" name="reg_pwd" class="name form-control" placeholder="password" id="pw">
+                        <i class="fa-solid fa-eye-slash" id="eye"></i>
+                    </div>
                     <br>
                     <br>
                     <button type="submit" name="signUp" class="btnsignup mt-1 form-control">

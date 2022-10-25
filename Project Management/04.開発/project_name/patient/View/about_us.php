@@ -75,6 +75,7 @@ if (!isset($_SESSION["email"])) {
             </div>
             <hr class="about_line" />
         </div>
+<<<<<<< HEAD
 
         <!-- Section-3 -->
 
@@ -105,6 +106,9 @@ if (!isset($_SESSION["email"])) {
             </div> -->
         <!-- </div> -->
 
+=======
+        <hr class="about_line mt-4" />
+>>>>>>> origin/main
         <!-- dropdown section -->
         <div class="policy">
             <h2 class="display_top header-2 mt-2">Privacy Policy</h2>

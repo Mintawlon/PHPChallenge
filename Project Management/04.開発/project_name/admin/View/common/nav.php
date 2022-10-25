@@ -22,7 +22,10 @@
             <div class="logo_btn ">
                 <img src="./storages/logo/VR2.png" alt="" id="logo">
             </div>
+<<<<<<< HEAD
             <!-- <img class="logo_btn" src="../../../patient//View/storages/logo/VR2.png" alt="Vr_Carer" width="104px"> -->
+=======
+>>>>>>> origin/main
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
@@ -175,7 +178,7 @@
 
             </div>
             <div class="navbar_btn log_out_btn">
-                <a href="#" class="nav-link align-middle py-2 ">
+                <a href="./login.php" class="nav-link align-middle py-2 " >
                     <i class="fa-solid fa-arrow-left color_black"></i>
                     <span class="navbar_btn_name log_out fw-bold">Log Out</span>
                 </a>

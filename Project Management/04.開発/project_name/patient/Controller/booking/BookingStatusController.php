@@ -14,11 +14,11 @@ if (isset($_SESSION["email"])) {
     // for ($i = 0; $i < count($status); $i++)
     //     echo $status[$i]["doctor_id"];
 
-    $sql = $pdo->prepare(
-        "SELECT * FROM date WHERE doctor_id = :id"
-    );
-    $sql->bindValue(":id", $status[0]["doctor_id"]);
-    $sql->execute();
-    $time = $sql->fetchAll(PDO::FETCH_ASSOC);
+    // $sql = $pdo->prepare(
+    //     "SELECT * FROM date WHERE doctor_id = :id"
+    // );
+    // $sql->bindValue(":id", $status[0]["doctor_id"]);
+    // $sql->execute();
+    // $time = $sql->fetchAll(PDO::FETCH_ASSOC);
     //print_r($time);
 }

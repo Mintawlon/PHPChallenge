@@ -9,7 +9,11 @@ $startPage = ($page-1)*$rowLimit;
 
 // Get Hospital Info
 $sql = $pdo->prepare(
+<<<<<<< HEAD
     "SELECT * FROM `hospital_location`  WHERE del_flg != 1 LIMIT  $startPage,$rowLimit 
+=======
+    "SELECT * FROM `hospital_location` WHERE del_flg != 1  LIMIT  $startPage,$rowLimit 
+>>>>>>> origin/main
     "
 );
 $sql->execute();
