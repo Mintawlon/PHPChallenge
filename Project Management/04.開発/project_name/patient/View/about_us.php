@@ -75,14 +75,15 @@ if (!isset($_SESSION["email"])) {
             </div>
             <hr class="about_line" />
         </div>
+<<<<<<< HEAD
 
         <!-- Section-3 -->
 
-        <div class="content-container">
+        <!-- <div class="content-container"> -->
 
-            <div class="card p-3" style="width: 38rem;">
+            <!-- <div class="card p-3" style="width: 38rem;">
                 <p class="text-center content-card-header">Get In Touch</p>
-                <!--input Form -->
+                
                 <form action="../Controller/aboutUs/aboutUscontroller.php" method="post">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingPassword" placeholder="Your Name" name="name">
@@ -96,27 +97,30 @@ if (!isset($_SESSION["email"])) {
                         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="comment"></textarea>
                         <label for="floatingTextarea2">Comments</label>
                     </div>
-                    <!-- Blue Square Btn -->
+                   
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-primary" type="submit" name="contact">Submit</button>
                     </div>
 
                 </form>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
+=======
         <hr class="about_line mt-4" />
+>>>>>>> origin/main
         <!-- dropdown section -->
         <div class="policy">
-            <h2 class="display_top header-2">Privacy Policy</h2>
+            <h2 class="display_top header-2 mt-2">Privacy Policy</h2>
 
             <?php foreach ($policyInfo as $info1) { ?>
                 <!-- Page Tab -->
                 <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p>
                 <!-- Page Tab -->
-                <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p>
+                <!-- <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p> -->
             <?php } ?>
         </div>
+        <hr class="about_line mt-4" />
     </div>
     </div>
     <!-- Footer -->

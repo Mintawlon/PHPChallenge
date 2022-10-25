@@ -9,16 +9,8 @@ $startPage = ($page - 1) * $rowLimit;
 
 $sql = $pdo->prepare("SELECT * FROM inpatient");
 
-<<<<<<< HEAD
-
-// get inpatient info
- $sql = $pdo->prepare(
-    "SELECT * FROM inpatient WHERE del_flg != 1 LIMIT  $startPage,$rowLimit
-    ");
-=======
 // get inpatient info
 $sql = $pdo->prepare("SELECT * FROM inpatient WHERE del_flg != 1   LIMIT  $startPage,$rowLimit");
->>>>>>> origin/main
 
 $sql->execute();
 

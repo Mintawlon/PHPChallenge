@@ -22,11 +22,7 @@ include("../Controller/inpatientController.php");
 <<<<<<< HEAD
     <script src="./resources/js/inpatientSearch.js"  defer></script>
 =======
-
     <script src="./resources/js/inpatientSearch.js" defer></script>
-
-    <script src="./resources/js/inpatientSearch.js?v=" <?= time() ?> defer></script>
-
 >>>>>>> origin/main
 </head>
 
@@ -70,11 +66,11 @@ include("../Controller/inpatientController.php");
                             <td>Room</td>
                             <td>address</td>
 <<<<<<< HEAD
-                            <td>Edit</td>
-                            <td>Delete</td>
-=======
                             <td>Action</td>
 
+=======
+                            <td>Edit</td>
+                            <td>Delete</td>
 >>>>>>> origin/main
                         </tr>
                     </thead>
@@ -87,10 +83,6 @@ include("../Controller/inpatientController.php");
                                 <td><?= $ipatient["name"] ?></td>
                                 <td><?= $ipatient["age"] ?></td>
                                 <td><?= $ipatient["disease"] ?></td>
-<<<<<<< HEAD
-                                <td><?= $ipatient["status"] ?></td>
-                                <td><?= $ipatient["room"] ?></td>
-=======
                                 <td><?= $ipatient["room"] ?></td>
                                 <?php if ($ipatient["status"] == "HCU") { ?>
                                     <td style="color:#F00000; font-weight:bold"><?= $ipatient["status"] ?></td>
@@ -99,20 +91,21 @@ include("../Controller/inpatientController.php");
                                 <?php } else { ?>
                                     <td style="color:#45B649; font-weight:bold"> <?= $ipatient["status"] ?></td>
                                 <?php } ?>
->>>>>>> origin/main
                                 <td><?= $ipatient["address"] ?></td>
                                 <td class="p-3">
+<<<<<<< HEAD
+                                        <a href="../Controller/inpatientEditController.php?id=<?= $ipatient["id"] ?>" class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                                 </td>
+=======
                                     <a href="../Controller/inpatientEditController.php?id=<?= $ipatient["id"] ?>" class="me-4">
                                         Edit</a>
-<<<<<<< HEAD
-                                 </td>
-                                 <td>
-                                 <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
-                                 </td>
-                               
-=======
+                                </td>
+                                <td>
                                     <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                 </td>
+
 >>>>>>> origin/main
                             </tr>
                         <?php } ?>
@@ -204,7 +197,6 @@ include("../Controller/inpatientController.php");
 
 <<<<<<< HEAD
 =======
-</body>
 
 >>>>>>> origin/main
 </html>

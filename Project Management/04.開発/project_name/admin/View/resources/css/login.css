@@ -24,10 +24,10 @@ body {
   font-family: var(--secondary_font) !important;
   color: var(--third_color) !important;
   width: 200px !important;
-  margin-left: 170px !important;
   font-family: var(--primary_font);
   font-size: var(--extra_small);
-  border-radius: 50px !important;
+  border-radius: 50px !important; 
+  margin: 0 auto;
 }
 
 
@@ -38,3 +38,16 @@ body {
     }
     
   } 
+
+  /* Password Eyelash */
+.password_box{
+  position: relative;
+}
+#eye{
+  position: absolute;
+  right: 5%;
+  top: 10px;
+}
+.icon{
+  color: var(--fourth_color);
+}

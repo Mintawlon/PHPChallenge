@@ -176,7 +176,7 @@ if (isset($_SESSION["doctorInfo"])) {
                     <hr />
                 </section>
                 <section class="dressing_time">
-                    <form action="../Controller/addDateController.php" method="post">
+                    <form action="../Controller/addDateController.php" method="post" >
                         <div class="input_set">
                             <h2 class="input_set_header my-4">Add Dressing Time</h2>
                             <div class="input_one mb-2">

@@ -17,9 +17,10 @@ $("#search").click(function (){
 
                 $("#table_text").empty();
                 for (const inpatient of inpatientList) {
+                    let number = 1;
                     $("#table_text").append(
                         `<tr class="row_bdr">
-                        <td>1</td> -->
+                        <td>${number++}</td>
                         <td>${inpatient.hospitalized_date} </td>
                         <td>${inpatient.name}</td>
                         <td>${inpatient.age}</td>
@@ -27,12 +28,11 @@ $("#search").click(function (){
                         <td>${inpatient.status}</td>
                         <td>${inpatient.room}</td>
                         <td>${inpatient.address}</td>    
-                        <td class="p-3">
-                                    <a href="../Controller/inpatientEditController.php?id=${inpatient.id}" class="edit_btn me-4">
-                                        Edit</a> </td>
-                        <td>
-                                    <a href="../Controller/inpatientEditController.php?delId=${inpatient.id}" class="trash "><i class="fa-solid fa-trash"></i></a>
-                        </td>                  
+                         <td class="p-3">
+                                       <a href="../Controller/inpatientEditController.php?id=${inpatient.id}" class="edit_btn me-4">
+                                            Edit</a>
+                                        <a href="../Controller/inpatientEditController.php?delId=${inpatient.id}" class="trash "><i class="fa-solid fa-trash"></i></a>
+                        </td>               
                     </tr>`
                     );
                

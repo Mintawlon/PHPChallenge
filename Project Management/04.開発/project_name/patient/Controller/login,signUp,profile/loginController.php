@@ -22,10 +22,15 @@ if (isset($_POST["logIn"])) {
         password_verify($loginPwd, $login_check[0]["password"]) &&
         $loginEmail == $login_check[0]["email_address"]
     ) {
+        unset($_SESSION["wrongEmail"]);
+        unset($_SESSION["wrongLoginPwd"]);
         header("Location: ../../View/home1.php");
-    } else {
-        echo "wrong";
-        // header("Location: ../../View/login.php");
+    } else if($loginEmail != $login_check[0]["email_address"]) {
+        $_SESSION["wrongEmail"] =  $loginEmail ;
+        header("Location: ../../View/login.php");
+    }else if($loginPwd != $login_check[0]["password"]){
+        $_SESSION["wrongLoginPwd"] =  $loginPwd ;
+        header("Location: ../../View/login.php");
     }
 
 };
