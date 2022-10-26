@@ -20,6 +20,9 @@ $view = 2;
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?= time() ?> />
     <link rel="stylesheet" href="./resources/css/adminDashboard.css" <?= time() ?> />
+    <!-- chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./resources/js/chart.js" defer></script>
 </head>
 
 <body>
@@ -76,6 +79,10 @@ $view = 2;
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- Chart -->
+                <div>
+                    <canvas id="myChart"></canvas>
                 </div>
                 <!--Search Box-->
                 <div class="sec_input mb-2 d-flex justify-content-end">
