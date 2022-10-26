@@ -39,9 +39,9 @@ $("#search").click(function () {
         alert(err);
       }
     });
-  // if ($("#searchFirstaid").val() == "") {
-  //   // alert("search something");
-  // } else {
-    
-  // }
+ 
+});
+
+$("#allFirstAid").click(function () {
+  location.reload();
 });

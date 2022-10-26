@@ -46,6 +46,22 @@ body{
     border-radius: 10px;
     border: none;
 }
+#save_btn:hover{
+    background-color: var(--first_color);
+    color: var(--secondary_color) !important;
+}
+#pwdChangeBtn{
+    background-color: var(--first_color);
+    color: var(--second_color);
+    width: 15%;
+    height: 2.5em;
+    border-radius: 10px;
+    border: none;
+}
+#pwdChangeBtn:hover{
+    background-color: var(--primary_color);
+    color: var(--first_color);
+}
 #file_input{
     border-radius: 10px;
     width: 50%;
@@ -62,7 +78,24 @@ body{
     height: 2em;
     padding-left: 10px;
 }
-
+.changeInput{
+    outline: none;
+    border: 2px solid var(--first_color) ;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 50%;
+    height: 2em;
+    padding-left: 10px;
+}
+.icon{
+    color: var(--third_color);
+  }
+#changePwd{
+    background-color: var(--secondary_color);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
 @media only screen and (max-width:800px) {
     .profile_wrapper{
         flex-direction: column;

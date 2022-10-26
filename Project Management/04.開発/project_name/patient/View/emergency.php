@@ -44,10 +44,7 @@ if (!isset($_SESSION["email"])) {
                 ?>
             </select>
             <button id="search"  class="fw-bold mt-2 allDoctor">Search</button>
-            <button  class="mt-3 ms-4 allDoctor">Show All First Aid</button>
-            <!-- <input type="text" class="search_input  ps-5" id="searchFirstaid" placeholder="search by bodypart" />
-            <i class="fa-solid fa-magnifying-glass search_icon text_white"></i> -->
-            <!-- <button class="search_text">Search</button> -->
+            <button  class="mt-3 ms-4 allDoctor" id="allFirstAid">Show All First Aid</button>
         </div>
     </div>
     <!-- First Tab -->
@@ -83,7 +80,7 @@ if (!isset($_SESSION["email"])) {
                     </span>
                 </h1>
                 <div class="wrapper">
-                    <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
+                    <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
                     <div class="info">
                         <h2 class="first_aid_para_header">What to Do?</h2>
                         <?= $emergency["article_text"] ?>

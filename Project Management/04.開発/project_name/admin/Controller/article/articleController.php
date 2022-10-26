@@ -9,31 +9,38 @@ if (isset($_POST["homeArticleAdd"])) {
     $photo = $_POST["homeArticlePhoto"];
     $link = $_POST["pageLink"];
 
+    $file = $_FILES['homeArticlePhoto']['name'];
+    $location = $_FILES['homeArticlePhoto']['tmp_name'];
+    $extension = pathinfo($file)['extension'];
+    $path = $id . "." . $extension;
 
-    $sql = $pdo->prepare(
-        "INSERT INTO 
-        article (
-        header,
-        para_header,
-        para_text,
-        image,
-        page_link,
-        create_date
-        ) 
-        VALUES 
-        (
-        :header,
-        :para_header,
-        :para_text,
-        :image,
-        :link,
-        :createdDate
-        );"
-    );
+    if (move_uploaded_file($location, "../../View/storages/article/" . $id . "." . $extension)) {
+        $sql = $pdo->prepare(
+            "INSERT INTO 
+                article (
+                header,
+                para_header,
+                para_text,
+                image,
+                page_link,
+                create_date
+                ) 
+                VALUES 
+                (
+                :header,
+                :para_header,
+                :para_text,
+                :image,
+                :link,
+                :createdDate
+                );"
+        );
+    }
+
     $sql->bindValue(":header", $header);
     $sql->bindValue(":para_header", $paraHeader);
     $sql->bindValue(":para_text", $paragraph);
-    $sql->bindValue(":image", $photo);
+    $sql->bindValue(":image", $path);
     $sql->bindValue(":link", $link);
     $sql->bindValue(":createdDate", date("Y/m/d"));
 

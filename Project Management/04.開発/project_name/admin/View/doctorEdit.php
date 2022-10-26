@@ -43,14 +43,12 @@ if (isset($_SESSION["doctorInfo"])) {
                         <i class="fa-solid fa-arrow-left arrow_left color_green"></i>
                     </a>
                 </div>
-                <form action="../Controller/doctorEditController.php" method="POST" class="edit_doctor">
+                <form action="../Controller/doctorEditController.php" method="POST" class="edit_doctor" enctype="multipart/form-data">
                     <div class="input_set">
                         <h2 class="input_set_header my-4">Edit Selected Doctor Information</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Doctor Name</span>
-
                             <input type="text" class="common_input form-control" name="updateDoctorName" value="<?= $doctorInfo[0]["doctor_name"] ?>" />
-
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Age</span>
@@ -80,7 +78,7 @@ if (isset($_SESSION["doctorInfo"])) {
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Profile Photo</span>
-                            <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" name="updateDoctorPhoto" />
+                            <input type="file" class="form-control  common_input " name="updateDoctorPhoto" />
                         </div>
 
                         <input type="hidden" value="<?= $doctorInfo[0]["id"] ?>" name="updateDoctorId">

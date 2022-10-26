@@ -18,6 +18,7 @@ $emergencyInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 if(isset($_POST["addEmergencyTab"])){
     $header = $_POST["header"];
     $para = $_POST["paragraph"];
+
     $sql = $pdo->prepare(
         "INSERT INTO 
         emergency_page_header (
@@ -41,10 +42,15 @@ if(isset($_POST["addEmergencyTab"])){
 }
 // Add Article
 if(isset($_POST["addEmergency"])){
-    $image = $_POST["emergencyImage"];
     $header = $_POST["emergencyHeader"];
     $paragraph = $_POST["emergencyParagraph"];  
 
+    $file = $_FILES['emergencyImage']['name'];
+    $location = $_FILES['emergencyImage']['tmp_name'];
+    $extension = pathinfo($file)['extension'];
+    $path = $header . "." . $extension;
+
+    if (move_uploaded_file($location, "../View/storages/emergency/" . $header . "." . $extension)) {
     $sql = $pdo->prepare(
         "INSERT INTO 
         first_aid (
@@ -61,9 +67,11 @@ if(isset($_POST["addEmergency"])){
         :createdDate
         );"
     );
+
+}
     $sql->bindValue(":header",$header);
     $sql->bindValue(":paragraph",$paragraph);
-    $sql->bindValue(":image",$image);
+    $sql->bindValue(":image", $path );
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();

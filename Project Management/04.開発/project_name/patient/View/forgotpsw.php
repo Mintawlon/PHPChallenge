@@ -13,6 +13,9 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/fa91b09b37.js" crossorigin="anonymous"></script>
+    <script src="./resources/js/signUp.js" defer></script>
 
     <!-- Css -->
     <link rel="stylesheet" href="./resources/css/forgotpsw.css">
@@ -30,23 +33,34 @@ session_start();
         <!-- body -->
         <div class="body ">
             <form action="../Controller/forgotPasswordController.php" method="post">
-            <br><br><br><br>
-            <div class="inputbox_wrapper">
-                <p class="pasw mt-5 fw-semibold">Forgot Your Password?</p>
-                <!-- input box -->
-                <div class="inpbox ms-5 mt-5">
-                    <input type="text" class="name form-control" name="email" placeholder="Email Address">
-                    <br>
-                    <button type="submit" name="resetPsw" class="btnsignup mt-1 form-control">
-                        Send Email
-                    </button>
-                    </form>
-                </div>
-            </div>
-            <div>
-                <img class="login_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">
-            </div>
+                <br>
+                <div class="inputbox_wrapper">
+                    <p class="pasw mt-5 fw-semibold">Forgot Your Password?</p>
+                    <!-- input box -->
+                    <div class="inpbox ms-5 mt-5">
+                        <input type="text" class="name form-control" name="email" placeholder="Email Address">
+                        <br>
+                        <?php
+                        if (isset($_SESSION["forgotEmailWrong"])) { ?>
+                            <p class="icon fw-bold">
+                            <i class="fa-solid fa-triangle-exclamation  "></i>
+
+                            Email Wrong Check Again!
+                            </p>
+                        <?php } ?>
+                        <button type="submit" name="resetPsw" class="btnsignup mt-1 form-control">
+                            Send Email
+                        </button>
+                        <a href="./login.php">
+                        <p class="mt-2 reg text-white fs-6 text-decoration-underline ">Go to Login</p>
+                    </a>
+            </form>
         </div>
+    </div>
+    <div>
+        <img class="login_img ms-5" src="../View/components/card/image/image_login.png.png" alt="">
+    </div>
+    </div>
 </body>
 
 </html>

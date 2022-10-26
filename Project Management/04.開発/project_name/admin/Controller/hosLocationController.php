@@ -9,11 +9,7 @@ $startPage = ($page-1)*$rowLimit;
 
 // Get Hospital Info
 $sql = $pdo->prepare(
-<<<<<<< HEAD
-    "SELECT * FROM `hospital_location`  WHERE del_flg != 1 LIMIT  $startPage,$rowLimit 
-=======
     "SELECT * FROM `hospital_location` WHERE del_flg != 1  LIMIT  $startPage,$rowLimit 
->>>>>>> origin/main
     "
 );
 $sql->execute();
@@ -21,7 +17,7 @@ $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // Pagination
 $sql = $pdo->prepare(
-    "SELECT COUNT(id) As total FROM `hospital_location` 
+    "SELECT COUNT(id) As total FROM `hospital_location`  WHERE del_flg != 1 
     "
 );
 $sql->execute();
