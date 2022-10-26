@@ -201,7 +201,7 @@ body{
 .search_input {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 20em;
   height: 2.5em;
   border: 1px solid var(--secondary_color);
@@ -211,14 +211,14 @@ body{
 .search_icon {
   position: absolute;
   top: 30%;
-  left: 5em;
+  left: 1em;
   font-size: var(--extra_small);
 }
 
 .search_text {
   position:absolute;
   top: 10%;
-  left: 0;
+  left: 20rem;
   font-size: var(--extra_small);
 }
 
@@ -421,7 +421,7 @@ hr {
 }
 .navbar_btn_name {
   font-size: var(--extra_extra_small);
-  color: var(--first_color);
+  color: var(--sixth_color);
   padding-left: 1em;
   font-family: var(--primary_font);
 }
@@ -435,10 +435,10 @@ hr {
   height: 10px;
 }
 .color_black {
-  color: var(--first_color);
+  color: var(--sixth_color);
 }
 .color_green {
-  color: var(--primary_color);
+  color: var(--fourth_color);
 }
 .log_out{
   color: var(--third_color);

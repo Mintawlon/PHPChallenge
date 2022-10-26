@@ -28,32 +28,6 @@ if (!isset($_SESSION["email"])) {
     <?php
     include("./common/head.php")
     ?>
-    <!-- Page header -->
-    <!-- <h3 class="blog_header my-4">Blog</h3> -->
-    <!-- Page Tab -->
-    <!-- <div class="blog_tab_wrapper">
-        <a class="blog_tab mb-4" href="./emergency.php">
-            <div class="blog_tab_text_div">
-                <h3 class="blog_tab_text">Emergency First Aid</h3>
-            </div>
-            <div class="blog_tab_img_div">
-                <img src="./storages/image/blog_tab_img1.png" alt="" class="blog_tab_img">
-            </div>
-        </a>
-        <hr class="line" />
-    </div> -->
-    <!-- Page Tab -->
-    <!-- <div class="blog_tab_wrapper">
-        <a class="blog_tab mb-4" href="./blooddonation.php">
-            <div class="blog_tab_text_div">
-                <h3 class="blog_tab_text">Blood Donation</h3>
-            </div>
-            <div class="blog_tab_img_div">
-                <img src="./storages/image/blog_tab_img2.png" alt="" class="blog_tab_img">
-            </div>
-        </a>
-        <hr class="line" />
-    </div> -->
     <!-- Current Diseases header -->
     <h1 class="current_disease_header my-5">Current Diseases</h1>
     <!-- Current Diseases card -->
