@@ -58,7 +58,7 @@ include("../Controller/emergencyController.php");
                                         <?= $emergency["article_header"] ?>
                                     </td>
                                     <td id="image">
-                                        <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="image">
+                                        <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="image">
                                     </td>
 
                                     <td id="text"><?= $emergency["article_text"] ?></td>
@@ -66,9 +66,6 @@ include("../Controller/emergencyController.php");
                                         <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="edit_btn me-4">
                                             Edit</a>
                                         <a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
-
-                                        <!-- <span class="edit_delete_btn"><a  class="color_sixth me-2">Edit</a></span>
-                                        <span class="edit_delete_btn"><a  class="color_fifth">Delete</a></span> -->
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -102,11 +99,11 @@ include("../Controller/emergencyController.php");
                 </section>
                 <!-- Add Article Form -->
                 <section class="add_first_aid">
-                    <form class="input_set" action="../Controller/emergencyController.php" method="POST">
+                    <form class="input_set" action="../Controller/emergencyController.php" method="POST" enctype="multipart/form-data">
                         <h2 class="input_set_header my-4">Add First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Add image</span>
-                            <input type="file" name="emergencyImage" id="formFileLg" class="form-control  common_input " accept="image/*" />
+                            <input type="file" name="emergencyImage" class="form-control  common_input "   />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>

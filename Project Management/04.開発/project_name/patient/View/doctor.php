@@ -64,7 +64,7 @@ unset($_SESSION["alreadyBookedDoctor"]);
                 <div class="col-sm-12 col-md-6 col-lg-4 text-center card-container searchSpeciality" id="<?= $doctor["speciality"] ?>">
                     <div class="card cart" style="width: 23rem;">
                         <dvi class="image">
-                            <img src="./storages/image/<?= $doctor["profile_photo"] ?>" class="card-img-top" alt="...">
+                            <img src="./storages/doctor/<?= $doctor["profile_photo"] ?>" class="card-img-top" alt="...">
                             <h5 class="mt-2"><?= $doctor["doctor_name"] ?></h5>
                             <p><?= $doctor["speciality"] ?></p>
                         </dvi>

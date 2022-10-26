@@ -20,7 +20,7 @@ if (isset($_POST["changeProfile"])) {
         $extension = pathinfo($file)['extension'];
         $path = $id . "." . $extension;
 
-        if (move_uploaded_file($location, "../../View/storages/image/" . $id . "." . $extension)) {
+        if (move_uploaded_file($location, "../../View/storages/userprofile/" . $id . "." . $extension)) {
             $sql = $pdo->prepare(
                 "UPDATE
                 user_register SET 

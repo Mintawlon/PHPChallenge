@@ -80,7 +80,7 @@ if (!isset($_SESSION["email"])) {
                     </span>
                 </h1>
                 <div class="wrapper">
-                    <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
+                    <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
                     <div class="info">
                         <h2 class="first_aid_para_header">What to Do?</h2>
                         <?= $emergency["article_text"] ?>

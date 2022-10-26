@@ -53,7 +53,7 @@ include("../Controller/medicineInfoController.php");
                                 <td><?= $medicine["medicine_name"] ?></td>
                                 <td><?= $medicine["description"] ?></td>
                                 <td>
-                                    <span><a href="" class="color_fifth">Delete</a></span>
+                                    <span><a href="../Controller/medicineController.php?delId=<?= $medicine["id"] ?>" class="color_fifth">Delete</a></span>
                                 </td>
                             </tr>
                             <?php
@@ -67,7 +67,7 @@ include("../Controller/medicineInfoController.php");
                     <hr />
                 </section>
                 <section class="add_medicine">
-                    <form action="../Controller/medicineController.php" method="post">
+                    <form action="../Controller/medicineController.php" method="post" enctype="multipart/form-data">
                         <div class="input_set">
                             <h2 class="input_set_header my-4">Add Medicine</h2>
                             <div class="input_one mb-2">
@@ -80,7 +80,7 @@ include("../Controller/medicineInfoController.php");
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text add_file">Add Medicine Image</span>
-                                <input type="file" id="formFileLg" name="medicineImg" class="form-control common_input " accept="image/*" />
+                                <input type="file"  name="medicineImg" class="form-control common_input " />
                             </div>
                             <div class=" mb-2  ">
                                 <!-- Add Btn -->

@@ -57,7 +57,7 @@ if (!isset($_SESSION["email"])) {
                             <img src="./storages/image/Dengue Fever.png" alt="" class="first_slide_img" />
                         </div>
                     </li>
-                    
+
                 </ul>
             </div>
         </section>
@@ -82,7 +82,7 @@ if (!isset($_SESSION["email"])) {
                         <p class="text-white"> <?= $info["para_text"] ?></p>
                     </div>
                     <div class="article_image">
-                        <img src="./storages/image/<?= $info["image"] ?>" alt="" id="article_image">
+                        <img src="./storages/article/<?= $info["image"] ?>" alt="" id="article_image">
                     </div>
                 </div>
             </div>
@@ -101,11 +101,11 @@ if (!isset($_SESSION["email"])) {
                 <li class="card">
                     <div>
                         <div class="vaccine_div">
-                            <img src="./storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
+                            <img src="./storages/medicine/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
                         </div>
                         <h3 class="card-title"><?= $medicine["medicine_name"] ?></h3>
                         <div class="card-content">
-                            <p ><?= $medicine["description"] ?></p>
+                            <p><?= $medicine["description"] ?></p>
                         </div>
                     </div>
                 </li>

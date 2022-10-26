@@ -56,7 +56,7 @@ include("../Controller/article/articleInfoController.php");
                                     <td><?= $info["header"] ?></td>
                                     <td id="paraHeader"> <?= $info["para_header"] ?></td>
                                     <td id="paragraph"><?= $info["para_text"] ?></td>
-                                    <td id="image"><img src="./storages/image/<?= $info["image"] ?>" alt="" class="image"></td>
+                                    <td id="image"><img src="./storages/article/<?= $info["image"] ?>" alt="" class="image"></td>
                                     <td class="pt-3">
                                         <a href="../Controller/articleEditController.php?id=<?= $info["id"] ?>" class="edit_btn me-4 mt-3">
                                             Edit</a>
@@ -77,7 +77,7 @@ include("../Controller/article/articleInfoController.php");
 
                 <!-- Add First Aid Tab Form -->
                 <section class="first_aid_tab">
-                    <form action="../Controller/article/articleController.php" method="POST" class="input_set">
+                    <form action="../Controller/article/articleController.php" method="POST"  enctype="multipart/form-data" class="input_set">
                         <h2 class="input_set_header my-4">Add New Article</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header </span>
@@ -97,7 +97,7 @@ include("../Controller/article/articleInfoController.php");
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Article Photo</span>
-                            <input type="file" id="formFileLg" class="form-control common_input" accept="image/*" name="homeArticlePhoto" required />
+                            <input type="file"  class="form-control common_input"  name="homeArticlePhoto" id="file_input" onchange="setImage()"  required />
                         </div>
                         <!-- Add Btn -->
                         <button type="submit" name="homeArticleAdd" class="common_btn add_btn">Add</button>

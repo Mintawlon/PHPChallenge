@@ -2,13 +2,13 @@
 include("../Model/dbConnection.php");
 session_start();
 // Get article info for Update
-if(isset($_GET["id"])){
+if (isset($_GET["id"])) {
     $id = $_GET["id"];
     $sql = $pdo->prepare(
         "SELECT * FROM `article` WHERE id=:id
         "
     );
-    $sql->bindValue(":id",$id);
+    $sql->bindValue(":id", $id);
     $sql->execute();
     $articleInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -16,7 +16,9 @@ if(isset($_GET["id"])){
     header("Location: ../View/articleEdit.php");
 }
 // Update Article
-if(isset($_POST["homeArticleEdit"])){
+
+
+if (isset($_POST["homeArticleEdit"])) {
     $id = $_POST["homeArticleId"];
     $photo = $_POST["homeArticlePhoto"];
     $link = $_POST["pageLink"];
@@ -25,7 +27,7 @@ if(isset($_POST["homeArticleEdit"])){
     $articleHeader = $_POST["homeArticleHeader"];
 
 
-    if( $_POST["homeArticlePhoto"] == ""){
+    if ($_FILES["homeArticlePhoto"]["name"] == "") {
         $sql = $pdo->prepare(
             "UPDATE
             article SET 
@@ -35,9 +37,15 @@ if(isset($_POST["homeArticleEdit"])){
             page_link=:page_link,
             update_date=:updatedDate WHERE id=:id"
         );
-    }else{
-        $sql = $pdo->prepare(
-            "UPDATE
+    } else {
+        $file = $_FILES['homeArticlePhoto']['name'];
+        $location = $_FILES['homeArticlePhoto']['tmp_name'];
+        $extension = pathinfo($file)['extension'];
+        $path = $id  . "." . $extension;
+
+        if (move_uploaded_file($location, "../View/storages/article/" . $id . "." . $extension)) {
+            $sql = $pdo->prepare(
+                "UPDATE
             article SET 
             header=:header,
             para_header=:para_header,
@@ -45,16 +53,19 @@ if(isset($_POST["homeArticleEdit"])){
             image=:image,
             page_link=:page_link,
             update_date=:updatedDate WHERE id=:id"
-        );
-        $sql->bindValue(":image",$photo);
+            );
+            $sql->bindValue(":image", $path);
+        } else {
+            echo 'There was some error moving the file to upload directory.';
+        }
     }
 
- 
-    $sql->bindValue(":id",$id);
-    $sql->bindValue(":header",$articleHeader);
-    $sql->bindValue(":para_header",$articleParaHeader);
-    $sql->bindValue(":para_text",$articlePara);
-    $sql->bindValue(":page_link",$link);
+
+    $sql->bindValue(":id", $id);
+    $sql->bindValue(":header", $articleHeader);
+    $sql->bindValue(":para_header", $articleParaHeader);
+    $sql->bindValue(":para_text", $articlePara);
+    $sql->bindValue(":page_link", $link);
 
     $sql->bindValue(":updatedDate", date("Y/m/d"));
 
@@ -63,19 +74,19 @@ if(isset($_POST["homeArticleEdit"])){
     header("Location: ../View/article.php");
 }
 
-if(isset($_GET["delId"])){
+if (isset($_GET["delId"])) {
     $id = $_GET["delId"];
 
     echo $id;
 
-    $sql = $pdo->prepare("UPDATE article SET 
+    $sql = $pdo->prepare(
+        "UPDATE article SET 
     del_flg = 1
      WHERE id=:id"
-     );
+    );
     $sql->bindValue(":id", $id);
 
     $sql->execute();
 
     header("Location: ../View/article.php");
 }
-?>
