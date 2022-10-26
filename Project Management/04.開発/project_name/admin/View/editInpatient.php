@@ -73,7 +73,24 @@
                           </div>
                           <div class="input_one mb-2 display_top">
                               <span class="input_set_text text_display">Status</span>
-                              <input type="text" class="common_input form-control" name="status" value="<?php echo $inpatientInfo[0]["status"] ?>" />
+                              <select name="status" id="" class="common_input form-control" required>
+                                <?php
+                                if ($inpatientInfo[0]["gender"] == 0) { ?>
+                                    <option value="0" selected>Normal</option>
+                                    <option value="1">HCU</option>
+                                    <option value="2">ICU</option>
+                                <?php } else if  ($inpatientInfo[0]["gender"] == 1) { ?>
+                                    <option value="0">Normal</option>
+                                    <option value="1" selected>HCU</option>
+                                    <option value="2">ICU</option>
+                                <?php } else { ?>
+                                    <option value="0">Normal</option>
+                                    <option value="1" >HCU</option>
+                                    <option value="2" selected >ICU</option>
+                                <?php } ?>
+
+                            </select>
+                              <!-- <input type="text" class="common_input form-control" name="status" value="<?php echo $inpatientInfo[0]["status"] ?>" /> -->
                           </div>
                           <div class="input_one mb-2 display_top">
                               <span class="input_set_text text_display">Room</span>

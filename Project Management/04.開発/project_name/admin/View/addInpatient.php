@@ -65,7 +65,12 @@ include("../Controller/inpatientController.php");
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Status</span>
-                            <input type="text" class="common_input form-control" name="status" />
+                            <!-- <input type="text" class="common_input form-control" name="status" /> -->
+                            <select name="status" id="" class="common_input form-control" required>
+                                <option value="0">Normal</option>
+                                <option value="1">HCU</option>
+                                <option value="2">ICU</option>
+                            </select>
                         </div>
                         <div class="input_one mb-2 display_top">
                             <span class="input_set_text text_display">Room</span>
