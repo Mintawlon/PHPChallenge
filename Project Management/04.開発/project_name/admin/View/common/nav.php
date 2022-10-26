@@ -24,11 +24,6 @@
                 <img src="./storages/logo/VR2.png" alt="" id="logo">
 
             </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/main
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
@@ -174,17 +169,10 @@
 
 
             </div>
-<<<<<<< HEAD
             <div class="navbar_btn log_out_btn  pt-1 px-2">
                 <a href="./login.php"  >
                     <i class="fa-solid fa-arrow-left color_black fs-6 me-2" ></i>
                     <span class="navbar_btn_name log_out fw-bold fs-6 ">Log Out</span>
-=======
-            <div class="navbar_btn log_out_btn">
-                <a href="./login.php" class="nav-link align-middle py-2 ">
-                    <i class="fa-solid fa-arrow-left color_black"></i>
-                    <span class="navbar_btn_name log_out fw-bold">Log Out</span>
->>>>>>> origin/main
                 </a>
             </div>
         </div>

@@ -16,7 +16,6 @@ if (!isset($_SESSION["email"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -110,6 +109,15 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
     </div>
+    <!-- Alert Box -->
+    <?php
+    if(isset($_SESSION["alreadyBookedDoctor"])){
+        echo
+        "<script>
+        alert ('Alerady Book With This Docotor');
+        </script>";
+    }
+    ?>
     <!-- Footer -->
     <?php
     include("./common/footer.php")

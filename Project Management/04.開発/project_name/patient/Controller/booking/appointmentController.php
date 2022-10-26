@@ -131,7 +131,7 @@ if (isset($_POST["makeBooking"])) {
             header("Location: ../../View/booking.php");
         } else {
             header("Location: ../../View/appointment.php");
-            $_SESSION["alreadyBookedDoctor"];
+            $_SESSION["alreadyBookedDoctor"] = "Already Book This Doctor! ";
         }
     }
 

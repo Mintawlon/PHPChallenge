@@ -13,12 +13,6 @@ if(isset($_POST["searchText"])){
     
     echo json_encode($searchList);
 
-
-
-//  SELECT * FROM doctor WHERE speciality = :search
-
-// 
-// 
 }
 
 ?>

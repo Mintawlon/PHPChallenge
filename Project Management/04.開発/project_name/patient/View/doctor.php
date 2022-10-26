@@ -7,6 +7,7 @@ if (!isset($_SESSION["email"])) {
 }
 
 unset($_SESSION["selectedDoctorDuty"]);
+unset($_SESSION["alreadyBookedDoctor"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
