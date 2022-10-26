@@ -40,9 +40,10 @@ if (isset($_POST["resetPwd"])) {
         $mail = new SendMail();
         $mail->sendMail(
             $userInfo[0]['email_address'],
-            "Reset Password Complete",
-            "<h1>Password Reset Complete</h1>
-            <p>New Password : $newPassword</p>"
+            "Password Reset Complete",
+            "<h2>Hello!</h2>
+            <h3>We received a request to reat your password and we'll give a new paassword.</h3>
+            <p>Here a new password : $newPassword</p>"
         );
         header("Location: ../View/login.php");
     } else {
