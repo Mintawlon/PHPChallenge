@@ -92,65 +92,15 @@ $view = 2;
                         <tr class="text-white">
                             <td>No.</td>
                             <td>Patient Name</td>
-                            <td>Age</td>
+                            <td>Email</td>
                             <td>Doctor Name</td>
-                            <td>Contact</td>
-                            <td>Address</td>
-                            <td>Status</td>
+                            <td>Dieses</td>
+                            <td>Booking Date</td>
+                            <td>Next Appointment</td>
 
                         </tr>
                     </thead>
                     <tbody id="resultData">
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Doctor Name</td>
-                            <td>Contact</td>
-                            <td>Address.</td>
-                            <td class="pending_color">Pending</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Doctor Name</td>
-                            <td>Contact</td>
-                            <td>Address.</td>
-                            <td class="reject_color">Reject</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Doctor Name</td>
-                            <td>Contact</td>
-                            <td>Address.</td>
-                            <td class="approve_color">Approve</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Doctor Name</td>
-                            <td>Contact</td>
-                            <td>Address.</td>
-                            <td>Status</td>
-
-                        </tr>
-                        <tr class="row_bdr">
-                            <td>No.</td>
-                            <td>Patient Name</td>
-                            <td>Age</td>
-                            <td>Doctor Name</td>
-                            <td>Contact</td>
-                            <td>Address.</td>
-                            <td>Status</td>
-
-                        </tr>
 
                         <!-- Table  -->
 

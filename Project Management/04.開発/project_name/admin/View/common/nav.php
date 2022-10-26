@@ -20,16 +20,12 @@
     <div class="col-sm-3 col-md-4 col-xl-2 navbar_wrapper ">
         <div class="d-flex flex-column align-items-center align-items-sm-start min-vh-100 mt-2 navbar ">
             <div class="logo_btn ">
-<<<<<<< HEAD
-            <img src="./storages/logo/VR2.png" alt="" id="logo" wid>
-=======
+
                 <img src="./storages/logo/VR2.png" alt="" id="logo">
->>>>>>> origin/main
+
             </div>
-<<<<<<< HEAD
-            <!-- <img class="logo_btn" src="../../../patient//View/storages/logo/VR2.png" alt="Vr_Carer" width="104px"> -->
-=======
->>>>>>> origin/main
+
+
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
@@ -182,7 +178,7 @@
 
             </div>
             <div class="navbar_btn log_out_btn">
-                <a href="./login.php" class="nav-link align-middle py-2 " >
+                <a href="./login.php" class="nav-link align-middle py-2 ">
                     <i class="fa-solid fa-arrow-left color_black"></i>
                     <span class="navbar_btn_name log_out fw-bold">Log Out</span>
                 </a>
