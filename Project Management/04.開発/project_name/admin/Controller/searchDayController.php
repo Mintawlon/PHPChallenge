@@ -13,4 +13,3 @@ if(isset($_POST["searchText"])){
     echo json_encode($doctorByDay);
 
 }
-?>

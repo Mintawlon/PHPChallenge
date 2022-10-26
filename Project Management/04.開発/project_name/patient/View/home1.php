@@ -108,7 +108,11 @@ if (!isset($_SESSION["email"])) {
                 <li class="card">
                     <div>
                         <div class="vaccine_div">
+<<<<<<< HEAD
+                            <img src="../../admin/View/storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img text-center align-items-center ">
+=======
                             <img src="./storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
+>>>>>>> origin/main
                         </div>
                         <h3 class="card-title"><?= $medicine["medicine_name"] ?></h3>
                         <div class="card-content">
