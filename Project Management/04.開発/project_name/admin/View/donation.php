@@ -43,7 +43,8 @@ include "../Controller/bloodDonationCenter/donationListController.php";
                                 <td>Contact</td>
                                 <td>Email</td>
                                 <td>Address</td>
-                                <td>Action</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,8 +59,10 @@ include "../Controller/bloodDonationCenter/donationListController.php";
                                     <td><?php echo $center["center_email"] ?></td>
                                     <td><?php echo $center["center_address"] ?></td>
                                     <td>
-                                        <span><a href="../Controller/bloodDonationCenter/EditDonationController.php?id=<?php echo $center["id"] ?>" class="color_sixth">Edit</a></span>
-                                        <a href="../Controller/bloodDonationCenter/deleteCenterController.php?id=<?php echo $center["id"] ?>" class="color_fifth">Remove</a>
+                                        <a href="../Controller/bloodDonationCenter/EditDonationController.php?id=<?php echo $center["id"] ?>" class="edit_btn me-4">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="../Controller/bloodDonationCenter/deleteCenterController.php?id=<?php echo $center["id"] ?>" class="trash"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>

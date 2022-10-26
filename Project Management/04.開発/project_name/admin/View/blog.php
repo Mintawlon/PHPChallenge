@@ -62,9 +62,10 @@ include "../Controller/blog/listBlogController.php";
                                     <td><?php echo $blog["header"] ?></td>
                                     <td class="desc"><?php echo $blog["description"] ?></td>
                                     <td>
-                                        <span><a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="color_sixth">Edit</a></span>
-                                        <span><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="color_fifth">Delete</a></span>
+                                        <a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="edit_btn" >Edit</a>
+                                        <a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
+                                   
                                 </tr>
                             <?php } ?>
                         </tbody>
