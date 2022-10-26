@@ -41,29 +41,52 @@ if (!isset($_SESSION["email"])) {
         <div class="profile_photo_div">
             <div class="profile_photo">
                 <div class="photo">
-                    <img src="./storages/image/<?=$userInfo[0]["profile_image"]?>" alt="" id="photo">
+                    <img src="./storages/image/<?= $userInfo[0]["profile_image"] ?>" alt="" id="photo">
                 </div>
-                <p class="text-white"><?= $_SESSION["email"]?> </p>
+                <p class="text-white"><?= $_SESSION["email"] ?> </p>
             </div>
         </div>
 
         <div class="profile_edit">
             <div class="name text-white">
                 <p>Name</p>
-                <input type="text" id="name_input" name="changeName" class="text-white" value="<?=$userInfo[0]["register_name"]?> ">
+                <input type="text" id="name_input" name="changeName" class="text-white" value="<?= $userInfo[0]["register_name"] ?> ">
             </div>
             <div class="name text-white mt-3">
                 <p>Profile Photo</p>
-                <input type="file" class="form-control"  id="file_input" onchange="setImage()" name="changePhoto">
+                <input type="file" class="form-control" id="file_input" onchange="setImage()" name="changePhoto">
             </div>
-            <input type="hidden" name="id" value="<?=$userInfo[0]["id"]?>">
-            <button type="submit" id="save_btn" name="changeProfile" class="text-white mt-3">Save</button>
+            <input type="hidden" name="id" value="<?= $userInfo[0]["id"] ?>">
+            <button type="submit" id="save_btn" name="changeProfile" class="text-white mt-3 fw-bold">Save</button>
         </div>
     </form>
 
-    <div class="col-sm-10">
-        
-    </div>
+    <hr>
+
+    <h2 class="text-center text-white">Change Your Password</h2>
+    <form action="../Controller/changePasswordController.php" method="POST" class="text-center mb-5 mt-5 py-3" id="changePwd">
+
+        <p class="text-white">Current Password</p>
+        <input type="text" class="text-white changeInput" name="currentPwd" value="<?php
+                                                                                    if (isset($_SESSION["currentPwdWrong"])) {
+                                                                                        echo $_SESSION["currentPwdWrong"];
+                                                                                    } ?>">
+
+        <?php
+        if (isset($_SESSION["currentPwdWrong"])) { ?>
+            <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation"></i>Password Wrong</p>
+        <?php } ?>
+        <p class="text-white mt-3">New Password</p>
+        <input type="text" class="text-white changeInput" name="changePwd" value="">
+        <br>
+        <button type="submit" id="pwdChangeBtn" name="changePwdBtn" class="fw-bold mt-3">Change</button>
+
+        <?php
+        if (isset($_SESSION["Successfully Change"])) { ?>
+            <p id="alreadyExist" class="icon"><?=$_SESSION["Successfully Change"]?></p>
+        <?php } ?>
+
+    </form>
 
 
 </body>

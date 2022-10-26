@@ -13,7 +13,9 @@ body {
   top: 90px;
   left: 160px;
 }
-
+.icon{
+  color: var(--frist_color);
+}
 .pasw {
     margin-top: 100px !important;
   color: var(--tertiary_color);

@@ -1,8 +1,7 @@
 <?php
 session_start();
 include "../Controller/medicineController.php";
-// echo "<pre>";
-// print_r($medicineInfo);
+unset($_SESSION["Successfully Change"]);
 include "../Controller/articleInfoController.php";
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");

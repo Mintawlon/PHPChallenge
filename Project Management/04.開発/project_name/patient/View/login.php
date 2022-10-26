@@ -50,7 +50,7 @@ unset($_SESSION["userInfo"]);
                     } ?>" required>
                     <?php
                     if (isset($_SESSION["wrongEmail"])) { ?>
-                        <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation  "></i>  Email Address Wrong</p>
+                        <p id="alreadyExist" class="icon fw-bold"><i class="fa-solid fa-triangle-exclamation  "></i>  Email Address Wrong</p>
                     <?php } ?>
                     <div class="password_box">
                         <input type="password" name="pwd" class="name form-control mb-3" placeholder="Password"  id="pw" value="<?php
@@ -62,7 +62,7 @@ unset($_SESSION["userInfo"]);
                    
                     <?php
                     if (isset($_SESSION["wrongLoginPwd"])) { ?>
-                         <p id="alreadyExist" class="icon"><i class="fa-solid fa-triangle-exclamation "></i>  Password Wrong</p>
+                         <p id="alreadyExist" class="icon fw-bold"><i class="fa-solid fa-triangle-exclamation "></i>  Password Wrong</p>
                     <?php } ?>
                     <a href="./forgotpsw.php">
                         <p class="forgotpsw text-decoration-underline text-white">Forgot Password?</p>

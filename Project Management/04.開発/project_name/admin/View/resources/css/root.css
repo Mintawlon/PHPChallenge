@@ -445,6 +445,7 @@ hr {
   color: var(--third_color);
 }
 .log_out_btn{
+  padding: 0 !important;
   border-radius: 3em;
 }
 

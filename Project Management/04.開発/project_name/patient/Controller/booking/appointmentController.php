@@ -131,9 +131,7 @@ if (isset($_POST["makeBooking"])) {
             header("Location: ../../View/booking.php");
         } else {
             header("Location: ../../View/appointment.php");
-            echo "<script>
-            alert('Alerady Exist This Email');
-            </script>";
+            $_SESSION["alreadyBookedDoctor"];
         }
     }
 

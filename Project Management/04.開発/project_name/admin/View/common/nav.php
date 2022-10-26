@@ -22,10 +22,6 @@
             <div class="logo_btn ">
                 <img src="./storages/logo/VR2.png" alt="" id="logo">
             </div>
-<<<<<<< HEAD
-            <!-- <img class="logo_btn" src="../../../patient//View/storages/logo/VR2.png" alt="Vr_Carer" width="104px"> -->
-=======
->>>>>>> origin/main
             <div class="navbar_btn">
                 <a href="./adminDashboard.php" class="nav-link ">
                     <i class="fa-solid fa-house-user navbar_btn_icon color_black "></i>
@@ -41,7 +37,7 @@
                     <span class="navbar_btn_name">
                         Daily
                     </span>
-                    <i class="fa-solid fa-caret-down color_black"></i>
+                    <i class="fa-solid fa-caret-down color_black mt-1"></i>
                 </a>
 
             </button>
@@ -79,7 +75,7 @@
                     <span class="navbar_btn_name">
                         User Home
                     </span>
-                    <i class="fa-solid fa-caret-down color_black"></i>
+                    <i class="fa-solid fa-caret-down color_black mt-1"></i>
                 </a>
 
             </button>
@@ -115,20 +111,14 @@
             <!-- Dropdown button -->
             <button class="dropdown-btn navbar_btn">
                 <a href="#" class="nav-link  ">
-                    <i class="fa-solid fa-user color_black"></i>
+                    <i class="fa-solid fa-user color_black "></i>
                     <span class="navbar_btn_name">
                         Information
                     </span>
-                    <i class="fa-solid fa-caret-down color_black"></i>
+                    <i class="fa-solid fa-caret-down color_black mt-1"></i>
                 </a>
             </button>
             <div class="dropdown-container">
-                <!-- <a href="./about.php" class="nav-link dropdown_list">
-                    <i class="fa-solid fa-users color_green"></i>
-                    <span class="navbar_btn_name_o px-1 ">
-                        About Us
-                    </span>
-                </a> -->
                 <div>
                     <a href="./about.php" class="nav-link dropdown_list">
                         <i class="fa-solid fa-users color_green"></i>
@@ -152,7 +142,7 @@
                     <span class="navbar_btn_name">
                         Blogs
                     </span>
-                    <i class="fa-solid fa-caret-down color_black"></i>
+                    <i class="fa-solid fa-caret-down color_black mt-1"></i>
                 </a>
             </button>
             <div class="dropdown-container">
@@ -177,10 +167,10 @@
 
 
             </div>
-            <div class="navbar_btn log_out_btn">
-                <a href="./login.php" class="nav-link align-middle py-2 " >
-                    <i class="fa-solid fa-arrow-left color_black"></i>
-                    <span class="navbar_btn_name log_out fw-bold">Log Out</span>
+            <div class="navbar_btn log_out_btn  pt-1 px-2">
+                <a href="./login.php"  >
+                    <i class="fa-solid fa-arrow-left color_black fs-6 me-2" ></i>
+                    <span class="navbar_btn_name log_out fw-bold fs-6 ">Log Out</span>
                 </a>
             </div>
         </div>
