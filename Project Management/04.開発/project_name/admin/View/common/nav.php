@@ -34,7 +34,7 @@
             </div>
             <!-- Dropdown button -->
             <button class="dropdown-btn navbar_btn">
-                <a href="#" class="nav-link  ">
+                <a href="#daily" class="nav-link" id="daily">
                     <i class="fa-solid fa-calendar-days color_black"></i>
                     <span class="navbar_btn_name">
                         Daily
@@ -72,7 +72,7 @@
             </div>
             <!-- Dropdown button -->
             <button class="dropdown-btn navbar_btn">
-                <a href="#" class="nav-link  ">
+                <a href="#userHome" class="nav-link" id="userHome">
                     <i class="fa-solid fa-user color_black"></i>
                     <span class="navbar_btn_name">
                         User Home
@@ -112,7 +112,7 @@
             </div>
             <!-- Dropdown button -->
             <button class="dropdown-btn navbar_btn">
-                <a href="#" class="nav-link  ">
+                <a href="#information" class="nav-link" id="information">
                     <i class="fa-solid fa-user color_black "></i>
                     <span class="navbar_btn_name">
                         Information
@@ -139,7 +139,7 @@
             </div>
             <!-- Dropdown button -->
             <button class="dropdown-btn navbar_btn">
-                <a href="#" class="nav-link  ">
+                <a href="#blog" class="nav-link" id="blog">
                     <i class="fa-solid fa-blog color_black"></i>
                     <span class="navbar_btn_name">
                         Blogs

@@ -60,11 +60,11 @@ if(isset($_SESSION["articleInfo"])){
                 </form>
                 <!-- Edit Aritcle Form -->
                 <section class="edit_first_aid">
-                    <form action="../Controller/emergencyEditController.php" method="POST" class="input_set">
+                    <form action="../Controller/emergencyEditController.php" method="POST" class="input_set"  enctype="multipart/form-data">
                         <h2 class="input_set_header my-4">Edit First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Update image</span>
-                            <input type="file" id="formFileLg" class="form-control form-control-lg common_input " accept="image/*" name="articleImage" />
+                            <input type="file"class="form-control form-control-lg common_input " name="articleImage" id="file_input" onchange="setImage()" />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>

@@ -1,7 +1,7 @@
 <?php
 include("../Model/dbConnection.php");
 $sql = $pdo->prepare(
-    "SELECT * FROM `first_aid` 
+    "SELECT * FROM `first_aid` WHERE del_flg != 1 
     "
 );
 $sql->execute();

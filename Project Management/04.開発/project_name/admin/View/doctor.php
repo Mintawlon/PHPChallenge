@@ -73,7 +73,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
                                     <td><?= $doctor["speciality"] ?></td>
                                     <td><?= $doctor["contact"] ?></td>
                                     <td id="image">
-                                        <img src="./storages/image/<?= $doctor["profile_photo"] ?>" alt="" class="image">
+                                        <img src="./storages/doctor/<?= $doctor["profile_photo"] ?>" alt="" class="image">
                                     </td>
                                     <td>
                                         <a href="../Controller/dateController.php?id=<?= $doctor["id"] ?>" class="color_sixth"><button class="edit_btn me-4" value="<?= $doctor["id"] ?>">Add</button></a>
@@ -92,7 +92,7 @@ include "../Controller/doctor/getDoctorInfoController.php";
                     ?>
                     <hr />
                 </section>
-                <form action="../Controller/doctor/doctorAddController.php" method="POST" class="add_doctor">
+                <form action="../Controller/doctor/doctorAddController.php" method="POST" class="add_doctor" enctype="multipart/form-data">
                     <div class="input_set">
                         <h2 class="input_set_header my-4"><u>Add Doctor</u></h2>
                         <div class="input_one mb-2">
@@ -112,7 +112,16 @@ include "../Controller/doctor/getDoctorInfoController.php";
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Speciality</span>
-                            <input type="text" class="common_input form-control " name="doctorSpeciality" required />
+                            <select name="doctorSpeciality" id="" class="common_input form-control" required>
+                                <option value="General Health">General Health</option>
+                                <option value="Pulmonology">Pulmonology</option>
+                                <option value="Paediatric">Paediatric</option>
+                                <option value="Ophthalmology">Ophthalmology</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="OB-GYN">OB-GYN</option>
+                                <option value="Dentist">Dentist</option>
+                            </select>
+                       
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Contact</span>

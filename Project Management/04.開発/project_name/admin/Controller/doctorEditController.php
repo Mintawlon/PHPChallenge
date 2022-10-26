@@ -24,9 +24,8 @@ if (isset($_POST["updateDoctorInfo"])) {
     $gender = $_POST["updateDoctorGender"];
     $speciality = $_POST["updateDoctorSpeciality"];
     $phone = $_POST["updateDoctorPhone"];
-    $photo = $_POST["updateDoctorPhoto"];
 
-    if ($photo == "") {
+    if ($_FILES["updateDoctorPhoto"]["name"] == "") {
         $sql = $pdo->prepare(
             "UPDATE
             doctor SET 
@@ -37,9 +36,25 @@ if (isset($_POST["updateDoctorInfo"])) {
             gender=:gender,
             update_date=:updatedDate WHERE id=:id"
         );
+        $sql->bindValue(":id", $id);
+        $sql->bindValue(":name", $name);
+        $sql->bindValue(":speciality", $speciality);
+        $sql->bindValue(":age", $age);
+        $sql->bindValue(":contact", $phone);
+        $sql->bindValue(":gender", $gender);
+        $sql->bindValue(":updatedDate", date("Y/m/d"));
+        $sql->execute();
+        header("Location: ../View/doctor.php");
+
     } else {
-        $sql = $pdo->prepare(
-            "UPDATE
+        $file = $_FILES['updateDoctorPhoto']['name'];
+        $location = $_FILES['updateDoctorPhoto']['tmp_name'];
+        $extension = pathinfo($file)['extension'];
+        $path = $id . "." . $extension;
+
+        if (move_uploaded_file($location, "../View/storages/doctor/" . $id . "." . $extension)) {
+            $sql = $pdo->prepare(
+                "UPDATE
             doctor SET 
             doctor_name=:name,
             speciality = :speciality,
@@ -48,21 +63,25 @@ if (isset($_POST["updateDoctorInfo"])) {
             gender=:gender,
             profile_photo=:photo,
             update_date=:updatedDate WHERE id=:id"
-        );
-        $sql->bindValue(":photo", $photo);
+            );
+            $sql->bindValue(":photo", $path);
+            $sql->bindValue(":id", $id);
+            $sql->bindValue(":name", $name);
+            $sql->bindValue(":speciality", $speciality);
+            $sql->bindValue(":age", $age);
+            $sql->bindValue(":contact", $phone);
+            $sql->bindValue(":gender", $gender);
+            $sql->bindValue(":updatedDate", date("Y/m/d"));
+            $sql->execute();
+            header("Location: ../View/doctor.php");
+        } else {
+            echo 'There was some error moving the file to upload directory.';
+        }
     }
-    $sql->bindValue(":id", $id);
-    $sql->bindValue(":name", $name);
-    $sql->bindValue(":speciality", $speciality);
-    $sql->bindValue(":age", $age);
-    $sql->bindValue(":contact", $phone);
-    $sql->bindValue(":gender", $gender);
-    $sql->bindValue(":updatedDate", date("Y/m/d"));
-    $sql->execute();
-    header("Location: ../View/doctor.php");
+
 }
 // Remove Doctor
-if(isset($_GET["delId"])){
+if (isset($_GET["delId"])) {
     $delId = $_GET["delId"];
 
     $sql = $pdo->prepare("UPDATE doctor SET 

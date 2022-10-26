@@ -47,7 +47,7 @@ if(isset($_SESSION["homeArticleInfo"])){
 
                 <!-- Add First Aid Tab Form -->
                 <section class="first_aid_tab">
-                    <form action="../Controller/articleEditController.php" method="POST" class="input_set">
+                    <form action="../Controller/articleEditController.php" method="POST" enctype="multipart/form-data" class="input_set">
                         <h2 class="input_set_header my-4">Edit New Article</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header </span>
@@ -67,7 +67,7 @@ if(isset($_SESSION["homeArticleInfo"])){
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Article Photo</span>
-                            <input type="file" id="formFileLg" class="form-control common_input" accept="image/*" name="homeArticlePhoto"   value="<?= $info[0]["image"] ?>" />
+                            <input type="file" class="form-control common_input" name="homeArticlePhoto" id="file_input" onchange="setImage()"  value="<?= $info[0]["image"] ?>" />
                         </div>
                         <input type="hidden" name="homeArticleId" value="<?= $info[0]["id"] ?>">
                         <!-- Add Btn -->

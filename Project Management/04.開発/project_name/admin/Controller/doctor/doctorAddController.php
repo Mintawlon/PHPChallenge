@@ -8,9 +8,14 @@ if (isset($_POST["doctorAdd"])) {
     $gender = $_POST["doctorGender"];
     $speciality = $_POST["doctorSpeciality"];
     $phone = $_POST["doctorPhone"];
-    $photo = $_POST["doctorPhoto"];
     $_SESSION["doctorName"]= $name;
+
+    $file = $_FILES['doctorPhoto']['name'];
+    $location = $_FILES['doctorPhoto']['tmp_name'];
+    $extension = pathinfo($file)['extension'];
+    $path = $name . "." . $extension;
     
+    if (move_uploaded_file($location, "../../View/storages/doctor/" . $name . "." . $extension)) {
     $sql = $pdo->prepare(
         "INSERT INTO 
         doctor (
@@ -33,12 +38,13 @@ if (isset($_POST["doctorAdd"])) {
         :createdDate
         );"
     );
+}
     $sql->bindValue(":name", $name);
     $sql->bindValue(":age", $age);
     $sql->bindValue(":gender", $gender);
     $sql->bindValue(":speciality", $speciality);
     $sql->bindValue(":phone", $phone);
-    $sql->bindValue(":photo", $photo);
+    $sql->bindValue(":photo", $path);
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
