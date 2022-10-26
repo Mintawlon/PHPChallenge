@@ -79,8 +79,8 @@ $view = 2;
                 </div>
                 <!--Search Box-->
                 <div class="sec_input mb-2 d-flex justify-content-end">
-                    <input type="date" id="todayList" class="common_input form-control" name="serachText" placeholder="yyyy-mm-dd" />
-                    <button class="searchDay px-5 ms-5 border rounded" id="boom">search</button>
+                    <input type="date" id="todayList" class="common_input form-control" name="serachText" placeholder="yyyy-mm-dd" width="150" />
+                    <button class="px-5 searchDay" id="boom">search</button>
                 </div>
                 <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
                 <div class="input_set">
