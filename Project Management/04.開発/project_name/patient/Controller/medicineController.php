@@ -3,7 +3,7 @@ include "./../Model/dbConnection.php";
 
 // get doctor info
 $sql = $pdo->prepare(
-    "SELECT * FROM `medicine`
+    "SELECT * FROM `medicine` WHERE del_flg != 1 
     "
 );
 $sql->execute();

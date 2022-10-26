@@ -94,10 +94,10 @@ include "../Controller/booking/approvedPatientListController.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $count = 0; ?>
+                    <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                         <?php foreach ($historyList as $history) { ?>
                             <tr class="row_bdr">
-                                <td><?php echo ++$count ?></td>
+                                <td><?php echo $number++?></td>
                                 <td><?php echo $history["patient_name"] ?></td>
                                 <td><?php echo $history["doctor_name"] ?></td>
                                 <td><?php echo $history["booking_date"] ?></td>
@@ -110,6 +110,9 @@ include "../Controller/booking/approvedPatientListController.php";
                         <?php } ?>
                     </tbody>
                 </table>
+                <?php
+                    include "./common/pagination.php";
+                    ?>
             </div>
         </div>
     </div>

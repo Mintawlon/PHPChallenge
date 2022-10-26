@@ -56,7 +56,8 @@ include("../Controller/hosLocationController.php");
                 <td><?= $number++ ?></td>
                 <td><?= $hospital["hospital_name"] ?></td>
                 <td><?= $hospital["contact"] ?></td>
-                <td id="map"><?= $hospital["google_map_image"] ?></td>
+                <td id="map">
+                <iframe src="<?= $hospital["google_map_image"] ?>"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
                 <td><?= $hospital["address"] ?></td>
                 <td id="email"><?= $hospital["email"] ?></td>
                 </td>

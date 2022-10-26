@@ -49,22 +49,41 @@ if (isset($_GET["id"])) {
 // Update Article
 if (isset($_POST["edit_article"])) {
     $id = $_POST["article_id"];
-    $image = $_POST["articleImage"];
     $newheader = $_POST["articleHeader"];
     $newpara = $_POST["articleText"];
 
-    $sql = $pdo->prepare(
-        "UPDATE
+    if ($_FILES["articleImage"]["name"] == "") {
+        $sql = $pdo->prepare(
+            "UPDATE
+        first_aid SET 
+        article_header=:header,
+        article_text=:para,
+        update_date=:updatedDate WHERE id=:id"
+        );
+    } else {
+        $file = $_FILES['articleImage']['name'];
+        $location = $_FILES['articleImage']['tmp_name'];
+        $extension = pathinfo($file)['extension'];
+        $path = $newheader . "." . $extension;
+
+        if (move_uploaded_file($location, "../View/storages/emergency/" . $newheader . "." . $extension)) {
+            $sql = $pdo->prepare(
+                "UPDATE
         first_aid SET 
         article_header=:header,
         article_text=:para,
         article_image=:image,
         update_date=:updatedDate WHERE id=:id"
-    );
+            );
+            $sql->bindValue(":image", $path);
+        } else {
+            echo 'There was some error moving the file to upload directory.';
+        }
+    
+    }
     $sql->bindValue(":id", $id);
     $sql->bindValue(":header", $newheader);
     $sql->bindValue(":para", $newpara);
-    $sql->bindValue(":image", $image);
     $sql->bindValue(":updatedDate", date("Y/m/d"));
 
     $sql->execute();
@@ -76,7 +95,8 @@ if (isset($_GET["delId"])) {
     $delId = $_GET["delId"];
     $sql = $pdo->prepare(
         "UPDATE first_aid SET del_flg = 1 WHERE id=:id
-     ");
+     "
+    );
     $sql->bindValue(":id", $delId);
     $sql->execute();
     header("Location: ../View/Emergency.php");

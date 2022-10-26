@@ -1,8 +1,7 @@
 <?php
 session_start();
 include "../Controller/medicineController.php";
-// echo "<pre>";
-// print_r($medicineInfo);
+unset($_SESSION["Successfully Change"]);
 include "../Controller/articleInfoController.php";
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
@@ -58,11 +57,7 @@ if (!isset($_SESSION["email"])) {
                             <img src="./storages/image/Dengue Fever.png" alt="" class="first_slide_img" />
                         </div>
                     </li>
-                    <li class="splide__slide">
-                        <div class="first_slide_div">
-                            <img src="./storages/image/hospital ads.png" alt="" class="first_slide_img" />
-                        </div>
-                    </li>
+
                 </ul>
             </div>
         </section>
@@ -87,7 +82,7 @@ if (!isset($_SESSION["email"])) {
                         <p class="text-white"> <?= $info["para_text"] ?></p>
                     </div>
                     <div class="article_image">
-                        <img src="./storages/image/<?= $info["image"] ?>" alt="" id="article_image">
+                        <img src="./storages/article/<?= $info["image"] ?>" alt="" id="article_image">
                     </div>
                 </div>
             </div>
@@ -102,28 +97,23 @@ if (!isset($_SESSION["email"])) {
 
         <ul class="cards">
             <?php $count = 1; ?>
-
-            <?php foreach ($medicineInfo as $medicine) {
-
-            ?>
+            <?php foreach ($medicineInfo as $medicine) { ?>
                 <li class="card">
                     <div>
                         <div class="vaccine_div">
-<<<<<<< HEAD
-                            <img src="../../admin/View/storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img text-center align-items-center ">
-=======
-                            <img src="./storages/medicineImage/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
->>>>>>> origin/main
+                            <img src="./storages/medicine/<?= $medicine["medicine_image"] ?>" class="vaccine_img">
                         </div>
                         <h3 class="card-title"><?= $medicine["medicine_name"] ?></h3>
                         <div class="card-content">
-                            <p ipsum><?= $medicine["description"] ?></p>
+                            <p><?= $medicine["description"] ?></p>
                         </div>
                     </div>
-                <?php } ?>
+                </li>
+            <?php } ?>
+
+        </ul>
     </div>
-    </ul>
-    </div>
+
     <!--scorll card-->
     <!-- Footer -->
     <?php

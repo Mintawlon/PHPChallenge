@@ -1,10 +1,10 @@
 
-
 <?php
 
 include "../Model/dbConnection.php";
 include "./common/commonFunction.php";
 include "./common/mailSender.php";
+session_start();
 
 if(isset($_POST["resetPsw"])){
     $userEmail = $_POST["email"];
@@ -23,11 +23,12 @@ if(isset($_POST["resetPsw"])){
 
         $sql= $pdo->prepare(
             "UPDATE user_register SET
-                password = :password
+                password = :password,
+                update_date = :updateDate
                 WHERE id = :id
             "
         );
-
+        $sql->bindValue(":updateDate", date("Y/m/d"));
         $sql->bindValue(":password",  
         password_hash($newPassword,PASSWORD_DEFAULT));
         $sql->bindValue(":id", $userInfo[0]['id']);
@@ -43,7 +44,8 @@ if(isset($_POST["resetPsw"])){
         );
          header("Location: ../View/login.php");
     }else{
-
+        $_SESSION["forgotEmailWrong"] = $userEmail;
+        header("Location: ../View/forgotpsw.php");
     }
 }
 ?>

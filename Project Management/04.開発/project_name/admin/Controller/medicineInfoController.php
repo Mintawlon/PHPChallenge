@@ -6,7 +6,7 @@ $startPage = ($page-1)*$rowLimit;
 
 // get article info
 $sql = $pdo->prepare(
-    "SELECT * FROM `medicine` LIMIT  $startPage,$rowLimit
+    "SELECT * FROM `medicine` WHERE del_flg != 1  LIMIT  $startPage,$rowLimit
     "
 );
 $sql->execute();

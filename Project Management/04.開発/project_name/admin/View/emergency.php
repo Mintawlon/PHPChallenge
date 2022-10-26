@@ -58,7 +58,7 @@ include("../Controller/emergencyController.php");
                                         <?= $emergency["article_header"] ?>
                                     </td>
                                     <td id="image">
-                                        <img src="./storages/image/<?= $emergency["article_image"] ?>" alt="" class="image">
+                                        <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="image">
                                     </td>
 
                                     <td id="text"><?= $emergency["article_text"] ?></td>
@@ -66,9 +66,6 @@ include("../Controller/emergencyController.php");
                                         <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="edit_btn me-4">
                                             Edit</a>
                                         <a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
-
-                                        <!-- <span class="edit_delete_btn"><a  class="color_sixth me-2">Edit</a></span>
-                                        <span class="edit_delete_btn"><a  class="color_fifth">Delete</a></span> -->
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -76,84 +73,9 @@ include("../Controller/emergencyController.php");
 
                         </tbody>
                     </table>
-                    <!-- Pagination -->
                     <?php
-                    if ($totalPages <= 2) { ?>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item pagination_li
-                            <?php if ($page <= 1) {
-                                echo "disabled";
-                            } ?>
-                            ">
-
-                                    <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                        <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                                    </a>
-                                </li>
-
-                                <li class="page-item pagination_li ">
-                                    <a class="page-link pagination_item
-                                " href="?page=
-                                <?php for ($i = 1; $i <= $totalPages; $i++) {
-                                    echo $i;
-                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
-                                </li>
-
-
-                                <li class="page-item pagination_li  
-                            <?php if ($page >= $totalPages) {
-                                echo "disabled";
-                            } ?>
-                            ">
-                                    <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                        <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    <?php
-                    } else {?>
-                        <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item 
-                            <?php if ($page <= 1) {
-                                echo "disabled";
-                            } ?>
-                            ">
-
-                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                                </a>
-                            </li>
-
-                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                                <li class="page-item 
-                                <?php
-                                if ($page == $i) {
-                                    echo "active";
-                                }
-                                ?>
-                                "><a class="page-link 
-                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
-                            <?php } ?>
-
-
-                            <li class="page-item   
-                            <?php if ($page >= $totalPages) {
-                                echo "disabled";
-                            } ?>
-                            ">
-                                <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                    <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <?php 
-                    }
+                    include "./common/pagination.php";
                     ?>
-                    <!-- Pagination -->
 
                     <hr />
                 </section>
@@ -167,7 +89,8 @@ include("../Controller/emergencyController.php");
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Add new paragraph</span>
-                            <textarea class="common_input form-control text_area" placeholder="Text" name="paragraph"></textarea>
+                            <textarea class="common_input form-control text_area" placeholder="Text" name="paragraph" >
+                            </textarea>
                         </div>
                         <!-- Add Btn -->
                         <button type="submit" name="addEmergencyTab" class="common_btn add_btn">Add</button>
@@ -176,11 +99,11 @@ include("../Controller/emergencyController.php");
                 </section>
                 <!-- Add Article Form -->
                 <section class="add_first_aid">
-                    <form class="input_set" action="../Controller/emergencyController.php" method="POST">
+                    <form class="input_set" action="../Controller/emergencyController.php" method="POST" enctype="multipart/form-data">
                         <h2 class="input_set_header my-4">Add First Aid Kit</h2>
                         <div class="input_one mb-2">
                             <span class="input_set_text add_file">Add image</span>
-                            <input type="file" name="emergencyImage" id="formFileLg" class="form-control  common_input " accept="image/*" />
+                            <input type="file" name="emergencyImage" class="form-control  common_input "   />
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Header</span>

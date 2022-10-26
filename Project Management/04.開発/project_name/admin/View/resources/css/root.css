@@ -405,7 +405,6 @@ hr {
 }
 #logo{
   width: 50%;
-  height: 100%;
 }
 .navbar_btn,
 .dropdown_list {
@@ -445,6 +444,7 @@ hr {
   color: var(--third_color);
 }
 .log_out_btn{
+  padding: 0 !important;
   border-radius: 3em;
 }
 
