@@ -2,6 +2,7 @@
 body{
     background-color:var(--primary_color) !important;
     font-family: var(--primary_font) !important;
+    overflow-x: hidden !important;
 }
 .bcontent {
     margin-top: 10px;
@@ -54,9 +55,10 @@ bottom: 0;
   animation-iteration-count: infinite;
   position: relative;
   animation-timing-function: linear;
+  
 }
 @keyframes example {
-    0%   { left:0px; top:0;}
+    0%   { left:-50%; top:0;}
    
     100% { left:100%; top:0;}
   }

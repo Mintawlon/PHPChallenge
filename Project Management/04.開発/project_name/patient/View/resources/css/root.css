@@ -225,11 +225,10 @@
   flex-direction: row;
   justify-content: space-between;
   width: 80vw;
-  height: 20em;
+  height: 25vh !important;
   background-color: var(--primary_color);
 }
 .card_img {
-  width: 40%;
   height: 100%;
 }
 .info {
