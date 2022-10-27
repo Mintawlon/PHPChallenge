@@ -73,7 +73,6 @@ if (!isset($_SESSION["email"])) {
                 <img src="./storages/image/<?= $info["image2"] ?>" alt="" class="card_img" />
 
             </div>
-            <hr class="about_line" />
         </div>
         <hr class="about_line mt-4" />
         <!-- dropdown section -->
@@ -82,7 +81,7 @@ if (!isset($_SESSION["email"])) {
 
             <?php foreach ($policyInfo as $info1) { ?>
                 <!-- Page Tab -->
-                <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p>
+                <p class="text-center first_aid_p4ara"><?= $info1["policy_text"] ?></p>
                 <!-- Page Tab -->
                 <!-- <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p> -->
             <?php } ?>

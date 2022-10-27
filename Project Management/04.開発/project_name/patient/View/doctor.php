@@ -87,7 +87,7 @@ unset($_SESSION["alreadyBookedDoctor"]);
                                 <?php }
                                 }
                                 ?>
-                                <button class=" btn btn-outline-primary submit"><a href="../Controller/booking/bookingFormInfoController.php?doctorId=<?= $doctor["id"] ?>" id="submit_atag">Continued</a></button>
+                                <button class=" btn btn-outline-primary submit"><a href="../Controller/booking/bookingFormInfoController.php?doctorId=<?= $doctor["id"] ?>" id="submit_atag">Continue</a></button>
                             </div>
                         </div>
                     </div>

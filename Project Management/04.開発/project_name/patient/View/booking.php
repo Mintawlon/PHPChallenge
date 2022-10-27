@@ -22,7 +22,8 @@ include "../Controller/booking/BookingStatusController.php";
     <?php
     include("./common/head.php");
     ?>
-    <p class="warning">IF We Approved You can get A QR code If We Reject You card is Dissapered</p>
+    <p class="warning">Only approved bookings will be displayed on this page
+</p>
     <div class="container bcontent">
 
         <div class="page-deader">Your Booking Status</div>

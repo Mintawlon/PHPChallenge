@@ -49,7 +49,8 @@ if (!isset($_SESSION["login"])) {
                                 <td>Image</td>
                                 <td>Header</td>
                                 <td>Description</td>
-                                <td>Action</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,8 +67,8 @@ if (!isset($_SESSION["login"])) {
                                     <td class="desc"><?php echo $blog["description"] ?></td>
                                     <td>
                                         <a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="edit_btn">Edit</a>
-                                        <a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
+                                    <td><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
