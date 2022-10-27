@@ -4,6 +4,9 @@ if (isset($_SESSION["centerInfo"])) {
     //print_r($_SESSION["centerInfo"]);
     $editCenter = $_SESSION["centerInfo"];
 }
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

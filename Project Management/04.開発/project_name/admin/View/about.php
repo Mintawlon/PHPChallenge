@@ -1,12 +1,12 @@
 <?php
 include("../Controller/aboutusController.php");
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,8 +28,8 @@ include("../Controller/aboutusController.php");
             <?php
             include("./common/nav.php")
             ?>
-            <form action="../Controller/aboutusController.php" method="post">
-                <div class=" data_box   col-sm-9  col-md-8 col-xl-10 mt-3">
+            <div class="col-sm-9  col-md-8 col-xl-10 mt-3">
+                <form action="../Controller/aboutusController.php" method="post">
                     <!-- Header -->
                     <div class="header_wrapper bg_header ">
                         <div class="header_box">
@@ -41,7 +41,7 @@ include("../Controller/aboutusController.php");
                             <h2 class="input_set_header my-4">Update About Us Info</h2>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Add new info</span>
-                                <textarea class="form-control common_input text_area " placeholder="Text" name="text1" value="<?php echo $about[0]["text1"]?>"></textarea>
+                                <textarea class="form-control common_input text_area " placeholder="Text" name="text1" value="<?php echo $about[0]["text1"] ?>"></textarea>
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text add_file">Add new image</span>
@@ -83,10 +83,9 @@ include("../Controller/aboutusController.php");
                             </div>
                         </div>
                     </section>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-
     </div>
 </body>
 

@@ -4,6 +4,7 @@ session_start();
 if (isset($_POST["adminLogIn"])) {
     $name = $_POST["adminName"];
     $password = $_POST["adminPassword"];
+    $_SESSION["login"] = $name;
 
     $sql = $pdo->prepare(
         "SELECT * FROM admin WHERE admin_name = :name "

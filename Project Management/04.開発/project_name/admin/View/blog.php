@@ -1,6 +1,9 @@
 <?php
 include "../Controller/blog/listBlogController.php";
-//print_r($blogList);
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,10 +65,9 @@ include "../Controller/blog/listBlogController.php";
                                     <td><?php echo $blog["header"] ?></td>
                                     <td class="desc"><?php echo $blog["description"] ?></td>
                                     <td>
-                                        <a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="edit_btn" >Edit</a>
+                                        <a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="edit_btn">Edit</a>
                                         <a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
-                                   
                                 </tr>
                             <?php } ?>
                         </tbody>

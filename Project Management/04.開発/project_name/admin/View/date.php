@@ -1,11 +1,13 @@
 <?php
 include "../Controller/dateController.php";
+session_start();
 if (isset($_SESSION["doctorInfo"])) {
     $doctorInfo = $_SESSION["doctorInfo"];
 }
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 
-// echo "<pre>";
-// print_r($doctorInfo)
 ?>
 
 <!DOCTYPE html>

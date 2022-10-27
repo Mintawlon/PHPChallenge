@@ -3,6 +3,9 @@ session_start();
 if (isset($_SESSION["patientInfoHistory"])) {
     $patientInfo = $_SESSION["patientInfoHistory"];
 }
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

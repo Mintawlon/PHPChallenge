@@ -1,7 +1,11 @@
 <?php
 include("../Controller/emergencyEditController.php");
+session_start();
 if(isset($_SESSION["articleInfo"])){
     $info = $_SESSION["articleInfo"];
+}
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
 }
 
 ?>

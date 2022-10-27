@@ -212,6 +212,7 @@
   }
 }
 
+
 /* First Aid Card */
 .first_aid_card {
   display: flex;
@@ -225,10 +226,11 @@
   flex-direction: row;
   justify-content: space-between;
   width: 80vw;
-  height: 25vh !important;
+  height: 20em;
   background-color: var(--primary_color);
 }
 .card_img {
+  width: 40%;
   height: 100%;
 }
 .info {
@@ -256,9 +258,6 @@
   border: none;
 }
 @media only screen and (max-width: 800px) {
-  .first_aid_para_header {
-    font-size: var(--extra_extra_small);
-  }
   .wrapper {
     flex-direction: column;
     height: 40em;

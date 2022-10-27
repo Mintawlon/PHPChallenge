@@ -1,7 +1,11 @@
 <?php
 include "../Controller/doctorEditController.php";
+session_start();
 if (isset($_SESSION["doctorInfo"])) {
     $doctorInfo = $_SESSION["doctorInfo"];
+}
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
 }
 ?>
 <!DOCTYPE html>

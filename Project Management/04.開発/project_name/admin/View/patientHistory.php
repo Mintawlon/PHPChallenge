@@ -1,8 +1,9 @@
 <?php
-
 include "../Controller/booking/approvedPatientListController.php";
-
-
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +76,7 @@ include "../Controller/booking/approvedPatientListController.php";
                         <?php } ?>
                     </tbody>
                 </table>
-             
+
                 <div class="input_set">
                     <h2 class="input_set_header my-4">Patient History List</h2>
                 </div>
@@ -94,10 +95,10 @@ include "../Controller/booking/approvedPatientListController.php";
                         </tr>
                     </thead>
                     <tbody>
-                    <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
+                        <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                         <?php foreach ($historyList as $history) { ?>
                             <tr class="row_bdr">
-                                <td><?php echo $number++?></td>
+                                <td><?php echo $number++ ?></td>
                                 <td><?php echo $history["patient_name"] ?></td>
                                 <td><?php echo $history["doctor_name"] ?></td>
                                 <td><?php echo $history["booking_date"] ?></td>
@@ -111,8 +112,8 @@ include "../Controller/booking/approvedPatientListController.php";
                     </tbody>
                 </table>
                 <?php
-                    include "./common/pagination.php";
-                    ?>
+                include "./common/pagination.php";
+                ?>
             </div>
         </div>
     </div>

@@ -1,5 +1,9 @@
 <?php
 include("../Controller/medicineInfoController.php");
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,24 +50,24 @@ include("../Controller/medicineInfoController.php");
                             </tr>
                         </thead>
                         <tbody>
-                        <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
+                            <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                             <?php foreach ($medicineInfo as $medicine) { ?>
-                            <tr class="row_bdr">
-                                <td><?= $number++ ?></td>
-                                <td><?= $medicine["medicine_name"] ?></td>
-                                <td><?= $medicine["description"] ?></td>
-                                <td>
-                                    <span><a href="../Controller/medicineController.php?delId=<?= $medicine["id"] ?>" class="color_fifth">Delete</a></span>
-                                </td>
-                            </tr>
+                                <tr class="row_bdr">
+                                    <td><?= $number++ ?></td>
+                                    <td><?= $medicine["medicine_name"] ?></td>
+                                    <td><?= $medicine["description"] ?></td>
+                                    <td>
+                                        <span><a href="../Controller/medicineController.php?delId=<?= $medicine["id"] ?>" class="color_fifth">Delete</a></span>
+                                    </td>
+                                </tr>
                             <?php
                             }
                             ?>
                         </tbody>
                     </table>
-                 <?php
-                 include "./common/pagination.php"
-                 ?>
+                    <?php
+                    include "./common/pagination.php"
+                    ?>
                     <hr />
                 </section>
                 <section class="add_medicine">
@@ -80,7 +84,7 @@ include("../Controller/medicineInfoController.php");
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text add_file">Add Medicine Image</span>
-                                <input type="file"  name="medicineImg" class="form-control common_input " />
+                                <input type="file" name="medicineImg" class="form-control common_input " />
                             </div>
                             <div class=" mb-2  ">
                                 <!-- Add Btn -->
@@ -91,7 +95,6 @@ include("../Controller/medicineInfoController.php");
                     </form>
                 </section>
             </div>
-
 
         </div>
     </div>

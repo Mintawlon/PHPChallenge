@@ -18,10 +18,9 @@ if (!isset($_SESSION["email"])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
-    <!-- Css Root  -->
     <link rel="stylesheet" href="./resources/css/root.css">
-        <!-- Css -->
-        <link rel="stylesheet" href="./resources/css/emergency.css?v=" time()>
+    <!-- Css -->
+    <link rel="stylesheet" href="./resources/css/emergency.css?v=" <?= time() ?>>
     <script src="./resources/js/jquery3.6.0.js"></script>
     <script src="./resources/js/emergency.js" defer></script>
 
@@ -42,8 +41,8 @@ if (!isset($_SESSION["email"])) {
                 <?php }
                 ?>
             </select>
-            <button id="search"  class="fw-bold mt-2 allDoctor">Search</button>
-            <button  class="mt-3 ms-4 allDoctor" id="allFirstAid">Show All First Aid</button>
+            <button id="search" class="fw-bold mt-2 allDoctor">Search</button>
+            <button class="mt-3 ms-4 allDoctor" id="allFirstAid">Show All First Aid</button>
         </div>
     </div>
     <!-- First Tab -->

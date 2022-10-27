@@ -1,6 +1,9 @@
 <?php
 include "../Controller/booking/bookingStatusController.php";
-//print_r($rejected);
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 
 <!DOCTYPE html>

@@ -4,6 +4,11 @@ include "../Controller/dashboard/dashbaordController.php";
 
 include "../Controller/dashboard/searchController.php";
 $view = 2;
+
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

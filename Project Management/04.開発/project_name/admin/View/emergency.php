@@ -1,5 +1,9 @@
 <?php
 include("../Controller/emergencyController.php");
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+}
 ?>
 
 <!DOCTYPE html>

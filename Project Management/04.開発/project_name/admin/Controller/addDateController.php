@@ -1,21 +1,11 @@
 <?php
-
-// echo "OK";
 session_start();
 
 include "../Model/dbConnection.php";
-
-
-$sql = $pdo->prepare("
-
-        SELECT * FROM date
-    ");
+$sql = $pdo->prepare("SELECT * FROM date");
 
 $sql->execute();
-
 $dateInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-// $dateInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-//  print_r($dateInfo);
 
 if (isset($_POST["dateadd"])) {
 
@@ -25,8 +15,7 @@ if (isset($_POST["dateadd"])) {
     $endTime   = $_POST["endTime"];
 
     $sql = $pdo->prepare(
-        "INSERT INTO 
-     date (
+        "INSERT INTO date (
         doctor_id,
         date,
         startTime,
@@ -47,9 +36,6 @@ if (isset($_POST["dateadd"])) {
     $sql->bindValue(":endTime", $endTime);
 
     $sql->execute();
-
-    // $dateInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-    // print_r($dateInfo);
 
     header("Location: ../View/date.php");
 }
