@@ -39,7 +39,7 @@ session_start();
                 <!-- input box -->
                 <form method="POST" action="../Controller/login,signUp,profile/signupController.php" class="inpbox mt-3">
                     Name* <br>
-                    <input type="text" name="reg_name" class="name form-control" placeholder="username">
+                    <input type="text" name="reg_name" class="name form-control" placeholder="username" required>
                     <br>
                     Email* <br>
                     <input type="email" name="reg_email" class="name form-control" placeholder="email" value="
@@ -47,7 +47,7 @@ session_start();
                     if (isset($_SESSION["aleradyExistEmail"])) {
                         echo $_SESSION["aleradyExistEmail"];
                     } ?>
-                    ">
+                    " required>
                     <?php
                     if (isset($_SESSION["aleradyExistEmail"])) { ?>
                         <p id="alreadyExist"><u>This Email Address Already has an Account</u></p>
@@ -56,7 +56,7 @@ session_start();
                     <br>
                     Password* <br>
                     <div class="password_box">
-                        <input type="password" name="reg_pwd" class="name form-control" placeholder="password" id="pw">
+                        <input type="password" name="reg_pwd" class="name form-control" placeholder="password" id="pw" required>
                         <i class="fa-solid fa-eye-slash" id="eye"></i>
                     </div>
                     <br>

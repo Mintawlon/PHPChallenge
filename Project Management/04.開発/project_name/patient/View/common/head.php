@@ -40,7 +40,7 @@ if (isset($_SESSION["updatedInfo"])) {
           <a class="navbar_text mt-3 me-4 ">
             <span class="btn btn-outline-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <span class="navbarProfileText me-3" class="navbarProfileText">Profile</span>
-              <img src="./storages/userprofile/<?= $photo ?>" class="profile">
+              <img src="./storages/userprofile/<?= $photo?>" class="profile">
             </span>
           </a>
         </div>

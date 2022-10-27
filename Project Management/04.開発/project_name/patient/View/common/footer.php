@@ -64,10 +64,13 @@
                             Blogs
                         </h6>
                         <p>
-                            <a href="./blooddonation.php" class="link_color fw-semibold"><u>Blood Donation</u></a>
+                            <a href="./blooddonation.php" class="link_color fw-semibold"><u>Find Blood Donation Centers</u></a>
                         </p>
                         <p>
                             <a href="./emergency.php" class="link_color fw-semibold"><u>First Aid For Emergency Situations</u></a>
+                        </p>
+                        <p>
+                            <a href="./hospital_location.php" class="link_color fw-semibold"><u>Find Hospital Locations</u></a>
                         </p>
                     </div>
                     <!-- Grid column -->

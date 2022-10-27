@@ -35,7 +35,7 @@ unset($_SESSION["alreadyBookedDoctor"]);
     <?php
     include("./common/head.php");
     ?>
-      <button id="allDoctor" class="mt-3 ms-4">Show All Doctors</button>
+    <button id="allDoctor" class="mt-3 ms-4">Show All Doctors</button>
 
     <div class="container-fluid">
         <!--doctor specility-->
@@ -77,13 +77,13 @@ unset($_SESSION["alreadyBookedDoctor"]);
                                 <?php foreach ($doctorDressingTime as $time) {
                                     if ($time["doctor_id"] == $doctor["id"]) {    ?>
                                         <div class="form-check">
-                                           
+
                                             <label class="form-check-label" for="flexRadioDefault1">
-                                               <span id="day"><?= $time["date"]?> </span> 
-                                               <span id="time"><?= $time["startTime"]?>  ~ <?= $time["endTime"]?> </span>
+                                                <span id="day"><?= $time["date"] ?> </span>
+                                                <span id="time"><?= $time["startTime"] ?> ~ <?= $time["endTime"] ?> </span>
                                             </label>
                                         </div>
-                                        <hr> 
+                                        <hr>
                                 <?php }
                                 }
                                 ?>

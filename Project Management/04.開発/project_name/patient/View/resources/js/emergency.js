@@ -23,7 +23,7 @@ $("#search").click(function () {
                 </span>
             </h1>
             <div class="wrapper">
-                <img src="./storages/image/${article.article_image}" alt="" class="card_img" />
+                <img src="./storages/emergency/${article.article_image}" alt="" class="card_img" />
                 <div class="info">
                     <h2 class="first_aid_para_header">What to Do?</h2>
                     ${article.article_text}

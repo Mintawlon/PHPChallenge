@@ -76,6 +76,7 @@ if (isset($_SESSION["doctorInfo"])) {
                                 <td>Date</td>
                                 <td>Start Time</td>
                                 <td>End Time</td>
+                                <td>Remove</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -90,6 +91,9 @@ if (isset($_SESSION["doctorInfo"])) {
                                     <td><?php echo $date["date"] ?></td>
                                     <td><?php echo $date["startTime"] ?></td>
                                     <td><?php echo $date["endTime"] ?></td>
+                                    <td>
+                                    <a href="../Controller/dateController.php?del_id=<?=$date["id"]?>" class="trash "><i class="fa-solid fa-trash"></i></a>
+                                    </td>
                                 </tr>
                             <?php } ?>
                         </tbody>

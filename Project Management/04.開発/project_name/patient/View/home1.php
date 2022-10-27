@@ -3,6 +3,7 @@ session_start();
 include "../Controller/medicineController.php";
 unset($_SESSION["Successfully Change"]);
 include "../Controller/articleInfoController.php";
+include "../Controller/carouselController.php";
 if (!isset($_SESSION["email"])) {
     header("Location: ./login.php");
 }
@@ -44,17 +45,22 @@ if (!isset($_SESSION["email"])) {
                 <ul class="splide__list">
                     <li class="splide__slide">
                         <div class="first_slide_div">
-                            <img src="./storages/image/blood_donate.png" alt="" class="first_slide_img" />
+                            <img src="./storages/image/<?=$carouselInfo[0]["caroussel_image"]?>" alt="" class="first_slide_img" />
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="first_slide_div">
-                            <img src="./storages/image/Covid (2).png" alt="" class="first_slide_img" />
+                            <img src="./storages/image/<?=$carouselInfo[0]["caroussel_image_2"]?>" alt="" class="first_slide_img" />
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="first_slide_div">
-                            <img src="./storages/image/Dengue Fever.png" alt="" class="first_slide_img" />
+                            <img src="./storages/image/<?=$carouselInfo[0]["caroussel_image_3"]?>" alt="" class="first_slide_img" />
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="first_slide_div">
+                            <img src="./storages/image/<?=$carouselInfo[0]["caroussel_image_4"]?>" alt="" class="first_slide_img" />
                         </div>
                     </li>
 

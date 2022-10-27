@@ -28,7 +28,7 @@ if (isset($_GET["doctorId"])) {
 
 
     $sql = $pdo->prepare(
-        "SELECT * FROM `date` WHERE doctor_id=:id
+        "SELECT * FROM `date` WHERE doctor_id=:id AND del_flg =0
         "
     );
     $sql->bindValue(":id", $id);

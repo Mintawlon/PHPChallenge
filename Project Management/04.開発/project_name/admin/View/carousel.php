@@ -28,29 +28,29 @@
                         <span class="navbar-brand ttl_admin" href="#">Carousel</span>
                     </div>
                 </div>
-                <div class="input_set">
+                <form class="input_set" action="../Controller/carouselController.php" method="POST"  enctype="multipart/form-data">
                     <h2 class="input_set_header my-4">Edit Carousel Image</h2>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 1</span>
-                        <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" />
+                        <input type="file"  class="form-control  common_input " name="carousel_1"  />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 2</span>
-                        <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control  common_input " name="carousel_2" accept="image/*" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 3</span>
-                        <input type="file" id="formFileLg" class="form-control  common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control  common_input " name="carousel_3" accept="image/*" />
                     </div>
                     <div class="input_one mb-2">
                         <span class="input_set_text add_file">Carousel Image 4</span>
-                        <input type="file" id="formFileLg" class="form-control common_input " accept="image/*" />
+                        <input type="file" id="formFileLg" class="form-control common_input " name="carousel_4" accept="image/*" />
                     </div>
                     <div class=" mb-2  ">
                         <!-- Add Btn -->
-                        <a href="" class="common_btn add_btn  ">Update</a>
+                        <button type="submit" class="common_btn add_btn" name="carouselUpdate" >Update</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

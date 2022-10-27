@@ -41,7 +41,7 @@ if (!isset($_SESSION["email"])) {
         <div class="profile_photo_div">
             <div class="profile_photo">
                 <div class="photo">
-                    <img src="./storages/image/<?= $userInfo[0]["profile_image"] ?>" alt="" id="photo">
+                    <img src="./storages/userprofile/<?=$userInfo[0]["profile_image"]?>" alt="" id="photo">
                 </div>
                 <p class="text-white"><?= $_SESSION["email"] ?> </p>
             </div>

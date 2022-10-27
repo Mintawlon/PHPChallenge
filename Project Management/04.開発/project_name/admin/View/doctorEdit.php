@@ -70,7 +70,58 @@ if (isset($_SESSION["doctorInfo"])) {
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Speciality</span>
-                            <input type="text" class="common_input form-control" name="updateDoctorSpeciality" value="<?= $doctorInfo[0]["speciality"] ?>" />
+                            <select name="updateDoctorSpeciality" id="" class="common_input form-control" required>
+                                <option value="General Health"
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="General Health"){
+                                    echo "selected";
+                                }
+                                ?>
+                                >General Health</option>
+                                <option value="Pulmonology"
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="Pulmonology"){
+                                    echo "selected";
+                                }
+                                ?>
+                                >Pulmonology</option>
+                                <option value="Paediatric"
+                                
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="Paediatric"){
+                                    echo "selected";
+                                }
+                                ?>>Paediatric</option>
+                                <option value="Ophthalmology"
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="Ophthalmology"){
+                                    echo "selected";
+                                }
+                                ?>
+                                >Ophthalmology</option>
+                                <option value="Neurology"
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="Neurology"){
+                                    echo "selected";
+                                }
+                                ?>
+                                >Neurology</option>
+                                <option value="OB-GYN"
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="OB-GYN"){
+                                    echo "selected";
+                                }
+                                ?>
+                                >OB-GYN</option>
+                                <option value="Dentist"
+                                <?php
+                                if($doctorInfo[0]["speciality"]=="Dentist"){
+                                    echo "selected";
+                                }
+                                ?>
+                                >Dentist</option>
+                            </select>
+                       
                         </div>
                         <div class="input_one mb-2">
                             <span class="input_set_text">Contact</span>

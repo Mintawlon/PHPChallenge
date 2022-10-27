@@ -81,9 +81,10 @@ $view = 2;
                     </div>
                 </div>
                 <!-- Chart -->
-                <div>
+                <div class="chart mx-auto my-5 col-sm-9 col-md-8 col-xl-8">
                     <canvas id="myChart"></canvas>
                 </div>
+                <hr>
                 <!--Search Box-->
                 <div class="sec_input mb-2 d-flex justify-content-end">
                     <input type="date" id="todayList" class="common_input form-control" name="serachText" placeholder="yyyy-mm-dd" />

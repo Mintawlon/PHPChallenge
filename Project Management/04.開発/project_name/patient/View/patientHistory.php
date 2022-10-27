@@ -36,7 +36,7 @@ include "../Controller/patientHistoryController.php";
   <div id="pdf_download">
 
 
-    <p class=" fw-bold email_text">Email : <?= $history[0]["email"] ?> / From VR Carer</p>
+    <p class=" fw-bold email_text">Email : <?= $_SESSION["email"] ?> / From VR Carer</p>
 
     <table class="table  mt-3">
       <thead>

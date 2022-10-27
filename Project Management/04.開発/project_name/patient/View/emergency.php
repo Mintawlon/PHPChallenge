@@ -35,11 +35,10 @@ if (!isset($_SESSION["email"])) {
 
     <!-- Search Box -->
     <div id="first_aid_search" class="me-4">
-        <div class="searchbox mt-2">
+        <div class="searchbox mt-2 mb-4">
             <select name="" id="first_aid_select" class="form-select">
                 <?php foreach ($emergencyInfo as $emergency) { ?>
                     <option value="<?= $emergency["article_header"] ?>"><?= $emergency["article_header"] ?></option>
-
                 <?php }
                 ?>
             </select>

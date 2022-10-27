@@ -257,6 +257,9 @@
   border: none;
 }
 @media only screen and (max-width: 800px) {
+  .first_aid_para_header {
+    font-size: var(--extra_extra_small);
+  }
   .wrapper {
     flex-direction: column;
     height: 40em;

@@ -65,6 +65,8 @@ body {
 @media only screen and (max-width: 800px) {
   .location_box{
     flex-direction: column;
+      width: 80%;
+      height: 65%;
   }
   .hospital_location_header{
     font-size: var(--medium);
@@ -82,8 +84,9 @@ body {
     font-size: var(--extra_extra_small);
   }
   .map_image{
-    width: 90%;
-    height: 90%;
+    margin-top: 1em;
+    width: 80%;
+    height: 80%;
   }
   
 }
