@@ -83,6 +83,7 @@ if (!isset($_SESSION["login"])) {
                         <tbody>
                         <tbody id="dayTable">
                             <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
+                            
                             <?php foreach ($dateInfo as $date) { ?>
                                 <tr class="row_bdr">
                                     <td><?= $number++ ?></td>
@@ -100,84 +101,9 @@ if (!isset($_SESSION["login"])) {
                         </tbody>
 
                     </table>
-                    <!-- Pagination -->
                     <?php
-                    if ($totalPages < 3) { ?>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item pagination_li
-                            <?php if ($page <= 1) {
-                                echo "disabled";
-                            } ?>
-                            ">
-
-                                    <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                        <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                                    </a>
-                                </li>
-
-                                <li class="page-item pagination_li ">
-                                    <a class="page-link pagination_item
-                                " href="?page=
-                                <?php for ($i = 1; $i <= $totalPages; $i++) {
-                                    echo $i;
-                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
-                                </li>
-
-
-                                <li class="page-item pagination_li  
-                            <?php if ($page >= $totalPages) {
-                                echo "disabled";
-                            } ?>
-                            ">
-                                    <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                        <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    <?php
-                    } else { ?>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item 
-                            <?php if ($page <= 1) {
-                                echo "disabled";
-                            } ?>
-                            ">
-
-                                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                        <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                                    </a>
-                                </li>
-
-                                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                                    <li class="page-item 
-                                <?php
-                                    if ($page == $i) {
-                                        echo "active";
-                                    }
-                                ?>
-                                "><a class="page-link 
-                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
-                                <?php } ?>
-
-
-                                <li class="page-item   
-                            <?php if ($page >= $totalPages) {
-                                echo "disabled";
-                            } ?>
-                            ">
-                                    <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                        <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    <?php
-                    }
+                    include "./common/pagination.php";
                     ?>
-                    <!-- Pagination -->
                     <hr />
                 </section>
                 <section class="dressing_time">
@@ -186,15 +112,27 @@ if (!isset($_SESSION["login"])) {
                             <h2 class="input_set_header my-4">Add Dressing Time</h2>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Doctor Name</span>
-                                <input type="text" class="common_input form-control" value="<?php echo $doctorInfo[0]["doctor_name"] ?>" />
+                                <input type="text" class="common_input form-control" value="<?php
+                                if (isset($_SESSION["doctorInfo"])) {
+                                    echo $doctorInfo[0]["doctor_name"] ;
+                                }
+                                ?>" />
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Age</span>
-                                <input type="text" class="common_input form-control " value="<?php echo $doctorInfo[0]["age"] ?>" />
+                                <input type="text" class="common_input form-control " value="<?php
+                                if (isset($_SESSION["doctorInfo"])) {
+                                    echo $doctorInfo[0]["age"]  ;
+                                }
+                                ?>" />
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Speciality</span>
-                                <input type="text" class="common_input form-control " value="<?php echo $doctorInfo[0]["speciality"] ?>" />
+                                <input type="text" class="common_input form-control " value="<?php 
+                                if (isset($_SESSION["doctorInfo"])) {
+                                    echo $doctorInfo[0]["speciality"] ;
+                                }
+                                ?>" />
                             </div>
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Date</span>
