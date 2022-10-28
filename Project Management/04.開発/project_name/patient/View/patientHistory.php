@@ -59,7 +59,7 @@ include "../Controller/patientHistoryController.php";
             <th scope="row"><?= $number++ ?></th>
             <td><?= $userHistory["patient_name"] ?></td>
             <td><?= $userHistory["doctor_name"] ?></td>
-            <td><?= $userHistory["booking_date"] ?></td>
+            <td id="booking_date"><?= $userHistory["booking_date"] ?></td>
             <td><?= $userHistory["disease"] ?></td>
             <td><?= $userHistory["medicine"] ?></td>
             <td><?php
@@ -85,7 +85,27 @@ include "../Controller/patientHistoryController.php";
       </tbody>
     </table>
 
-  </div>
+<!-- 
+    <div class="historyCard">
+      <?php foreach ($history as $userHistory) { ?>
+        <div class="history_card">
+          <p>No. <span><?= $number++ ?></span> </p>
+          <p>Patient Name <span><?= $userHistory["patient_name"] ?></span> </p>
+          <p>Booking Date<span><?= $userHistory["doctor_name"] ?></span> </p>
+          <p>Disease<span>1</span> </p>
+          <p>Medicine<span>1</span> </p>
+          <p>Next Appointment<span>1</span> </p>
+          <p>Symptons<span>1</span> </p>
+          <p>To Avoid<span>1</span> </p>
+        </div>
+      <?php } ?>
+    </div>-->
+  </div> 
+
+  <br>
+  <br>
+
+  <br>
   <!-- Footer -->
   <?php
   include("./common/footer.php")
