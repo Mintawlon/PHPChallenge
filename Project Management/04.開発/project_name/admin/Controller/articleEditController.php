@@ -1,6 +1,7 @@
 <?php
 include("../Model/dbConnection.php");
 session_start();
+
 // Get article info for Update
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
@@ -15,9 +16,8 @@ if (isset($_GET["id"])) {
     $_SESSION["homeArticleInfo"] = $articleInfo;
     header("Location: ../View/articleEdit.php");
 }
+
 // Update Article
-
-
 if (isset($_POST["homeArticleEdit"])) {
     $id = $_POST["homeArticleId"];
     $photo = $_POST["homeArticlePhoto"];
@@ -74,6 +74,7 @@ if (isset($_POST["homeArticleEdit"])) {
     header("Location: ../View/article.php");
 }
 
+// Delete Article
 if (isset($_GET["delId"])) {
     $id = $_GET["delId"];
 

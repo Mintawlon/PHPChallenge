@@ -13,7 +13,7 @@ if (isset($_POST["updateCenter"])) {
         center_contact=:contact,
         center_email=:email,
         updated_date=:updated_date
-         where id=:id
+        where id=:id
         "
     );
     $sql->bindValue(":name", $center);

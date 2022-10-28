@@ -5,14 +5,11 @@ $rowLimit = 10;
 $page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
 $startPage = ($page-1)*$rowLimit;
 
-
 //approved list
 $sql = $pdo->prepare("SELECT * FROM booking WHERE status=1 AND history = 0 AND date =:today ");
 $sql->bindValue(":today",date("Y-m-d"));
 $sql->execute();
 $approved = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-
 
 // Get history info
 $sql = $pdo->prepare(

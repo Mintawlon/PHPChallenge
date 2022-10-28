@@ -2,6 +2,7 @@
 
 include "../../Model/dbConnection.php";
 
+// Add Home Article
 if (isset($_POST["homeArticleAdd"])) {
     $header = $_POST["homeArticleHeader"];
     $paraHeader = $_POST["homeArticleParaHeader"];

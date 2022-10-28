@@ -62,10 +62,10 @@ if (!isset($_SESSION["login"])) {
                                     <td><?php echo $center["center_contact"] ?></td>
                                     <td><?php echo $center["center_email"] ?></td>
                                     <td><?php echo $center["center_address"] ?></td>
-                                    <td>
+                                    <td class="p-3">
                                         <a href="../Controller/bloodDonationCenter/EditDonationController.php?id=<?php echo $center["id"] ?>" class="edit_btn me-4">Edit</a>
                                     </td>
-                                    <td>
+                                    <td class="p-3">
                                         <a href="../Controller/bloodDonationCenter/deleteCenterController.php?id=<?php echo $center["id"] ?>" class="trash"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>

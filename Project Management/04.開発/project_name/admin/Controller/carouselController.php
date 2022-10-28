@@ -12,8 +12,9 @@ if (isset($_POST["carouselUpdate"])) {
         }
         $sql = $pdo->prepare(
             "UPDATE carousel SET 
-    caroussel_image=:image,
-    update_date=:updatedDate WHERE id=1"
+            caroussel_image=:image,
+            update_date=:updatedDate WHERE id=1
+            "
         );
     }
     if ($_FILES["carousel_2"]["name"] != "") {
@@ -26,8 +27,8 @@ if (isset($_POST["carouselUpdate"])) {
         }
         $sql = $pdo->prepare(
             "UPDATE carousel SET 
-    caroussel_image_2=:image,
-    update_date=:updatedDate WHERE id=1"
+            caroussel_image_2=:image,
+            update_date=:updatedDate WHERE id=1"
         );
     }
     if ($_FILES["carousel_3"]["name"] != "") {
@@ -40,8 +41,8 @@ if (isset($_POST["carouselUpdate"])) {
         }
         $sql = $pdo->prepare(
             "UPDATE carousel SET 
-    caroussel_image_3=:image,
-    update_date=:updatedDate WHERE id=1"
+            caroussel_image_3=:image,
+            update_date=:updatedDate WHERE id=1"
         );
     }
     if ($_FILES["carousel_4"]["name"] != "") {
@@ -54,8 +55,8 @@ if (isset($_POST["carouselUpdate"])) {
         }
         $sql = $pdo->prepare(
             "UPDATE carousel SET 
-    caroussel_image_4=:image,
-    update_date=:updatedDate WHERE id=1"
+            caroussel_image_4=:image,
+            update_date=:updatedDate WHERE id=1"
         );
     }
     $sql->bindValue(":image", $path);
@@ -63,4 +64,3 @@ if (isset($_POST["carouselUpdate"])) {
     $sql->execute();
     header("Location: ../View/carousel.php");
 }
-

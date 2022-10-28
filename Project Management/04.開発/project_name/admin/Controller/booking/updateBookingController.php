@@ -11,7 +11,7 @@ if (isset($_GET["id"])) {
         qrcode=:qrcode,
         status=:status,
         update_date=:update_date
-         where id=:id
+        where id=:id
         "
     );
     $sql->bindValue(":qrcode", $qrcode);
