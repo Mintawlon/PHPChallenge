@@ -39,24 +39,21 @@ unset($_SESSION["alreadyBookedDoctor"]);
 
     <div class="container-fluid">
         <!--doctor specility-->
-        <div class="row">
-            <div class="col-12 mt-5 btn-row">
-                <!-- Blue Square Btn -->
-                <button class="square_special_btn mobile" id="General Health" onclick="speciality(this.id)"><i class="fa-solid fa-stethoscope me-3"></i>General Health</button>
-                <button class="square_special_btn" id="Pulmonology" onclick="speciality(this.id)"><i class="fa-solid fa-lungs me-3"></i>Pulmonology</button>
-                <button class="square_special_btn" id="Paediatric" onclick="speciality(this.id)"><i class="fa-solid fa-baby me-3"></i>Paediatric </button>
-                <button class="square_special_btn" id="Ophthalmology" onclick="speciality(this.id)"><i class="fa-solid fa-eye me-3"></i>Ophthalmology</button>
-            </div>
+
+        <div class="btnBox my-3">
+            <button class="doctorBtn" id="General Health" onclick="speciality(this.id)"><i class="fa-solid fa-stethoscope doctorBtn_icon"></i><span class="doctorBtn_text">General Health</span></button>
+            <button class="doctorBtn" id="Pulmonology" onclick="speciality(this.id)"><i class="fa-solid fa-lungs doctorBtn_icon"></i>Pulmonology</button>
+            <button class="doctorBtn" id="Paediatric" onclick="speciality(this.id)"><i class="fa-solid fa-baby doctorBtn_icon"></i>Paediatric </button>
+            <button class="doctorBtn" id="Ophthalmology" onclick="speciality(this.id)"><i class="fa-solid fa-eye doctorBtn_icon"></i>Ophthalmology</button>
         </div>
-        <div class="row">
-            <div class="col-12 mt-5 btn-row">
-                <!-- Blue Square Btn -->
-                <button class="square_special_btn mobile" id="Neurology" onclick="speciality(this.id)"><i class="fa-solid fa-brain me-3"></i>Neurology</button>
-                <button class="square_special_btn" id="OB-GYN" onclick="speciality(this.id)"><i class="fa-solid fa-person-pregnant me-3"></i>OB-GYN</button>
-                <button class="square_special_btn" id="Dentist" onclick="speciality(this.id)"> <i class="fa-solid fa-tooth me-3"></i>Dentist</button>
-                </form>
-            </div>
+        <div class="btnBox">
+            <button class="doctorBtn" id="Neurology" onclick="speciality(this.id)"><i class="fa-solid fa-brain doctorBtn_icon"></i>Neurology</button>
+                <button class="doctorBtn" id="OB-GYN" onclick="speciality(this.id)"><i class="fa-solid fa-person-pregnant doctorBtn_icon"></i>OB-GYN</button>
+                <button class="doctorBtn" id="Dentist" onclick="speciality(this.id)"> <i class="fa-solid fa-tooth doctorBtn_icon"></i>Dentist</button>
         </div>
+
+
+
 
         <div class="row mt-5" id="doctorSearch">
             <!--card-->
