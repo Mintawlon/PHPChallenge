@@ -2,7 +2,7 @@
 include("../Controller/hosLocationController.php");
 session_start();
 if (!isset($_SESSION["login"])) {
-    header("Location: ./login.php");
+  header("Location: ./login.php");
 }
 ?>
 
@@ -61,7 +61,7 @@ if (!isset($_SESSION["login"])) {
                 <td><?= $hospital["hospital_name"] ?></td>
                 <td><?= $hospital["contact"] ?></td>
                 <td id="map">
-                <iframe src="<?= $hospital["google_map_image"] ?>"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                  <iframe src="<?= $hospital["google_map_image"] ?>" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
                 <td><?= $hospital["address"] ?></td>
                 <td id="email"><?= $hospital["email"] ?></td>
                 </td>
@@ -75,82 +75,8 @@ if (!isset($_SESSION["login"])) {
         </table>
         <!-- Pagination -->
         <?php
-        if ($totalPages < 3) { ?>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item pagination_li
-                            <?php if ($page <= 1) {
-                              echo "disabled";
-                            } ?>
-                            ">
-
-                <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                  <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                </a>
-              </li>
-
-              <li class="page-item pagination_li ">
-                <a class="page-link pagination_item
-                                " href="?page=
-                                <?php for ($i = 1; $i <= $totalPages; $i++) {
-                                  echo $i;
-                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
-              </li>
-
-
-              <li class="page-item pagination_li  
-                            <?php if ($page >= $totalPages) {
-                              echo "disabled";
-                            } ?>
-                            ">
-                <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                  <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        <?php
-        } else { ?>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item 
-                            <?php if ($page <= 1) {
-                              echo "disabled";
-                            } ?>
-                            ">
-
-                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                  <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                </a>
-              </li>
-
-              <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                <li class="page-item 
-                                <?php
-                                if ($page == $i) {
-                                  echo "active";
-                                }
-                                ?>
-                                "><a class="page-link 
-                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
-              <?php } ?>
-
-
-              <li class="page-item   
-                            <?php if ($page >= $totalPages) {
-                              echo "disabled";
-                            } ?>
-                            ">
-                <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
-                  <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        <?php
-        }
+        include "./common/pagination.php"
         ?>
-        <!-- Pagination -->
         <hr class="about_line mt-5" />
         <!-- Add Hospital Info Form -->
         <form action="../Controller/hosLocationController.php" method="POST" class="input_set">
@@ -172,9 +98,8 @@ if (!isset($_SESSION["login"])) {
             <input type="text" name="hospitalEmail" class="common_input form-control" />
           </div>
           <div class="input_one mb-2 display_top">
-            <span class="input_set_text text_display ">Google Map</span>
-            <textarea id="" class="common_input form-control text_area" name="hospitalMap" rows="5"></textarea>
-            <!-- <input type="text" name="hospitalMap" class="common_input form-control " /> -->
+            <span class="input_set_text text_display">Google Map</span>
+            <textarea id="" class="common_input form-control text_area" placeholder="Only src attribute" name="hospitalMap" rows="5"></textarea>
           </div>
           <div class=" mb-2  display_top ">
             <!-- Add Btn -->

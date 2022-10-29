@@ -5,6 +5,8 @@ if (!isset($_SESSION["email"])) {
 }
 include "../Controller/phpqrcode/qrlib.php";
 include "../Controller/booking/BookingStatusController.php";
+
+unset($_SESSION["bookingSuccess"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

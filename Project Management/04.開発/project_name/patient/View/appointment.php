@@ -16,6 +16,7 @@ if (!isset($_SESSION["email"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,10 +33,53 @@ if (!isset($_SESSION["email"])) {
 </head>
 
 <body>
+    <!-- Alert Box -->
+    <?php
+    if (isset($_SESSION["alreadyBookedDoctor"])) {
+        echo
+        "
+        <div class='modal' tabindex='-1' id='myModal'>
+            <div class='modal-dialog ' >
+                <div class='modal-content bookingAlert'  >
+                    <div class='modal-body'>
+                        <p class='alert_text'>Alerady Book With This Doctor.</p>
+                    </div>
+                    <div class='aler_btn'>
+                        <button type='button' class='btn  alert_btn_text '>
+                        <a href='./doctor.php' class=' alert_btn_a_text text-decoration-none'>OK</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ";
+    }
+    if (isset($_SESSION["bookingSuccess"])) {
+        echo
+        "
+        <div class='modal' tabindex='-1' id='myModal'>
+            <div class='modal-dialog ' >
+                <div class='modal-content bookingAlert'  >
+                    <div class='modal-body'>
+                    <p class='alert_text'><span><i class='fa-solid fa-check'></i></span>SUCCESS!</p>
+                        <p class='alert_text'>Go to Booking Status and Check Your Booking.</p>
+                    </div>
+                    <div class='aler_btn'>
+                        <button type='button' class='btn  alert_btn_text' >
+                        <a href='./booking.php' class='alert_btn_a_text text-decoration-none'>OK</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ";
+    }
+    ?>
     <!-- Header -->
     <?php
     include("./common/head.php")
     ?>
+    
     <div class="container body mb-4">
         <div class="row">
             <div class="col-md-6 col-sm-12 inputbox_wrapper">
@@ -94,7 +138,7 @@ if (!isset($_SESSION["email"])) {
                             </div>
                             <div class="doctorDuty mt-3 pt-3">
                                 <h5> <?= $docotrInfo[0]["doctor_name"] ?></h5>
-                                <p><?=$docotrInfo[0]["speciality"] ?></p>
+                                <p><?= $docotrInfo[0]["speciality"] ?></p>
                                 <div class="text">
                                     <?php foreach ($selectedDoctorDuty as $time) { ?>
                                         <p> <?= $time["date"] ?> <span><?= $time["startTime"] ?> </span> ~ <span> <?= $time["endTime"] ?></span></p>
@@ -109,18 +153,28 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
     </div>
-    <!-- Alert Box -->
-    <?php
-    if(isset($_SESSION["alreadyBookedDoctor"])){
-        echo
-        "<script>
-        alert ('Alerady Book With This Docotor');
-        </script>";
-    }
-    ?>
+
+
+
     <!-- Footer -->
     <?php
     include("./common/footer.php")
+    ?>
+
+
+
+    <?php
+    if (isset($_SESSION["alreadyBookedDoctor"]) ||isset($_SESSION["bookingSuccess"]) ) {
+        echo
+        "
+    <script>
+    var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+        keyboard: false
+    })
+    myModal.show()
+    </script>
+    ";
+    }
     ?>
 </body>
 

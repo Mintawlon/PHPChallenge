@@ -34,16 +34,13 @@
 .approve_color{
     color: var(--sixth_color);
 }
-<<<<<<< HEAD
-=======
 .searchDay{
-  background-color: var(--second_colors);
+  background-color: var(--secondary_color);
   font-size: var(--extra_small)!important;
   border: none !important;
   border-radius: 50px !important;
   color: var(--first_color);
 }
 .searchDay:hover{
-  color: var(--secondary_color);
+  color: var(--second_color);
 }
->>>>>>> origin/main

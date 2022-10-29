@@ -23,7 +23,6 @@ if (!isset($_SESSION["email"])) {
     <!-- Splide.js cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/themes/splide-skyblue.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-    <!-- JS file for Slider -->
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0442ff9845.js" crossorigin="anonymous"></script>
 

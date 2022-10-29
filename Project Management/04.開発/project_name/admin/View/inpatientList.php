@@ -91,7 +91,7 @@ if (!isset($_SESSION["login"])) {
                                         <a href="../Controller/inpatientEditController.php?id=<?= $ipatient["id"] ?>" class="edit_btn me-4">
                                             Edit</a>
                                         <a href="../Controller/inpatientEditController.php?delId=<?= $ipatient["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
-                                 </td>
+                                </td>
 
                             </tr>
                         <?php } ?>
@@ -99,82 +99,8 @@ if (!isset($_SESSION["login"])) {
                 </table>
                 <!-- Pagination -->
                 <?php
-                if ($totalPages < 3) { ?>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item pagination_li
-                            <?php if ($page <= 1) {
-                                echo "disabled";
-                            } ?>
-                            ">
-
-                                <a class="page-link pagination_item" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                                </a>
-                            </li>
-
-                            <li class="page-item pagination_li ">
-                                <a class="page-link pagination_item
-                                " href="?page=
-                                <?php for ($i = 1; $i <= $totalPages; $i++) {
-                                    echo $i;
-                                } ?> "><?= $page ?>/<?= $totalPages ?></a>
-                            </li>
-
-
-                            <li class="page-item pagination_li  
-                            <?php if ($page >= $totalPages) {
-                                echo "disabled";
-                            } ?>
-                            ">
-                                <a class="page-link pagination_item" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                    <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                <?php
-                } else { ?>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item 
-                            <?php if ($page <= 1) {
-                                echo "disabled";
-                            } ?>
-                            ">
-
-                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
-                                </a>
-                            </li>
-
-                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                                <li class="page-item 
-                                <?php
-                                if ($page == $i) {
-                                    echo "active";
-                                }
-                                ?>
-                                "><a class="page-link 
-                                " href="?page=<?= $i ?>"><?= $i ?></a></li>
-                            <?php } ?>
-
-
-                            <li class="page-item   
-                            <?php if ($page >= $totalPages) {
-                                echo "disabled";
-                            } ?>
-                            ">
-                                <a class="page-link " href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                    <span aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                <?php
-                }
-                ?>
-                <!-- Pagination -->
+                    include "./common/pagination.php"
+                    ?>
                 <hr class="about_line mt-5" />
             </div>
         </div>

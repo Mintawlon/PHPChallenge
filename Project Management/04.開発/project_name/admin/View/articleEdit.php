@@ -1,6 +1,5 @@
 <?php
 include("../Controller/articleEditController.php");
-session_start();
 if(isset($_SESSION["homeArticleInfo"])){
     $info = $_SESSION["homeArticleInfo"];
 }
