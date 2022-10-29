@@ -66,7 +66,7 @@ if (!isset($_SESSION["login"])) {
                                     </td>
 
                                     <td id="text"><?= $emergency["article_text"] ?></td>
-                                    <td>
+                                    <td class="p-3">
                                         <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="edit_btn me-4">
                                             Edit</a>
                                         <a href="../Controller/emergencyEditController.php?delId=<?= $emergency["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>

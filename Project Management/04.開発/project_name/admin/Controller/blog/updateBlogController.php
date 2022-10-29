@@ -12,11 +12,11 @@ if (isset($_POST["updateBlog"])) {
         echo "File Not Exist";
         $sql = $pdo->prepare(
             "UPDATE blog SET
-             header =:header,
-             description=:description,
-             updated_date=:updated_date 
-             where id=:id
-            "
+            header =:header,
+            description=:description,
+            updated_date=:updated_date 
+            where id=:id
+        "
         );
         $sql->bindValue(":header", $header);
         $sql->bindValue(":description", $description);
@@ -34,12 +34,12 @@ if (isset($_POST["updateBlog"])) {
         if (move_uploaded_file($location, "../../View/storages/blog/" . $header . "." . $extension)) {
             $sql = $pdo->prepare(
                 "UPDATE blog SET
-                 image=:profile,
-                 header =:header,
-                 description=:description,
-                 updated_date=:updated_date
-                 where id=:id
-                "
+                image=:profile,
+                header =:header,
+                description=:description,
+                updated_date=:updated_date
+                where id=:id
+            "
             );
             $sql->bindValue(":profile", $path);
             $sql->bindValue(":header", $header);

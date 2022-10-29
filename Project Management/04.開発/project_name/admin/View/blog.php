@@ -65,10 +65,10 @@ if (!isset($_SESSION["login"])) {
                                     </td>
                                     <td><?php echo $blog["header"] ?></td>
                                     <td class="desc"><?php echo $blog["description"] ?></td>
-                                    <td>
+                                    <td class="p-3">
                                         <a href="../Controller/blog/editBlogController.php?id=<?php echo $blog["id"] ?>" class="edit_btn">Edit</a>
                                     </td>
-                                    <td><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a></td>
+                                    <td class="p-3"><a href="../Controller/blog/deleteblog.php?id=<?php echo $blog["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                             <?php } ?>
                         </tbody>

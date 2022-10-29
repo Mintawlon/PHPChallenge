@@ -23,7 +23,7 @@ $("#search").click(function () {
             <div class="location_box">
               <div class="map_image ">
                 <div class="map">
-                ${hospital.google_map_image}
+                <iframe src=" ${hospital.google_map_image}"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
                 </div>
               </div>
             <div class="hospitalInfo mt-3">

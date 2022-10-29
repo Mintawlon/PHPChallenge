@@ -2,8 +2,8 @@
 include "../Model/dbConnection.php";
 
 $rowLimit = 5;
-$page = (isset($_GET["page"])) ? $_GET["page"] : 1 ;
-$startPage = ($page-1)*$rowLimit;
+$page = (isset($_GET["page"])) ? $_GET["page"] : 1;
+$startPage = ($page - 1) * $rowLimit;
 
 //pending list
 $sql = $pdo->prepare("SELECT * FROM booking WHERE status=0 LIMIT  $startPage,$rowLimit");
@@ -26,6 +26,6 @@ $sql = $pdo->prepare(
     "
 );
 $sql->execute();
-$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC) [0]["total"];
+$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]["total"];
 
-$totalPages = ceil($totalRecord/$rowLimit);
+$totalPages = ceil($totalRecord / $rowLimit);

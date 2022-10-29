@@ -2,11 +2,8 @@
 
 include "../../Model/dbConnection.php";
 if (isset($_POST['addDieses'])) {
-
     $header = $_POST['header'];
-    //echo $header;
     $description = $_POST['description'];
-    //echo $file;
     $file = $_FILES["uploadFile"]['name'];
     $location = $_FILES['uploadFile']['tmp_name'];
     $extension = pathinfo($file)['extension'];

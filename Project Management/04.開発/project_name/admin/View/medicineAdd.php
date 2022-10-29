@@ -56,8 +56,8 @@ if (!isset($_SESSION["login"])) {
                                     <td><?= $number++ ?></td>
                                     <td><?= $medicine["medicine_name"] ?></td>
                                     <td><?= $medicine["description"] ?></td>
-                                    <td>
-                                        <span><a href="../Controller/medicineController.php?delId=<?= $medicine["id"] ?>" class="color_fifth">Delete</a></span>
+                                    <td class="p-3">
+                                        <a href="../Controller/medicineController.php?delId=<?= $medicine["id"] ?>" class="trash "><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php

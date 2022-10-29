@@ -11,21 +11,21 @@ if (isset($_POST["addCenter"])) {
     echo $contact;
     $sql = $pdo->prepare(
         "INSERT INTO blood_donation
-         (
-             center_name,
-             center_address,
-             center_contact,
-             center_email,
-             created_date
-         ) 
-         VALUES 
-         (
-             :name,
-             :address,
-             :contact,
-             :email,
-             :created_date
-         )"
+        (
+            center_name,
+            center_address,
+            center_contact,
+            center_email,
+            created_date
+        ) 
+        VALUES 
+        (
+            :name,
+            :address,
+            :contact,
+            :email,
+            :created_date
+        )"
     );
 
     $sql->bindValue(":name", $center);

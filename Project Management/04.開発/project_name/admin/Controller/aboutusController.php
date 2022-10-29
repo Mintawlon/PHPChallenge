@@ -28,17 +28,15 @@ if (isset($_POST["update"])) {
     $sql->execute();
     header("Location: ../View/about.php");
 }
-// Add Privacy Policy Info
 
+// Add Privacy Policy Info
 if (isset($_POST["update2"])) {
     $text3 = $_POST["policy_text"];
-
     $sql = $pdo->prepare(
         "UPDATE
-policy SET 
-policy_text=:policy_text"
-
-
+        policy SET 
+        policy_text=:policy_text
+        "
     );
     $sql->bindValue(":policy_text", $text3);
 
