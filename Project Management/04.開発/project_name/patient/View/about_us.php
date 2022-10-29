@@ -43,7 +43,7 @@ if (!isset($_SESSION["email"])) {
             <h3 class="about_header my-4">About Us</h3>
             <!-- Page Tab -->
             <p class="text-center first_aid_para"><?= $info["text1"] ?></p>
-            <img src="./storages/image/<?= $info["image1"] ?>" alt="" class="about_us_center mt-5" />
+            <!-- <img src="./storages/image/<?= $info["image1"] ?>" alt="" class="about_us_center mt-5" /> -->
             <hr class="about_line mt-5" />
         <?php  } ?>
 
@@ -52,25 +52,12 @@ if (!isset($_SESSION["email"])) {
         <div class="first_aid_card my-4">
             <div class="wrapper">
                 <div class="info" data-aos="flip-down">
-                    <h2 class="display_top header-2">Section-2</h2>
+                    <h2 class="display_top header-2"><?= $info["header"] ?></h2>
                     <ol class="first_aid_para">
                     <p class="first_aid_para"><?= $info["text2"] ?></p>
-                        <!-- <li>
-                            
-                        </li> -->
-                        <!-- <li>
-                            <p class="first_aid_para"><?= $info["text2"] ?></p>
-                        </li>
-                        <li>
-                            <p class="first_aid_para"><?= $info["text2"] ?></p>
-                        </li>
-                        <li>
-                            <p class="first_aid_para"><?= $info["text2"] ?></p>
-                        </li> -->
                     </ol>
-                    <!-- <p class="first_aid_para"><?= $info["text2"] ?></p> -->
                 </div>
-                <img src="./storages/image/<?= $info["image2"] ?>" alt="" class="card_img" />
+                <img src="./storages/about/<?= $info["image2"] ?>" alt="" class="card_img" />
 
             </div>
         </div>
@@ -81,7 +68,7 @@ if (!isset($_SESSION["email"])) {
 
             <?php foreach ($policyInfo as $info1) { ?>
                 <!-- Page Tab -->
-                <p class="text-center first_aid_p4ara"><?= $info1["policy_text"] ?></p>
+                <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p>
                 <!-- Page Tab -->
                 <!-- <p class="text-center first_aid_para"><?= $info1["policy_text"] ?></p> -->
             <?php } ?>
