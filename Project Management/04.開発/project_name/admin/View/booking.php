@@ -77,6 +77,7 @@ if (!isset($_SESSION["login"])) {
                                     </td>
                                 </tr>
                             <?php } ?>
+                            
                         </tbody>
                     </table>
                     <?php

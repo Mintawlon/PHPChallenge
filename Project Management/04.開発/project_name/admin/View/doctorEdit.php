@@ -1,6 +1,5 @@
 <?php
 include "../Controller/doctorEditController.php";
-session_start();
 if (isset($_SESSION["doctorInfo"])) {
     $doctorInfo = $_SESSION["doctorInfo"];
 }

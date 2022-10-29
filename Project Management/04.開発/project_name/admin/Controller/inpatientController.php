@@ -19,7 +19,7 @@ $inpatient = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // Pagination
 $sql = $pdo->prepare(
-    "SELECT COUNT(id) As total FROM `date` 
+    "SELECT COUNT(id) As total FROM inpatient WHERE del_flg != 1 
     "
 );
 $sql->execute();
