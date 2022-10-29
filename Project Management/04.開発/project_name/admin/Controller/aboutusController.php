@@ -5,26 +5,45 @@ include("../Model/dbConnection.php");
 // Add About Us Info
 if (isset($_POST["update"])) {
     $text1 = $_POST["text1"];
-    $image1 = $_POST["image1"];
     $header = $_POST["header"];
     $text2 = $_POST["text2"];
-    $image2 = $_POST["image2"];
 
-    $sql = $pdo->prepare(
+
+    if ($_FILES["image2"]["name"] == "") {
+        $sql = $pdo->prepare(
         "UPDATE
-        about_us SET 
-        text1=:text1,
-        image1=:image1,
-        header=:header,
-        text2=:text2,
-        image2=:image2"
+            about_us SET 
+             text1=:text1,
+             header=:header,
+             text2=:text2,
+             update_date=:updatedDate WHERE header=:header"
+        );
+    } else {
+        $file = $_FILES['image2']['name'];
+        $location = $_FILES['image2']['tmp_name'];
+        $extension = pathinfo($file)['extension'];
+        $path = $header . "." . $extension;
 
-    );
+        if (move_uploaded_file($location, "../View/storages/about/" . $header . "." . $extension)) {
+            $sql = $pdo->prepare(
+                "UPDATE
+            about_us SET 
+             text1=:text1,
+             header=:header,
+             text2=:text2,
+             image2=:image2,
+             update_date=:updatedDate WHERE header=:header"
+            );
+            $sql->bindValue(":image2", $path);
+        } else {
+            echo 'There was some error moving the file to upload directory.';
+        }
+    
+    }
     $sql->bindValue(":text1", $text1);
-    $sql->bindValue(":image1", $image1);
     $sql->bindValue(":header", $header);
     $sql->bindValue(":text2", $text2);
-    $sql->bindValue(":image2", $image2);
+    $sql->bindValue(":updatedDate", date("Y/m/d"));
     $sql->execute();
     header("Location: ../View/about.php");
 }

@@ -28,7 +28,7 @@ if (!isset($_SESSION["login"])) {
             include("./common/nav.php")
             ?>
             <div class="col-sm-9  col-md-8 col-xl-10 mt-3">
-                <form action="../Controller/aboutusController.php" method="post">
+                <form action="../Controller/aboutusController.php" method="post" enctype="multipart/form-data">
                     <!-- Header -->
                     <div class="header_wrapper bg_header ">
                         <div class="header_box">
@@ -42,10 +42,10 @@ if (!isset($_SESSION["login"])) {
                                 <span class="input_set_text">Add new info</span>
                                 <textarea class="form-control common_input text_area " placeholder="Text" name="text1" value="<?php echo $about[0]["text1"] ?>"></textarea>
                             </div>
-                            <div class="input_one mb-2">
+                            <!-- <div class="input_one mb-2">
                                 <span class="input_set_text add_file">Add new image</span>
                                 <input type="file" id="formFileLg" class="form-control form-control-lg common_input" accept="image/*" name="image1" />
-                            </div>
+                            </div> -->
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Header for paragraph</span>
                                 <input type="text" class="common_input form-control" name="header" />
