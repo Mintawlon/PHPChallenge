@@ -230,6 +230,7 @@
   background-color: var(--primary_color);
 }
 .card_img {
+  width: 50%;
   height: 100% !important;
 }
 .info {
