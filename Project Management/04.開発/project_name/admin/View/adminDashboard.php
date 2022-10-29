@@ -119,32 +119,9 @@ if (!isset($_SESSION["login"])) {
 
                     </tbody>
                 </table>
-                <div class='pagination_container'>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                </div>
                 <hr class="about_line mt-5" />
-
             </div>
         </div>
-
-
     </div>
     <!-- js -->
     <script src="../View/resources/js/jquery3.6.0.js"></script>

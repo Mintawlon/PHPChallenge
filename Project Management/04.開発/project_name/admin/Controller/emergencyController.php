@@ -80,7 +80,7 @@ if(isset($_POST["addEmergency"])){
 
 // Pagination
 $sql = $pdo->prepare(
-    "SELECT COUNT(id) As total FROM `first_aid` 
+    "SELECT COUNT(id) As total FROM `first_aid` WHERE del_flg != 1
     "
 );
 $sql->execute();

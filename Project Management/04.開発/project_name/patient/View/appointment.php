@@ -100,18 +100,15 @@ if (!isset($_SESSION["email"])) {
                         <input type="text" id="TextInput" class="form-control" placeholder="Patient Name" name="patient" value="<?= $userInfo[0]["register_name"] ?>" required>
                     </div>
                     <div class="input_align m-3">
-                        <input type="number" id="TextInput" class="form-control" name="age" placeholder="Patient Age">
+                        <input type="number" id="TextInput" class="form-control" name="age" placeholder="Patient Age" required>
                     </div>
                     <div class="input_align m-3">
-
-                        <input type="number" id="TextInput" class="form-control" name="contact" placeholder="Phone Number">
+                        <input type="number" id="TextInput" class="form-control" name="contact" placeholder="Phone Number" required>
                     </div>
                     <div class="input_align m-3">
-
-                        <input type="text" id="TextInput" class="form-control" name="address" placeholder="address">
+                        <input type="text" id="TextInput" class="form-control" name="address" placeholder="address" required>
                     </div>
                     <div class="input_align m-3">
-
                         <input type="text" id="TextInput" class="form-control" name="remark" placeholder="Remark From Doctor If Have">
                     </div>
                     <div class="input_align m-3">

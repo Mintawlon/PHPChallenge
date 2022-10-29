@@ -64,7 +64,6 @@ if (!isset($_SESSION["login"])) {
                                     <td id="image">
                                         <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="image">
                                     </td>
-
                                     <td id="text"><?= $emergency["article_text"] ?></td>
                                     <td class="p-3">
                                         <a href="../Controller/emergencyEditController.php?id=<?= $emergency["id"] ?>" class="edit_btn me-4">
@@ -73,8 +72,6 @@ if (!isset($_SESSION["login"])) {
                                     </td>
                                 </tr>
                             <?php } ?>
-
-
                         </tbody>
                     </table>
                     <?php

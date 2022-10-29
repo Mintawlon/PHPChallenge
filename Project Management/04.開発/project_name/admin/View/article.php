@@ -53,7 +53,7 @@ if (!isset($_SESSION["login"])) {
                             </tr>
                         </thead>
                         <tbody id="table_text">
-                            <?php $number = 1 ?>
+                        <?php $number = ($page * $rowLimit) - ($rowLimit - 1) ?>
                             <?php foreach ($homeArticleInfo as $info) { ?>
                                 <tr>
                                     <td id="number"><?= $number++ ?></td>
