@@ -48,7 +48,8 @@ if (isset($_POST["addbtn"])) {
         disease,
         status,
         room,
-        address
+        address,
+        create_date
         
         
      )
@@ -60,7 +61,8 @@ if (isset($_POST["addbtn"])) {
         :disease,
         :status,
         :room,
-        :address
+        :address,
+        :create_date
      )
     
      ");
@@ -71,6 +73,7 @@ if (isset($_POST["addbtn"])) {
     $sql->bindValue(":status", $status);
     $sql->bindValue(":room", $room);
     $sql->bindValue(":address", $address);
+    $sql->bindValue(":create_date", date("Y/m/d"));
 
     $sql->execute();
 
