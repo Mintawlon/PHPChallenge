@@ -96,6 +96,9 @@ body {
   border-radius: 10px;
 }
 @media only screen and (max-width: 800px) {
+  #pwdChangeBtn {
+    width: 30%;
+  }
   #changePwd {
     width: 80%;
   }
