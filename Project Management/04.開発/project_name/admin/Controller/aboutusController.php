@@ -13,10 +13,10 @@ if (isset($_POST["update"])) {
         $sql = $pdo->prepare(
         "UPDATE
             about_us SET 
-             text1=:text1,
-             header=:header,
-             text2=:text2,
-             update_date=:updatedDate WHERE header=:header"
+            text1=:text1,
+            header=:header,
+            text2=:text2,
+            update_date=:updatedDate "
         );
     } else {
         $file = $_FILES['image2']['name'];
@@ -32,7 +32,7 @@ if (isset($_POST["update"])) {
              header=:header,
              text2=:text2,
              image2=:image2,
-             update_date=:updatedDate WHERE header=:header"
+             update_date=:updatedDate "
             );
             $sql->bindValue(":image2", $path);
         } else {

@@ -32,7 +32,7 @@ if (!isset($_SESSION["email"])) {
     <h3 class="blood_donate_header my-5">Blood Donation Center</h3>
     <!-- Blood Donation Center Cards -->
     <?php foreach ($centerList as $center) { ?>
-        <div class="center_card_wrapper">
+        <div class="center_card_wrapper mb-5">
             <div class="center_card">
                 <div class="center_name_div">
                     <h2 class="center_name"><?php echo $center["center_name"] ?></h2>
@@ -45,8 +45,9 @@ if (!isset($_SESSION["email"])) {
                         </span></p>
                 </div>
             </div>
-            <hr class="line" />
+            
         </div>
+        <hr class="line " />
     <?php } ?>
     <!-- Blood Donation Center Cards -->
     <!-- Footer -->

@@ -42,10 +42,6 @@ if (!isset($_SESSION["login"])) {
                                 <span class="input_set_text">Add new info</span>
                                 <textarea class="form-control common_input text_area " placeholder="Text" name="text1" value="<?php echo $about[0]["text1"] ?>"></textarea>
                             </div>
-                            <!-- <div class="input_one mb-2">
-                                <span class="input_set_text add_file">Add new image</span>
-                                <input type="file" id="formFileLg" class="form-control form-control-lg common_input" accept="image/*" name="image1" />
-                            </div> -->
                             <div class="input_one mb-2">
                                 <span class="input_set_text">Header for paragraph</span>
                                 <input type="text" class="common_input form-control" name="header" />

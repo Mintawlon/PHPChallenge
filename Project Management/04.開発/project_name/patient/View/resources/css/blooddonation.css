@@ -54,3 +54,6 @@ body {
     font-size: var(--medium);
   }
 }
+.line{
+  margin: 0 auto !important;
+}
