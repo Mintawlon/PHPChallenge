@@ -7,7 +7,6 @@ if (isset($_POST["homeArticleAdd"])) {
     $header = $_POST["homeArticleHeader"];
     $paraHeader = $_POST["homeArticleParaHeader"];
     $paragraph = $_POST["homeArticlePara"];
-    $photo = $_POST["homeArticlePhoto"];
     $link = $_POST["pageLink"];
 
     $file = $_FILES['homeArticlePhoto']['name'];

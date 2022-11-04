@@ -81,7 +81,6 @@ if (isset($_POST["updateDoctorInfo"])) {
 
 }
 
-
 // Remove Doctor
 if (isset($_GET["delId"])) {
     $delId = $_GET["delId"];
