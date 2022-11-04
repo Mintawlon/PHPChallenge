@@ -20,7 +20,6 @@ if (isset($_GET["id"])) {
 // Update Article
 if (isset($_POST["homeArticleEdit"])) {
     $id = $_POST["homeArticleId"];
-    $photo = $_POST["homeArticlePhoto"];
     $link = $_POST["pageLink"];
     $articlePara = $_POST["homeArticlePara"];
     $articleParaHeader = $_POST["homeArticleParaHeader"];

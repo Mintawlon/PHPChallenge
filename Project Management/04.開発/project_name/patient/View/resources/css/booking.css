@@ -1,7 +1,6 @@
 
 body{
     background-color:var(--primary_color) !important;
-    font-family: var(--primary_font) !important;
     overflow-x: hidden !important;
 }
 .bcontent {

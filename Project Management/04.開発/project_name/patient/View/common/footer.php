@@ -46,7 +46,7 @@
                     <div class="col-4 mx-auto mb-3 mt-5">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4 text-white">
-                            About MedPlatform
+                            About VR_CARER
                         </h6>
                         <p>
                             <a href="./about_us.php" class="text-decoration-none link_color fw-semibold"><u>About Us</u></a>
@@ -82,7 +82,7 @@
 
         <!-- Copyright -->
         <div class="text-center p-4">
-            © 2022 Copyright: <span class="fw-bold">MedPlatform.com</span>
+            © 2022 Copyright: <span class="fw-bold">VR_CARER.com</span>
         </div>
         <!-- <h1 class=" backlogo_name fw-bolder">MedPlatform</h1> -->
         <!-- Copyright -->

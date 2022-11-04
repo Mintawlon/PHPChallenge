@@ -49,8 +49,8 @@ unset($_SESSION["bookingSuccess"]);
         </div>
         <div class="btnBox">
             <button class="doctorBtn" id="Neurology" onclick="speciality(this.id)"><i class="fa-solid fa-brain doctorBtn_icon"></i>Neurology</button>
-                <button class="doctorBtn" id="OB-GYN" onclick="speciality(this.id)"><i class="fa-solid fa-person-pregnant doctorBtn_icon"></i>OB-GYN</button>
-                <button class="doctorBtn" id="Dentist" onclick="speciality(this.id)"> <i class="fa-solid fa-tooth doctorBtn_icon"></i>Dentist</button>
+            <button class="doctorBtn" id="OB-GYN" onclick="speciality(this.id)"><i class="fa-solid fa-person-pregnant doctorBtn_icon"></i>OB-GYN</button>
+            <button class="doctorBtn" id="Dentist" onclick="speciality(this.id)"> <i class="fa-solid fa-tooth doctorBtn_icon"></i>Dentist</button>
         </div>
 
 

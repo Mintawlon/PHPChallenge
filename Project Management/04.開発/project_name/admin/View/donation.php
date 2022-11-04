@@ -102,7 +102,7 @@ if (!isset($_SESSION["login"])) {
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Causes</label>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Address</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control common_input text_area" id="exampleFormControlTextarea1" name="address" rows="5" placeholder="Address"></textarea>
                                 </div>

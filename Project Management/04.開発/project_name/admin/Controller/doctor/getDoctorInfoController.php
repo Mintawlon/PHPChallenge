@@ -16,7 +16,7 @@ $doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // Pagination
 $sql = $pdo->prepare(
-    "SELECT COUNT(id) As total FROM `doctor` 
+    "SELECT COUNT(id) As total FROM `doctor` WHERE del_flg != 1 
     "
 );
 $sql->execute();

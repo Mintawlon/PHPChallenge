@@ -80,3 +80,18 @@ if (isset($_POST["updateDoctorInfo"])) {
     }
 
 }
+
+
+// Remove Doctor
+if (isset($_GET["delId"])) {
+    $delId = $_GET["delId"];
+
+    $sql = $pdo->prepare("UPDATE doctor SET 
+    del_flg = 1
+     WHERE id=:id
+     ");
+    $sql->bindValue(":id", $delId);
+
+    $sql->execute();
+    header("Location: ../View/doctor.php");
+}

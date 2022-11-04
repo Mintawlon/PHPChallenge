@@ -18,6 +18,12 @@ unset($_SESSION["bookingSuccess"]);
     <!--css-->
     <link rel="stylesheet" href="./resources/css/root.css?v=" <?php time() ?>>
     <link rel="stylesheet" href="./resources/css/booking.css?v=" <?php time() ?>>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,7 +31,7 @@ unset($_SESSION["bookingSuccess"]);
     include("./common/head.php");
     ?>
     <p class="warning">Only approved bookings will be displayed on this page
-</p>
+    </p>
     <div class="container bcontent">
 
         <div class="page-deader">Your Booking Status</div>
