@@ -79,7 +79,7 @@ if (!isset($_SESSION["email"])) {
                 </h1>
                 <div class="wrapper">
                     <div>
-                    <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="card_img " />
+                    <img src="./storages/emergency/<?= $emergency["article_image"] ?>" alt="" class="card_img" />
                     </div>
                     <div class="info">
                         <h2 class="first_aid_para_header">What to Do?</h2>

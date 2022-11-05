@@ -30,13 +30,9 @@
                 </li>
 
                 <li class="page-item pagination_li ">
-                    <a class="page-link pagination_item
-                                " href="?page=
-                                <?php for ($i = 1; $i <= $totalPages; $i++) {
-                                    echo $i;
-                                } ?> ">
+                    <span class="page-link pagination_item" href="">
                         <?= $page ?>/<?= $totalPages ?>
-                    </a>
+                    </span>
                 </li>
 
 
